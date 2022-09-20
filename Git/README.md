@@ -22,12 +22,10 @@ ssh-add ~/.ssh/id_ed25519
 
 Step 5: Adding a new SSH key to your GitHub account https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
 cat ~/.ssh/id_ed25519.pub
-  # Then select and copy the contents of the id_ed25519.pub file
-  # displayed in the terminal to your clipboard
+Then select and copy the contents of the id_ed25519.pub file
+displayed in the terminal to your clipboard
 In the upper-right corner of any page, click your profile photo, then click Settings.
-
 Settings icon in the user bar, In the "Access" section of the sidebar, click SSH and GPG keys.
-
 Click New SSH key or Add SSH key.
 These steps should set your new Linux machine with Github
 
