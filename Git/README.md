@@ -4,11 +4,11 @@ There are a couple of ways to download the source code, https way:
 git clone git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git
 
 Clone using SSH 
-git clone git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git
+**git clone git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git**
 
 
 The Git status command gives us all the necessary information about the current branch. 
-git status
+**git status**
 
 We need to use the git add command to include the changes of a file(s) into our next commit. 
 To add a single file:
