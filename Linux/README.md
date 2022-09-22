@@ -53,3 +53,18 @@
 - Check if xterm package exists: `dpkg -l | grep xterm`,If xterm package does not exist , install it `sudo apt install xterm`
 - Set lxterminal as x-terminal-emulator by running the following command `sudo update-alternatives --config x-terminal-emulator`
 
+### Bash Scripting
+- `touch hello_world.sh` :Create a file named hello_world.sh
+- `which bash` : Find the path to bash shell
+- Setup of a Bash Script
+```
+#! usr/bin/bash
+echo "Hello World"
+```
+- `chmod u+x hello_world.sh` Make the Bash script executable, chmod modifies the existing rights of a file for a particular user. We are adding +x to user u.
+- You can run the script in the following ways:
+```
+./hello_world.sh
+or
+bash hello_world.sh
+```
