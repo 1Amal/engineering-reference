@@ -3,11 +3,11 @@ Reference manuals, Cheat sheets, Study notes
 Please note this collection is intended for education purposes only, no copyright infringement intended !
 
 
+<li><a href="./Linux/">Linux</a></li>
+<li><a href="./Git/">Git</a></li>
 <li><a href="./HTML/">HTML</a></li>
 <li><a href="./CSS/">CSS</a></li>
 <li><a href="./JavaScript/">JavaScript</a></li>
-<li><a href="./Git/">Git</a></li>
-<li><a href="./Linux/">Linux</a></li>
 <li><a href="./Python/">Python</a></li>
 
 
