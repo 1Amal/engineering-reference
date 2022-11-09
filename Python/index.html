@@ -9,46 +9,28 @@
     <a href="../index.html">Back to Main Index</a>
     <h1>Python Reference</h1>
     <a href="https://github.com/1Amal/engineering-reference/tree/main/Python">Click here to view other resources</a>
-    <h2> Jupyter Notebook </h2>
-        <p>Start Jupyter Notebook in any folder, jupyter notebook --notebook-dir=”LOCATION of the folder to start Jupyter Notebook i.e. D:/Documents”</p>
-        <p>Jupyter Notebook and JupyterLab < 3.0
-            For old Jupyter Notebook interface installed with notebook package and run as jupyter notebook (see the next section for the identical interface installed with nbclassic and run with jupyter nbclassic, and for JupyterLab):
-            <ol> 
-                <li>Open cmd (or Anaconda Prompt) and run jupyter notebook --generate-config.</li>
-                <li> This writes a file to C:\Users\username\.jupyter\jupyter_notebook_config.py.            C:\Users\<Windows user directory>\.jupyter </li>
-                <li>Browse to the file location and open it in an Editor</li>
-                <li>Search for the following line in the file: #c.NotebookApp.notebook_dir = ''</li>
-                <li>Replace by c.NotebookApp.notebook_dir = '/the/path/to/home/folder/'  Make sure you use forward slashes in your path and use 
-                    /home/user/ instead of ~/ for your home directory, backslashes could be used if placed in double quotes even if folder name contains 
-                    spaces as such : "D:\yourUserName\Any Folder\More Folders\"</li>
-                <li>Remove the # at the beginning of the line to allow the line to execute 
-                    JupyterLab >= 3, Jupyter Notebook Classic, and RetroLab
-                    For recent nbclassic and JupyterLab >= 3 use c.ServerApp.root_dir instead of c.NotebookApp.notebook_dir (and jupyter server --generate-config 
-                    instead of jupyter notebook --generate-config). </li>
-        </ol>   
-        </p>
+    
 
-        <h2>Python help</h2>
-        <p> 
-            For help type ‘help’ i.e. for definition of ‘print’ function type:
+<h2>Python Basics</h2>
+    <ul>
+        <li>For help type ‘help’ i.e. for definition of ‘print’ function type:
             help(print)
             ?print
-            
-            Getting help from Jupyter and Python to remember what stuff does:
             <ul> 
-                <li> shift+tab in the brackets of a function or argument will bring up the docstring, or short instructions on how to use it </li>
+                <li>Getting help from Jupyter and Python to remember what stuff does:
+                    shift+tab in the brackets of a function or argument will bring up the docstring, or short instructions on how to use it </li>
                 <li> help(function_or_method) will print out the same docstring </li>
                 <li> dir(variable) will remind you what methods are available (for a variable, depending on its type or data structure) </li>
-            Other tricks
                 <li> tab whilst typing will try to autocomplete things </li>
                 <li> command+click or alt+click will enable multi-line editing - which is so amazingly cool and a must have feature for a text editor once you know it exists. </li>
-
             </ul>
-        </p>
-       
+        <li>%pip install : Install Python modules <br>i.e %pip install geocode 
+        </li>
         
-        <h2>Install Python modules</h2>
-            <p> %pip install geocode </p>
+        </li>
+
+    </ul>
+
 
 <h2> Python data types</h2>
 <h3> Python Collections (Arrays) </h3>
@@ -127,5 +109,24 @@ print(thisdict) </p>
      <li> Changeable: Dictionaries are changeable, meaning that we can change, add or remove items after the dictionary has been created.</li>
      <li> Duplicates Not Allowed: Dictionaries cannot have two items with the same key:</li>
 </ul>
+
+<h2> Jupyter Notebook </h2>
+        <p>Start Jupyter Notebook in any folder, jupyter notebook --notebook-dir=”LOCATION of the folder to start Jupyter Notebook i.e. D:/Documents”</p>
+        <p>Jupyter Notebook and JupyterLab < 3.0
+            For old Jupyter Notebook interface installed with notebook package and run as jupyter notebook (see the next section for the identical interface installed with nbclassic and run with jupyter nbclassic, and for JupyterLab):
+            <ol> 
+                <li>Open cmd (or Anaconda Prompt) and run jupyter notebook --generate-config.</li>
+                <li> This writes a file to C:\Users\username\.jupyter\jupyter_notebook_config.py.            C:\Users\<Windows user directory>\.jupyter </li>
+                <li>Browse to the file location and open it in an Editor</li>
+                <li>Search for the following line in the file: #c.NotebookApp.notebook_dir = ''</li>
+                <li>Replace by c.NotebookApp.notebook_dir = '/the/path/to/home/folder/'  Make sure you use forward slashes in your path and use 
+                    /home/user/ instead of ~/ for your home directory, backslashes could be used if placed in double quotes even if folder name contains 
+                    spaces as such : "D:\yourUserName\Any Folder\More Folders\"</li>
+                <li>Remove the # at the beginning of the line to allow the line to execute 
+                    JupyterLab >= 3, Jupyter Notebook Classic, and RetroLab
+                    For recent nbclassic and JupyterLab >= 3 use c.ServerApp.root_dir instead of c.NotebookApp.notebook_dir (and jupyter server --generate-config 
+                    instead of jupyter notebook --generate-config). </li>
+        </ol>   
+        </p>
 </body>
 </html>
