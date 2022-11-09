@@ -12,63 +12,86 @@
     <li> <a href="https://github.com/1Amal/engineering-reference/tree/main/Linux">Click here to view other Linux resources</a> </li>
     <li> <a href="https://swcarpentry.github.io/shell-novice/"> Linux Reference</a></li>
 </ul>
+<h2>File / Directory operations</h2>
+<ul>
+
+    <li> pwd - Print working directory command in Linux </li>
+    <li> cd - Linux command to navigate through directories </li> 
+    <li> mkdir - Command used to create directories in Linux </li>
+    <li> mv - Move or rename files in Linux</li>
+    <li> cp - Similar usage as mv but for copying files in Linux</li>
+    <li> rm - Delete files or directories</li>
+    <li> touch - Create blank/empty files</li>
+    <li> ln - Create symbolic links (shortcuts) to other files</li>
+    <li> cat - Display file contents on the terminal</li>
+    <li> tar - Command to extract and compress files in Linux</li>
+    <li> head - Return the specified number of lines from the top</li>
+    <li> tail - Return the specified number of lines from the bottom</li>
+    <li> diff - Find the difference between two files</li>
+    <li> cmp - Allows you to check if two files are identical</li>
+    <li> comm - Combines the functionality of diff and cmp</li>
+    <li> sort - Linux command to sort the content of a file while outputting</li>
+    <li> zip - Zip files in Linux</li>
+    <li> unzip - Unzip files in Linux</li>
+
+</ul>
+
+<h2>Networking</h2>
+<ul>
+    <li>ssh - Secure Shell command in Linux</li>
+
+
+
+</ul>
+
+<h2>Administration / root</h2>
+
+<ul>
+
+
+
+</ul>
 
 <ul> 
-<li> `history`: Linux store any command you type in an archive file. History is the command to use to display this list. You can also clear all the history.</li>
-`history -c` Or clear one specific entry. `history -d 12`
-<li> `ls` : The most frequently used command in Linux to list directories</li> 
-<li>  `pwd` - Print working directory command in Linux </li>
-<li> `cd` - Linux command to navigate through directories </li> 
-<li> `mkdir` - Command used to create directories in Linux </li>
-<li>`mv` - Move or rename files in Linux</li>
-<li>`cp` - Similar usage as mv but for copying files in Linux</li>
-<li> `rm` - Delete files or directories</li>
-<li> `touch` - Create blank/empty files</li>
-<li> `ln` - Create symbolic links (shortcuts) to other files</li>
-<li>`cat` - Display file contents on the terminal</li>
-<li>`clear` - Clear the terminal display</li>
-<li>`echo` - Print any text that follows the command</li>
-<li>`less` - Linux command to display paged outputs in the terminal</li>
-<li> `man` - Access manual pages for all Linux commands</li>
-<li> `uname` - Linux command to get basic information about the OS</li>
-<li>`whoami` - Get the active username</li>
-<li>`tar` - Command to extract and compress files in Linux</li>
-<li> `grep` - Search for a string within an output</li>
-<li> `head` - Return the specified number of lines from the top</li>
-<li>`tail` - Return the specified number of lines from the bottom</li>
-<li> `diff` - Find the difference between two files</li>
-<li> `cmp` - Allows you to check if two files are identical</li>
-<li> `comm` - Combines the functionality of diff and cmp</li>
-<li> `sort` - Linux command to sort the content of a file while outputting</li>
-<li> `export` - Export environment variables in Linux</li>
-<li>`zip` - Zip files in Linux</li>
-<li>`unzip` - Unzip files in Linux</li>
-<li>`ssh` - Secure Shell command in Linux</li>
-<li>`service` - Linux command to start and stop services</li>
-<li> `ps` - Display active processes</li>
-<li> `kill` and `killall` - Kill active processes by process ID or name</li>
-<li>`df` - Display disk filesystem information</li>
-<li>`mount` - Mount file systems in Linux</li>
-<li>`chmod` - Command to change file permissions</li>
-<li>`chown` - Command for granting ownership of files or folders</li>
-<li>`ifconfig` - Display network interfaces and IP addresses</li>
-<li>`traceroute` - Trace all the network hops to reach the destination</li>
-<li> `wget` - Direct download files from the internet</li>
-<li>`ufw` - Firewall command</li>
-<li>`iptables` - Base firewall for all other firewall utilities to interface with</li>
-<li> apt, pacman, yum, rpm - Package managers depending on the distro</li>
-<li> `sudo` - Command to escalate privileges in Linux</li>
-<li>`cal` - View a command-line calendar</li>
-<li>`alias` - Create custom shortcuts for your regularly used commands</li>
-<li> `dd` - Majorly used for creating bootable USB sticks</li>
-<li>`whereis` - Locate the binary, source, and manual pages for a command</li>
-<li>`whatis` - Find what a command is used for</li>
-<li>`top` - View active processes live with their system usage</li>
-<li>`useradd` and `usermod` - Add new user or change existing users data</li>
-<li> `passwd` - Create or update passwords for existing users</li>
-<li>`sudo killall openvpn`: Close OpenVpn</li>
-<li>Check if xterm package exists: `dpkg -l | grep xterm`,If xterm package does not exist , install it `sudo apt install xterm`</li>
-<li>Set lxterminal as x-terminal-emulator by running the following command `sudo update-alternatives --config x-terminal-emulator`</li>
+    <li> history : Linux store any command you type in an archive file. History is the command to use to display this list. You can also clear all the history.</li>
+    `history -c` Or clear one specific entry. `history -d 12`
+    <li> ls : The most frequently used command in Linux to list directories</li> 
+    <li> clear - Clear the terminal display</li>
+    <li> echo - Print any text that follows the command</li>
+    <li> less - Linux command to display paged outputs in the terminal</li>
+    <li> man - Access manual pages for all Linux commands</li>
+    <li> uname - Linux command to get basic information about the OS</li>
+    <li> whoami - Get the active username</li>
+    <li> grep - Search for a string within an output</li>
+
+    <li> export - Export environment variables in Linux</li>
+
+
+    <li> service - Linux command to start and stop services</li>
+    <li> ps - Display active processes</li>
+    <li> kill and `killall` - Kill active processes by process ID or name</li>
+    <li> df - Display disk filesystem information</li>
+    <li> mount - Mount file systems in Linux</li>
+    <li> chmod - Command to change file permissions</li>
+    <li> chown - Command for granting ownership of files or folders</li>
+    <li> ifconfig - Display network interfaces and IP addresses</li>
+    <li> traceroute - Trace all the network hops to reach the destination</li>
+    <li> wget - Direct download files from the internet</li>
+    <li> ufw - Firewall command</li>
+    <li> iptables - Base firewall for all other firewall utilities to interface with</li>
+    <li> apt, pacman, yum, rpm - Package managers depending on the distro</li>
+    <li> sudo - Command to escalate privileges in Linux</li>
+    <li> cal - View a command-line calendar</li>
+    <li> alias - Create custom shortcuts for your regularly used commands</li>
+    <li> dd - Majorly used for creating bootable USB sticks</li>
+    <li> whereis - Locate the binary, source, and manual pages for a command</li>
+    <li> whatis - Find what a command is used for</li>
+    <li> top - View active processes live with their system usage</li>
+    <li> useradd and usermod - Add new user or change existing users data</li>
+    <li> passwd - Create or update passwords for existing users</li>
+    <li> sudo killall openvpn: Close OpenVpn</li>
+    <li> Check if xterm package exists: `dpkg -l | grep xterm`,If xterm package does not exist , install it `sudo apt install xterm`</li>
+    <li> Set lxterminal as x-terminal-emulator by running the following command `sudo update-alternatives --config x-terminal-emulator`</li>
 
 </ul>
 
