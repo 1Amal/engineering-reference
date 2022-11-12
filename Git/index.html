@@ -11,42 +11,50 @@
     <li> <a href="https://github.com/1Amal/engineering-reference/tree/main/Git">Click here to view other Git resources</a> </li>
     <li> <a href="https://git-scm.com/book/en/v2"> Git Reference</a></li>
     </ul>
+<h2>Git Basics</h2>
+    <ul>
+      <li> <code>Git clone </code> : is a command for downloading existing source code from a remote repository (like Github, for example). 
+        Git clone basically makes an identical copy of the latest version of a project in a repository and saves it to your computer.
+        There are a couple of ways to download the source code, 
+        <p>- Clone using SSH: <code>git clone git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code></p> 
+        <p>- Clone using HTTPS: <code>git clone git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code></p> 
+      </li> 
+      
+      <li> <code>git status </code>: command gives us all the necessary information about the current branch.</li>
+      
+      <li> <code>git add</code> : We need to use the git add command to include the changes of a file(s) into our next commit. 
+            <p>- To add a single file: <code>git add [filename] </code></p>
+            <p>- To add all files in repo at once: <code>git add -A </code></p>
+      </li> 
+      
+      <li> <code> git commit</code>:  is like setting a checkpoint in the development process which you can go back to later if needed.
+        We also need to write a short message to explain what we have developed or changed in the source code.
+        <p><code>git commit -m "commit message"</code></p>
+      </li>
+
+      <li> <code>git push</code> :After committing your changes, the next thing you want to do is send your changes to the remote server. Git push uploads your commits to the remote repository.
+        <p><code>git push [remote][branch-name]</code></p> 
+        <p>However, if your branch is newly created, then you also need to upload the branch with the following command:<br>
+          <code>git push --set-upstream [remote] [name-of-your-branch]</code> <br>
+          alternatively you can also use: <code>git push -u origin [branch_name]</code> </p>
+      
+      </li>
+        
+      <li> 
+      </li> 
+        
+        <li>The git pull command is used to get updates from the remote repo. This command is a combination of git fetch and git merge which means that, when we use git pull, it gets the updates from remote repository (git fetch) and immediately applies the latest changes in your local (git merge).
+        `git pull <remote>`  </li>
+        
+        <li> To see our commit history, first we need to use:
+        `git log -- oneline` </li>
+    
+    
+    </ul>
+
 <ul>
-    <li> Git clone is a command for downloading existing source code from a remote repository (like Github, for example). 
-  Git clone basically makes an identical copy of the   latest version of a project in a repository and saves it to your computer.
-  There are a couple of ways to download the source code, 
-  - https way:
-    `git clone git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git`
+ 
 
-  - Clone using SSH 
-  `git clone git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git`
-</li> 
-
-<li> The Git status command gives us all the necessary information about the current branch.  `git status` </li> 
-
-<li>  We need to use the git add command to include the changes of a file(s) into our next commit. 
-To add a single file:
-`git add <file>`
-- To add everything at once: `git add -A`
-</li> 
-
-<li>  Git commit is like setting a checkpoint in the development process which you can go back to later if needed.
-We also need to write a short message to explain what we have developed or changed in the source code.
-`git commit -m "commit message"` </li>
-
-<li>  After committing your changes, the next thing you want to do is send your changes to the remote server. Git push uploads your commits to the remote repository.
-`git push <remote> <branch-name>` </li>
-
-<li> However, if your branch is newly created, then you also need to upload the branch with the following command:
-`git push --set-upstream <remote> <name-of-your-branch>`
-or
-`git push -u origin <branch_name>` </li> 
-
-<li>The git pull command is used to get updates from the remote repo. This command is a combination of git fetch and git merge which means that, when we use git pull, it gets the updates from remote repository (git fetch) and immediately applies the latest changes in your local (git merge).
-`git pull <remote>`  </li>
-
-<li> To see our commit history, first we need to use:
-`git log -- oneline` </li>
 
 <li> A safer way that we can undo our commits is by using git revert. We just need to specify the hash code next to our commit that we would like to undo:
  `git revert 3321844`
