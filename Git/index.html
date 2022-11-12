@@ -40,82 +40,84 @@
       
       </li>
         
-      <li> 
-      </li> 
+      <li> <code>git pull</code> : command is used to get updates from the remote repo. 
+        This command is a combination of git fetch and git merge which means that, when we use git pull, 
+        it gets the updates from remote repository (git fetch) and immediately applies the latest changes in your local (git merge).<br>
+        <code>git pull [remote]</code>  </li>
         
-        <li>The git pull command is used to get updates from the remote repo. This command is a combination of git fetch and git merge which means that, when we use git pull, it gets the updates from remote repository (git fetch) and immediately applies the latest changes in your local (git merge).
-        `git pull <remote>`  </li>
-        
-        <li> To see our commit history, first we need to use:
-        `git log -- oneline` </li>
+        <li> <code>git log -- oneline</code> : To see our commit history, first we need to use:
+         </li>
+
+      <li> <code>git revert</code> : A safer way that we can undo our commits is by using git revert. 
+        We just need to specify the hash code next to our commit that we would like to undo:<br>
+          <code>git revert 3321844</code><br>
+         The Git revert command will undo the given commit, but will create a new commit without deleting the older one:
+         The advantage of using git revert is that it doesn't touch the commit history. This means that you can still see all of the commits in your history, even the reverted ones. 
+         Another safety measure here is that everything happens in our local system unless we push them to the remote repo. That's why git revert is safer to use and is the preferred way to undo our commits.
+      </li>
+
+      <li> <code>git pull origin main</code> : Update local copy with the remote copy  </li>
     
     
     </ul>
-
-<ul>
  
+<h2>Git Advanced Topics</h2>
+<ul>
+
+  <li> <code>git remote update origin --prune</code> : To update the local list of remote branches </li> 
+
+  <li> <code> git branch -a</code> : To show all local and remote branches that (local) Git knows about </li>
 
 
-<li> A safer way that we can undo our commits is by using git revert. We just need to specify the hash code next to our commit that we would like to undo:
- `git revert 3321844`
-The Git revert command will undo the given commit, but will create a new commit without deleting the older one:
-The advantage of using git revert is that it doesn't touch the commit history. This means that you can still see all of the commits in your history, even the reverted ones. 
-Another safety measure here is that everything happens in our local system unless we push them to the remote repo. That's why git revert is safer to use and is the preferred way to undo our commits.
-</li> 
+  <li> <code>git checkout dev</code> : When you've completed development in your branch and everything works fine, 
+       the final step is merging the branch with the parent branch (dev or master). 
+       This is done with the git merge command. Git merge basically integrates your feature branch with all of its 
+       commits back to the dev (or master) branch. 
+       It's important to remember that you first need to be on the specific branch that you want to merge with your feature branch.
+       For example, when you want to merge your feature branch into the dev branch. First you should switch to the dev branch:
+   </li>
 
-<li> Update local copy with the remote copy `git pull origin main` </li>
+  <li> <code>: git fetch</code> : Before merging, you should update your local dev branch </li>
 
-<li> To update the local list of remote branches: `git remote update origin --prune` </li> 
+  <li> <code>git merge [branch-name]</code> : Finally, you can merge your feature branch into dev </li>
 
-<li>  To show all local and remote branches that (local) Git knows about: `git branch -a` </li>
+  <li> <code>git remote -v</code> : Check the fetch and push locations  </li>
 
+  <li> <code>git config --global user.email "email@example.com" </code> : Set an email address in Git. You can use your GitHub-provided noreply email address or any email address. </li>
 
- <li> When you've completed development in your branch and everything works fine, the final step is merging the branch with the parent branch (dev or master). 
- This is done with the git merge command. Git merge basically integrates your feature branch with all of its commits back to the dev (or master) branch. 
- It's important to remember that you first need to be on the specific branch that you want to merge with your feature branch. For example, when you want to merge your feature branch into the dev branch. First you should switch to the dev branch:
-`git checkout dev` </li>
+  <li> <code>git remote set-url origin [updated link url https://........git]</code> : Update renamed repository address  </li>
+</ul>
 
-<li> Before merging, you should update your local dev branch: `git fetch` </li>
+  <h3> Setting up GitHub on a new Linux installation </h3>
 
-<li> Finally, you can merge your feature branch into dev:`git merge <branch-name>` </li>
+  <ol> 
+      <li> <code>git config --global user.name "Amal K" </code> : Use this command for adding a user name and confirm that you have set the Git username correctly:
+  <br><code>git config user.name</code> </li>
 
-<li> Check the fetch and push locations `git remote -v` </li>
+  <li> <code>git config --global user.email "email@example.com"</code> : To set an email address in Git. 
+    You can use your GitHub-provided noreply email address or any email address.<br>
+  To confirm that you have set the email address correctly in Git:<br>
+  <code>git config --global user.email</code> </li>
 
-<li> Set an email address in Git. You can use your GitHub-provided noreply email address or any email address. `git config --global user.email "email@example.com"` </li>
+  <li> <code>ssh-keygen -t ed25519 -C "your_email@example.com"</code> : Generating a new SSH key, for further information 
+    <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank">Visit here</a>
+   </li> 
 
-<li> Update renamed repository address `git remote set-url origin [updated link url https://........git]` </li>
+  <li> Adding your SSH key to the ssh-agent
+  `eval "$(ssh-agent -s)"`
+  `ssh-add ~/.ssh/id_ed25519`
+  </li>
 
-<h3> Setting up GitHub on a new Linux installation </h3>
-
-<ol> 
-    <li> Adding user name: `git config --global user.name "Amal K"` 
-
-Confirm that you have set the Git username correctly:
-`git config user.name` </li>
-
-<li> Set an email address in Git. You can use your GitHub-provided noreply email address or any email address.
-`git config --global user.email "email@example.com"`
-Confirm that you have set the email address correctly in Git:
-`git config --global user.email` </li>
-
-<li> Generating a new SSH key https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
-`ssh-keygen -t ed25519 -C "your_email@example.com"` </li> 
-
-<li> Adding your SSH key to the ssh-agent
-`eval "$(ssh-agent -s)"`
-`ssh-add ~/.ssh/id_ed25519`
-</li>
-
-<li> Adding a new SSH key to your GitHub account https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
-`cat ~/.ssh/id_ed25519.pub`
-Then select and copy the contents of the id_ed25519.pub file displayed in the terminal to your clipboard
-In the upper-right corner of any GitHub page, click your profile photo, then click Settings. Settings icon in the user bar, In the "Access" section of the sidebar, 
-click SSH and GPG keys. Click New SSH key or Add SSH key. These steps should set your new Linux machine with Github
-</li>
+  <li> Adding a new SSH key to your GitHub account https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+  `cat ~/.ssh/id_ed25519.pub`
+  Then select and copy the contents of the id_ed25519.pub file displayed in the terminal to your clipboard
+  In the upper-right corner of any GitHub page, click your profile photo, then click Settings. Settings icon in the user bar, In the "Access" section of the sidebar, 
+  click SSH and GPG keys. Click New SSH key or Add SSH key. These steps should set your new Linux machine with Github
+  </li>
 
 </ol>
 
 
-</ul>
+
 </body>
 </html>
