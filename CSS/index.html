@@ -8,7 +8,64 @@
 <body>
 <a href="../index.html">Back to Main Index</a>
 <h1>CSS Reference</h1>
-<a href="https://github.com/1Amal/engineering-reference/tree/main/CSS">Click here to view other CSS resources</a>
-
+<a href="https://github.com/1Amal/engineering-reference/tree/main/CSS">Click here to view other CSS resources</a><br>
+<a href="https://www.w3schools.com/cssref/index.php" target="_blank">W3Schools CSS Reference </a>
 </body>
 </html>
+
+<h2>CSS Setup</h2>
+<ul>
+    <li>External CSS: To use an external style sheet, add a link to it in the <head> section of each HTML page <br>
+        <code>
+            &lt!DOCTYPE html> <br>
+                &lthtml&gt <br>
+                    &lthead&gt <br>
+                        &ltlink rel="stylesheet" href="styles.css"&gt <br>
+                    &lt/head&gt <br>
+                &ltbody&gt <br>
+
+                    &lth1&gtThis is a heading &lt/h1&gt <br>
+                    &ltp>This is a paragraph. &lt/p&gt <br>
+
+                &lt/body&gt <br>
+                &lt/html&gt <br>
+
+    </li>
+
+    <li>Internal css
+        An internal CSS is defined in the &lthead&gt section of an HTML page, within a &ltstyle&gt element.
+        <br>
+        <code>
+            &lt!DOCTYPE html&gt <br>
+                &lthtml&gt <br>
+                &lthead&gt <br>
+                &ltstyle&gt <br>
+                    body {background-color: powderblue;} <br>
+                    h1   {color: blue;} <br>
+                    p    {color: red;} <br>
+                    &lt/style&gt <br>
+                    &lt/head&gt <br>
+                    &ltbody&gt <br>
+
+                    &ltbody&gt <br>
+                    &lthtml&
+                </code>
+    </li>
+
+    <li> Inline CSS: An inline CSS is used to apply a unique style to a single HTML element.<br>
+        An inline CSS uses the style attribute of an HTML element.<br>
+        The following example sets the text color of the &lth1&gt element to blue, and the text color of the &ltp&gt element to red:<br>
+
+        Example: <br>
+        <code>
+        &lth1 style="color:blue;">A Blue Heading &lt/h1&gt <br>
+
+        &ltp style="color:red;">A red paragraph.&lt/p&gt
+    </code>
+
+    </li>
+
+    </li>
+
+
+</ul>
