@@ -9,5 +9,62 @@
     <a href="../index.html">Back to Main Index</a>
     <h1>JavaScript Reference</h1>
     <a href="https://github.com/1Amal/engineering-reference/tree/main/JavaScript">Click here to view other JavaScript resources</a>
+
+    <h2>Setup JavaScript</h2>
+    <ul>
+        <li> External JavaScript: JavaScript files have the file extension .js.
+            To use an external script, put the name of the script file in the src (source) attribute of 
+            <br> 
+            <code>   
+            &ltscript&gt tag: <br>
+                    &ltscript src="myScript.js"&gt &lt/script&gt
+                </code> 
+        </li>
+
+        <li> JavaScript in &lthead&gt
+                JavaScript can be placed in the &lthead&gt section of an HTML page.<br>
+                
+                <code>
+                    &lt!DOCTYPE html&gt <br>
+                    &lthtml&gt <br>
+                    &lthead&gt <br>
+                    &ltscript&gt <br>
+                    function myFunction() { <br>
+                      document.getElementById("demo").innerHTML = "Paragraph changed.";<br>
+                    }<br>
+                    &lt/script&gt<br>
+                    &lt/head&gt<br>
+                    &ltbody&gt<br>
+
+                    
+                    &lt/body&gt<br>
+                    &lt/html&gt
+
+                </code>
+        </li>
+
+        <li> JavaScript in &ltbody&gt : JavaScript function can be placed in the &ltbody&gt section of an HTML page.
+                    <br>          
+                <code>
+                &lt!DOCTYPE html&gt <br>
+                &lthtml&gt <br>
+                &ltbody&gt <br>
+                
+                &lth2&gtDemo JavaScript in Body &lt/h2&gt <br>
+                
+                &ltscript&gt <br>
+                function myFunction() { <br>
+                  document.getElementById("demo").innerHTML = "Paragraph changed."; <br>
+                }<br>
+                &lt/script&gt <br>
+                
+                &lt/body&gt <br>
+                &lt/html&gt <br>
+            </code>
+
+
+        </li>
+
+    </ul>
 </body>
 </html>
