@@ -19,17 +19,16 @@ h2
 
 #nav_bar
 {
-  /* background-color:#2b2a33 ; */
   padding:1vw;  
  }
 
-/* #nav_bar ul
+#nav_bar ul
 {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-} */
+}
 
 #nav_bar li
 {
@@ -48,7 +47,7 @@ list-style-type: none;
   padding-left: 0.5vw;
   padding-right: 0.5vw;
   text-decoration: none;
-  font-size:1.4em;
+  font-size:2em;
 }
 
 #nav_bar li a:hover
