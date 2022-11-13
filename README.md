@@ -12,6 +12,7 @@ Please note this collection is intended for education purposes only, no copyrigh
 <li><a href="https://1amal.github.io/engineering-reference/Python/index.html">Python</a></li>
 <li><a href="https://1amal.github.io/engineering-reference/Software%20Development%20Tools/index.html">Software Development Tools</a></li>
 <li><a href="https://1amal.github.io/engineering-reference/Networking%20and%20Cybersecurity/index.html">Networking and Cybersecurity</a></li>
+<li><a href="https://1amal.github.io/engineering-reference/Electronics/index.html">Electronics</a></li>
 
 
 
