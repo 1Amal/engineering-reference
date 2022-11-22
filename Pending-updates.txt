@@ -1,7 +1,7 @@
 Place to add all updates to the reference database before they are entered into the database. Use this document as an Draft. 
 
 **************** Pending updates ****************
-Date: 20/11/2022
+Date: 22/11/2022
 ***** FLEXBOX CSS *****
 Following is from Odin Project only used here for reference and personal learning (https://www.theodinproject.com/lessons/foundations-introduction-to-flexbox)
 
@@ -22,7 +22,7 @@ In Practice: You will likely not be using complex values for flex-grow, flex-shr
 
 flex-direction:column; : column puts the main axis vertical (top-to-bottom).
 
-flex-direction: row; : Puts the main axis horizontal (left-to-right)
+flex-direction: row; : Puts the main axis horizontal (left-to-right), the flex-direction property's default is row.
 
 justify-content: center; : Aligns items across the main axis vertically
 
@@ -30,5 +30,22 @@ align-items: center; : Aligns items across the main axis horizontally
 
 gap: 8px; : Setting gap on a flex container simply adds a specified space between flex items (https://www.theodinproject.com/lessons/foundations-alignment)
 
+As with all properties in CSS, some initial values are defined, so when creating a flex container all of the contained flex items will behave in the following way.
+
+    Items display in a row (the flex-direction property's default is row).
+    The items start from the start edge of the main axis.
+    The items do not stretch on the main dimension, but can shrink.
+    The items will stretch to fill the size of the cross axis.
+    The flex-basis property is set to auto.
+    The flex-wrap property is set to nowrap.
+
+flex-wrap: no-wrap; :   Using nowrap would cause an overflow if the items were not able to shrink, or could not shrink small enough to fit. It is also the initial value,
+flex-wrap: wrap; : As flex-wrap is set to wrap, the items wrap
+
+flex-flow : You can combine the two properties flex-direction and flex-wrap into the flex-flow shorthand. The first value specified is flex-direction and the second value is flex-wra
+
+***** Linux *****
+ 
+shutdown -h 0 : Shutdown computer immediately
 
 **************** Completed Updates ****************
