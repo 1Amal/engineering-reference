@@ -7,7 +7,6 @@ Date: 22/11/2022
 
 ***** Linux *****
  
-shutdown -h 0 : Shutdown computer immediately
 
 ***** Microsoft Windows *****
 
