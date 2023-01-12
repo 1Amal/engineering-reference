@@ -1,7 +1,7 @@
 Place to add all updates to the reference database before they are entered into the database. Use this document as an Draft. 
 
 **************** Pending updates ****************
-Date: 22/11/2022
+
 ***** FLEXBOX CSS *****
 
 
@@ -11,4 +11,6 @@ Date: 22/11/2022
 ***** Microsoft Windows *****
 
 
-**************** Completed Updates ****************
+***** Raspberri Pi ***** 
+argonone-config : Argoneone Case fan control configuration
+curl https://download.argon40.com/argon1.sh | bash : Install ArgonOne fancontrol script
