@@ -8,12 +8,42 @@ Place to add all updates to the reference database before they are entered into 
 ***** Linux *****
 sudo apt update && sudo apt upgrade : To refresh and update software in Debian / Ubuntu in one command
 
+
+df -h : You can display disk usage in a more human-readable format
+
+du -h : The du command displays disk usage. This tool can display disk usage for individual directories in Linux, giving you a finer-grained view of your disk usage. 
+Use it to display the amount of space used by your current directory
+
+sudo dmesg | more : View the Kernel ring buffer for messages
+
+
+
 ***** Microsoft Windows *****
 
 
 ***** Raspberri Pi ***** 
 argonone-config : Argoneone Case fan control configuration
 curl https://download.argon40.com/argon1.sh | bash : Install ArgonOne fancontrol script
+
+pinout: A handy reference can be accessed on the Raspberry Pi by opening a terminal window and running the command pinout
+
+sudo usermod -a -G gpio <username> : In order to use the GPIO ports your user must be a member of the gpio group. The pi user is a member by default, other users need to be added manually.
+
+sudo apt remove <tree> : You can uninstall a package with apt remove, The user is prompted to confirm the removal. Again, the -y flag will auto-confirm.
+
+sudo apt purge tree : You can also choose to completely remove the package and its associated configuration files with apt purge
+
+sudo rpi-update and then use sudo reboot
+rpi-update will download the latest pre-release version of the linux kernel, its matching modules, device tree files, along with the latest versions of the VideoCore firmware. 
+It will then install these files to relevant locations on the SD card, overwriting any previous versions.
+
+
+sudo apt-get update
+sudo apt install --reinstall libraspberrypi0 libraspberrypi-{bin,dev,doc} raspberrypi-bootloader raspberrypi-kernel
+
+If you have done an rpi-update and things are not working as you wish, if your Raspberry Pi is still bootable you can return to the stable release using:
+
+
 
 
 ****  Dev Tools *****
