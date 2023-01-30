@@ -70,7 +70,7 @@
     <li><a href="https://guides.codepath.com/websecurity" target="_blank">CodePath Web Security</a></li>
 </ul>
 
-<!-- ********** Start of Linux Reference section **********-->
+<!-- ********** Start of Linux reference section **********-->
 <h1>Linux Reference</h1>
     <ul> 
     <li> <a href="https://github.com/1Amal/engineering-reference/tree/main/Linux">Click here to view other Linux resources</a> </li>
@@ -261,9 +261,9 @@ or
     </li>
 
 </ul>
-<!-- ********** End of Linux Reference section **********-->
+<!-- ********** End of Linux reference section **********-->
 
-<!-- ********** Start of Windows Reference section **********-->
+<!-- ********** Start of Windows reference section **********-->
 
 <h1>Microsoft Windows Reference</h1>
 <ul>
@@ -301,8 +301,260 @@ or
 
 </ul>
 
-<!-- ********** End of Windows Reference section **********-->
+<!-- ********** End of Windows reference section **********-->
 
+<!-- ********** Start of Git reference section **********-->
+
+<h1>Git version control</h1>
+<ul>
+    <li> <a href="https://github.com/1Amal/engineering-reference/tree/main/Git">Click here to view other Git resources</a> </li>
+    <li> <a href="https://git-scm.com/book/en/v2"> Git Reference</a></li>
+    </ul>
+<h2>Git Basics</h2>
+    <ul>
+      <li> <code>Git clone </code> : is a command for downloading existing source code from a remote repository (like Github, for example). 
+        Git clone basically makes an identical copy of the latest version of a project in a repository and saves it to your computer.
+        There are a couple of ways to download the source code, 
+        <p>- Clone using SSH: <code>git clone git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code></p> 
+        <p>- Clone using HTTPS: <code>git clone git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code></p> 
+      </li> 
+      
+      <li> <code>git status </code>: command gives us all the necessary information about the current branch.</li>
+      
+      <li> <code>git add</code> : We need to use the git add command to include the changes of a file(s) into our next commit. 
+            <p>- To add a single file: <code>git add [filename] </code></p>
+            <p>- To add all files in repo at once: <code>git add -A </code></p>
+      </li> 
+      
+      <li> <code> git commit</code>:  is like setting a checkpoint in the development process which you can go back to later if needed.
+        We also need to write a short message to explain what we have developed or changed in the source code.
+        <p><code>git commit -m "commit message"</code></p>
+      </li>
+
+      <li> <code>git push</code> :After committing your changes, the next thing you want to do is send your changes to the remote server. Git push uploads your commits to the remote repository.
+        <p><code>git push [remote][branch-name]</code></p> 
+        <p>However, if your branch is newly created, then you also need to upload the branch with the following command:<br>
+          <code>git push --set-upstream [remote] [name-of-your-branch]</code> <br>
+          alternatively you can also use: <code>git push -u origin [branch_name]</code> </p>
+      
+      </li>
+        
+      <li> <code>git pull</code> : command is used to get updates from the remote repo. 
+        This command is a combination of git fetch and git merge which means that, when we use git pull, 
+        it gets the updates from remote repository (git fetch) and immediately applies the latest changes in your local (git merge).<br>
+        <code>git pull [remote]</code>  </li>
+        
+        <li> <code>git log -- oneline</code> : To see our commit history, first we need to use:
+         </li>
+
+      <li> <code>git revert</code> : A safer way that we can undo our commits is by using git revert. 
+        We just need to specify the hash code next to our commit that we would like to undo:<br>
+          <code>git revert 3321844</code><br>
+         The Git revert command will undo the given commit, but will create a new commit without deleting the older one:
+         The advantage of using git revert is that it doesn't touch the commit history. This means that you can still see all of the commits in your history, even the reverted ones. 
+         Another safety measure here is that everything happens in our local system unless we push them to the remote repo. That's why git revert is safer to use and is the preferred way to undo our commits.
+      </li>
+
+      <li> <code>git pull origin main</code> : Update local copy with the remote copy  </li>
+    
+    
+    </ul>
+ 
+<h2>Git Advanced Topics</h2>
+<ul>
+
+  <li> <code>git remote update origin --prune</code> : To update the local list of remote branches </li> 
+
+  <li> <code> git branch -a</code> : To show all local and remote branches that (local) Git knows about </li>
+
+
+  <li> <code>git checkout dev</code> : When you've completed development in your branch and everything works fine, 
+       the final step is merging the branch with the parent branch (dev or master). 
+       This is done with the git merge command. Git merge basically integrates your feature branch with all of its 
+       commits back to the dev (or master) branch. 
+       It's important to remember that you first need to be on the specific branch that you want to merge with your feature branch.
+       For example, when you want to merge your feature branch into the dev branch. First you should switch to the dev branch:
+   </li>
+
+  <li> <code> git fetch</code> : Before merging, you should update your local dev branch </li>
+
+  <li> <code>git merge [branch-name]</code> : Finally, you can merge your feature branch into dev </li>
+
+  <li> <code>git remote -v</code> : Check the fetch and push locations  </li>
+
+  <li> <code>git config --global user.email "email@example.com" </code> : Set an email address in Git. You can use your GitHub-provided noreply email address or any email address. </li>
+
+  <li> <code>git remote set-url origin [updated link url https://........git]</code> : Update renamed repository address  </li>
+</ul>
+
+  <h3> Setting up GitHub on a new Linux installation </h3>
+
+  <ol> 
+      <li> <code>git config --global user.name "Amal K" </code> : Use this command for adding a user name and confirm that you have set the Git username correctly:
+  <br><code>git config user.name</code> </li>
+
+  <li> <code>git config --global user.email "email@example.com"</code> : To set an email address in Git. 
+    You can use your GitHub-provided noreply email address or any email address.<br>
+  To confirm that you have set the email address correctly in Git:<br>
+  <code>git config --global user.email</code> </li>
+
+  <li> <code>ssh-keygen -t ed25519 -C "your_email@example.com"</code> : Generating a new SSH key, for further information 
+    <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank">Visit here</a>
+   </li> 
+
+  <li> <code>eval "$(ssh-agent -s)"<br>
+    ssh-add ~/.ssh/id_ed25519</code> : Adding your SSH key to the ssh-agent
+  </li>
+
+  <li> <code>cat ~/.ssh/id_ed25519.pub</code> : Adding a new SSH key to your GitHub account 
+    <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account" target="_blank">Visit here</a>
+  <br>
+  Then select and copy the contents of the id_ed25519.pub file displayed in the terminal to your clipboard
+  In the upper-right corner of any GitHub page, click your profile photo, then click Settings. <br>
+  Settings icon in the user bar, In the "Access" section of the sidebar, 
+  click SSH and GPG keys. Click New SSH key or Add SSH key. These steps should set your new Linux machine with Github
+  </li>
+
+</ol>
+
+<!-- ********** End of Git reference section **********-->
+
+<!-- ********** Start of Software Development Tools reference section **********-->
+<h1>Software Development Tools Reference</h1>
+<ul>
+<li> <a href="https://github.com/1Amal/engineering-reference/tree/main/Software Development Tools">Click here to view other Software Development Tools resources</a> </li>
+
+</ul>
+<h2>Visual Studio Code keyboard shortcuts</h2>
+<ul>
+<li><code>Ctrl+Shift+P, F1 </code> : Show Command Palette</li>
+<li><code>Ctrl+K Ctrl+S</code> : Keyboard Shortcuts</li>
+<li><code>F11 </code> : Toggle full screen</li>
+<li><code>Ctrl+ = / - </code> : Zoom in/out</li>
+<li><code>Ctrl+B</code> : Toggle Sidebar visibility</li>
+<li><code>Ctrl+` </code> : Show integrated terminal</li>
+</ul>
+
+<!-- ********** End of Software Development Tools reference section **********-->
+
+<!-- ********** Start of Electronics Engineering reference section **********-->
+<h1>Electronics Engineering Reference</h1>
+<a href="https://github.com/1Amal/engineering-reference/tree/main/Electronics">Click here to view other Electronics Engineering resources</a> <br>
+<a href="../Linux/index.html">Please visit Linux section for Raspberry Pi OS</a>
+
+<h2>Electronics Reference</h2>
+
+<ul>
+    <li><a href="https://www.allaboutcircuits.com/textbook/reference/chpt-2/resistor-color-codes/" target="_blank">Resistor Color codes</a></li>
+
+</ul>
+
+<h2>Raspberry Pi</h2>
+<ul>
+ <li><a href="https://www.raspberrypi.com/documentation/" target="_blank">Offical Raspberrypi Pi documentation</a></li>
+ <li><a href="https://www.raspberrypi.com/documentation/computers/raspberry-pi.html" target="_blank">Raspberry Pi Hardware Reference</a></li>
+ <li><a href="https://www.raspberrypi.com/documentation/computers/os.html" target="_blank">Raspberry Pi OS</a></li>
+</ul>
+
+<h2>Arduino</h2>
+
+<ul>
+    <li><a href="https://store-usa.arduino.cc/products/arduino-uno-rev3">Arduino Uno Board reference</a></li>
+    <li><a href="https://www.arduino.cc/reference/en/" target="_">Arduino Language reference</a></li>
+</ul>
+
+<!-- ********** End of Electronics Engineering reference section **********-->
+
+
+<!-- ********** Start of Networking and Cybersecurity reference section **********-->
+<h1>Networking and Cybersecurity Reference</h1>
+<a href="https://github.com/1Amal/engineering-reference/tree/main/Networking and Cybersecurity">Click here to view other Networking and Cybersecurity resources</a>
+
+<ul>
+    <li><code>
+        Class A: 255.0.0.0 <br>
+        Class B: 255.255.0.0 <br>
+        Class C: 255.255.255.0 <br>
+
+    </code>A network mask helps to know which portion of the address identifies the network and 
+    which portion of the address identifies the node. Class A, B, and C networks have default masks, 
+    also known as natural masks.
+</li>
+</ul>
+
+<h2>The 7 layers of the OSI model</h2>
+<a href="https://www.networkworld.com/article/3239677/the-osi-model-explained-and-how-to-easily-remember-its-7-layers.html" target="_blank">From Network World</a>
+<ul>
+
+<li> <b>A</b>ll <b>P</b>eople <b>S</b>eem <b>T</b>o <b>N</b>eed <b>D</b>ata <b>P</b>rocessing : The first letter of each word is the same as the first letter an OSI layer.</li>    
+<li> <b>Layer 7 - Application:</b>
+    The Application Layer in the OSI model is the layer that is the “closest to the end user”. 
+    It receives information directly from users and displays incoming data to the user. 
+    Oddly enough, applications themselves do not reside at the application layer. 
+    Instead the layer facilitates communication through lower layers in order to establish connections
+     with applications at the other end. 
+     Web browsers (Google Chrome, Firefox, Safari, etc.) TelNet, and FTP, are examples of 
+     communications  that rely  on Layer 7.
+    </li>
+
+<li><b> Layer 6 - Presentation: </b> The Presentation Layer represents the area that is independent 
+    of data representation at the application layer. In general, it represents the preparation or 
+    translation of application format to network format, 
+    or from network formatting to application format. 
+    In other words, the layer “presents” data for the application or the network. 
+    A good example of this is encryption and decryption of data for secure transmission; 
+    this happens at Layer 6.
+</li>
+
+<li><b>Layer 5 - Session: </b>When two computers or other networked devices need to speak with 
+    one another, a session needs to be created, and this is done at the Session Layer. 
+    Functions at this layer involve setup, coordination (how long should a system wait for a response,
+     for example) and termination between the applications at each end of the session.
+
+     <li><b>Layer 4 – Transport: </b>The Transport Layer deals with the coordination of the data 
+        transfer between end systems and hosts. How much data to send, at what rate, 
+        where it goes, etc. The best known example of the Transport Layer is the Transmission Control 
+        Protocol (TCP), which is built on top of the Internet Protocol (IP), commonly known as TCP/IP. TCP and UDP port numbers work at Layer 4, while IP addresses work at Layer 3, the Network Layer.
+     </li>
+
+<li><b>Layer 3 - Network : </b>Here at the Network Layer is where you’ll find most of the router 
+    functionality that most networking professionals care about and love. 
+    In its most basic sense, this layer is responsible for packet forwarding, 
+    including routing through different routers. You might know that your Boston computer wants to 
+    connect to a server in California, but there are millions of different paths to take. 
+    Routers at this layer help do this efficiently.
+</li>
+
+<li><b>Layer 2 – Data Link:  </b>The Data Link Layer provides node-to-node data transfer 
+    (between two directly connected nodes), and also handles error correction from the physical layer.
+     Two sublayers exist here as well--the Media Access Control (MAC) layer and the Logical Link 
+     Control (LLC) layer. In the networking world, most switches operate at Layer 2. 
+     But it’s not that simple. Some switches also operate at Layer 3 in order to support virtual LANs 
+     that may span more than one switch subnet, which requires routing capabilities.
+</li>
+
+<li><b>Layer 1 - Physical: </b>At the bottom of our OSI model we have the Physical Layer, 
+    which represents the electrical and physical representation of the system. 
+    This can include everything from the cable type, radio frequency link (as in a Wi-Fi network), 
+    as well as the layout of pins, voltages, and other physical requirements. 
+    When a networking problem occurs, many networking pros go right to the physical layer to check 
+    that all of the cables are properly connected and that the power plug hasn’t been pulled from the 
+    router, switch or computer, for example.
+</li>
+
+</li>
+
+</ul>
+
+<h2>External resources</h2>
+<ul>
+    <li><a href="https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html" target="_blank">Cisco IP addressing</a></li>
+
+
+
+</ul>
+
+<!-- ********** End of Networking and Cybersecurity reference section **********-->
 
 </body>
 
