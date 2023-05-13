@@ -16,7 +16,7 @@
 
         <li><a href="index.html#Linux">Linux |</a></li>
         <li><a href="index.html#Windows">Microsoft Windows Reference |</a></li>
-        <li><a href="index.html#Git">Git |</a></li>
+        <li><a href="index.html#Git">Git |</a></li> <!-- ********** Start of Git reference section **********-->
         <li><a href="index.html#HTML">HTML |</a></li>
         <li><a href="index.html#CSS">CSS |</a></li>
         <li><a href="index.html#JavaScript">JavaScript |</a></li>
@@ -415,9 +415,27 @@ or
       </li>
 
       <li> <code>git pull origin main</code> : Update local copy with the remote copy  </li>
+      <li><code>git fetch</code> : Use git fetch to retrieve new work done by other people. Fetching from a repository grabs all the new remote-tracking branches and tags without merging those changes into your own branches.</li>
+      
+      <li><code>git diff</code> : Show you all of your local changes since you last committed.</li>
+      
+      <li><code>git diff index.html</code> : To check what changes made to a certain file simply add the path of a file as an option </li>
+      
+      <li><code>git diff --color-words index.html</code> : this option shows a more concise view </li>
+      
+      <li><code>git diff --staged index.html</code> : Staged changes in a certain file</li>
+      
+      <li><code>git diff --staged</code> : Staged changes in all local files</li>
+
+    <li><code>git diff main (NAME OF OTHER BRANCH)</code> : It's also possible to compare two branches to each other. This helps you find out how exactly the code in both branches is different:</li>
+
+    <li><code>git diff main feature/login index.html</code> : Compare a certain file in two different branches. You can do this simply by adding the file's path:
+        This will show you how the file "index.html" was changed in the feature/login branch, compared to how it looks in the main branch.
+
+    </li>
     
-    
-    </ul>
+
+</ul>
  
 <h2>Git Advanced Topics</h2>
 <ul>
