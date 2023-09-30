@@ -234,7 +234,438 @@ or
 <!-- ********** End of Linux reference section **********-->
 </div>
 
+<div> 
+
+    <!-- ********** Start of Git reference section **********-->
+    
+    <h1 id="Git">Git version control</h1>
+    <ul>
+        <li> <a href="https://github.com/1Amal/engineering-reference/tree/main/Git">Click here to view other Git resources</a> </li>
+        <li> <a href="https://git-scm.com/book/en/v2"> Git Reference</a></li>
+        </ul>
+    <h2>Git Basics</h2>
+        <ul>
+          <li> <code>Git clone </code> : is a command for downloading existing source code from a remote repository (like Github, for example). 
+            Git clone basically makes an identical copy of the latest version of a project in a repository and saves it to your computer.
+            There are a couple of ways to download the source code, 
+            <p>- Clone using SSH: <code>git clone git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code></p> 
+            <p>- Clone using HTTPS: <code>git clone git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code></p> 
+          </li> 
+          
+          <li> <code>git status </code>: command gives us all the necessary information about the current branch.</li>
+          
+          <li> <code>git add</code> : We need to use the git add command to include the changes of a file(s) into our next commit. 
+                <p>- To add a single file: <code>git add [filename] </code></p>
+                <p>- To add all files in repo at once: <code>git add -A </code></p>
+          </li> 
+          
+          <li> <code> git commit</code>:  is like setting a checkpoint in the development process which you can go back to later if needed.
+            We also need to write a short message to explain what we have developed or changed in the source code.
+            <p><code>git commit -m "commit message"</code></p>
+          </li>
+    
+          <li> <code>git push</code> :After committing your changes, the next thing you want to do is send your changes to the remote server. Git push uploads your commits to the remote repository.
+            <p><code>git push [remote][branch-name]</code></p> 
+            <p>However, if your branch is newly created, then you also need to upload the branch with the following command:<br>
+              <code>git push --set-upstream [remote] [name-of-your-branch]</code> <br>
+              alternatively you can also use: <code>git push -u origin [branch_name]</code> </p>
+          
+          </li>
+            
+          <li> <code>git pull</code> : command is used to get updates from the remote repo. 
+            This command is a combination of git fetch and git merge which means that, when we use git pull, 
+            it gets the updates from remote repository (git fetch) and immediately applies the latest changes in your local (git merge).<br>
+            <code>git pull [remote]</code>  </li>
+            
+            <li> <code>git log -- oneline</code> : To see our commit history, first we need to use:
+             </li>
+    
+          <li> <code>git revert</code> : A safer way that we can undo our commits is by using git revert. 
+            We just need to specify the hash code next to our commit that we would like to undo:<br>
+              <code>git revert 3321844</code><br>
+             The Git revert command will undo the given commit, but will create a new commit without deleting the older one:
+             The advantage of using git revert is that it doesn't touch the commit history. This means that you can still see all of the commits in your history, even the reverted ones. 
+             Another safety measure here is that everything happens in our local system unless we push them to the remote repo. That's why git revert is safer to use and is the preferred way to undo our commits.
+          </li>
+    
+          <li> <code>git pull origin main</code> : Update local copy with the remote copy  </li>
+          <li><code>git fetch</code> : Use git fetch to retrieve new work done by other people. Fetching from a repository grabs all the new remote-tracking branches and tags without merging those changes into your own branches.</li>
+          
+          <li><code>git diff</code> : Show you all of your local changes since you last committed.</li>
+          
+          <li><code>git diff index.html</code> : To check what changes made to a certain file simply add the path of a file as an option </li>
+          
+          <li><code>git diff --color-words index.html</code> : this option shows a more concise view </li>
+          
+          <li><code>git diff --staged index.html</code> : Staged changes in a certain file</li>
+          
+          <li><code>git diff --staged</code> : Staged changes in all local files</li>
+    
+        <li><code>git diff main (NAME OF OTHER BRANCH)</code> : It's also possible to compare two branches to each other. This helps you find out how exactly the code in both branches is different:</li>
+    
+        <li><code>git diff main feature/login index.html</code> : Compare a certain file in two different branches. You can do this simply by adding the file's path:
+            This will show you how the file "index.html" was changed in the feature/login branch, compared to how it looks in the main branch.
+    
+        </li>
+        
+    
+    </ul>
+     
+    <h2>Git Advanced Topics</h2>
+    <ul>
+    
+      <li> <code>git remote update origin --prune</code> : To update the local list of remote branches </li> 
+    
+      <li> <code> git branch -a</code> : To show all local and remote branches that (local) Git knows about </li>
+    
+    
+      <li> <code>git checkout dev</code> : When you've completed development in your branch and everything works fine, 
+           the final step is merging the branch with the parent branch (dev or master). 
+           This is done with the git merge command. Git merge basically integrates your feature branch with all of its 
+           commits back to the dev (or master) branch. 
+           It's important to remember that you first need to be on the specific branch that you want to merge with your feature branch.
+           For example, when you want to merge your feature branch into the dev branch. First you should switch to the dev branch:
+       </li>
+    
+      <li> <code> git fetch</code> : Before merging, you should update your local dev branch </li>
+    
+      <li> <code>git merge [branch-name]</code> : Finally, you can merge your feature branch into dev </li>
+    
+      <li> <code>git remote -v</code> : Check the fetch and push locations  </li>
+    
+      <li> <code>git config --global user.email "email@example.com" </code> : Set an email address in Git. You can use your GitHub-provided noreply email address or any email address. </li>
+    
+      <li> <code>git remote set-url origin [updated link url https://........git]</code> : Update renamed repository address  </li>
+    </ul>
+    
+      <h3> Setting up GitHub on a new Linux installation </h3>
+    
+      <ol> 
+          <li> <code>git config --global user.name "Amal K" </code> : Use this command for adding a user name and confirm that you have set the Git username correctly:
+      <br><code>git config user.name</code> </li>
+    
+      <li> <code>git config --global user.email "email@example.com"</code> : To set an email address in Git. 
+        You can use your GitHub-provided noreply email address or any email address.<br>
+      To confirm that you have set the email address correctly in Git:<br>
+      <code>git config --global user.email</code> </li>
+    
+      <li> <code>ssh-keygen -t ed25519 -C "your_email@example.com"</code> : Generating a new SSH key, for further information 
+        <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank">Visit here</a>
+       </li> 
+    
+      <li> <code>eval "$(ssh-agent -s)"<br>
+        ssh-add ~/.ssh/id_ed25519</code> : Adding your SSH key to the ssh-agent
+      </li>
+    
+      <li> <code>cat ~/.ssh/id_ed25519.pub</code> : Adding a new SSH key to your GitHub account 
+        <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account" target="_blank">Visit here</a>
+      <br>
+      Then select and copy the contents of the id_ed25519.pub file displayed in the terminal to your clipboard
+      In the upper-right corner of any GitHub page, click your profile photo, then click Settings. <br>
+      Settings icon in the user bar, In the "Access" section of the sidebar, 
+      click SSH and GPG keys. Click New SSH key or Add SSH key. These steps should set your new Linux machine with Github
+      </li>
+    
+    </ol>
+    
+    <!-- ********** End of Git reference section **********-->
+    </div>
+
 <div>
+
+<!-- ********** Start of JavaScript reference section **********-->
+<h1 id="JavaScript">JavaScript Reference</h1>
+    <a href="https://github.com/1Amal/engineering-reference/tree/main/JavaScript">Click here to view other JavaScript resources</a>
+
+    <h2>Setup JavaScript</h2>
+    <ul>
+        <li> External JavaScript: JavaScript files have the file extension .js.
+            To use an external script, put the name of the script file in the src (source) attribute of 
+            <br> 
+            <code>   
+            &ltscript&gt tag: <br>
+                    &ltscript src="myScript.js"&gt &lt/script&gt
+                </code> 
+        </li>
+
+        <li> JavaScript in &lthead&gt
+                JavaScript can be placed in the &lthead&gt section of an HTML page.<br>
+                
+                <code>
+                    &lt!DOCTYPE html&gt <br>
+                    &lthtml&gt <br>
+                    &lthead&gt <br>
+                    &ltscript&gt <br>
+                    function myFunction() { <br>
+                      document.getElementById("demo").innerHTML = "Paragraph changed.";<br>
+                    }<br>
+                    &lt/script&gt<br>
+                    &lt/head&gt<br>
+                    &ltbody&gt<br>
+
+                    
+                    &lt/body&gt<br>
+                    &lt/html&gt
+
+                </code>
+        </li>
+
+        <li> JavaScript in &ltbody&gt : JavaScript function can be placed in the &ltbody&gt section of an HTML page.
+                    <br>          
+                <code>
+                &lt!DOCTYPE html&gt <br>
+                &lthtml&gt <br>
+                &ltbody&gt <br>
+                
+                &lth2&gtDemo JavaScript in Body &lt/h2&gt <br>
+                
+                &ltscript&gt <br>
+                function myFunction() { <br>
+                  document.getElementById("demo").innerHTML = "Paragraph changed."; <br>
+                }<br>
+                &lt/script&gt <br>
+                
+                &lt/body&gt <br>
+                &lt/html&gt <br>
+            </code>
+
+        </li>
+        <h2>Loops</h2>
+        <p>
+            Which loop type should you use?
+If you're iterating through an array or some other object that supports it, 
+and don't need access to the index position of each item, then for...of is the best choice. 
+It's easier to read and there's less to go wrong.
+
+For other uses, for, while, and do...while loops are largely interchangeable. They can all be used to solve the same problems, and which one you use will largely depend on your personal preference — which one you find easiest to remember or most intuitive. We would recommend for, at least to begin with, as it is probably the easiest for remembering everything — the initializer, condition, and final-expression all have to go neatly into the parentheses, 
+so it is easy to see where they are and check that you aren't missing them.
+
+        </p>
+        <li>
+            <b>for...of loops</b>
+            <br>
+
+                for (const item of array) <br>
+                {<br>
+                // code to run <br>
+                }
+        </li>
+
+        <li>
+
+            <b>for loops</b> <br>
+
+                for (initializer; condition; final-expression) <br>
+                {<br>
+                // code to run<br>
+                }
+        </li>
+
+        <li>
+                <b>while loops</b> <br>
+
+                initializer <br>
+                while (condition) <br>
+                { <br>
+                // code to run
+                <br>
+                final-expression <br>
+                }
+
+        </li>
+
+        <li>
+
+            <b>do...while loops</b> <br>
+                initializer <br>
+                do <br>
+                { <br>
+                    // code to run<br>
+
+                final-expression <br>
+                } <br>
+                while (condition) 
+        </li>
+
+
+    </ul>
+
+<!-- ********** End of JavaScript reference section **********-->
+</div>
+
+
+<div>
+
+    <!-- ********** Start of HTML reference section **********-->
+    <h1 id="HTML">HTML Reference</h1>
+    <ul>
+    <li> <a href="https://github.com/1Amal/engineering-reference/tree/main/HTML">Click here to view other HTML resources</a> </li>
+    <li> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">Mozilla Developer Network, HTML</a> </li>
+    <li><a href="https://www.w3schools.com/TAGS/default.asp" target="_blank">HTML tags from W3Schools</a></li>
+    <li> <a href="https://validator.w3.org/" target="_blank">HTML Validator</a> </li>
+    
+    
+    </ul>
+    
+    <ul>
+        <li><code>&lt!--This is a comment--&gt</code> : HTML Comments</li>
+        <li><code>&lt!DOCTYPE&gt</code> : Defines the document type</li>
+        <li><code>&lthead&gt</code> : Contains metadata/information for the document</li>
+        <li><code>&lthtml&gt</code> : Defines the root of an HTML document</li>
+        <li><code>&lta&gt</code> : Defines a hyperlink</li>
+        <li><code>&ltabbr&gt</code> : Defines an abbreviation or an acronym</li>
+        <li><code>&ltb&gt</code> : Defines bold text</li>
+        <li><code>&ltbody&gt </code> : Defines the document's body</li>
+        <li><code>&ltbr&gt</code> : Defines a single line break</li>
+        <li><code>&ltbutton&gt</code> : Defines a clickable button</li>
+        <li><code>&ltdiv&gt</code> : Defines a section in a document</li>
+        <li><code>&ltem&gt</code>: Defines emphasized text </li>
+        <li><code>&lth1&gt to &lth6&gt</code> : Defines HTML headings</li>
+        
+    </ul>
+    
+    <!-- ********** End of HTML reference section **********-->
+    </div>
+    
+    <div>
+    
+    <!-- ********** Start of CSS reference section **********-->
+    <h1 id="CSS">CSS Reference</h1>
+    <a href="https://github.com/1Amal/engineering-reference/tree/main/CSS">Click here to view other CSS resources</a><br>
+    <a href="https://www.w3schools.com/cssref/index.php" target="_blank">W3Schools CSS Reference </a>
+    </body>
+    </html>
+    
+    <h2>CSS Setup</h2>
+    <ul>
+        <li>External CSS: To use an external style sheet, add a link to it in the <head> section of each HTML page <br>
+            <code>
+                &lt!DOCTYPE html> <br>
+                    &lthtml&gt <br>
+                        &lthead&gt <br>
+                            &ltlink rel="stylesheet" href="styles.css"&gt <br>
+                        &lt/head&gt <br>
+                    &ltbody&gt <br>
+    
+                        &lth1&gtThis is a heading &lt/h1&gt <br>
+                        &ltp>This is a paragraph. &lt/p&gt <br>
+    
+                    &lt/body&gt <br>
+                    &lt/html&gt <br>
+        </li>
+    
+        <li>Internal css
+            An internal CSS is defined in the &lthead&gt section of an HTML page, within a &ltstyle&gt element.
+            <br>
+            <code>
+                &lt!DOCTYPE html&gt <br>
+                    &lthtml&gt <br>
+                    &lthead&gt <br>
+                    &ltstyle&gt <br>
+                        body {background-color: powderblue;} <br>
+                        h1   {color: blue;} <br>
+                        p    {color: red;} <br>
+                        &lt/style&gt <br>
+                        &lt/head&gt <br>
+                        &ltbody&gt <br>
+    
+                        &ltbody&gt <br>
+                        &lthtml&
+                    </code>
+        </li>
+    
+        <li> Inline CSS: An inline CSS is used to apply a unique style to a single HTML element.<br>
+            An inline CSS uses the style attribute of an HTML element.<br>
+            The following example sets the text color of the &lth1&gt element to blue, and the text color of the &ltp&gt element to red:<br>
+    
+            Example: <br>
+            <code>
+            &lth1 style="color:blue;">A Blue Heading &lt/h1&gt <br>
+    
+            &ltp style="color:red;">A red paragraph.&lt/p&gt
+        </code>
+    
+        </li>
+    
+        <h3>Following is from Odin Project only used here for reference and personal 
+            learning (https://www.theodinproject.com/lessons/foundations-introduction-to-flexbox) </h3>
+    <li> 
+    display:flex; : A flex container is any element that has display: flex on it. 
+    A flex item is any element that lives directly inside of a flex container. 
+    Somewhat confusingly, any element can be both a flex container and a flex item. 
+    Said another way, you can also put display: flex on a flex item and then use flexbox to arrange its children.
+    Flex is actually a shorthand for flex-grow, flex-shrink and flex-basis. 
+    (https://www.theodinproject.com/lessons/foundations-growing-and-shrinking)
+    </li>
+    
+    <li> flex-grow : Expects a single number as its value, and that number is used as the flex-item’s 
+        “growth factor”. When we applied flex: 1 to every div inside our container, 
+        we were telling every div to grow the same amount. 
+        The result of this is that every div ends up the exact same size. 
+        If we instead add flex: 2 to just one of the divs, then that div would grow to 2x the size of the others.
+    </li>
+    
+    <li> flex-shrink : Similar to flex-grow, but sets the “shrink factor” of a flex item. 
+        flex-shrink only ends up being applied if the size of all flex items is larger than their parent container.
+        For example, if our 3 divs from above had a width declaration like: width: 100px, and .flex-container was 
+        smaller than 300px, our divs would have to shrink to fit. </li>
+    
+    <li> flex-basis : Simply sets the initial size of a flex item, so any sort of flex-growing or 
+    flex-shrinking starts from that baseline size. 
+    The shorthand value defaults to flex-basis: 0%. The reason we had to change it to auto in the flex-shrink 
+    example is that with the basis set to 0, those items would ignore the item’s width, and everything would 
+    shrink evenly. Using auto as a flex-basis tells the item to check for a width declaration (width: 250px).
+    Important Note About Flex-Basis: There is a difference between the default value of flex-basis and the way 
+    the flex shorthand defines it if no flex-basis is given. The actual default value for flex-basis is auto, 
+    but when you specify flex: 1 on an element, it interprets that as flex: 1 1 0. 
+    If you want to only adjust an item’s flex-grow you can simply do so directly, without the shorthand. 
+    Or you can be more verbose and use the full 3 value shorthand flex: 1 1 auto, which is also equivalent to 
+    using flex: auto. </li>
+    
+    <li> flex: auto; : Is one of the shorthands of flex. When auto is defined as a flex keyword it is equivalent to 
+        the values of flex-grow: 1, flex-shrink: 1 and flex-basis: auto or to flex: 1 1 auto using the flex 
+        shorthand. 
+        Note that flex: auto is not the default value when using the flex shorthand despite the name being “auto” 
+        which may be slightly confusing at first. You will encounter and learn more about flex: auto and its
+         potential use-cases when reading through the assignment section.
+    
+    In Practice: You will likely not be using complex values for flex-grow, flex-shrink or flex-basis. Generally, you’re most likely to use declarations like 
+    flex: 1; to make divs grow evenly and flex-shrink: 0 to keep certain divs from shrinking. It is possible to get fancy, and set up layouts where some columns relate to each other in a specific ratio, so it’s useful to know that you can use other values, but those are relatively rare.
+    </li>
+    
+    <li>flex-direction:column; : column puts the main axis vertical (top-to-bottom). </li>
+    
+    <li>flex-direction: row; : Puts the main axis horizontal (left-to-right), the flex-direction property's 
+        default is row. </li>
+    
+    <li> justify-content: center; : Aligns items across the main axis vertically </li>
+    
+    <li> align-items: center; : Aligns items across the main axis horizontally </li>
+    
+    <li> gap: 8px; : Setting gap on a flex container simply adds a specified space between flex 
+        items (https://www.theodinproject.com/lessons/foundations-alignment) </li>
+    
+    <li> As with all properties in CSS, some initial values are defined, so when creating a flex container all of the contained flex items will behave in the following way.
+    
+        Items display in a row (the flex-direction property's default is row).
+        The items start from the start edge of the main axis.
+        The items do not stretch on the main dimension, but can shrink.
+        The items will stretch to fill the size of the cross axis.
+        The flex-basis property is set to auto.
+        The flex-wrap property is set to nowrap.
+    </li>
+    
+    <li> flex-wrap: no-wrap; : Using nowrap would cause an overflow if the items were not able to shrink, 
+        or could not shrink small enough to fit. It is also the initial value. </li>
+    <li> flex-wrap: wrap; : As flex-wrap is set to wrap, the items wrap </li>
+    
+    <li>flex-flow : You can combine the two properties flex-direction and flex-wrap into the flex-flow shorthand. The first value specified is flex-direction and the second value is flex-wrap </li>
+    </ul>
+    
+    <!-- ********** End of CSS reference section **********-->
+    </div>
+
+
 <!-- ********** Start of RaspberriPi reference section **********-->
 
 <h1 id="RaspberryPi"> RaspberryPi </h1> 
@@ -350,142 +781,7 @@ or
 
 </div>
 
-<div> 
 
-<!-- ********** Start of Git reference section **********-->
-
-<h1 id="Git">Git version control</h1>
-<ul>
-    <li> <a href="https://github.com/1Amal/engineering-reference/tree/main/Git">Click here to view other Git resources</a> </li>
-    <li> <a href="https://git-scm.com/book/en/v2"> Git Reference</a></li>
-    </ul>
-<h2>Git Basics</h2>
-    <ul>
-      <li> <code>Git clone </code> : is a command for downloading existing source code from a remote repository (like Github, for example). 
-        Git clone basically makes an identical copy of the latest version of a project in a repository and saves it to your computer.
-        There are a couple of ways to download the source code, 
-        <p>- Clone using SSH: <code>git clone git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code></p> 
-        <p>- Clone using HTTPS: <code>git clone git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code></p> 
-      </li> 
-      
-      <li> <code>git status </code>: command gives us all the necessary information about the current branch.</li>
-      
-      <li> <code>git add</code> : We need to use the git add command to include the changes of a file(s) into our next commit. 
-            <p>- To add a single file: <code>git add [filename] </code></p>
-            <p>- To add all files in repo at once: <code>git add -A </code></p>
-      </li> 
-      
-      <li> <code> git commit</code>:  is like setting a checkpoint in the development process which you can go back to later if needed.
-        We also need to write a short message to explain what we have developed or changed in the source code.
-        <p><code>git commit -m "commit message"</code></p>
-      </li>
-
-      <li> <code>git push</code> :After committing your changes, the next thing you want to do is send your changes to the remote server. Git push uploads your commits to the remote repository.
-        <p><code>git push [remote][branch-name]</code></p> 
-        <p>However, if your branch is newly created, then you also need to upload the branch with the following command:<br>
-          <code>git push --set-upstream [remote] [name-of-your-branch]</code> <br>
-          alternatively you can also use: <code>git push -u origin [branch_name]</code> </p>
-      
-      </li>
-        
-      <li> <code>git pull</code> : command is used to get updates from the remote repo. 
-        This command is a combination of git fetch and git merge which means that, when we use git pull, 
-        it gets the updates from remote repository (git fetch) and immediately applies the latest changes in your local (git merge).<br>
-        <code>git pull [remote]</code>  </li>
-        
-        <li> <code>git log -- oneline</code> : To see our commit history, first we need to use:
-         </li>
-
-      <li> <code>git revert</code> : A safer way that we can undo our commits is by using git revert. 
-        We just need to specify the hash code next to our commit that we would like to undo:<br>
-          <code>git revert 3321844</code><br>
-         The Git revert command will undo the given commit, but will create a new commit without deleting the older one:
-         The advantage of using git revert is that it doesn't touch the commit history. This means that you can still see all of the commits in your history, even the reverted ones. 
-         Another safety measure here is that everything happens in our local system unless we push them to the remote repo. That's why git revert is safer to use and is the preferred way to undo our commits.
-      </li>
-
-      <li> <code>git pull origin main</code> : Update local copy with the remote copy  </li>
-      <li><code>git fetch</code> : Use git fetch to retrieve new work done by other people. Fetching from a repository grabs all the new remote-tracking branches and tags without merging those changes into your own branches.</li>
-      
-      <li><code>git diff</code> : Show you all of your local changes since you last committed.</li>
-      
-      <li><code>git diff index.html</code> : To check what changes made to a certain file simply add the path of a file as an option </li>
-      
-      <li><code>git diff --color-words index.html</code> : this option shows a more concise view </li>
-      
-      <li><code>git diff --staged index.html</code> : Staged changes in a certain file</li>
-      
-      <li><code>git diff --staged</code> : Staged changes in all local files</li>
-
-    <li><code>git diff main (NAME OF OTHER BRANCH)</code> : It's also possible to compare two branches to each other. This helps you find out how exactly the code in both branches is different:</li>
-
-    <li><code>git diff main feature/login index.html</code> : Compare a certain file in two different branches. You can do this simply by adding the file's path:
-        This will show you how the file "index.html" was changed in the feature/login branch, compared to how it looks in the main branch.
-
-    </li>
-    
-
-</ul>
- 
-<h2>Git Advanced Topics</h2>
-<ul>
-
-  <li> <code>git remote update origin --prune</code> : To update the local list of remote branches </li> 
-
-  <li> <code> git branch -a</code> : To show all local and remote branches that (local) Git knows about </li>
-
-
-  <li> <code>git checkout dev</code> : When you've completed development in your branch and everything works fine, 
-       the final step is merging the branch with the parent branch (dev or master). 
-       This is done with the git merge command. Git merge basically integrates your feature branch with all of its 
-       commits back to the dev (or master) branch. 
-       It's important to remember that you first need to be on the specific branch that you want to merge with your feature branch.
-       For example, when you want to merge your feature branch into the dev branch. First you should switch to the dev branch:
-   </li>
-
-  <li> <code> git fetch</code> : Before merging, you should update your local dev branch </li>
-
-  <li> <code>git merge [branch-name]</code> : Finally, you can merge your feature branch into dev </li>
-
-  <li> <code>git remote -v</code> : Check the fetch and push locations  </li>
-
-  <li> <code>git config --global user.email "email@example.com" </code> : Set an email address in Git. You can use your GitHub-provided noreply email address or any email address. </li>
-
-  <li> <code>git remote set-url origin [updated link url https://........git]</code> : Update renamed repository address  </li>
-</ul>
-
-  <h3> Setting up GitHub on a new Linux installation </h3>
-
-  <ol> 
-      <li> <code>git config --global user.name "Amal K" </code> : Use this command for adding a user name and confirm that you have set the Git username correctly:
-  <br><code>git config user.name</code> </li>
-
-  <li> <code>git config --global user.email "email@example.com"</code> : To set an email address in Git. 
-    You can use your GitHub-provided noreply email address or any email address.<br>
-  To confirm that you have set the email address correctly in Git:<br>
-  <code>git config --global user.email</code> </li>
-
-  <li> <code>ssh-keygen -t ed25519 -C "your_email@example.com"</code> : Generating a new SSH key, for further information 
-    <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank">Visit here</a>
-   </li> 
-
-  <li> <code>eval "$(ssh-agent -s)"<br>
-    ssh-add ~/.ssh/id_ed25519</code> : Adding your SSH key to the ssh-agent
-  </li>
-
-  <li> <code>cat ~/.ssh/id_ed25519.pub</code> : Adding a new SSH key to your GitHub account 
-    <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account" target="_blank">Visit here</a>
-  <br>
-  Then select and copy the contents of the id_ed25519.pub file displayed in the terminal to your clipboard
-  In the upper-right corner of any GitHub page, click your profile photo, then click Settings. <br>
-  Settings icon in the user bar, In the "Access" section of the sidebar, 
-  click SSH and GPG keys. Click New SSH key or Add SSH key. These steps should set your new Linux machine with Github
-  </li>
-
-</ol>
-
-<!-- ********** End of Git reference section **********-->
-</div>
 
 <div> 
 
@@ -957,300 +1253,8 @@ print(thisdict) </p>
 <!-- ********** End of Python reference section **********-->
 </div>
 
-<div>
-
-<!-- ********** Start of HTML reference section **********-->
-<h1 id="HTML">HTML Reference</h1>
-<ul>
-<li> <a href="https://github.com/1Amal/engineering-reference/tree/main/HTML">Click here to view other HTML resources</a> </li>
-<li> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">Mozilla Developer Network, HTML</a> </li>
-<li><a href="https://www.w3schools.com/TAGS/default.asp" target="_blank">HTML tags from W3Schools</a></li>
-<li> <a href="https://validator.w3.org/" target="_blank">HTML Validator</a> </li>
-
-
-</ul>
-
-<ul>
-    <li><code>&lt!--This is a comment--&gt</code> : HTML Comments</li>
-    <li><code>&lt!DOCTYPE&gt</code> : Defines the document type</li>
-    <li><code>&lthead&gt</code> : Contains metadata/information for the document</li>
-    <li><code>&lthtml&gt</code> : Defines the root of an HTML document</li>
-    <li><code>&lta&gt</code> : Defines a hyperlink</li>
-    <li><code>&ltabbr&gt</code> : Defines an abbreviation or an acronym</li>
-    <li><code>&ltb&gt</code> : Defines bold text</li>
-    <li><code>&ltbody&gt </code> : Defines the document's body</li>
-    <li><code>&ltbr&gt</code> : Defines a single line break</li>
-    <li><code>&ltbutton&gt</code> : Defines a clickable button</li>
-    <li><code>&ltdiv&gt</code> : Defines a section in a document</li>
-    <li><code>&ltem&gt</code>: Defines emphasized text </li>
-    <li><code>&lth1&gt to &lth6&gt</code> : Defines HTML headings</li>
-    
-</ul>
-
-<!-- ********** End of HTML reference section **********-->
-</div>
-
-<div>
-
-<!-- ********** Start of CSS reference section **********-->
-<h1 id="CSS">CSS Reference</h1>
-<a href="https://github.com/1Amal/engineering-reference/tree/main/CSS">Click here to view other CSS resources</a><br>
-<a href="https://www.w3schools.com/cssref/index.php" target="_blank">W3Schools CSS Reference </a>
-</body>
-</html>
-
-<h2>CSS Setup</h2>
-<ul>
-    <li>External CSS: To use an external style sheet, add a link to it in the <head> section of each HTML page <br>
-        <code>
-            &lt!DOCTYPE html> <br>
-                &lthtml&gt <br>
-                    &lthead&gt <br>
-                        &ltlink rel="stylesheet" href="styles.css"&gt <br>
-                    &lt/head&gt <br>
-                &ltbody&gt <br>
-
-                    &lth1&gtThis is a heading &lt/h1&gt <br>
-                    &ltp>This is a paragraph. &lt/p&gt <br>
-
-                &lt/body&gt <br>
-                &lt/html&gt <br>
-    </li>
-
-    <li>Internal css
-        An internal CSS is defined in the &lthead&gt section of an HTML page, within a &ltstyle&gt element.
-        <br>
-        <code>
-            &lt!DOCTYPE html&gt <br>
-                &lthtml&gt <br>
-                &lthead&gt <br>
-                &ltstyle&gt <br>
-                    body {background-color: powderblue;} <br>
-                    h1   {color: blue;} <br>
-                    p    {color: red;} <br>
-                    &lt/style&gt <br>
-                    &lt/head&gt <br>
-                    &ltbody&gt <br>
-
-                    &ltbody&gt <br>
-                    &lthtml&
-                </code>
-    </li>
-
-    <li> Inline CSS: An inline CSS is used to apply a unique style to a single HTML element.<br>
-        An inline CSS uses the style attribute of an HTML element.<br>
-        The following example sets the text color of the &lth1&gt element to blue, and the text color of the &ltp&gt element to red:<br>
-
-        Example: <br>
-        <code>
-        &lth1 style="color:blue;">A Blue Heading &lt/h1&gt <br>
-
-        &ltp style="color:red;">A red paragraph.&lt/p&gt
-    </code>
-
-    </li>
-
-    <h3>Following is from Odin Project only used here for reference and personal 
-        learning (https://www.theodinproject.com/lessons/foundations-introduction-to-flexbox) </h3>
-<li> 
-display:flex; : A flex container is any element that has display: flex on it. 
-A flex item is any element that lives directly inside of a flex container. 
-Somewhat confusingly, any element can be both a flex container and a flex item. 
-Said another way, you can also put display: flex on a flex item and then use flexbox to arrange its children.
-Flex is actually a shorthand for flex-grow, flex-shrink and flex-basis. 
-(https://www.theodinproject.com/lessons/foundations-growing-and-shrinking)
-</li>
-
-<li> flex-grow : Expects a single number as its value, and that number is used as the flex-item’s 
-    “growth factor”. When we applied flex: 1 to every div inside our container, 
-    we were telling every div to grow the same amount. 
-    The result of this is that every div ends up the exact same size. 
-    If we instead add flex: 2 to just one of the divs, then that div would grow to 2x the size of the others.
-</li>
-
-<li> flex-shrink : Similar to flex-grow, but sets the “shrink factor” of a flex item. 
-    flex-shrink only ends up being applied if the size of all flex items is larger than their parent container.
-    For example, if our 3 divs from above had a width declaration like: width: 100px, and .flex-container was 
-    smaller than 300px, our divs would have to shrink to fit. </li>
-
-<li> flex-basis : Simply sets the initial size of a flex item, so any sort of flex-growing or 
-flex-shrinking starts from that baseline size. 
-The shorthand value defaults to flex-basis: 0%. The reason we had to change it to auto in the flex-shrink 
-example is that with the basis set to 0, those items would ignore the item’s width, and everything would 
-shrink evenly. Using auto as a flex-basis tells the item to check for a width declaration (width: 250px).
-Important Note About Flex-Basis: There is a difference between the default value of flex-basis and the way 
-the flex shorthand defines it if no flex-basis is given. The actual default value for flex-basis is auto, 
-but when you specify flex: 1 on an element, it interprets that as flex: 1 1 0. 
-If you want to only adjust an item’s flex-grow you can simply do so directly, without the shorthand. 
-Or you can be more verbose and use the full 3 value shorthand flex: 1 1 auto, which is also equivalent to 
-using flex: auto. </li>
-
-<li> flex: auto; : Is one of the shorthands of flex. When auto is defined as a flex keyword it is equivalent to 
-    the values of flex-grow: 1, flex-shrink: 1 and flex-basis: auto or to flex: 1 1 auto using the flex 
-    shorthand. 
-    Note that flex: auto is not the default value when using the flex shorthand despite the name being “auto” 
-    which may be slightly confusing at first. You will encounter and learn more about flex: auto and its
-     potential use-cases when reading through the assignment section.
-
-In Practice: You will likely not be using complex values for flex-grow, flex-shrink or flex-basis. Generally, you’re most likely to use declarations like 
-flex: 1; to make divs grow evenly and flex-shrink: 0 to keep certain divs from shrinking. It is possible to get fancy, and set up layouts where some columns relate to each other in a specific ratio, so it’s useful to know that you can use other values, but those are relatively rare.
-</li>
-
-<li>flex-direction:column; : column puts the main axis vertical (top-to-bottom). </li>
-
-<li>flex-direction: row; : Puts the main axis horizontal (left-to-right), the flex-direction property's 
-    default is row. </li>
-
-<li> justify-content: center; : Aligns items across the main axis vertically </li>
-
-<li> align-items: center; : Aligns items across the main axis horizontally </li>
-
-<li> gap: 8px; : Setting gap on a flex container simply adds a specified space between flex 
-    items (https://www.theodinproject.com/lessons/foundations-alignment) </li>
-
-<li> As with all properties in CSS, some initial values are defined, so when creating a flex container all of the contained flex items will behave in the following way.
-
-    Items display in a row (the flex-direction property's default is row).
-    The items start from the start edge of the main axis.
-    The items do not stretch on the main dimension, but can shrink.
-    The items will stretch to fill the size of the cross axis.
-    The flex-basis property is set to auto.
-    The flex-wrap property is set to nowrap.
-</li>
-
-<li> flex-wrap: no-wrap; : Using nowrap would cause an overflow if the items were not able to shrink, 
-    or could not shrink small enough to fit. It is also the initial value. </li>
-<li> flex-wrap: wrap; : As flex-wrap is set to wrap, the items wrap </li>
-
-<li>flex-flow : You can combine the two properties flex-direction and flex-wrap into the flex-flow shorthand. The first value specified is flex-direction and the second value is flex-wrap </li>
-</ul>
-
-<!-- ********** End of CSS reference section **********-->
-</div>
 
 <div> 
-
-<!-- ********** Start of JavaScript reference section **********-->
-<h1 id="JavaScript">JavaScript Reference</h1>
-    <a href="https://github.com/1Amal/engineering-reference/tree/main/JavaScript">Click here to view other JavaScript resources</a>
-
-    <h2>Setup JavaScript</h2>
-    <ul>
-        <li> External JavaScript: JavaScript files have the file extension .js.
-            To use an external script, put the name of the script file in the src (source) attribute of 
-            <br> 
-            <code>   
-            &ltscript&gt tag: <br>
-                    &ltscript src="myScript.js"&gt &lt/script&gt
-                </code> 
-        </li>
-
-        <li> JavaScript in &lthead&gt
-                JavaScript can be placed in the &lthead&gt section of an HTML page.<br>
-                
-                <code>
-                    &lt!DOCTYPE html&gt <br>
-                    &lthtml&gt <br>
-                    &lthead&gt <br>
-                    &ltscript&gt <br>
-                    function myFunction() { <br>
-                      document.getElementById("demo").innerHTML = "Paragraph changed.";<br>
-                    }<br>
-                    &lt/script&gt<br>
-                    &lt/head&gt<br>
-                    &ltbody&gt<br>
-
-                    
-                    &lt/body&gt<br>
-                    &lt/html&gt
-
-                </code>
-        </li>
-
-        <li> JavaScript in &ltbody&gt : JavaScript function can be placed in the &ltbody&gt section of an HTML page.
-                    <br>          
-                <code>
-                &lt!DOCTYPE html&gt <br>
-                &lthtml&gt <br>
-                &ltbody&gt <br>
-                
-                &lth2&gtDemo JavaScript in Body &lt/h2&gt <br>
-                
-                &ltscript&gt <br>
-                function myFunction() { <br>
-                  document.getElementById("demo").innerHTML = "Paragraph changed."; <br>
-                }<br>
-                &lt/script&gt <br>
-                
-                &lt/body&gt <br>
-                &lt/html&gt <br>
-            </code>
-
-        </li>
-        <h2>Loops</h2>
-        <p>
-            Which loop type should you use?
-If you're iterating through an array or some other object that supports it, 
-and don't need access to the index position of each item, then for...of is the best choice. 
-It's easier to read and there's less to go wrong.
-
-For other uses, for, while, and do...while loops are largely interchangeable. They can all be used to solve the same problems, and which one you use will largely depend on your personal preference — which one you find easiest to remember or most intuitive. We would recommend for, at least to begin with, as it is probably the easiest for remembering everything — the initializer, condition, and final-expression all have to go neatly into the parentheses, 
-so it is easy to see where they are and check that you aren't missing them.
-
-        </p>
-        <li>
-            <b>for...of loops</b>
-            <br>
-
-                for (const item of array) <br>
-                {<br>
-                // code to run <br>
-                }
-        </li>
-
-        <li>
-
-            <b>for loops</b> <br>
-
-                for (initializer; condition; final-expression) <br>
-                {<br>
-                // code to run<br>
-                }
-        </li>
-
-        <li>
-                <b>while loops</b> <br>
-
-                initializer <br>
-                while (condition) <br>
-                { <br>
-                // code to run
-                <br>
-                final-expression <br>
-                }
-
-        </li>
-
-        <li>
-
-            <b>do...while loops</b> <br>
-                initializer <br>
-                do <br>
-                { <br>
-                    // code to run<br>
-
-                final-expression <br>
-                } <br>
-                while (condition) 
-        </li>
-
-
-    </ul>
-
-<!-- ********** End of JavaScript reference section **********-->
-</div>
-
-
 
 </body>
 
