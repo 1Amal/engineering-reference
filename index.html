@@ -287,7 +287,15 @@ or
             it gets the updates from remote repository (git fetch) and immediately applies the latest changes in your local (git merge).<br>
             <code>git pull [remote]</code>  </li>
             
-            <li> <code>git log -- oneline</code> : To see our commit history, first we need to use:
+            <li> <code>git log -- oneline</code> : To see our commit history
+             </li>
+
+             <li>Git can specify which files or parts of your project should be ignored by Git using a .gitignore file.
+
+                Step 1: touch .gitignore 
+                Step 2: # text comment	| name	All name files, name folders, and files and folders in any name folder | name/	Ending with / specifies the pattern is for a folder. Matches all files and folders in any name folder
+
+                For more information go to : <a href="https://www.w3schools.com/git/git_ignore.asp?remote=github" target="_blank">Git Ignore</a>
              </li>
     
           <li> <code>git revert</code> : A safer way that we can undo our commits is by using git revert. 
