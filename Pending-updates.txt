@@ -19,6 +19,29 @@ Just tell git to ignore filemode change. Here are several ways to do so:
 
      [core]
           filemode = false
+          
+          
+ Public e-mail address change if you get this error
+  ! [remote rejected] main -> main (push declined due to email privacy restrictions)
+  
+  You can see your personal e-mail address, which is used by default for your commits in Git:
+
+git config --global user.email
+Find your GitHub noreply address in your GitHub's Personal Settings → Emails. It's mentioned in the description of the Keep my email address private checkbox. Usually, it starts with a unique identifier, plus your username:
+
+{ID}+{username}@users.noreply.github.com
+
+hange the global user e-mail address setting to be your GitHub noreply address:
+
+git config --global user.email {ID}+{username}@users.noreply.github.com
+Reset the author information on your last commit:
+
+git commit --amend --reset-author
+If you have multiple commits with your private e-mail address, see this answer.
+
+Now you can push the commit with the noreply e-mail address, and future commits will have the noreply e-mail address as well.
+
+git push
 
 
 
