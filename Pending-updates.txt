@@ -2,11 +2,60 @@ Place to add all updates to the reference database before they are entered into 
 
 **************** Pending updates ****************
 
-***** FLEXBOX CSS *****
+***** Git *****
+When the repo is cloned between Windows and Linux/Unix machines.
+
+Just tell git to ignore filemode change. Here are several ways to do so:
+
+    Config ONLY for current repo:
+
+     git config core.filemode false
+
+    Config globally:
+
+     git config --global core.filemode false
+
+    Add in ~/.gitconfig:
+
+     [core]
+          filemode = false
+
+
 
 
 ***** Linux *****
-Test
+sudo lshw : View hardware info
+Edit the Laptop Lid close behaviour
+sudo gnome-text-editor /etc/systemd/logind.conf
+find out the line #HandleLidSwitch=suspend and change it to one of following :
+
+    HandleLidSwitch=lock – lock when lid closed.
+    HandleLidSwitch=ignore – do nothing, some laptops will disconnect Wi-Fi.
+    HandleLidSwitch=poweroff – shutdown.
+    HandleLidSwitch=hibernate – hibernate Ubuntu.
+    
+    sudo lshw : View hardware info
+
+restart your computer
+
+Fixing the Encrypted drive issues on boot initramfs
+When you boot Ubuntu will not mount the encrypted drive as for some reason i.e. /etc/crypttab has been changed
+cryptsetup luksOpen /dev/nvme0n1p3 DecryptedDrive
+Enter the correct password and then exit the console
+exit
+*nvme0n1p3 is the default name for the SSD, change as per the correct device
+
+Once Ubuntu boots up normally (after the encrypted drive is mounted according to the above)
+Edit the /etc/crypttab by
+sudo nano /etc/crypttab
+
+Also open up Ubuntu Disks manager and look for the LUKS encrypted drive UUID then add to the 
+DecryptedDrive UUID=XXXXX none nofail
+Then update initramfs as follows
+sudo update-initramfs -u -k all
+
+
+
 
 ***** Microsoft Windows *****
 
