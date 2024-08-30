@@ -63,9 +63,9 @@ a:active {
 }
 
 /* ********** Start of code for Navigation Bar **********  */
-.webSiteMainMenuDiv {
+.nav-bar {
   background-color: #1f2937;
-  padding: 1rem;
+  padding: 1vw;
   display: flex; /*Enable flexbox layout */
   flex-direction: row;
   justify-content: space-between; /*This defines the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. 
@@ -74,30 +74,33 @@ a:active {
   flex-shrink: 0;
 }
 
-.webSiteMainMenuDiv ul {
+.nav-bar ul {
   list-style-type: none;
-  margin: 0rem;
-  padding: 0rem;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
 }
 
-.webSiteMainMenuDiv li {
+.nav-bar li {
   float: left;
 }
 
-.webSiteMainMenuDiv li a {
+.nav-bar li a {
   color: #f9faf8;
-  padding: 1rem;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
   text-decoration: none;
   font-size: 2rem;
 }
 
-.webSiteMainMenuDiv li a:hover {
-  background-color: #11b076;
+.nav-bar li a:hover {
+  background-color: #15d48e;
 }
 
-.webSiteMainMenuDiv a:active {
-  background-color: #0e0bd5;
+.nav-bar a:active {
+  background-color: #0704aa;
 }
 
 /* ********** End of code for Navigation Bar **********  */
