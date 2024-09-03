@@ -1,69 +1,136 @@
 /* CSS Style sheet Template, developed by Amal Kariyawasam (https://1amal.github.io), 
-Last Update: 23/08/2024 
+Last Update: 30/08/2024 
 */
 
-html {
-  font-size: medium;
+:root {
+  font-family: "openSansRegular";
+  font-size: 16px;
+
+  /* min-height: 100vh;   */
+  /* The min-width CSS property sets the minimum width of an element. 
+  It prevents the used value of the width property from becoming smaller than the value specified for min-width. */
+
+  /* Colour Scheme */
+  /* HTML Main Element Colours */
+  --colour-RootBackground: #ffffff;
+  --colour-H1-Heading: #000000;
+  --colour-H2-Heading: #160404;
+  --colour-H3-Heading: #1e1c1c;
+  --colour-P-Paragraph: #1f2937;
+  --colour-HeadingBackground: #ffffff;
+  --colour-ALinks: #2997ff;
+  --colour-ALinksActive: #13a570;
+  --colour-ALinksVisited: #027a50;
+  --colour-ALinksHover: #7940e3;
+  /* Different Div Section Colours */
+  --colour-MainWebsiteGridContainer: #ffffff;
+  --colour-IntroductionBackground: #f4b618;
+  --colour-IntroductionText: #000000;
+  --colour-IntroductionLogos: #0cb920;
+  --colour-ProjectBackground: #ffffff;
+  --colour-ProjectBorderWebsites: #f0a00a;
+  --colour-ProjectBorderProductivityApps: #37e50c;
+  --colour-ProjectBorderGamesMultimedia: #8f0449;
+  --colour-ProjectBorderDeveloperResources: #b03d03;
+  --colour-ProjectText: #110000;
+  --colour-FooterBackground: #caced3;
+  --colour-FooterText: #170f0f;
+  --colour-MainMenuBackground: #23ab50;
+  --colour-MainMenuText: #ffffff;
+  --colour-BorderProjects: #5e50e2;
+  --colour-CPDPending: #d68418;
+  --colour-CPDCompleted: #13a570;
+  /* Custom CSS */
+  background-color: var(--colour-RootBackground);
+  margin: 0;
 }
 
 @font-face {
   font-family: "openSansRegular";
-  src: url(./open-sans-regular.ttf);
+  src: url(../website-resources/fonts/open-sans-regular.ttf);
   font-weight: normal;
   font-style: normal;
 }
 
-body {
-  font-family: "openSansRegular";
-  display: flex;
-  flex-direction: column;
-  margin: 1rem;
-  /*  min-height: 100vh; The min-width CSS property sets the minimum width of an element. 
-  It prevents the used value of the width property from becoming smaller than the value specified for min-width. */
+h1 {
+  font-size: 2rem;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  color: var(--colour-H1-Heading);
+  background-color: var(--colour-HeadingBackground);
 }
 
-h1 {
-  display: flex;
-  justify-content: center; /*This defines the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. 
-  It also exerts some control over the alignment of items when they overflow the line. */
-  background-color: #1f2937;
-  color: #fbfbfe;
+h2 {
+  font-size: 1.5rem;
+  padding: 5px;
+  margin: 5px;
   text-align: center;
-  font-size: 2.5rem;
-  margin: 0rem;
+  color: var(--colour-H2-Heading);
+  /* background-color: var(--colour-HeadingBackground); */
+}
+
+h3 {
+  font-size: 1.25rem;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  color: var(--colour-H3-Heading);
+  /* background-color: var(--colour-HeadingBackground); */
 }
 
 p {
-  margin: 1rem;
   font-size: 1rem;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  color: var(--colour-P-Paragraph);
+  /* background-color: var(--colour-HeadingBackground); */
 }
 
 a:link {
-  color: #2997ff;
   background-color: transparent;
   text-decoration: none;
+  color: var(--colour-ALinks);
 }
 
 a:visited {
-  color: #027a50;
   background-color: transparent;
   text-decoration: none;
+  color: var(--colour-ALinksVisited);
 }
 
 a:hover {
-  color: #7940e3;
   background-color: transparent;
   text-decoration: underline;
+  color: var(--colour-ALinksHover);
 }
 
 a:active {
-  color: #086342;
   background-color: transparent;
   text-decoration: underline;
+  color: var(--colour-ALinksActive);
+}
+/* ********** Code for Containers ********** */
+.mainWebsiteGridContainer {
+  display: grid;
+  grid-template:
+    "navBar navBar navBar" 1fr
+    "introductionContainer introductionContainer" 1fr
+    "projectsContainer projectsContainer" 5fr
+    "contactContainer contactContainer" 1fr
+    / 1fr 1fr;
+
+  max-height: 100vh;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: var(--colour-MainWebsiteGridContainer);
 }
 
 /* ********** Start of code for Navigation Bar **********  */
-.nav-bar {
+/* ********** Start of code for Navigation Bar **********  */
+#navBar {
   background-color: #1f2937;
   padding: 1vw;
   display: flex; /*Enable flexbox layout */
@@ -74,18 +141,18 @@ a:active {
   flex-shrink: 0;
 }
 
-.nav-bar ul {
+#navBar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
-.nav-bar li {
+#navBar li {
   float: left;
 }
 
-.nav-bar li a {
+#navBar li a {
   color: #f9faf8;
   padding-top: 0.5vw;
   padding-bottom: 0.5vw;
@@ -95,96 +162,297 @@ a:active {
   font-size: 2rem;
 }
 
-.nav-bar li a:hover {
+#navBar li a:hover {
   background-color: #15d48e;
 }
 
-.nav-bar a:active {
+#navBar a:active {
   background-color: #0704aa;
 }
 
 /* ********** End of code for Navigation Bar **********  */
-
-.introductionDiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem;
-  background-color: #1f2937;
-  color: #e7dddd;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.project-intro {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  background-color: #e5e7eb;
-}
-
-.project-intro p {
-  font-size: 1rem;
+/* 
+.dropdown-container {
+  grid-area: mainMenuContainer;
+  margin: 1rem auto;
   text-align: center;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+  color: var(--colour-MainMenuText);
+  background-color: var(--colour-IntroductionBackground);
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.project-intro h1 {
-  justify-content: center;
-  background-color: #e5e7eb;
-  color: #1f2937;
+.menu-title {
+  padding: 1rem;
+  background-color: var(--colour-MainMenuBackground);
+}
+
+.dropdown-menu {
+  display: none;
+  margin: 1rem;
   padding: 0.5rem;
+  overflow: hidden;
+  background-color: var(--colour-MainMenuBackground);
 }
 
-.portfolio {
+.visible {
+  display: block;
+  animation: expand 600ms ease-in-out;
+  transform-origin: bottom;
+}
+
+ul.dropdown-menu li:hover {
+  background: var(--colour-ALinksHover);
+}
+
+ul.dropdown-menu li {
+  list-style-type: none;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--colour-ALinksVisited);
+}
+
+ul.dropdown-menu li a {
+  color: var(--colour-MainMenuText);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+ul.dropdown-menu a:active {
+  background-color: var(--colour-ALinksActive);
+}
+
+@keyframes expand {
+  0% {
+    transform: scaleY(0);
+  }
+
+  70% {
+    transform: scaleY(1.1);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+} */
+
+/* ********** End of code for Navigation Bar **********  */
+
+/* ********** Start of code for About Section **********  */
+
+.introductionContainer {
+  grid-area: introductionContainer;
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 1 auto;
+  justify-content: flex-start;
+  border-radius: 20%;
+  background-color: var(--colour-IntroductionBackground);
+}
+
+.currentSkillsDiv {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--colour-MainMenuBackground);
+}
+
+.frontEndStackDiv {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  flex-basis: 0;
-  flex: 1;
-  column-gap: 1.5rem;
-  color: black;
+  justify-content: flex-start;
+  /* background-color: var(--colour-IntroductionBackground); */
+}
+
+.backEndStackDiv {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.devToolsDiv {
+  display: flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.aboutInfoDiv {
+  flex: auto;
   font-size: 1.5rem;
-  row-gap: 1.5rem;
-  justify-content: baseline;
-  align-items: stretch;
+  font-weight: 700;
+  background-color: var(--colour-IntroductionBackground);
+  color: var(--colour-IntroductionText);
+}
+
+/* ********** End of code for About Section **********  */
+/* ********** Start of code for Project Section**********  */
+.projectsContainer {
+  grid-area: projectsContainer;
+  color: var(--colour-ProjectText);
+}
+
+.projectCardsContainer {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1;
+  box-sizing: border-box;
+  text-align: center;
+  /* justify-content: flex-start; */
+  /* display: grid; */
+  /* grid-template-rows: repeat(3, 1fr); */
+  /* grid-template-columns: repeat(auto-fill, minmax(800px, 1fr)); */
+  /* grid-template-columns: repeat(3,1fr); */
+  font-size: 1.5rem;
+}
+.projectCategoryWebsites {
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: 10px;
+  border-width: 0.25rem;
+  border-style: solid;
+  border-color: var(--colour-ProjectBorderWebsites);
+  margin: 10px;
+}
+
+.projectCategoryProductivityWebApps {
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: 10px;
+  border-width: 0.25rem;
+  border-style: solid;
+  border-color: var(--colour-ProjectBorderProductivityApps);
+  margin: 10px;
+}
+
+.projectCategoryGamesWebApps {
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: 10px;
+  border-width: 0.25rem;
+  border-style: solid;
+  margin: 10px;
+  border-color: var(--colour-ProjectBorderGamesMultimedia);
+}
+
+.projectCategoryDeveloperResources {
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: 10px;
+  border-width: 0.25rem;
+  border-style: solid;
+  margin: 10px;
+  border-color: var(--colour-ProjectBorderDeveloperResources);
 }
 
 .projectDiv {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-bottom: 1rem;
+  display: grid;
+  grid-template: 3fr 1fr 1fr 1fr / 3fr 1fr;
+  resize: both;
   padding: 0.5rem;
   margin: 1rem;
   border-radius: 25px;
-  border-color: #3882f6;
-  border-width: 0.5rem;
+  border-width: 0.1rem;
   border-style: solid;
-  width: 30rem;
+  border-color: var(--colour-BorderProjects);
+  width: 400px;
+  height: 800px;
+  overflow: scroll;
+}
+.projectPreviewImageDiv {
+  grid-area: 1/1/2/3;
 }
 
-.footer {
-  text-align: center;
-  padding: 2rem;
-  display: block;
-  background-color: #1f2937;
-  color: #fbfbfe;
+.projectScreenShotImage {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.projectNameDiv {
+  grid-area: 2/1/3/2;
+}
+
+.projectLinks {
+  grid-area: 2/2/3/3;
+  justify-self: center;
+}
+.projectDescriptionDiv {
+  grid-area: 3/1/4/3;
+}
+
+.projectTechStackDiv {
+  grid-area: 4/1/5/3;
+}
+
+.svgLogos {
+  height: 3rem;
+  width: 3rem;
+  padding: 0.5rem;
+}
+
+/* ********** End of code for Project Section**********  */
+
+.contactMeContainer {
+  grid-area: contactContainer;
+  padding: 1rem;
+  background-color: var(--colour-FooterBackground);
+  color: var(--colour-FooterText);
 }
 
 .cpdCompleted {
-  color: #0aa86e;
+  color: var(--colour-CPDCompleted);
   font-size: 1.6rem;
 }
 
 .cpdPending {
-  color: #d9680b;
+  color: var(--colour-CPDPending);
   font-size: 1.5rem;
 }
 
-.svgLogos {
-  height: 2rem;
-  width: 2rem;
+.contactMe {
+  text-align: center;
+  padding: 1rem;
 }
 
-.techLogosDiv {
+/* Media queries for responsive mobile displays  */
+
+@media (max-width: 400px) {
+  .introductionContainer {
+    flex-wrap: wrap;
+  }
+
+  .projectDiv {
+    width: 270px;
+    height: 800px;
+  }
+
+  .projectCardsContainer {
+    flex: 1 1 100%;
+  }
+
+  .projectCardsContainer {
+    flex: 1 1 100%;
+  }
+  .projectCategoryWebsites {
+    flex: 1 1 100%;
+  }
+
+  .projectCategoryGamesWebApps {
+    flex: 1 1 100%;
+  }
+
+  .projectCategoryProductivityWebApps {
+    flex: 1 1 100%;
+  }
+
+  .projectCategoryDeveloperResources {
+    flex: 1 1 100%;
+  }
 }
