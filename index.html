@@ -20,7 +20,10 @@
 
       <div id="navBar">
         <div>
-          <h3>Linux and Miscellaneous Operating Systems</h3>
+          <a href="index.html#linuxAndMiscellaneousOperatingSystems"
+            ><h3>Linux and Miscellaneous Operating Systems</h3></a
+          >
+
           <ul>
             <li><a href="index.html#Linux">Linux |</a></li>
             <!-- ********** Start of Linux reference section **********-->
@@ -58,7 +61,7 @@
         </div>
         <div>
           <h3>
-            <a href="index.html#FrontEnd"
+            <a href="index.html#frontEndDevelopmentLanguagesAndFrameWorks"
               >Front End Development Languages and FrameWorks</a
             >
           </h3>
@@ -163,1902 +166,1973 @@
           </li>
         </ul>
       </div>
-
-      <div id="linux">
-        <!-- ********** Start of Linux reference section **********-->
-        <h1>Linux Reference</h1>
-        <ul>
-          <li>
-            <a
-              href="https://github.com/1Amal/engineering-reference/tree/main/Linux"
-              >Click here to view other Linux resources</a
-            >
-          </li>
-          <li>
-            <a href="https://swcarpentry.github.io/shell-novice/">
-              Linux Reference</a
-            >
-          </li>
-        </ul>
-        <div class="project-1">
-          <h2>File / Directory operations</h2>
+      <div id="linuxAndMiscellaneousOperatingSystems">
+        <div id="linux">
+          <!-- ********** Start of Linux reference section **********-->
+           <h1>Linux and Miscellaneous Operating Systems</h1>
+          <h2>Linux</h2>
           <ul>
-            <li>pwd - Print working directory command in Linux</li>
-            <li>cd - Linux command to navigate through directories</li>
-            <li>mkdir - Command used to create directories in Linux</li>
-            <li>sudo systemctl hibernate - Hibernate The computer</li>
             <li>
               <a
-                href="https://www.linuxuprising.com/2021/08/how-to-enable-hibernation-on-ubuntu.html"
-                >Enable Hibernate on Ubuntu Tutorial</a
+                href="https://github.com/1Amal/engineering-reference/tree/main/Linux"
+                >Click here to view other Linux resources</a
               >
             </li>
-            <li>mv - Move or rename files in Linux</li>
-            <li>cp - Similar usage as mv but for copying files in Linux</li>
-            <li>rm - Delete files or directories</li>
-            <li>touch - Create blank/empty files</li>
-            <li>ln - Create symbolic links (shortcuts) to other files</li>
-            <li>cat - Display file contents on the terminal</li>
-            <li>tar - Command to extract and compress files in Linux</li>
-            <li>head - Return the specified number of lines from the top</li>
-            <li>tail - Return the specified number of lines from the bottom</li>
-            <li>diff - Find the difference between two files</li>
-            <li>cmp - Allows you to check if two files are identical</li>
-            <li>comm - Combines the functionality of diff and cmp</li>
             <li>
-              sort - Linux command to sort the content of a file while
-              outputting
-            </li>
-            <li>zip - Zip files in Linux</li>
-            <li>unzip - Unzip files in Linux</li>
-          </ul>
-        </div>
-
-        <div class="project-2">
-          <h2>Networking</h2>
-          <ul>
-            <li>ssh - Secure Shell command in Linux</li>
-            <li>
-              traceroute - Trace all the network hops to reach the destination
-            </li>
-            <li>wget - Direct download files from the internet</li>
-            <li>ufw - Firewall command</li>
-            <li>
-              iptables - Base firewall for all other firewall utilities to
-              interface with
-            </li>
-            <li>w : Show who is logged on and what they are doing</li>
-            <li>
-              tree : Analyze current location in the file tree. It will show you
-              the entire lower tree.
-            </li>
-            <li>
-              ifconfig OR ip a: Displays your current network configuration,
-              mainly your IP address if connected.
-            </li>
-            <li>
-              sudo ifup eth0 OR ifup <span>[interface] </span>: Enables the
-              specified interface.
-            </li>
-            <li>
-              sudo ifdown wlan0 OR ifdown <span>[interface]</span> : Disables
-              the specified interface. Can be useful to disable Wi-Fi if you are
-              already connected by cable for example.
+              <a href="https://swcarpentry.github.io/shell-novice/">
+                Linux Reference</a
+              >
             </li>
           </ul>
-        </div>
-
-        <div class="project-3">
-          <h2>System Information and Search</h2>
-
-          <ul>
-            <li>
-              sudo dmesg | more : View the Kernel ring buffer for messages
-            </li>
-            <li>
-              history : Linux store any command you type in an archive file.
-              History is the command to use to display this list. You can also
-              clear all the history. `history -c` Or clear one specific entry.
-              `history -d 12`
-            </li>
-            <li>
-              ls : The most frequently used command in Linux to list directories
-            </li>
-            <li>clear - Clear the terminal display</li>
-            <li>echo - Print any text that follows the command</li>
-            <li>
-              less - Linux command to display paged outputs in the terminal
-            </li>
-            <li>man - Access manual pages for all Linux commands</li>
-            <li>uname - Linux command to get basic information about the OS</li>
-            <li>whoami - Get the active username</li>
-            <li>grep - Search for a string within an output</li>
-            <li>cal - View a command-line calendar</li>
-            <li>
-              whereis - Locate the binary, source, and manual pages for a
-              command
-            </li>
-            <li>whatis - Find what a command is used for</li>
-            <li>top - View active processes live with their system usage</li>
-            <li>
-              netstat : Netstat is a powerful tool to monitor what your
-              Raspberry Pi/Linux machine is doing with the network. For example,
-              you can see every port open and every traffic flow. Basic usages
-              to display all listening connections you can use: `netstat -l`
-              `-p` option will add the process id (PID). `netstat -lp` `-c`
-              option allows you to refresh data continuously. `netstat -lpc`
-            </li>
-            <li>
-              dmesg : This command is useful to understand your Raspberry Pi /
-              Linux machine boot problems. It will show you every event that
-              happened in the start sequence. Here you could see errors with
-              drivers or services and understand why something doesn’t work the
-              way you want. You will get a column with the time elapsed since
-              the beginning of the boot and a text explaining what happened.
-              There are also normal messages when everything is fine
-            </li>
-            <li>
-              cat /home/pi/README.txt OR cat [file] : Displays all the content
-              of the specified file.
-            </li>
-            <li>
-              more /var/log/syslog OR more [file] : Displays the content of the
-              specified file, page per page (enter or space to continue, q to
-              quit).
-            </li>
-            <li>
-              tail /var/log/syslog OR tail [file]` : Tail allows you to display
-              the end of a file, it’s useful to check new entries in a log file.
-            </li>
-            <li>
-              tail -n20 /var/log/syslog :You can specify the number of lines to
-              display with -n.
-            </li>
-            <li>
-              tail -f /var/log/syslog : Option -f to displays new lines in
-              real-time.
-            </li>
-            <li>
-              head /home/pi/file.txt OR head -n20 /home/pi/file.txt OR head
-              [file] : It’s the same as tail but to display the beginning of a
-              file.
-            </li>
-            <li>
-              grep dhcp /var/log/syslog` `grep [string]` : Grep is a powerful
-              tool to search string in a text. You can use it to search
-              something in a file or to filter the output of another command or
-              script. cat /var/log/syslog | grep dhcp /home/pi/myscript.sh |
-              grep error ls -latr | grep php Lot of options to use with grep,
-              like regular expressions or options to display lines before (-B),
-              after (-A) or around (-C) the search string. You can also use -v
-              to display everything except the input string. grep 'dhcp|dns'
-              /var/log/syslog grep -A2 -B4 'Fatal error'
-              /var/log/apache/error.log grep -v 'Notice'
-              /var/log/apache/error.log`
-            </li>
-          </ul>
-        </div>
-
-        <div class="project-4">
-          <h2>Administration | Root</h2>
-
-          <ul>
-            <li>
-              sudo apt update && sudo apt upgrade : To refresh and update
-              software in Debian / Ubuntu in one command
-            </li>
-            <li>
-              sudo apt install ./deb_file : To manually install Deb files,
-              command for same directory where the deb file is located
-            </li>
-            <li>snap refresh : Update the Snap packages</li>
-            <li>
-              df -h : You can display disk usage in a more human-readable format
-            </li>
-            <li>
-              du -h : The du command displays disk usage. This tool can display
-              disk usage for individual directories in Linux, giving you a
-              finer-grained view of your disk usage. Use it to display the
-              amount of space used by your current directory
-            </li>
-            <li>sudo - Command to escalate privileges in Linux</li>
-            <li>service - Linux command to start and stop services</li>
-            <li>ps - Display active processes</li>
-            <li>
-              kill , killall - Kill active processes by process ID or name
-            </li>
-            <li>df - Display disk filesystem information</li>
-            <li>mount - Mount file systems in Linux</li>
-            <li>chmod - Command to change file permissions</li>
-            <li>export - Export environment variables in Linux</li>
-            <li>chown - Command for granting ownership of files or folders</li>
-            <li>
-              apt, pacman, yum, rpm - Package managers depending on the distro
-            </li>
-            <li>
-              alias - Create custom shortcuts for your regularly used commands
-            </li>
-            <li>dd - Majorly used for creating bootable USB sticks</li>
-            <li>
-              useradd and usermod - Add new user or change existing users data
-            </li>
-            <li>passwd - Create or update passwords for existing users</li>
-            <li>sudo killall openvpn: Close OpenVpn</li>
-            <li>
-              crontab -l , crontab -e : Cron is a tool to schedule tasks on a
-              Raspberry Pi / Linux Machines. Crontab is the file where you enter
-              lines for each task to run. `-l` option to display lines. `-e`
-              option to edit lines. You can use sudo before to schedule tasks to
-              run with root privileges.
-            </li>
-            <li>
-              screen -s [name] , screen -r [name]: This tool allows you to let
-              something run in the background even if you close your session.
-              `-s` option to start a new screen with the following name. `-r`
-              option to resume a running screen with this name. You can forget
-              the name if you want, an ID will be generated, use screen `-r` to
-              find it and screen `-r [ID]` to resume it. With only one screen
-              running, screen `-r` will resume it directly.
-            </li>
-            <li>
-              lsof : lsof stands for “List open files”. This command displays
-              all files open on your Raspberry Pi. This can be useful to know
-              why you can’t edit a file, or which file lock the unmount process.
-            </li>
-            <li>
-              watch: If you are waiting for something, in a file or directory,
-              the watch command can help you to monitor what happens. This will
-              execute the same command every two seconds. You can also change
-              the refresh rate with the `-n` option. `watch -n10 date` watch
-              date watch ls -latr watch cat output.txt
-            </li>
-          </ul>
-        </div>
-
-        <div class="project-4">
-          <h2>Bash Scripting</h2>
-          <ul>
-            <li>touch hello_world.sh` : Create a file named hello_world.sh</li>
-            <li>`which bash` : Find the path to bash shell</li>
-            <li>
-              Setup of a Bash Script:
-              <p>
-                #! usr/bin/bash (If you get an error "cannot execute: required
-                file not found" use #! /bin/bash)
-              </p>
-              <p>echo "Hello World"</p>
-            </li>
-            <li>
-              `chmod u+x hello_world.sh` Make the Bash script executable, chmod
-              modifies the existing rights of a file for a particular user. We
-              are adding +x to user u.
-            </li>
-            <li>
-              <p>You can run the script in the following ways:</p>
-
-              <p>./hello_world.sh</p>
-              or
-              <p>bash hello_world.sh</p>
-            </li>
-          </ul>
-
-          <!-- ********** Start of RaspberriPi reference section **********-->
-          <div id="raspberryPi">
-            <h1>RaspberryPi</h1>
-
+          <div class="project-1">
+            <h2>Linux: File & Directory operations</h2>
             <ul>
-              <li>
-                argonone-config : Argoneone Case fan control configuration curl
-                https://download.argon40.com/argon1.sh | bash : Install ArgonOne
-                fancontrol script
-              </li>
-              <li>
-                pinout: A handy reference can be accessed on the Raspberry Pi by
-                opening a terminal window and running the command pinout
-              </li>
-              <li>
-                sudo usermod -a -G gpio [username] : In order to use the GPIO
-                ports your user must be a member of the gpio group. The pi user
-                is a member by default, other users need to be added manually.
-              </li>
-              <li>
-                sudo apt remove [tree] : You can uninstall a package with apt
-                remove, The user is prompted to confirm the removal. Again, the
-                -y flag will auto-confirm.
-              </li>
-              <li>
-                sudo apt purge tree : You can also choose to completely remove
-                the package and its associated configuration files with apt
-                purge
-              </li>
-              <li>sudo rpi-update and then use sudo reboot</li>
-              <li>
-                rpi-update will download the latest pre-release version of the
-                linux kernel, its matching modules, device tree files, along
-                with the latest versions of the VideoCore firmware. It will then
-                install these files to relevant locations on the SD card,
-                overwriting any previous versions.
-              </li>
-              <li>
-                sudo apt-get update sudo apt install --reinstall libraspberrypi0
-                libraspberrypi-{bin,dev,doc} raspberrypi-bootloader
-                raspberrypi-kernel If you have done an rpi-update and things are
-                not working as you wish, if your Raspberry Pi is still bootable
-                you can return to the stable release using above command
-              </li>
-              <li>
-                Check if xterm package exists: `dpkg -l | grep xterm`,If xterm
-                package does not exist , install it `sudo apt install xterm`
-              </li>
-              <li>
-                Set lxterminal as x-terminal-emulator by running the following
-                command `sudo update-alternatives --config x-terminal-emulator`
-              </li>
-              <li>`sudo raspi-config`: Configure Raspberry Pi</li>
-              <li>`/usr/bin/dm-tool lock` : Lock screen</li>
-              <li>
-                `sudo rpi-update` : Only use this if you know what you do. This
-                command will update everything on your Raspberry Pi (firmware,
-                packages, …) and can potentially break something.
-              </li>
-              <li>
-                `sudo apt install phpmyadmin` `sudo apt install vim htop` `apt
-                install [package]` : Installs the specified package(s).
-              </li>
-              <li>
-                `sudo apt remove vim` `apt remove [package]` : Removes a
-                previously selected package.
-              </li>
-              <li>
-                `sudo apt search myadmin` `sudo apt search php` `apt search
-                [search]` : Searches for a package name in the packages list
-                (repository).
-              </li>
-              <li>
-                `dpkg -l` `dpkg -l | grep myadmin` `dpkg -l` : Lists all
-                installed packages on your system. You can use grep to find a
-                specific package.
-              </li>
-              <li>
-                `sudo reboot` : This command will restart the Raspberry Pi
-                immediately.
-              </li>
-              <li>
-                `shutdown -h now` : This is to stop the Raspberry Pi
-                immediately. You can replace “now” by a specific time (shutdown
-                -h 12:05). Don’t use the power switch to stop your Raspberry,
-                you should do it properly by using this command.
-              </li>
-              <li>shutdown -h 0 : Shutdown computer immediately</li>
-
-              <li>
-                `ps aux` : This command displays all running process on your
-                Raspberry Pi.
-              </li>
-              <li>
-                `ps -u pi` : You can also display process started by a specific
-                user:
-              </li>
-              <li>
-                `kill 12345` `kill [pid]`: The kill command allows you to
-                terminate a process. You’ll need the process ID to do this.
-              </li>
-              <li>
-                `kill -9 12345` :Sometime you may need to use the -9 option to
-                force all related commands to stop. For example, if you run 20
-                commands in a script and kill it, it’ll continue to the next
-                line, not exit the program, except if you use the -9 option.
-              </li>
-              <li>
-                `killall php`: Killall to stop all occurrences of a program.
-              </li>
-              <li>
-                `htop` : This tool is an alternative to top. It’s more
-                user-friendly than top, with colors and dynamic load bars.
-              </li>
-              <li>
-                `df` `df -h`: Displays the partition list, with the disk space
-                used and available for each one.
-              </li>
-              <li>
-                `vcgencmd measure_temp` : You may not remember it, but this
-                command displays the current CPU temperature.
-              </li>
-              <li>
-                `raspi-gpio` : This command allows you to manage the GPIO pins
-                of the Raspberry Pi. You can either set or get a value.
-                raspi-gpio get raspi-gpio get 20 raspi-gpio set 20 a5 raspi-gpio
-                set 20 op pn dh
-              </li>
-            </ul>
-            <!-- ********** End of Raspberri Pi reference section **********-->
-          </div>
-          <!-- ********** End of Linux reference section **********-->
-          <div>
-            <!-- ********** Start of Windows reference section **********-->
-
-            <h1 id="Windows">Microsoft Windows Reference</h1>
-            <ul>
+              <li>pwd - Print working directory command in Linux</li>
+              <li>cd - Linux command to navigate through directories</li>
+              <li>mkdir - Command used to create directories in Linux</li>
+              <li>sudo systemctl hibernate - Hibernate The computer</li>
               <li>
                 <a
-                  href="https://github.com/1Amal/engineering-reference/tree/main/Microsoft Windows"
-                  >Click here to view Microsoft Windows resources</a
+                  href="https://www.linuxuprising.com/2021/08/how-to-enable-hibernation-on-ubuntu.html"
+                  >Enable Hibernate on Ubuntu Tutorial</a
                 >
               </li>
+              <li>mv - Move or rename files in Linux</li>
+              <li>cp - Similar usage as mv but for copying files in Linux</li>
+              <li>rm - Delete files or directories</li>
+              <li>touch - Create blank/empty files</li>
+              <li>ln - Create symbolic links (shortcuts) to other files</li>
+              <li>cat - Display file contents on the terminal</li>
+              <li>tar - Command to extract and compress files in Linux</li>
+              <li>head - Return the specified number of lines from the top</li>
+              <li>
+                tail - Return the specified number of lines from the bottom
+              </li>
+              <li>diff - Find the difference between two files</li>
+              <li>cmp - Allows you to check if two files are identical</li>
+              <li>comm - Combines the functionality of diff and cmp</li>
+              <li>
+                sort - Linux command to sort the content of a file while
+                outputting
+              </li>
+              <li>zip - Zip files in Linux</li>
+              <li>unzip - Unzip files in Linux</li>
             </ul>
-            <h2>Windows 11 Shortcuts</h2>
-            <ul>
-              <li><code>Ctrl + Shift + Esc</code> : Open Task Manager</li>
-              <li>
-                <code>Shift + F10 </code> : Display the shortcut menu for the
-                selected item
-              </li>
-              <li><code>Windows logo key + E </code> : Open File Explorer</li>
-              <li><code>Windows logo key + I </code> : Open Settings</li>
-            </ul>
-            <h2>Windows 11 Administration</h2>
-            <ul>
-              <li>
-                winget upgrade : Command line tool to update all installed
-                programs in Windows 11, this will download information about all
-                the latest avilable updates
-              </li>
-              <li>
-                winget upgrade --all : This will download and install all the
-                updates available
-              </li>
-              <li>
-                powercfg /availablesleepstates : Find the power states available
-                on your computer
-              </li>
-            </ul>
-
-            <h2>External resources</h2>
-            <ul>
-              <li>
-                <a
-                  href="https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec"
-                  target="_blank"
-                  >Microsoft Windows 11 Shortcuts</a
-                >
-              </li>
-            </ul>
-
-            <!-- ********** End of Windows reference section **********-->
           </div>
-          <div id="softwareDevelopmentTools">
+
+          <div class="project-2">
+            <h2>Linux: Networking</h2>
+            <ul>
+              <li>ssh - Secure Shell command in Linux</li>
+              <li>
+                traceroute - Trace all the network hops to reach the destination
+              </li>
+              <li>wget - Direct download files from the internet</li>
+              <li>ufw - Firewall command</li>
+              <li>
+                iptables - Base firewall for all other firewall utilities to
+                interface with
+              </li>
+              <li>w : Show who is logged on and what they are doing</li>
+              <li>
+                tree : Analyze current location in the file tree. It will show
+                you the entire lower tree.
+              </li>
+              <li>
+                ifconfig OR ip a: Displays your current network configuration,
+                mainly your IP address if connected.
+              </li>
+              <li>
+                sudo ifup eth0 OR ifup <span>[interface] </span>: Enables the
+                specified interface.
+              </li>
+              <li>
+                sudo ifdown wlan0 OR ifdown <span>[interface]</span> : Disables
+                the specified interface. Can be useful to disable Wi-Fi if you
+                are already connected by cable for example.
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-3">
+            <h2>Linux: System Information and Search</h2>
+
+            <ul>
+              <li>
+                sudo dmesg | more : View the Kernel ring buffer for messages
+              </li>
+              <li>
+                history : Linux store any command you type in an archive file.
+                History is the command to use to display this list. You can also
+                clear all the history. `history -c` Or clear one specific entry.
+                `history -d 12`
+              </li>
+              <li>
+                ls : The most frequently used command in Linux to list
+                directories
+              </li>
+              <li>clear - Clear the terminal display</li>
+              <li>echo - Print any text that follows the command</li>
+              <li>
+                less - Linux command to display paged outputs in the terminal
+              </li>
+              <li>man - Access manual pages for all Linux commands</li>
+              <li>
+                uname - Linux command to get basic information about the OS
+              </li>
+              <li>whoami - Get the active username</li>
+              <li>grep - Search for a string within an output</li>
+              <li>cal - View a command-line calendar</li>
+              <li>
+                whereis - Locate the binary, source, and manual pages for a
+                command
+              </li>
+              <li>whatis - Find what a command is used for</li>
+              <li>top - View active processes live with their system usage</li>
+              <li>
+                netstat : Netstat is a powerful tool to monitor what your
+                Raspberry Pi/Linux machine is doing with the network. For
+                example, you can see every port open and every traffic flow.
+                Basic usages to display all listening connections you can use:
+                `netstat -l` `-p` option will add the process id (PID). `netstat
+                -lp` `-c` option allows you to refresh data continuously.
+                `netstat -lpc`
+              </li>
+              <li>
+                dmesg : This command is useful to understand your Raspberry Pi /
+                Linux machine boot problems. It will show you every event that
+                happened in the start sequence. Here you could see errors with
+                drivers or services and understand why something doesn’t work
+                the way you want. You will get a column with the time elapsed
+                since the beginning of the boot and a text explaining what
+                happened. There are also normal messages when everything is fine
+              </li>
+              <li>
+                cat /home/pi/README.txt OR cat [file] : Displays all the content
+                of the specified file.
+              </li>
+              <li>
+                more /var/log/syslog OR more [file] : Displays the content of
+                the specified file, page per page (enter or space to continue, q
+                to quit).
+              </li>
+              <li>
+                tail /var/log/syslog OR tail [file]` : Tail allows you to
+                display the end of a file, it’s useful to check new entries in a
+                log file.
+              </li>
+              <li>
+                tail -n20 /var/log/syslog :You can specify the number of lines
+                to display with -n.
+              </li>
+              <li>
+                tail -f /var/log/syslog : Option -f to displays new lines in
+                real-time.
+              </li>
+              <li>
+                head /home/pi/file.txt OR head -n20 /home/pi/file.txt OR head
+                [file] : It’s the same as tail but to display the beginning of a
+                file.
+              </li>
+              <li>
+                grep dhcp /var/log/syslog` `grep [string]` : Grep is a powerful
+                tool to search string in a text. You can use it to search
+                something in a file or to filter the output of another command
+                or script. cat /var/log/syslog | grep dhcp /home/pi/myscript.sh
+                | grep error ls -latr | grep php Lot of options to use with
+                grep, like regular expressions or options to display lines
+                before (-B), after (-A) or around (-C) the search string. You
+                can also use -v to display everything except the input string.
+                grep 'dhcp|dns' /var/log/syslog grep -A2 -B4 'Fatal error'
+                /var/log/apache/error.log grep -v 'Notice'
+                /var/log/apache/error.log`
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-4">
+            <h2>Linux: Administration</h2>
+
+            <ul>
+              <li>
+                sudo apt update && sudo apt upgrade : To refresh and update
+                software in Debian / Ubuntu in one command
+              </li>
+              <li>
+                sudo apt install ./deb_file : To manually install Deb files,
+                command for same directory where the deb file is located
+              </li>
+              <li>snap refresh : Update the Snap packages</li>
+              <li>
+                df -h : You can display disk usage in a more human-readable
+                format
+              </li>
+              <li>
+                du -h : The du command displays disk usage. This tool can
+                display disk usage for individual directories in Linux, giving
+                you a finer-grained view of your disk usage. Use it to display
+                the amount of space used by your current directory
+              </li>
+              <li>sudo - Command to escalate privileges in Linux</li>
+              <li>service - Linux command to start and stop services</li>
+              <li>ps - Display active processes</li>
+              <li>
+                kill , killall - Kill active processes by process ID or name
+              </li>
+              <li>df - Display disk filesystem information</li>
+              <li>mount - Mount file systems in Linux</li>
+              <li>chmod - Command to change file permissions</li>
+              <li>export - Export environment variables in Linux</li>
+              <li>
+                chown - Command for granting ownership of files or folders
+              </li>
+              <li>
+                apt, pacman, yum, rpm - Package managers depending on the distro
+              </li>
+              <li>
+                alias - Create custom shortcuts for your regularly used commands
+              </li>
+              <li>dd - Majorly used for creating bootable USB sticks</li>
+              <li>
+                useradd and usermod - Add new user or change existing users data
+              </li>
+              <li>passwd - Create or update passwords for existing users</li>
+              <li>sudo killall openvpn: Close OpenVpn</li>
+              <li>
+                crontab -l , crontab -e : Cron is a tool to schedule tasks on a
+                Raspberry Pi / Linux Machines. Crontab is the file where you
+                enter lines for each task to run. `-l` option to display lines.
+                `-e` option to edit lines. You can use sudo before to schedule
+                tasks to run with root privileges.
+              </li>
+              <li>
+                screen -s [name] , screen -r [name]: This tool allows you to let
+                something run in the background even if you close your session.
+                `-s` option to start a new screen with the following name. `-r`
+                option to resume a running screen with this name. You can forget
+                the name if you want, an ID will be generated, use screen `-r`
+                to find it and screen `-r [ID]` to resume it. With only one
+                screen running, screen `-r` will resume it directly.
+              </li>
+              <li>
+                lsof : lsof stands for “List open files”. This command displays
+                all files open on your Raspberry Pi. This can be useful to know
+                why you can’t edit a file, or which file lock the unmount
+                process.
+              </li>
+              <li>
+                watch: If you are waiting for something, in a file or directory,
+                the watch command can help you to monitor what happens. This
+                will execute the same command every two seconds. You can also
+                change the refresh rate with the `-n` option. `watch -n10 date`
+                watch date watch ls -latr watch cat output.txt
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-4">
+            <h2>Linux: Bash Scripting</h2>
+            <ul>
+              <li>
+                touch hello_world.sh` : Create a file named hello_world.sh
+              </li>
+              <li>`which bash` : Find the path to bash shell</li>
+              <li>
+                Setup of a Bash Script:
+                <p>
+                  #! usr/bin/bash (If you get an error "cannot execute: required
+                  file not found" use #! /bin/bash)
+                </p>
+                <p>echo "Hello World"</p>
+              </li>
+              <li>
+                `chmod u+x hello_world.sh` Make the Bash script executable,
+                chmod modifies the existing rights of a file for a particular
+                user. We are adding +x to user u.
+              </li>
+              <li>
+                <p>You can run the script in the following ways:</p>
+
+                <p>./hello_world.sh</p>
+                or
+                <p>bash hello_world.sh</p>
+              </li>
+            </ul>
+
+            <!-- ********** Start of RaspberriPi reference section **********-->
+            <div id="raspberryPi">
+              <h2>Linux: RaspberryPi</h2>
+
+              <ul>
+                <li>
+                  argonone-config : Argoneone Case fan control configuration
+                  curl https://download.argon40.com/argon1.sh | bash : Install
+                  ArgonOne fancontrol script
+                </li>
+                <li>
+                  pinout: A handy reference can be accessed on the Raspberry Pi
+                  by opening a terminal window and running the command pinout
+                </li>
+                <li>
+                  sudo usermod -a -G gpio [username] : In order to use the GPIO
+                  ports your user must be a member of the gpio group. The pi
+                  user is a member by default, other users need to be added
+                  manually.
+                </li>
+                <li>
+                  sudo apt remove [tree] : You can uninstall a package with apt
+                  remove, The user is prompted to confirm the removal. Again,
+                  the -y flag will auto-confirm.
+                </li>
+                <li>
+                  sudo apt purge tree : You can also choose to completely remove
+                  the package and its associated configuration files with apt
+                  purge
+                </li>
+                <li>sudo rpi-update and then use sudo reboot</li>
+                <li>
+                  rpi-update will download the latest pre-release version of the
+                  linux kernel, its matching modules, device tree files, along
+                  with the latest versions of the VideoCore firmware. It will
+                  then install these files to relevant locations on the SD card,
+                  overwriting any previous versions.
+                </li>
+                <li>
+                  sudo apt-get update sudo apt install --reinstall
+                  libraspberrypi0 libraspberrypi-{bin,dev,doc}
+                  raspberrypi-bootloader raspberrypi-kernel If you have done an
+                  rpi-update and things are not working as you wish, if your
+                  Raspberry Pi is still bootable you can return to the stable
+                  release using above command
+                </li>
+                <li>
+                  Check if xterm package exists: `dpkg -l | grep xterm`,If xterm
+                  package does not exist , install it `sudo apt install xterm`
+                </li>
+                <li>
+                  Set lxterminal as x-terminal-emulator by running the following
+                  command `sudo update-alternatives --config
+                  x-terminal-emulator`
+                </li>
+                <li>`sudo raspi-config`: Configure Raspberry Pi</li>
+                <li>`/usr/bin/dm-tool lock` : Lock screen</li>
+                <li>
+                  `sudo rpi-update` : Only use this if you know what you do.
+                  This command will update everything on your Raspberry Pi
+                  (firmware, packages, …) and can potentially break something.
+                </li>
+                <li>
+                  `sudo apt install phpmyadmin` `sudo apt install vim htop` `apt
+                  install [package]` : Installs the specified package(s).
+                </li>
+                <li>
+                  `sudo apt remove vim` `apt remove [package]` : Removes a
+                  previously selected package.
+                </li>
+                <li>
+                  `sudo apt search myadmin` `sudo apt search php` `apt search
+                  [search]` : Searches for a package name in the packages list
+                  (repository).
+                </li>
+                <li>
+                  `dpkg -l` `dpkg -l | grep myadmin` `dpkg -l` : Lists all
+                  installed packages on your system. You can use grep to find a
+                  specific package.
+                </li>
+                <li>
+                  `sudo reboot` : This command will restart the Raspberry Pi
+                  immediately.
+                </li>
+                <li>
+                  `shutdown -h now` : This is to stop the Raspberry Pi
+                  immediately. You can replace “now” by a specific time
+                  (shutdown -h 12:05). Don’t use the power switch to stop your
+                  Raspberry, you should do it properly by using this command.
+                </li>
+                <li>shutdown -h 0 : Shutdown computer immediately</li>
+
+                <li>
+                  `ps aux` : This command displays all running process on your
+                  Raspberry Pi.
+                </li>
+                <li>
+                  `ps -u pi` : You can also display process started by a
+                  specific user:
+                </li>
+                <li>
+                  `kill 12345` `kill [pid]`: The kill command allows you to
+                  terminate a process. You’ll need the process ID to do this.
+                </li>
+                <li>
+                  `kill -9 12345` :Sometime you may need to use the -9 option to
+                  force all related commands to stop. For example, if you run 20
+                  commands in a script and kill it, it’ll continue to the next
+                  line, not exit the program, except if you use the -9 option.
+                </li>
+                <li>
+                  `killall php`: Killall to stop all occurrences of a program.
+                </li>
+                <li>
+                  `htop` : This tool is an alternative to top. It’s more
+                  user-friendly than top, with colors and dynamic load bars.
+                </li>
+                <li>
+                  `df` `df -h`: Displays the partition list, with the disk space
+                  used and available for each one.
+                </li>
+                <li>
+                  `vcgencmd measure_temp` : You may not remember it, but this
+                  command displays the current CPU temperature.
+                </li>
+                <li>
+                  `raspi-gpio` : This command allows you to manage the GPIO pins
+                  of the Raspberry Pi. You can either set or get a value.
+                  raspi-gpio get raspi-gpio get 20 raspi-gpio set 20 a5
+                  raspi-gpio set 20 op pn dh
+                </li>
+              </ul>
+              <!-- ********** End of Raspberri Pi reference section **********-->
+            </div>
+            <!-- ********** End of Linux reference section **********-->
             <div>
-              <h1>Software Development Tools</h1>
-              <a href="index.html#navBar">Navigation Bar</a>
-              <!-- ********** Start of Git reference section **********-->
+              <!-- ********** Start of Windows reference section **********-->
 
-              <h1 id="Git">Git version control</h1>
+              <h2 id="Windows">Microsoft Windows Reference</h2>
               <ul>
                 <li>
                   <a
-                    href="https://github.com/1Amal/engineering-reference/tree/main/Git"
-                    >Click here to view other Git resources</a
+                    href="https://github.com/1Amal/engineering-reference/tree/main/Microsoft Windows"
+                    >Click here to view Microsoft Windows resources</a
                   >
                 </li>
-                <li>
-                  <a href="https://git-scm.com/book/en/v2"> Git Reference</a>
-                </li>
               </ul>
-              <h2>Git Basics</h2>
+              <h2>Windows 11: Shortcuts</h2>
+              <ul>
+                <li><code>Ctrl + Shift + Esc</code> : Open Task Manager</li>
+                <li>
+                  <code>Shift + F10 </code> : Display the shortcut menu for the
+                  selected item
+                </li>
+                <li><code>Windows logo key + E </code> : Open File Explorer</li>
+                <li><code>Windows logo key + I </code> : Open Settings</li>
+              </ul>
+              <h2>Windows 11: Administration</h2>
               <ul>
                 <li>
-                  <code>Git clone </code> : is a command for downloading
-                  existing source code from a remote repository (like Github,
-                  for example). Git clone basically makes an identical copy of
-                  the latest version of a project in a repository and saves it
-                  to your computer. There are a couple of ways to download the
-                  source code,
-                  <p>
-                    - Clone using SSH:
-                    <code
-                      >git clone
-                      git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code
+                  winget upgrade : Command line tool to update all installed
+                  programs in Windows 11, this will download information about
+                  all the latest avilable updates
+                </li>
+                <li>
+                  winget upgrade --all : This will download and install all the
+                  updates available
+                </li>
+                <li>
+                  powercfg /availablesleepstates : Find the power states
+                  available on your computer
+                </li>
+              </ul>
+
+              <h2>Windows: External resources</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec"
+                    target="_blank"
+                    >Microsoft Windows 11 Shortcuts</a
+                  >
+                </li>
+              </ul>
+
+              <!-- ********** End of Windows reference section **********-->
+            </div>
+            <div id="softwareDevelopmentTools">
+              <div>
+                <h1>Software Development Tools</h1>
+                <a href="index.html#navBar">Navigation Bar</a>
+                <!-- ********** Start of Git reference section **********-->
+
+                <h2 id="Git">Git version control</h2>
+                <ul>
+                  <li>
+                    <a
+                      href="https://github.com/1Amal/engineering-reference/tree/main/Git"
+                      >Click here to view other Git resources</a
                     >
-                  </p>
-                  <p>
-                    - Clone using HTTPS:
-                    <code
-                      >git clone
-                      git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code
+                  </li>
+                  <li>
+                    <a href="https://git-scm.com/book/en/v2"> Git Reference</a>
+                  </li>
+                </ul>
+                <h2>Git: Basics</h2>
+                <ul>
+                  <li>
+                    <code>Git clone </code> : is a command for downloading
+                    existing source code from a remote repository (like Github,
+                    for example). Git clone basically makes an identical copy of
+                    the latest version of a project in a repository and saves it
+                    to your computer. There are a couple of ways to download the
+                    source code,
+                    <p>
+                      - Clone using SSH:
+                      <code
+                        >git clone
+                        git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code
+                      >
+                    </p>
+                    <p>
+                      - Clone using HTTPS:
+                      <code
+                        >git clone
+                        git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code
+                      >
+                    </p>
+                  </li>
+
+                  <li>
+                    <code>git status </code>: command gives us all the necessary
+                    information about the current branch.
+                  </li>
+
+                  <li>
+                    <code>git add</code> : We need to use the git add command to
+                    include the changes of a file(s) into our next commit.
+                    <p>
+                      - To add a single file: <code>git add [filename] </code>
+                    </p>
+                    <p>
+                      - To add all files in repo at once:
+                      <code>git add -A </code>
+                    </p>
+                  </li>
+
+                  <li>
+                    <code> git commit</code>: is like setting a checkpoint in
+                    the development process which you can go back to later if
+                    needed. We also need to write a short message to explain
+                    what we have developed or changed in the source code.
+                    <p><code>git commit -m "commit message"</code></p>
+                  </li>
+
+                  <li>
+                    <code>git push</code> :After committing your changes, the
+                    next thing you want to do is send your changes to the remote
+                    server. Git push uploads your commits to the remote
+                    repository.
+                    <p><code>git push [remote][branch-name]</code></p>
+                    <p>
+                      However, if your branch is newly created, then you also
+                      need to upload the branch with the following command:<br />
+                      <code
+                        >git push --set-upstream [remote]
+                        [name-of-your-branch]</code
+                      >
+                      <br />
+                      alternatively you can also use:
+                      <code>git push -u origin [branch_name]</code>
+                    </p>
+                  </li>
+
+                  <li>
+                    <code>git pull</code> : command is used to get updates from
+                    the remote repo. This command is a combination of git fetch
+                    and git merge which means that, when we use git pull, it
+                    gets the updates from remote repository (git fetch) and
+                    immediately applies the latest changes in your local (git
+                    merge).<br />
+                    <code>git pull [remote]</code>
+                  </li>
+
+                  <li>
+                    <code>git log -- oneline</code> : To see our commit history
+                  </li>
+
+                  <li>
+                    Git can specify which files or parts of your project should
+                    be ignored by Git using a .gitignore file. Step 1: touch
+                    .gitignore Step 2: # text comment | name All name files,
+                    name folders, and files and folders in any name folder |
+                    name/ Ending with / specifies the pattern is for a folder.
+                    Matches all files and folders in any name folder For more
+                    information go to :
+                    <a
+                      href="https://www.w3schools.com/git/git_ignore.asp?remote=github"
+                      target="_blank"
+                      >Git Ignore</a
                     >
-                  </p>
-                </li>
+                  </li>
 
-                <li>
-                  <code>git status </code>: command gives us all the necessary
-                  information about the current branch.
-                </li>
+                  <li>
+                    <code>git revert</code> : A safer way that we can undo our
+                    commits is by using git revert. We just need to specify the
+                    hash code next to our commit that we would like to undo:<br />
+                    <code>git revert 3321844</code><br />
+                    The Git revert command will undo the given commit, but will
+                    create a new commit without deleting the older one: The
+                    advantage of using git revert is that it doesn't touch the
+                    commit history. This means that you can still see all of the
+                    commits in your history, even the reverted ones. Another
+                    safety measure here is that everything happens in our local
+                    system unless we push them to the remote repo. That's why
+                    git revert is safer to use and is the preferred way to undo
+                    our commits.
+                  </li>
 
-                <li>
-                  <code>git add</code> : We need to use the git add command to
-                  include the changes of a file(s) into our next commit.
-                  <p>
-                    - To add a single file: <code>git add [filename] </code>
-                  </p>
-                  <p>
-                    - To add all files in repo at once: <code>git add -A </code>
-                  </p>
-                </li>
+                  <li>
+                    <code>git pull origin main</code> : Update local copy with
+                    the remote copy
+                  </li>
+                  <li>
+                    <code>git fetch</code> : Use git fetch to retrieve new work
+                    done by other people. Fetching from a repository grabs all
+                    the new remote-tracking branches and tags without merging
+                    those changes into your own branches.
+                  </li>
 
-                <li>
-                  <code> git commit</code>: is like setting a checkpoint in the
-                  development process which you can go back to later if needed.
-                  We also need to write a short message to explain what we have
-                  developed or changed in the source code.
-                  <p><code>git commit -m "commit message"</code></p>
-                </li>
+                  <li>
+                    <code>git diff</code> : Show you all of your local changes
+                    since you last committed.
+                  </li>
 
-                <li>
-                  <code>git push</code> :After committing your changes, the next
-                  thing you want to do is send your changes to the remote
-                  server. Git push uploads your commits to the remote
-                  repository.
-                  <p><code>git push [remote][branch-name]</code></p>
-                  <p>
-                    However, if your branch is newly created, then you also need
-                    to upload the branch with the following command:<br />
+                  <li>
+                    <code>git diff index.html</code> : To check what changes
+                    made to a certain file simply add the path of a file as an
+                    option
+                  </li>
+
+                  <li>
+                    <code>git diff --color-words index.html</code> : this option
+                    shows a more concise view
+                  </li>
+
+                  <li>
+                    <code>git diff --staged index.html</code> : Staged changes
+                    in a certain file
+                  </li>
+
+                  <li>
+                    <code>git diff --staged</code> : Staged changes in all local
+                    files
+                  </li>
+
+                  <li>
+                    <code>git diff main (NAME OF OTHER BRANCH)</code> : It's
+                    also possible to compare two branches to each other. This
+                    helps you find out how exactly the code in both branches is
+                    different:
+                  </li>
+
+                  <li>
+                    <code>git diff main feature/login index.html</code> :
+                    Compare a certain file in two different branches. You can do
+                    this simply by adding the file's path: This will show you
+                    how the file "index.html" was changed in the feature/login
+                    branch, compared to how it looks in the main branch.
+                  </li>
+                </ul>
+
+                <h2>Git: Advanced Topics</h2>
+                <ul>
+                  <li>
+                    <code>git remote update origin --prune</code> : To update
+                    the local list of remote branches
+                  </li>
+
+                  <li>
+                    <code> git branch -a</code> : To show all local and remote
+                    branches that (local) Git knows about
+                  </li>
+
+                  <li>
+                    <code>git checkout dev</code> : When you've completed
+                    development in your branch and everything works fine, the
+                    final step is merging the branch with the parent branch (dev
+                    or master). This is done with the git merge command. Git
+                    merge basically integrates your feature branch with all of
+                    its commits back to the dev (or master) branch. It's
+                    important to remember that you first need to be on the
+                    specific branch that you want to merge with your feature
+                    branch. For example, when you want to merge your feature
+                    branch into the dev branch. First you should switch to the
+                    dev branch:
+                  </li>
+
+                  <li>
+                    <code> git fetch</code> : Before merging, you should update
+                    your local dev branch
+                  </li>
+
+                  <li>
+                    <code>git merge [branch-name]</code> : Finally, you can
+                    merge your feature branch into dev
+                  </li>
+
+                  <li>
+                    <code>git remote -v</code> : Check the fetch and push
+                    locations
+                  </li>
+
+                  <li>
                     <code
-                      >git push --set-upstream [remote]
-                      [name-of-your-branch]</code
+                      >git config --global user.email "email@example.com"
+                    </code>
+                    : Set an email address in Git. You can use your
+                    GitHub-provided noreply email address or any email address.
+                  </li>
+
+                  <li>
+                    <code
+                      >git remote set-url origin [updated link url
+                      https://........git]</code
+                    >
+                    : Update renamed repository address
+                  </li>
+                </ul>
+
+                <h3>Setting up GitHub on a new Linux installation</h3>
+
+                <ol>
+                  <li>
+                    <code>git config --global user.name "Amal K" </code> : Use
+                    this command for adding a user name and confirm that you
+                    have set the Git username correctly: <br /><code
+                      >git config user.name</code
+                    >
+                  </li>
+
+                  <li>
+                    <code
+                      >git config --global user.email "email@example.com"</code
+                    >
+                    : To set an email address in Git. You can use your
+                    GitHub-provided noreply email address or any email
+                    address.<br />
+                    To confirm that you have set the email address correctly in
+                    Git:<br />
+                    <code>git config --global user.email</code>
+                  </li>
+
+                  <li>
+                    <code
+                      >ssh-keygen -t ed25519 -C "your_email@example.com"</code
+                    >
+                    : Generating a new SSH key, for further information
+                    <a
+                      href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"
+                      target="_blank"
+                      >Visit here</a
+                    >
+                  </li>
+
+                  <li>
+                    <code
+                      >eval "$(ssh-agent -s)"<br />
+                      ssh-add ~/.ssh/id_ed25519</code
+                    >
+                    : Adding your SSH key to the ssh-agent
+                  </li>
+
+                  <li>
+                    <code>cat ~/.ssh/id_ed25519.pub</code> : Adding a new SSH
+                    key to your GitHub account
+                    <a
+                      href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account"
+                      target="_blank"
+                      >Visit here</a
                     >
                     <br />
-                    alternatively you can also use:
-                    <code>git push -u origin [branch_name]</code>
+                    Then select and copy the contents of the id_ed25519.pub file
+                    displayed in the terminal to your clipboard In the
+                    upper-right corner of any GitHub page, click your profile
+                    photo, then click Settings. <br />
+                    Settings icon in the user bar, In the "Access" section of
+                    the sidebar, click SSH and GPG keys. Click New SSH key or
+                    Add SSH key. These steps should set your new Linux machine
+                    with Github
+                  </li>
+                </ol>
+
+                <!-- ********** End of Git reference section **********-->
+              </div>
+            </div>
+
+            <div id="frontEndDevelopmentLanguagesAndFrameWorks">
+                <h1>Front End Development Languages and FrameWorks
+                </h1>
+                <div id="javaScript">
+                    <!-- ********** Start of JavaScript reference section **********-->
+                <h2 >JavaScript Reference</h2>
+                <a
+                  href="https://github.com/1Amal/engineering-reference/tree/main/JavaScript"
+                  >Click here to view other JavaScript resources</a
+                >
+
+                <h2>Setup JavaScript</h2>
+                <ul>
+                  <li>
+                    External JavaScript: JavaScript files have the file
+                    extension .js. To use an external script, put the name of
+                    the script file in the src (source) attribute of
+                    <br />
+                    <code>
+                      &ltscript&gt tag: <br />
+                      &ltscript src="myScript.js"&gt &lt/script&gt
+                    </code>
+                  </li>
+
+                  <li>
+                    JavaScript in &lthead&gt JavaScript can be placed in the
+                    &lthead&gt section of an HTML page.<br />
+
+                    <code>
+                      &lt!DOCTYPE html&gt <br />
+                      &lthtml&gt <br />
+                      &lthead&gt <br />
+                      &ltscript&gt <br />
+                      function myFunction() { <br />
+                      document.getElementById("demo").innerHTML = "Paragraph
+                      changed.";<br />
+                      }<br />
+                      &lt/script&gt<br />
+                      &lt/head&gt<br />
+                      &ltbody&gt<br />
+
+                      &lt/body&gt<br />
+                      &lt/html&gt
+                    </code>
+                  </li>
+
+                  <li>
+                    JavaScript in &ltbody&gt : JavaScript function can be placed
+                    in the &ltbody&gt section of an HTML page.
+                    <br />
+                    <code>
+                      &lt!DOCTYPE html&gt <br />
+                      &lthtml&gt <br />
+                      &ltbody&gt <br />
+
+                      &lth2&gtDemo JavaScript in Body &lt/h2&gt <br />
+
+                      &ltscript&gt <br />
+                      function myFunction() { <br />
+                      document.getElementById("demo").innerHTML = "Paragraph
+                      changed.";
+                      <br />
+                      }<br />
+                      &lt/script&gt <br />
+
+                      &lt/body&gt <br />
+                      &lt/html&gt <br />
+                    </code>
+                  </li>
+                  <h2>JavaScript: Loops</h2>
+                  <p>
+                    Which loop type should you use? If you're iterating through
+                    an array or some other object that supports it, and don't
+                    need access to the index position of each item, then
+                    for...of is the best choice. It's easier to read and there's
+                    less to go wrong. For other uses, for, while, and do...while
+                    loops are largely interchangeable. They can all be used to
+                    solve the same problems, and which one you use will largely
+                    depend on your personal preference — which one you find
+                    easiest to remember or most intuitive. We would recommend
+                    for, at least to begin with, as it is probably the easiest
+                    for remembering everything — the initializer, condition, and
+                    final-expression all have to go neatly into the parentheses,
+                    so it is easy to see where they are and check that you
+                    aren't missing them.
                   </p>
-                </li>
+                  <li>
+                    <b>for...of loops</b>
+                    <br />
 
-                <li>
-                  <code>git pull</code> : command is used to get updates from
-                  the remote repo. This command is a combination of git fetch
-                  and git merge which means that, when we use git pull, it gets
-                  the updates from remote repository (git fetch) and immediately
-                  applies the latest changes in your local (git merge).<br />
-                  <code>git pull [remote]</code>
-                </li>
+                    for (const item of array) <br />
+                    {<br />
+                    // code to run <br />
+                    }
+                  </li>
 
-                <li>
-                  <code>git log -- oneline</code> : To see our commit history
-                </li>
+                  <li>
+                    <b>for loops</b> <br />
 
-                <li>
-                  Git can specify which files or parts of your project should be
-                  ignored by Git using a .gitignore file. Step 1: touch
-                  .gitignore Step 2: # text comment | name All name files, name
-                  folders, and files and folders in any name folder | name/
-                  Ending with / specifies the pattern is for a folder. Matches
-                  all files and folders in any name folder For more information
-                  go to :
-                  <a
-                    href="https://www.w3schools.com/git/git_ignore.asp?remote=github"
-                    target="_blank"
-                    >Git Ignore</a
-                  >
-                </li>
+                    for (initializer; condition; final-expression) <br />
+                    {<br />
+                    // code to run<br />
+                    }
+                  </li>
 
-                <li>
-                  <code>git revert</code> : A safer way that we can undo our
-                  commits is by using git revert. We just need to specify the
-                  hash code next to our commit that we would like to undo:<br />
-                  <code>git revert 3321844</code><br />
-                  The Git revert command will undo the given commit, but will
-                  create a new commit without deleting the older one: The
-                  advantage of using git revert is that it doesn't touch the
-                  commit history. This means that you can still see all of the
-                  commits in your history, even the reverted ones. Another
-                  safety measure here is that everything happens in our local
-                  system unless we push them to the remote repo. That's why git
-                  revert is safer to use and is the preferred way to undo our
-                  commits.
-                </li>
+                  <li>
+                    <b>while loops</b> <br />
 
-                <li>
-                  <code>git pull origin main</code> : Update local copy with the
-                  remote copy
-                </li>
-                <li>
-                  <code>git fetch</code> : Use git fetch to retrieve new work
-                  done by other people. Fetching from a repository grabs all the
-                  new remote-tracking branches and tags without merging those
-                  changes into your own branches.
-                </li>
+                    initializer <br />
+                    while (condition) <br />
+                    { <br />
+                    // code to run
+                    <br />
+                    final-expression <br />
+                    }
+                  </li>
 
-                <li>
-                  <code>git diff</code> : Show you all of your local changes
-                  since you last committed.
-                </li>
+                  <li>
+                    <b>do...while loops</b> <br />
+                    initializer <br />
+                    do <br />
+                    { <br />
+                    // code to run<br />
 
-                <li>
-                  <code>git diff index.html</code> : To check what changes made
-                  to a certain file simply add the path of a file as an option
-                </li>
+                    final-expression <br />
+                    } <br />
+                    while (condition)
+                  </li>
+                </ul>
 
-                <li>
-                  <code>git diff --color-words index.html</code> : this option
-                  shows a more concise view
-                </li>
+                <!-- ********** End of JavaScript reference section **********-->
+                </div>
 
-                <li>
-                  <code>git diff --staged index.html</code> : Staged changes in
-                  a certain file
-                </li>
+              <div id="HTML">
+                <!-- ********** Start of HTML reference section **********-->
+                <h2>HTML Reference</h2>
+                <ul>
+                  <li>
+                    <a
+                      href="https://github.com/1Amal/engineering-reference/tree/main/HTML"
+                      >Click here to view other HTML resources</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+                      target="_blank"
+                      >Mozilla Developer Network, HTML</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.w3schools.com/TAGS/default.asp"
+                      target="_blank"
+                      >HTML tags from W3Schools</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://validator.w3.org/" target="_blank"
+                      >HTML Validator</a
+                    >
+                  </li>
+                </ul>
 
-                <li>
-                  <code>git diff --staged</code> : Staged changes in all local
-                  files
-                </li>
+                <ul>
+                  <li>
+                    <code>&lt!--This is a comment--&gt</code> : HTML Comments
+                  </li>
+                  <li>
+                    <code>&lt!DOCTYPE&gt</code> : Defines the document type
+                  </li>
+                  <li>
+                    <code>&lthead&gt</code> : Contains metadata/information for
+                    the document
+                  </li>
+                  <li>
+                    <code>&lthtml&gt</code> : Defines the root of an HTML
+                    document
+                  </li>
+                  <li><code>&lta&gt</code> : Defines a hyperlink</li>
+                  <li>
+                    <code>&ltabbr&gt</code> : Defines an abbreviation or an
+                    acronym
+                  </li>
+                  <li><code>&ltb&gt</code> : Defines bold text</li>
+                  <li>
+                    <code>&ltbody&gt </code> : Defines the document's body
+                  </li>
+                  <li><code>&ltbr&gt</code> : Defines a single line break</li>
+                  <li>
+                    <code>&ltbutton&gt</code> : Defines a clickable button
+                  </li>
+                  <li>
+                    <code>&ltdiv&gt</code> : Defines a section in a document
+                  </li>
+                  <li><code>&ltem&gt</code>: Defines emphasized text</li>
+                  <li>
+                    <code>&lth1&gt to &lth6&gt</code> : Defines HTML headings
+                  </li>
+                </ul>
 
-                <li>
-                  <code>git diff main (NAME OF OTHER BRANCH)</code> : It's also
-                  possible to compare two branches to each other. This helps you
-                  find out how exactly the code in both branches is different:
-                </li>
+                <!-- ********** End of HTML reference section **********-->
+              </div>
+              <div>
+                <!-- ********** Start of CSS reference section **********-->
+                <h2 id="CSS">CSS Reference</h2>
+                <a
+                  href="https://github.com/1Amal/engineering-reference/tree/main/CSS"
+                  >Click here to view other CSS resources</a
+                ><br />
+                <a
+                  href="https://www.w3schools.com/cssref/index.php"
+                  target="_blank"
+                  >W3Schools CSS Reference
+                </a>
 
-                <li>
-                  <code>git diff main feature/login index.html</code> : Compare
-                  a certain file in two different branches. You can do this
-                  simply by adding the file's path: This will show you how the
-                  file "index.html" was changed in the feature/login branch,
-                  compared to how it looks in the main branch.
-                </li>
-              </ul>
+                <h2>CSS Setup</h2>
+                <ul>
+                  <li>
+                    External CSS: To use an external style sheet, add a link to
+                    it in the &lthead section of each HTML page <br />
+                    <code>
+                      &lt!DOCTYPE html> <br />
+                      &lthtml&gt <br />
+                      &lthead&gt <br />
+                      &ltlink rel="stylesheet" href="styles.css"&gt <br />
+                      &lt/head&gt <br />
+                      &ltbody&gt <br />
 
-              <h2>Git Advanced Topics</h2>
+                      &lth1&gtThis is a heading &lt/h1&gt <br />
+                      &ltp>This is a paragraph. &lt/p&gt <br />
+
+                      &lt/body&gt <br />
+                      &lt/html&gt <br />
+                    </code>
+                  </li>
+
+                  <li>
+                    Internal css An internal CSS is defined in the &lthead&gt
+                    section of an HTML page, within a &ltstyle&gt element.
+                    <br />
+                    <code>
+                      &lt!DOCTYPE html&gt <br />
+                      &lthtml&gt <br />
+                      &lthead&gt <br />
+                      &ltstyle&gt <br />
+                      body {background-color: powderblue;} <br />
+                      h1 {color: blue;} <br />
+                      p {color: red;} <br />
+                      &lt/style&gt <br />
+                      &lt/head&gt <br />
+                      &ltbody&gt <br />
+
+                      &ltbody&gt <br />
+                      &lthtml&
+                    </code>
+                  </li>
+
+                  <li>
+                    Inline CSS: An inline CSS is used to apply a unique style to
+                    a single HTML element.<br />
+                    An inline CSS uses the style attribute of an HTML
+                    element.<br />
+                    The following example sets the text color of the &lth1&gt
+                    element to blue, and the text color of the &ltp&gt element
+                    to red:<br />
+
+                    Example: <br />
+                    <code>
+                      &lth1 style="color:blue;">A Blue Heading &lt/h1&gt <br />
+
+                      &ltp style="color:red;">A red paragraph.&lt/p&gt
+                    </code>
+                  </li>
+
+                  <h3>
+                    Following is from Odin Project only used here for reference
+                    and personal learning
+                    (https://www.theodinproject.com/lessons/foundations-introduction-to-flexbox)
+                  </h3>
+                  <li>
+                    display:flex; : A flex container is any element that has
+                    display: flex on it. A flex item is any element that lives
+                    directly inside of a flex container. Somewhat confusingly,
+                    any element can be both a flex container and a flex item.
+                    Said another way, you can also put display: flex on a flex
+                    item and then use flexbox to arrange its children. Flex is
+                    actually a shorthand for flex-grow, flex-shrink and
+                    flex-basis.
+                    (https://www.theodinproject.com/lessons/foundations-growing-and-shrinking)
+                  </li>
+
+                  <li>
+                    flex-grow : Expects a single number as its value, and that
+                    number is used as the flex-item’s “growth factor”. When we
+                    applied flex: 1 to every div inside our container, we were
+                    telling every div to grow the same amount. The result of
+                    this is that every div ends up the exact same size. If we
+                    instead add flex: 2 to just one of the divs, then that div
+                    would grow to 2x the size of the others.
+                  </li>
+
+                  <li>
+                    flex-shrink : Similar to flex-grow, but sets the “shrink
+                    factor” of a flex item. flex-shrink only ends up being
+                    applied if the size of all flex items is larger than their
+                    parent container. For example, if our 3 divs from above had
+                    a width declaration like: width: 100px, and .flex-container
+                    was smaller than 300px, our divs would have to shrink to
+                    fit.
+                  </li>
+
+                  <li>
+                    flex-basis : Simply sets the initial size of a flex item, so
+                    any sort of flex-growing or flex-shrinking starts from that
+                    baseline size. The shorthand value defaults to flex-basis:
+                    0%. The reason we had to change it to auto in the
+                    flex-shrink example is that with the basis set to 0, those
+                    items would ignore the item’s width, and everything would
+                    shrink evenly. Using auto as a flex-basis tells the item to
+                    check for a width declaration (width: 250px). Important Note
+                    About Flex-Basis: There is a difference between the default
+                    value of flex-basis and the way the flex shorthand defines
+                    it if no flex-basis is given. The actual default value for
+                    flex-basis is auto, but when you specify flex: 1 on an
+                    element, it interprets that as flex: 1 1 0. If you want to
+                    only adjust an item’s flex-grow you can simply do so
+                    directly, without the shorthand. Or you can be more verbose
+                    and use the full 3 value shorthand flex: 1 1 auto, which is
+                    also equivalent to using flex: auto.
+                  </li>
+
+                  <li>
+                    flex: auto; : Is one of the shorthands of flex. When auto is
+                    defined as a flex keyword it is equivalent to the values of
+                    flex-grow: 1, flex-shrink: 1 and flex-basis: auto or to
+                    flex: 1 1 auto using the flex shorthand. Note that flex:
+                    auto is not the default value when using the flex shorthand
+                    despite the name being “auto” which may be slightly
+                    confusing at first. You will encounter and learn more about
+                    flex: auto and its potential use-cases when reading through
+                    the assignment section. In Practice: You will likely not be
+                    using complex values for flex-grow, flex-shrink or
+                    flex-basis. Generally, you’re most likely to use
+                    declarations like flex: 1; to make divs grow evenly and
+                    flex-shrink: 0 to keep certain divs from shrinking. It is
+                    possible to get fancy, and set up layouts where some columns
+                    relate to each other in a specific ratio, so it’s useful to
+                    know that you can use other values, but those are relatively
+                    rare.
+                  </li>
+
+                  <li>
+                    flex-direction:column; : column puts the main axis vertical
+                    (top-to-bottom).
+                  </li>
+
+                  <li>
+                    flex-direction: row; : Puts the main axis horizontal
+                    (left-to-right), the flex-direction property's default is
+                    row.
+                  </li>
+
+                  <li>
+                    justify-content: center; : Aligns items across the main axis
+                    vertically
+                  </li>
+
+                  <li>
+                    align-items: center; : Aligns items across the main axis
+                    horizontally
+                  </li>
+
+                  <li>
+                    gap: 8px; : Setting gap on a flex container simply adds a
+                    specified space between flex items
+                    (https://www.theodinproject.com/lessons/foundations-alignment)
+                  </li>
+
+                  <li>
+                    As with all properties in CSS, some initial values are
+                    defined, so when creating a flex container all of the
+                    contained flex items will behave in the following way. Items
+                    display in a row (the flex-direction property's default is
+                    row). The items start from the start edge of the main axis.
+                    The items do not stretch on the main dimension, but can
+                    shrink. The items will stretch to fill the size of the cross
+                    axis. The flex-basis property is set to auto. The flex-wrap
+                    property is set to nowrap.
+                  </li>
+
+                  <li>
+                    flex-wrap: no-wrap; : Using nowrap would cause an overflow
+                    if the items were not able to shrink, or could not shrink
+                    small enough to fit. It is also the initial value.
+                  </li>
+                  <li>
+                    flex-wrap: wrap; : As flex-wrap is set to wrap, the items
+                    wrap
+                  </li>
+
+                  <li>
+                    flex-flow : You can combine the two properties
+                    flex-direction and flex-wrap into the flex-flow shorthand.
+                    The first value specified is flex-direction and the second
+                    value is flex-wrap
+                  </li>
+                </ul>
+
+                <!-- ********** End of CSS reference section **********-->
+              </div>
+            </div>
+                           <!-- ********** End of Front End Development Languages and FrameWorks **********-->
+
+         <!-- ********** Start of Back End Development Languages and FrameWorks **********-->
+<div id="backEndDevelopmentLanguagesAndFrameWorks">
+    <h1>Back End Development Languages and FrameWorks</h1>
+    <div id="nodeJs">
+        <h2>Node.Js</h2>
+    </div>
+
+</div>
+
+         <!-- ********** End of Back End Development Languages and FrameWorks **********-->
+
+
+
+            <div>
+              <!-- ********** Start of Software development tools and best practices section **********-->
+              <h1 id="softwareBestPractices">
+                Software development best practices
+              </h1>
               <ul>
                 <li>
-                  <code>git remote update origin --prune</code> : To update the
-                  local list of remote branches
-                </li>
-
-                <li>
-                  <code> git branch -a</code> : To show all local and remote
-                  branches that (local) Git knows about
-                </li>
-
-                <li>
-                  <code>git checkout dev</code> : When you've completed
-                  development in your branch and everything works fine, the
-                  final step is merging the branch with the parent branch (dev
-                  or master). This is done with the git merge command. Git merge
-                  basically integrates your feature branch with all of its
-                  commits back to the dev (or master) branch. It's important to
-                  remember that you first need to be on the specific branch that
-                  you want to merge with your feature branch. For example, when
-                  you want to merge your feature branch into the dev branch.
-                  First you should switch to the dev branch:
-                </li>
-
-                <li>
-                  <code> git fetch</code> : Before merging, you should update
-                  your local dev branch
-                </li>
-
-                <li>
-                  <code>git merge [branch-name]</code> : Finally, you can merge
-                  your feature branch into dev
-                </li>
-
-                <li>
-                  <code>git remote -v</code> : Check the fetch and push
-                  locations
-                </li>
-
-                <li>
-                  <code
-                    >git config --global user.email "email@example.com"
-                  </code>
-                  : Set an email address in Git. You can use your
-                  GitHub-provided noreply email address or any email address.
-                </li>
-
-                <li>
-                  <code
-                    >git remote set-url origin [updated link url
-                    https://........git]</code
+                  <a
+                    href="https://github.com/1Amal/engineering-reference/tree/main/Software Development Tools"
+                    >Click here to view other Software development tools and
+                    best practices resources</a
                   >
-                  : Update renamed repository address
+                </li>
+              </ul>
+              <h2>Visual Studio Code keyboard shortcuts</h2>
+              <ul>
+                <li><code>Ctrl+Shift+P, F1 </code> : Show Command Palette</li>
+                <li><code>Ctrl+K Ctrl+S</code> : Keyboard Shortcuts</li>
+                <li><code>F11 </code> : Toggle full screen</li>
+                <li><code>Ctrl+ = / - </code> : Zoom in/out</li>
+                <li><code>Ctrl+B</code> : Toggle Sidebar visibility</li>
+                <li><code>Ctrl+` </code> : Show integrated terminal</li>
+                <li>
+                  <code>Alt and clicking in multiple locations</code>
+                  for Editing: This allows to edit multiple lines
+                  simultaneously.
+                </li>
+                <li>
+                  <code>(Ctrl + `)</code> Integrated Terminal: Utilize the
+                  integrated terminal for running command-line commands without
+                  leaving the editor.
                 </li>
               </ul>
 
-              <h3>Setting up GitHub on a new Linux installation</h3>
+              <h2>Firefox / Chrome Developer Tools</h2>
+              <ul>
+                <li>
+                  about:config then search for devtools.selfxss.count then set
+                  the value to 100 : To enable pasting to Firefox JavaScript
+                  console: Get into setting by As an temporary solution "allow
+                  pasting" can be used
+                </li>
+              </ul>
+              <h2>Clean Code</h2>
+              <p>
+                I will use the following Clean Code methods for writing my
+                source code :
+                <a
+                  href="https://www.theodinproject.com/lessons/foundations-clean-code"
+                  target="_blank"
+                >
+                  Odin Project, Foundations Course: Clean Code
+                </a>
+                and
+                <a
+                  href="https://onextrapixel.com/10-principles-for-keeping-your-programming-code-clean"
+                  target="_blank"
+                  >10 Principles for Keeping Your Programming Code Clean</a
+                >
+              </p>
+              <ul>
+                <li>Indentation:2 spaces for indentation</li>
+                <li>Semicolons: Always Add semicolons</li>
+                <li>
+                  Line length:Break lines that are longer than about 80
+                  characters.
+                  <ul>
+                    <li>Break immediately after an operator or comma</li>
+                    <li>Indent continuation lines by one level</li>
+                    <li>
+                      Vertically align continuation lines with the first
+                      variable
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Naming Things:Names for functions and variables should be
+                  descriptive. Always use camelCase. To keep things consistent
+                  and easy to read, variables should always begin with a noun or
+                  an adjective (that is, a noun phrase) and functions with a
+                  verb. It is ok to use single characters as variable names in
+                  the context of a loop or a callback function, but not
+                  elsewhere.
+                </li>
+                <li>Revise Your Logic Before Coding</li>
+                <li>Clearly Expose the Structure of the Page</li>
+                <li>Write Explanatory Comments and Avoid Abusing Comments</li>
+                <li>Avoid Extremely Large Functions</li>
+                <li>
+                  Use Naming Standards for Functions and Variables: Whenever a
+                  variable or a function is created, its name should be
+                  descriptive enough as to give a general idea of what it does
+                  or what it’s for.
+                </li>
+                <li>Avoid Indiscriminate Mixing of Coding Languages</li>
+                <li>
+                  Summarize Your Imports: Even though it is much better to have
+                  additional coding languages imported from different files,
+                  this shouldn’t be abused. If there are too many style sheets,
+                  they can probably be summarized into one or two. This won’t
+                  only save space and make things look cleaner, but it will also
+                  save loading time. Each imported file is an HTTP request that
+                  tampers with the performance of your application. So apart
+                  from being a consideration for tidiness, it is also a
+                  consideration for efficiency.
+                </li>
+              </ul>
 
+              <!-- ********** End of Software development tools and best practices section **********-->
+            </div>
+
+            <div>
+              <!-- ********** Start of Electronics Engineering reference section **********-->
+              <h1 id="Electronics">Electronics Engineering Reference</h1>
+              <a
+                href="https://github.com/1Amal/engineering-reference/tree/main/Electronics"
+                >Click here to view other Electronics Engineering resources</a
+              >
+              <br />
+              <a href="../Linux/index.html"
+                >Please visit Linux section for Raspberry Pi OS</a
+              >
+
+              <h2>Electronics Reference</h2>
+
+              <ul>
+                <li>
+                  <a
+                    href="https://www.allaboutcircuits.com/textbook/reference/chpt-2/resistor-color-codes/"
+                    target="_blank"
+                    >Resistor Color codes</a
+                  >
+                </li>
+              </ul>
+
+              <h2>Raspberry Pi</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.raspberrypi.com/documentation/"
+                    target="_blank"
+                    >Offical Raspberrypi Pi documentation</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.raspberrypi.com/documentation/computers/raspberry-pi.html"
+                    target="_blank"
+                    >Raspberry Pi Hardware Reference</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.raspberrypi.com/documentation/computers/os.html"
+                    target="_blank"
+                    >Raspberry Pi OS</a
+                  >
+                </li>
+              </ul>
+
+              <h2>Arduino</h2>
+
+              <ul>
+                <li>
+                  <a
+                    href="https://store-usa.arduino.cc/products/arduino-uno-rev3"
+                    >Arduino Uno Board reference</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.arduino.cc/reference/en/" target="_"
+                    >Arduino Language reference</a
+                  >
+                </li>
+              </ul>
+
+              <!-- ********** End of Electronics Engineering reference section **********-->
+            </div>
+
+            <div>
+              <!-- ********** Start of Networking and Cybersecurity reference section **********-->
+              <h1 id="Networking">Networking and Cybersecurity Reference</h1>
+              <a
+                href="https://github.com/1Amal/engineering-reference/tree/main/Networking and Cybersecurity"
+                >Click here to view other Networking and Cybersecurity
+                resources</a
+              >
+
+              <ul>
+                <li>
+                  <code>
+                    Class A: 255.0.0.0 <br />
+                    Class B: 255.255.0.0 <br />
+                    Class C: 255.255.255.0 <br /> </code
+                  >A network mask helps to know which portion of the address
+                  identifies the network and which portion of the address
+                  identifies the node. Class A, B, and C networks have default
+                  masks, also known as natural masks.
+                </li>
+              </ul>
+
+              <h2>The 7 layers of the OSI model</h2>
+              <a
+                href="https://www.networkworld.com/article/3239677/the-osi-model-explained-and-how-to-easily-remember-its-7-layers.html"
+                target="_blank"
+                >From Network World</a
+              >
+              <ul>
+                <li>
+                  <b>A</b>ll <b>P</b>eople <b>S</b>eem <b>T</b>o <b>N</b>eed
+                  <b>D</b>ata <b>P</b>rocessing : The first letter of each word
+                  is the same as the first letter an OSI layer.
+                </li>
+                <li>
+                  <b>Layer 7 - Application:</b>
+                  The Application Layer in the OSI model is the layer that is
+                  the “closest to the end user”. It receives information
+                  directly from users and displays incoming data to the user.
+                  Oddly enough, applications themselves do not reside at the
+                  application layer. Instead the layer facilitates communication
+                  through lower layers in order to establish connections with
+                  applications at the other end. Web browsers (Google Chrome,
+                  Firefox, Safari, etc.) TelNet, and FTP, are examples of
+                  communications that rely on Layer 7.
+                </li>
+
+                <li>
+                  <b> Layer 6 - Presentation: </b> The Presentation Layer
+                  represents the area that is independent of data representation
+                  at the application layer. In general, it represents the
+                  preparation or translation of application format to network
+                  format, or from network formatting to application format. In
+                  other words, the layer “presents” data for the application or
+                  the network. A good example of this is encryption and
+                  decryption of data for secure transmission; this happens at
+                  Layer 6.
+                </li>
+
+                <li>
+                  <b>Layer 5 - Session: </b>When two computers or other
+                  networked devices need to speak with one another, a session
+                  needs to be created, and this is done at the Session Layer.
+                  Functions at this layer involve setup, coordination (how long
+                  should a system wait for a response, for example) and
+                  termination between the applications at each end of the
+                  session.
+                </li>
+
+                <li>
+                  <b>Layer 4 – Transport: </b>The Transport Layer deals with the
+                  coordination of the data transfer between end systems and
+                  hosts. How much data to send, at what rate, where it goes,
+                  etc. The best known example of the Transport Layer is the
+                  Transmission Control Protocol (TCP), which is built on top of
+                  the Internet Protocol (IP), commonly known as TCP/IP. TCP and
+                  UDP port numbers work at Layer 4, while IP addresses work at
+                  Layer 3, the Network Layer.
+                </li>
+
+                <li>
+                  <b>Layer 3 - Network : </b>Here at the Network Layer is where
+                  you’ll find most of the router functionality that most
+                  networking professionals care about and love. In its most
+                  basic sense, this layer is responsible for packet forwarding,
+                  including routing through different routers. You might know
+                  that your Boston computer wants to connect to a server in
+                  California, but there are millions of different paths to take.
+                  Routers at this layer help do this efficiently.
+                </li>
+
+                <li>
+                  <b>Layer 2 – Data Link: </b>The Data Link Layer provides
+                  node-to-node data transfer (between two directly connected
+                  nodes), and also handles error correction from the physical
+                  layer. Two sublayers exist here as well--the Media Access
+                  Control (MAC) layer and the Logical Link Control (LLC) layer.
+                  In the networking world, most switches operate at Layer 2. But
+                  it’s not that simple. Some switches also operate at Layer 3 in
+                  order to support virtual LANs that may span more than one
+                  switch subnet, which requires routing capabilities.
+                </li>
+
+                <li>
+                  <b>Layer 1 - Physical: </b>At the bottom of our OSI model we
+                  have the Physical Layer, which represents the electrical and
+                  physical representation of the system. This can include
+                  everything from the cable type, radio frequency link (as in a
+                  Wi-Fi network), as well as the layout of pins, voltages, and
+                  other physical requirements. When a networking problem occurs,
+                  many networking pros go right to the physical layer to check
+                  that all of the cables are properly connected and that the
+                  power plug hasn’t been pulled from the router, switch or
+                  computer, for example.
+                </li>
+              </ul>
+
+              <h2>External resources</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html"
+                    target="_blank"
+                    >Cisco IP addressing</a
+                  >
+                </li>
+              </ul>
+
+              <!-- ********** End of Networking and Cybersecurity reference section **********-->
+            </div>
+
+            <div>
+              <!-- ********** Start of Python reference section **********-->
+              <h1 id="Python">Python Reference</h1>
+              <a
+                href="https://github.com/1Amal/engineering-reference/tree/main/Python"
+                >Click here to view other resources</a
+              >
+
+              <h2>Python Basics</h2>
+              <ul>
+                <li>
+                  Python Indentation: Indentation refers to the spaces at the
+                  beginning of a code line. Where in other programming languages
+                  the indentation in code is for readability only, the
+                  indentation in Python is very important. Python uses
+                  indentation to indicate a block of code.
+                </li>
+                <li>
+                  # : Add in front of the code for commenting out single line of
+                  code
+                  <br />
+                  """ <br />
+                  Use triple quotes for multiline comments <br />
+                  """
+                </li>
+
+                <li>print("Hello World"): Print a message onto the screen</li>
+
+                <li>
+                  Variable: Variables store data types into the memory of your
+                  computer, Variable names are case-sensitive. allowing Python
+                  to automatically populate them into your code when you
+                  reference them later.<br />
+                  "Name=Value" <br />
+                  On the left side of the variable we give name for the variable
+                  = On the right side we assign a value <br />
+                  A variable can have a short name (like x and y) or a more
+                  descriptive name (age, carname, total_volume). <br />
+                  Rules for Python variables:<br />
+                  A variable name must start with a letter or the underscore
+                  character<br />
+                  A variable name cannot start with a number<br />
+                  A variable name can only contain alpha-numeric characters and
+                  underscores (A-z, 0-9, and _ )<br />
+                  Variable names are case-sensitive (age, Age and AGE are three
+                  different variables)<br />
+                  Pascal Case: Each word starts with a capital letter:
+                  MyVariableName = "John" <br />
+                  Snake Case: Each word is separated by an underscore character:
+                  my_variable_name = "John"
+                </li>
+
+                <li>
+                  Primitive Data Types: Data types that are single objects and
+                  are immutable (cannot be changed without being redefined).
+                  These are:
+                  <ul>
+                    <li>Numbers: Numbers (with an optional + or - prefix).</li>
+                    <li>
+                      Integers: are whole numbers with an optional positive + or
+                      negative - prefix. For example, 3, 82, 38218, +3, -71 are
+                      all integers.
+                    </li>
+                    <li>
+                      Floats: Any number containing a decimal point is
+                      interpreted as a float (e.g., 0.32, .32, 83.7823, 1.00).
+                    </li>
+                    <li>
+                      Strings: Sequences of characters, always enclosed in
+                      quotation marks.
+                    </li>
+                    <li>
+                      Booleans: Also called flags; these can only be True or
+                      False.
+                    </li>
+                    <li>
+                      None: Represents a null value, or the absence of data.
+                    </li>
+                    <li>
+                      Numerical Operators: programmers perform equations with
+                      data by using numerical operators, which include +, -, *,
+                      /, //, and %.
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  Converting Data Types: we use built-in functions like float(),
+                  int(), str() to convert a data type. For instance, say our
+                  data set stores the number “1” as a string. To convert it to
+                  an integer, we would write int('1')
+                </li>
+
+                <li>
+                  Casting : If you want to specify the data type of a variable,
+                  this can be done with casting.<br />
+                  x = str(3) # x will be '3' <br />
+                  y = int(3) # y will be 3 <br />
+                  z = float(3) # z will be 3.0
+                </li>
+
+                <li>
+                  Get the Type : You can get the data type of a variable with
+                  the type() function i.e. <br />
+                  x = 5 <br />
+                  y = "John"<br />
+                  print(type(x)) <br />
+                  print(type(y) <br />
+                </li>
+
+                <li>
+                  Complex Data Types: A data type that can hold more than one
+                  object as Lists, Tuples, Set and Dictionaries<br />
+                  Lists: Enclosed by square brackets ([]). Mutable (changeable)
+                  collections of objects with specific orders. The objects in a
+                  list can be any combination of data types and do not have to
+                  be unique (elements can be repeated).
+                  <ul>
+                    <li>len() - tells us thg length of our list.</li>
+                    <li>append() - adds an item to the end of a list.</li>
+                    <li>pop() - removes an element from a list.</li>
+                    <li>
+                      index() - asks python to return the value in a given
+                      position. Indexing in Python starts from 0 not 1.
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  Tuples: Enclosed by parentheses (()). Immutable versions of
+                  lists. Unlike lists, their elements cannot be removed, added
+                  to, or changed.
+                </li>
+
+                <li>
+                  Set: Enclosed by curly braces ({}). A collection of unordered,
+                  unique elements.
+                </li>
+
+                <li>
+                  Dictionaries: Also enclosed by curly braces, but elements are
+                  pairs joined by a colon ({:}). These are sets of key-value
+                  pairs. Every element has a key (of any immutable data type),
+                  which must be unique, and a value (which can be of any data
+                  type and does not need to be unique — multiple keys can have
+                  the same value). Dictionaries, like sets, are unordered —
+                  their index is the keys, not a list of numbers.
+                </li>
+
+                <li>
+                  For help type ‘help’ i.e. for definition of ‘print’ function
+                  type: help(print) ?print
+                  <ul>
+                    <li>
+                      Getting help from Jupyter and Python to remember what
+                      stuff does: shift+tab in the brackets of a function or
+                      argument will bring up the docstring, or short
+                      instructions on how to use it
+                    </li>
+                    <li>
+                      help(function_or_method) will print out the same docstring
+                    </li>
+                    <li>
+                      dir(variable) will remind you what methods are available
+                      (for a variable, depending on its type or data structure)
+                    </li>
+                    <li>tab whilst typing will try to autocomplete things</li>
+                    <li>
+                      command+click or alt+click will enable multi-line
+                      editing - which is so amazingly cool and a must have
+                      feature for a text editor once you know it exists.
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  %pip install : Install Python modules <br />i.e %pip install
+                  geocode
+                </li>
+
+                <li>
+                  import: For importing external python modules<br />
+                  i.e: import csv
+                </li>
+              </ul>
+              <h2>Control Flow</h2>
+              <ul>
+                <li>
+                  Comparison Operators has the ability to compare values and
+                  return a boolean result of "True" or "False" <br />
+                  > : Greater than <br />
+                  >= : Greater than or equal to <br />
+                  < : Less than <br />
+                  <= : Less than or equal to <br />
+                  == : Equality <br />
+                  != : Inequality
+                </li>
+
+                <li>
+                  Logic operators allows to combine multiple operators together.
+                  For complex conditionals you can put several conditions in
+                  parentheses to evaluate as single expression.<br />
+                  and : Evaluates to True if all combined values are True <br />
+                  or : Evaluates to True if any of the combined values are True
+                  <br />
+                  not : Reverses the boolean result of whatever follows it
+                </li>
+              </ul>
+
+              <h2>Python Functions</h2>
+              <p>
+                A function is a block of code which only runs when it is called.
+                You can pass data, known as parameters, into a function. A
+                function can return data as a result.
+                <a
+                  href="https://www.w3schools.com/python/python_functions.asp"
+                  target="_blank"
+                  >Python Functions</a
+                >
+              </p>
+
+              <h2>Python Classes/Objects</h2>
+              <p>
+                Python is an object oriented programming language. Almost
+                everything in Python is an object, with its properties and
+                methods. A Class is like an object constructor, or a "blueprint"
+                for creating objects.
+                <a
+                  href="https://www.w3schools.com/python/python_classes.asp"
+                  target="_blank"
+                  >Python classes</a
+                >
+              </p>
+              <p>
+                Create a Class To create a class, use the keyword class:<br />
+
+                Example Create a class named MyClass, with a property named x:
+                <br />
+
+                class MyClass:<br />
+                x = 5
+              </p>
+
+              <h2>Python data structures definition and usage</h2>
+              <h3>Python Collections (Arrays)</h3>
+              <p>
+                There are four collection data types in the Python programming
+                language: List is a collection which is ordered and changeable.
+                Allows duplicate members. Lists are used to store multiple items
+                in a single variable. Create a List: thislist = ["apple",
+                "banana", "cherry"] print(thislist)
+              </p>
+              <ul>
+                <li>
+                  List items are ordered, changeable, and allow duplicate
+                  values.
+                </li>
+                <li>
+                  List items are indexed, the first item has index [0], the
+                  second item has index [1] etc.
+                </li>
+                <li>
+                  Ordered: When we say that lists are ordered, it means that the
+                  items have a defined order, and that order will not change.
+                </li>
+                <li>
+                  If you add new items to a list, the new items will be placed
+                  at the end of the list.
+                </li>
+                <li>
+                  Note: There are some list methods that will change the order,
+                  but in general: the order of the items will not change.
+                </li>
+                <li>
+                  Changeable: The list is changeable, meaning that we can
+                  change, add, and remove items in a list after it has been
+                  created.
+                </li>
+                <li>
+                  Allow Duplicates: Since lists are indexed, lists can have
+                  items with the same value:
+                </li>
+              </ul>
+              <h3>Tuples</h3>
+              <p>
+                Tuple is a collection which is ordered and unchangeable. Allows
+                duplicate members. Tuples are used to store multiple items in a
+                single variable. A tuple is a collection which is ordered and
+                unchangeable. Tuples are written with round brackets. Create a
+                Tuple: thistuple = ("apple", "banana", "cherry")
+                print(thistuple) tuple Items
+              </p>
+
+              <ul>
+                <li>
+                  Tuple items are ordered, unchangeable, and allow duplicate
+                  values.
+                </li>
+                <li>
+                  Tuple items are indexed, the first item has index [0], the
+                  second item has index [1] etc.
+                </li>
+                <li>
+                  Ordered: When we say that tuples are ordered, it means that
+                  the items have a defined order, and that order will not
+                  change.
+                </li>
+                <li>
+                  Unchangeable: Tuples are unchangeable, meaning that we cannot
+                  change, add or remove items after the tuple has been created.
+                </li>
+                <li>
+                  Allow Duplicates: Since tuples are indexed, they can have
+                  items with the same value:
+                </li>
+              </ul>
+
+              <h3>Set</h3>
+              <p>
+                Set is a collection which is unordered, unchangeable*, and
+                unindexed. No duplicate members. Sets are used to store multiple
+                items in a single variable. A set is a collection which is
+                unordered, unchangeable*, and unindexed. * Note: Set items are
+                unchangeable, but you can remove items and add new items. Sets
+                are written with curly brackets. Example Create a Set: thisset =
+                {"apple", "banana", "cherry"} print(thisset)
+              </p>
+
+              <ul>
+                <li>
+                  Set Items: Set items are unordered, unchangeable, and do not
+                  allow duplicate values.
+                </li>
+                <li>
+                  Unordered: Unordered means that the items in a set do not have
+                  a defined order.
+                </li>
+                <li>
+                  Set items can appear in a different order every time you use
+                  them, and cannot be referred to by index or key.
+                </li>
+                <li>
+                  Unchangeable: Set items are unchangeable, meaning that we
+                  cannot change the items after the set has been created.
+                </li>
+                <li>
+                  Once a set is created, you cannot change its items, but you
+                  can remove items and add new items.
+                </li>
+                <li>
+                  Duplicates Not Allowed: Sets cannot have two items with the
+                  same value. No duplicate members.
+                </li>
+              </ul>
+
+              <h3>Dictionary</h3>
+              <p>
+                Dictionary is a collection which is ordered** and changeable.
+                Dictionaries are used to store data values in key:value pairs. A
+                dictionary is a collection which is ordered*, changeable and do
+                not allow duplicates. Dictionaries are written with curly
+                brackets, and have keys and values: Example Create and print a
+                dictionary: thisdict = { "brand": "Ford", "model": "Mustang",
+                "year": 1964 } print(thisdict)
+              </p>
+
+              <ul>
+                <li>
+                  Dictionary Items: Dictionary items are ordered, changeable,
+                  and does not allow duplicates. Dictionary items are presented
+                  in key:value pairs, and can be referred to by using the key
+                  name. v
+                </li>
+                <li>
+                  Ordered or Unordered? :As of Python version 3.7, dictionaries
+                  are ordered. In Python 3.6 and earlier, dictionaries are
+                  unordered. When we say that dictionaries are ordered, it means
+                  that the items have a defined order, and that order will not
+                  change. Unordered means that the items does not have a defined
+                  order, you cannot refer to an item by using an index.
+                </li>
+                <li>
+                  Changeable: Dictionaries are changeable, meaning that we can
+                  change, add or remove items after the dictionary has been
+                  created.
+                </li>
+                <li>
+                  Duplicates Not Allowed: Dictionaries cannot have two items
+                  with the same key:
+                </li>
+              </ul>
+
+              <h2>Jupyter Notebook</h2>
+              <p>
+                Start Jupyter Notebook in any folder, jupyter notebook
+                --notebook-dir=”LOCATION of the folder to start Jupyter Notebook
+                i.e. D:/Documents”
+              </p>
+              <p>
+                Jupyter Notebook and JupyterLab 3.0 For old Jupyter Notebook
+                interface installed with notebook package and run as jupyter
+                notebook (see the next section for the identical interface
+                installed with nbclassic and run with jupyter nbclassic, and for
+                JupyterLab):
+              </p>
               <ol>
                 <li>
-                  <code>git config --global user.name "Amal K" </code> : Use
-                  this command for adding a user name and confirm that you have
-                  set the Git username correctly: <br /><code
-                    >git config user.name</code
-                  >
+                  Open cmd (or Anaconda Prompt) and run jupyter notebook
+                  --generate-config.
                 </li>
-
                 <li>
-                  <code
-                    >git config --global user.email "email@example.com"</code
-                  >
-                  : To set an email address in Git. You can use your
-                  GitHub-provided noreply email address or any email address.<br />
-                  To confirm that you have set the email address correctly in
-                  Git:<br />
-                  <code>git config --global user.email</code>
+                  This writes a file to
+                  C:\Users\username\.jupyter\jupyter_notebook_config.py.
+                  C:\Users\[Windows user directory]\.jupyter
                 </li>
-
+                <li>Browse to the file location and open it in an Editor</li>
                 <li>
-                  <code>ssh-keygen -t ed25519 -C "your_email@example.com"</code>
-                  : Generating a new SSH key, for further information
-                  <a
-                    href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"
-                    target="_blank"
-                    >Visit here</a
-                  >
+                  Search for the following line in the file:
+                  #c.NotebookApp.notebook_dir = ''
                 </li>
-
                 <li>
-                  <code
-                    >eval "$(ssh-agent -s)"<br />
-                    ssh-add ~/.ssh/id_ed25519</code
-                  >
-                  : Adding your SSH key to the ssh-agent
+                  Replace by c.NotebookApp.notebook_dir =
+                  '/the/path/to/home/folder/' Make sure you use forward slashes
+                  in your path and use /home/user/ instead of ~/ for your home
+                  directory, backslashes could be used if placed in double
+                  quotes even if folder name contains spaces as such :
+                  "D:\yourUserName\Any Folder\More Folders\"
                 </li>
-
                 <li>
-                  <code>cat ~/.ssh/id_ed25519.pub</code> : Adding a new SSH key
-                  to your GitHub account
-                  <a
-                    href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account"
-                    target="_blank"
-                    >Visit here</a
-                  >
-                  <br />
-                  Then select and copy the contents of the id_ed25519.pub file
-                  displayed in the terminal to your clipboard In the upper-right
-                  corner of any GitHub page, click your profile photo, then
-                  click Settings. <br />
-                  Settings icon in the user bar, In the "Access" section of the
-                  sidebar, click SSH and GPG keys. Click New SSH key or Add SSH
-                  key. These steps should set your new Linux machine with Github
+                  Remove the # at the beginning of the line to allow the line to
+                  execute JupyterLab >= 3, Jupyter Notebook Classic, and
+                  RetroLab For recent nbclassic and JupyterLab >= 3 use
+                  c.ServerApp.root_dir instead of c.NotebookApp.notebook_dir
+                  (and jupyter server --generate-config instead of jupyter
+                  notebook --generate-config).
                 </li>
               </ol>
 
-              <!-- ********** End of Git reference section **********-->
+              <!-- ********** End of Python reference section **********-->
             </div>
-          </div>
-
-          <div id="frontEndDevelopmentLanguagesAndFrameWorks">
-            <div>
-              <!-- ********** Start of JavaScript reference section **********-->
-              <h1 id="JavaScript">JavaScript Reference</h1>
-              <a
-                href="https://github.com/1Amal/engineering-reference/tree/main/JavaScript"
-                >Click here to view other JavaScript resources</a
-              >
-
-              <h2>Setup JavaScript</h2>
-              <ul>
-                <li>
-                  External JavaScript: JavaScript files have the file extension
-                  .js. To use an external script, put the name of the script
-                  file in the src (source) attribute of
-                  <br />
-                  <code>
-                    &ltscript&gt tag: <br />
-                    &ltscript src="myScript.js"&gt &lt/script&gt
-                  </code>
-                </li>
-
-                <li>
-                  JavaScript in &lthead&gt JavaScript can be placed in the
-                  &lthead&gt section of an HTML page.<br />
-
-                  <code>
-                    &lt!DOCTYPE html&gt <br />
-                    &lthtml&gt <br />
-                    &lthead&gt <br />
-                    &ltscript&gt <br />
-                    function myFunction() { <br />
-                    document.getElementById("demo").innerHTML = "Paragraph
-                    changed.";<br />
-                    }<br />
-                    &lt/script&gt<br />
-                    &lt/head&gt<br />
-                    &ltbody&gt<br />
-
-                    &lt/body&gt<br />
-                    &lt/html&gt
-                  </code>
-                </li>
-
-                <li>
-                  JavaScript in &ltbody&gt : JavaScript function can be placed
-                  in the &ltbody&gt section of an HTML page.
-                  <br />
-                  <code>
-                    &lt!DOCTYPE html&gt <br />
-                    &lthtml&gt <br />
-                    &ltbody&gt <br />
-
-                    &lth2&gtDemo JavaScript in Body &lt/h2&gt <br />
-
-                    &ltscript&gt <br />
-                    function myFunction() { <br />
-                    document.getElementById("demo").innerHTML = "Paragraph
-                    changed.";
-                    <br />
-                    }<br />
-                    &lt/script&gt <br />
-
-                    &lt/body&gt <br />
-                    &lt/html&gt <br />
-                  </code>
-                </li>
-                <h2>Loops</h2>
-                <p>
-                  Which loop type should you use? If you're iterating through an
-                  array or some other object that supports it, and don't need
-                  access to the index position of each item, then for...of is
-                  the best choice. It's easier to read and there's less to go
-                  wrong. For other uses, for, while, and do...while loops are
-                  largely interchangeable. They can all be used to solve the
-                  same problems, and which one you use will largely depend on
-                  your personal preference — which one you find easiest to
-                  remember or most intuitive. We would recommend for, at least
-                  to begin with, as it is probably the easiest for remembering
-                  everything — the initializer, condition, and final-expression
-                  all have to go neatly into the parentheses, so it is easy to
-                  see where they are and check that you aren't missing them.
-                </p>
-                <li>
-                  <b>for...of loops</b>
-                  <br />
-
-                  for (const item of array) <br />
-                  {<br />
-                  // code to run <br />
-                  }
-                </li>
-
-                <li>
-                  <b>for loops</b> <br />
-
-                  for (initializer; condition; final-expression) <br />
-                  {<br />
-                  // code to run<br />
-                  }
-                </li>
-
-                <li>
-                  <b>while loops</b> <br />
-
-                  initializer <br />
-                  while (condition) <br />
-                  { <br />
-                  // code to run
-                  <br />
-                  final-expression <br />
-                  }
-                </li>
-
-                <li>
-                  <b>do...while loops</b> <br />
-                  initializer <br />
-                  do <br />
-                  { <br />
-                  // code to run<br />
-
-                  final-expression <br />
-                  } <br />
-                  while (condition)
-                </li>
-              </ul>
-
-              <!-- ********** End of JavaScript reference section **********-->
-            </div>
-            <div>
-              <!-- ********** Start of HTML reference section **********-->
-              <h1 id="HTML">HTML Reference</h1>
-              <ul>
-                <li>
-                  <a
-                    href="https://github.com/1Amal/engineering-reference/tree/main/HTML"
-                    >Click here to view other HTML resources</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
-                    target="_blank"
-                    >Mozilla Developer Network, HTML</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://www.w3schools.com/TAGS/default.asp"
-                    target="_blank"
-                    >HTML tags from W3Schools</a
-                  >
-                </li>
-                <li>
-                  <a href="https://validator.w3.org/" target="_blank"
-                    >HTML Validator</a
-                  >
-                </li>
-              </ul>
-
-              <ul>
-                <li>
-                  <code>&lt!--This is a comment--&gt</code> : HTML Comments
-                </li>
-                <li><code>&lt!DOCTYPE&gt</code> : Defines the document type</li>
-                <li>
-                  <code>&lthead&gt</code> : Contains metadata/information for
-                  the document
-                </li>
-                <li>
-                  <code>&lthtml&gt</code> : Defines the root of an HTML document
-                </li>
-                <li><code>&lta&gt</code> : Defines a hyperlink</li>
-                <li>
-                  <code>&ltabbr&gt</code> : Defines an abbreviation or an
-                  acronym
-                </li>
-                <li><code>&ltb&gt</code> : Defines bold text</li>
-                <li><code>&ltbody&gt </code> : Defines the document's body</li>
-                <li><code>&ltbr&gt</code> : Defines a single line break</li>
-                <li><code>&ltbutton&gt</code> : Defines a clickable button</li>
-                <li>
-                  <code>&ltdiv&gt</code> : Defines a section in a document
-                </li>
-                <li><code>&ltem&gt</code>: Defines emphasized text</li>
-                <li>
-                  <code>&lth1&gt to &lth6&gt</code> : Defines HTML headings
-                </li>
-              </ul>
-
-              <!-- ********** End of HTML reference section **********-->
-            </div>
-            <div>
-              <!-- ********** Start of CSS reference section **********-->
-              <h1 id="CSS">CSS Reference</h1>
-              <a
-                href="https://github.com/1Amal/engineering-reference/tree/main/CSS"
-                >Click here to view other CSS resources</a
-              ><br />
-              <a
-                href="https://www.w3schools.com/cssref/index.php"
-                target="_blank"
-                >W3Schools CSS Reference
-              </a>
-
-              <h2>CSS Setup</h2>
-              <ul>
-                <li>
-                  External CSS: To use an external style sheet, add a link to it
-                  in the &lthead section of each HTML page <br />
-                  <code>
-                    &lt!DOCTYPE html> <br />
-                    &lthtml&gt <br />
-                    &lthead&gt <br />
-                    &ltlink rel="stylesheet" href="styles.css"&gt <br />
-                    &lt/head&gt <br />
-                    &ltbody&gt <br />
-
-                    &lth1&gtThis is a heading &lt/h1&gt <br />
-                    &ltp>This is a paragraph. &lt/p&gt <br />
-
-                    &lt/body&gt <br />
-                    &lt/html&gt <br />
-                  </code>
-                </li>
-
-                <li>
-                  Internal css An internal CSS is defined in the &lthead&gt
-                  section of an HTML page, within a &ltstyle&gt element.
-                  <br />
-                  <code>
-                    &lt!DOCTYPE html&gt <br />
-                    &lthtml&gt <br />
-                    &lthead&gt <br />
-                    &ltstyle&gt <br />
-                    body {background-color: powderblue;} <br />
-                    h1 {color: blue;} <br />
-                    p {color: red;} <br />
-                    &lt/style&gt <br />
-                    &lt/head&gt <br />
-                    &ltbody&gt <br />
-
-                    &ltbody&gt <br />
-                    &lthtml&
-                  </code>
-                </li>
-
-                <li>
-                  Inline CSS: An inline CSS is used to apply a unique style to a
-                  single HTML element.<br />
-                  An inline CSS uses the style attribute of an HTML element.<br />
-                  The following example sets the text color of the &lth1&gt
-                  element to blue, and the text color of the &ltp&gt element to
-                  red:<br />
-
-                  Example: <br />
-                  <code>
-                    &lth1 style="color:blue;">A Blue Heading &lt/h1&gt <br />
-
-                    &ltp style="color:red;">A red paragraph.&lt/p&gt
-                  </code>
-                </li>
-
-                <h3>
-                  Following is from Odin Project only used here for reference
-                  and personal learning
-                  (https://www.theodinproject.com/lessons/foundations-introduction-to-flexbox)
-                </h3>
-                <li>
-                  display:flex; : A flex container is any element that has
-                  display: flex on it. A flex item is any element that lives
-                  directly inside of a flex container. Somewhat confusingly, any
-                  element can be both a flex container and a flex item. Said
-                  another way, you can also put display: flex on a flex item and
-                  then use flexbox to arrange its children. Flex is actually a
-                  shorthand for flex-grow, flex-shrink and flex-basis.
-                  (https://www.theodinproject.com/lessons/foundations-growing-and-shrinking)
-                </li>
-
-                <li>
-                  flex-grow : Expects a single number as its value, and that
-                  number is used as the flex-item’s “growth factor”. When we
-                  applied flex: 1 to every div inside our container, we were
-                  telling every div to grow the same amount. The result of this
-                  is that every div ends up the exact same size. If we instead
-                  add flex: 2 to just one of the divs, then that div would grow
-                  to 2x the size of the others.
-                </li>
-
-                <li>
-                  flex-shrink : Similar to flex-grow, but sets the “shrink
-                  factor” of a flex item. flex-shrink only ends up being applied
-                  if the size of all flex items is larger than their parent
-                  container. For example, if our 3 divs from above had a width
-                  declaration like: width: 100px, and .flex-container was
-                  smaller than 300px, our divs would have to shrink to fit.
-                </li>
-
-                <li>
-                  flex-basis : Simply sets the initial size of a flex item, so
-                  any sort of flex-growing or flex-shrinking starts from that
-                  baseline size. The shorthand value defaults to flex-basis: 0%.
-                  The reason we had to change it to auto in the flex-shrink
-                  example is that with the basis set to 0, those items would
-                  ignore the item’s width, and everything would shrink evenly.
-                  Using auto as a flex-basis tells the item to check for a width
-                  declaration (width: 250px). Important Note About Flex-Basis:
-                  There is a difference between the default value of flex-basis
-                  and the way the flex shorthand defines it if no flex-basis is
-                  given. The actual default value for flex-basis is auto, but
-                  when you specify flex: 1 on an element, it interprets that as
-                  flex: 1 1 0. If you want to only adjust an item’s flex-grow
-                  you can simply do so directly, without the shorthand. Or you
-                  can be more verbose and use the full 3 value shorthand flex: 1
-                  1 auto, which is also equivalent to using flex: auto.
-                </li>
-
-                <li>
-                  flex: auto; : Is one of the shorthands of flex. When auto is
-                  defined as a flex keyword it is equivalent to the values of
-                  flex-grow: 1, flex-shrink: 1 and flex-basis: auto or to flex:
-                  1 1 auto using the flex shorthand. Note that flex: auto is not
-                  the default value when using the flex shorthand despite the
-                  name being “auto” which may be slightly confusing at first.
-                  You will encounter and learn more about flex: auto and its
-                  potential use-cases when reading through the assignment
-                  section. In Practice: You will likely not be using complex
-                  values for flex-grow, flex-shrink or flex-basis. Generally,
-                  you’re most likely to use declarations like flex: 1; to make
-                  divs grow evenly and flex-shrink: 0 to keep certain divs from
-                  shrinking. It is possible to get fancy, and set up layouts
-                  where some columns relate to each other in a specific ratio,
-                  so it’s useful to know that you can use other values, but
-                  those are relatively rare.
-                </li>
-
-                <li>
-                  flex-direction:column; : column puts the main axis vertical
-                  (top-to-bottom).
-                </li>
-
-                <li>
-                  flex-direction: row; : Puts the main axis horizontal
-                  (left-to-right), the flex-direction property's default is row.
-                </li>
-
-                <li>
-                  justify-content: center; : Aligns items across the main axis
-                  vertically
-                </li>
-
-                <li>
-                  align-items: center; : Aligns items across the main axis
-                  horizontally
-                </li>
-
-                <li>
-                  gap: 8px; : Setting gap on a flex container simply adds a
-                  specified space between flex items
-                  (https://www.theodinproject.com/lessons/foundations-alignment)
-                </li>
-
-                <li>
-                  As with all properties in CSS, some initial values are
-                  defined, so when creating a flex container all of the
-                  contained flex items will behave in the following way. Items
-                  display in a row (the flex-direction property's default is
-                  row). The items start from the start edge of the main axis.
-                  The items do not stretch on the main dimension, but can
-                  shrink. The items will stretch to fill the size of the cross
-                  axis. The flex-basis property is set to auto. The flex-wrap
-                  property is set to nowrap.
-                </li>
-
-                <li>
-                  flex-wrap: no-wrap; : Using nowrap would cause an overflow if
-                  the items were not able to shrink, or could not shrink small
-                  enough to fit. It is also the initial value.
-                </li>
-                <li>
-                  flex-wrap: wrap; : As flex-wrap is set to wrap, the items wrap
-                </li>
-
-                <li>
-                  flex-flow : You can combine the two properties flex-direction
-                  and flex-wrap into the flex-flow shorthand. The first value
-                  specified is flex-direction and the second value is flex-wrap
-                </li>
-              </ul>
-
-              <!-- ********** End of CSS reference section **********-->
-            </div>
-          </div>
-
-          <div>
-            <!-- ********** Start of Software development tools and best practices section **********-->
-            <h1 id="softwareBestPractices">
-              Software development best practices
-            </h1>
-            <ul>
-              <li>
-                <a
-                  href="https://github.com/1Amal/engineering-reference/tree/main/Software Development Tools"
-                  >Click here to view other Software development tools and best
-                  practices resources</a
-                >
-              </li>
-            </ul>
-            <h2>Visual Studio Code keyboard shortcuts</h2>
-            <ul>
-              <li><code>Ctrl+Shift+P, F1 </code> : Show Command Palette</li>
-              <li><code>Ctrl+K Ctrl+S</code> : Keyboard Shortcuts</li>
-              <li><code>F11 </code> : Toggle full screen</li>
-              <li><code>Ctrl+ = / - </code> : Zoom in/out</li>
-              <li><code>Ctrl+B</code> : Toggle Sidebar visibility</li>
-              <li><code>Ctrl+` </code> : Show integrated terminal</li>
-              <li>
-                <code>Alt and clicking in multiple locations</code>
-                for Editing: This allows to edit multiple lines simultaneously.
-              </li>
-              <li>
-                <code>(Ctrl + `)</code> Integrated Terminal: Utilize the
-                integrated terminal for running command-line commands without
-                leaving the editor.
-              </li>
-            </ul>
-
-            <h2>Firefox / Chrome Developer Tools</h2>
-            <ul>
-              <li>
-                about:config then search for devtools.selfxss.count then set the
-                value to 100 : To enable pasting to Firefox JavaScript console:
-                Get into setting by As an temporary solution "allow pasting" can
-                be used
-              </li>
-            </ul>
-            <h2>Clean Code</h2>
-            <p>
-              I will use the following Clean Code methods for writing my source
-              code :
-              <a
-                href="https://www.theodinproject.com/lessons/foundations-clean-code"
-                target="_blank"
-              >
-                Odin Project, Foundations Course: Clean Code
-              </a>
-              and
-              <a
-                href="https://onextrapixel.com/10-principles-for-keeping-your-programming-code-clean"
-                target="_blank"
-                >10 Principles for Keeping Your Programming Code Clean</a
-              >
-            </p>
-            <ul>
-              <li>Indentation:2 spaces for indentation</li>
-              <li>Semicolons: Always Add semicolons</li>
-              <li>
-                Line length:Break lines that are longer than about 80
-                characters.
-                <ul>
-                  <li>Break immediately after an operator or comma</li>
-                  <li>Indent continuation lines by one level</li>
-                  <li>
-                    Vertically align continuation lines with the first variable
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Naming Things:Names for functions and variables should be
-                descriptive. Always use camelCase. To keep things consistent and
-                easy to read, variables should always begin with a noun or an
-                adjective (that is, a noun phrase) and functions with a verb. It
-                is ok to use single characters as variable names in the context
-                of a loop or a callback function, but not elsewhere.
-              </li>
-              <li>Revise Your Logic Before Coding</li>
-              <li>Clearly Expose the Structure of the Page</li>
-              <li>Write Explanatory Comments and Avoid Abusing Comments</li>
-              <li>Avoid Extremely Large Functions</li>
-              <li>
-                Use Naming Standards for Functions and Variables: Whenever a
-                variable or a function is created, its name should be
-                descriptive enough as to give a general idea of what it does or
-                what it’s for.
-              </li>
-              <li>Avoid Indiscriminate Mixing of Coding Languages</li>
-              <li>
-                Summarize Your Imports: Even though it is much better to have
-                additional coding languages imported from different files, this
-                shouldn’t be abused. If there are too many style sheets, they
-                can probably be summarized into one or two. This won’t only save
-                space and make things look cleaner, but it will also save
-                loading time. Each imported file is an HTTP request that tampers
-                with the performance of your application. So apart from being a
-                consideration for tidiness, it is also a consideration for
-                efficiency.
-              </li>
-            </ul>
-
-            <!-- ********** End of Software development tools and best practices section **********-->
-          </div>
-
-          <div>
-            <!-- ********** Start of Electronics Engineering reference section **********-->
-            <h1 id="Electronics">Electronics Engineering Reference</h1>
-            <a
-              href="https://github.com/1Amal/engineering-reference/tree/main/Electronics"
-              >Click here to view other Electronics Engineering resources</a
-            >
-            <br />
-            <a href="../Linux/index.html"
-              >Please visit Linux section for Raspberry Pi OS</a
-            >
-
-            <h2>Electronics Reference</h2>
-
-            <ul>
-              <li>
-                <a
-                  href="https://www.allaboutcircuits.com/textbook/reference/chpt-2/resistor-color-codes/"
-                  target="_blank"
-                  >Resistor Color codes</a
-                >
-              </li>
-            </ul>
-
-            <h2>Raspberry Pi</h2>
-            <ul>
-              <li>
-                <a
-                  href="https://www.raspberrypi.com/documentation/"
-                  target="_blank"
-                  >Offical Raspberrypi Pi documentation</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.raspberrypi.com/documentation/computers/raspberry-pi.html"
-                  target="_blank"
-                  >Raspberry Pi Hardware Reference</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.raspberrypi.com/documentation/computers/os.html"
-                  target="_blank"
-                  >Raspberry Pi OS</a
-                >
-              </li>
-            </ul>
-
-            <h2>Arduino</h2>
-
-            <ul>
-              <li>
-                <a href="https://store-usa.arduino.cc/products/arduino-uno-rev3"
-                  >Arduino Uno Board reference</a
-                >
-              </li>
-              <li>
-                <a href="https://www.arduino.cc/reference/en/" target="_"
-                  >Arduino Language reference</a
-                >
-              </li>
-            </ul>
-
-            <!-- ********** End of Electronics Engineering reference section **********-->
-          </div>
-
-          <div>
-            <!-- ********** Start of Networking and Cybersecurity reference section **********-->
-            <h1 id="Networking">Networking and Cybersecurity Reference</h1>
-            <a
-              href="https://github.com/1Amal/engineering-reference/tree/main/Networking and Cybersecurity"
-              >Click here to view other Networking and Cybersecurity
-              resources</a
-            >
-
-            <ul>
-              <li>
-                <code>
-                  Class A: 255.0.0.0 <br />
-                  Class B: 255.255.0.0 <br />
-                  Class C: 255.255.255.0 <br /> </code
-                >A network mask helps to know which portion of the address
-                identifies the network and which portion of the address
-                identifies the node. Class A, B, and C networks have default
-                masks, also known as natural masks.
-              </li>
-            </ul>
-
-            <h2>The 7 layers of the OSI model</h2>
-            <a
-              href="https://www.networkworld.com/article/3239677/the-osi-model-explained-and-how-to-easily-remember-its-7-layers.html"
-              target="_blank"
-              >From Network World</a
-            >
-            <ul>
-              <li>
-                <b>A</b>ll <b>P</b>eople <b>S</b>eem <b>T</b>o <b>N</b>eed
-                <b>D</b>ata <b>P</b>rocessing : The first letter of each word is
-                the same as the first letter an OSI layer.
-              </li>
-              <li>
-                <b>Layer 7 - Application:</b>
-                The Application Layer in the OSI model is the layer that is the
-                “closest to the end user”. It receives information directly from
-                users and displays incoming data to the user. Oddly enough,
-                applications themselves do not reside at the application layer.
-                Instead the layer facilitates communication through lower layers
-                in order to establish connections with applications at the other
-                end. Web browsers (Google Chrome, Firefox, Safari, etc.) TelNet,
-                and FTP, are examples of communications that rely on Layer 7.
-              </li>
-
-              <li>
-                <b> Layer 6 - Presentation: </b> The Presentation Layer
-                represents the area that is independent of data representation
-                at the application layer. In general, it represents the
-                preparation or translation of application format to network
-                format, or from network formatting to application format. In
-                other words, the layer “presents” data for the application or
-                the network. A good example of this is encryption and decryption
-                of data for secure transmission; this happens at Layer 6.
-              </li>
-
-              <li>
-                <b>Layer 5 - Session: </b>When two computers or other networked
-                devices need to speak with one another, a session needs to be
-                created, and this is done at the Session Layer. Functions at
-                this layer involve setup, coordination (how long should a system
-                wait for a response, for example) and termination between the
-                applications at each end of the session.
-              </li>
-
-              <li>
-                <b>Layer 4 – Transport: </b>The Transport Layer deals with the
-                coordination of the data transfer between end systems and hosts.
-                How much data to send, at what rate, where it goes, etc. The
-                best known example of the Transport Layer is the Transmission
-                Control Protocol (TCP), which is built on top of the Internet
-                Protocol (IP), commonly known as TCP/IP. TCP and UDP port
-                numbers work at Layer 4, while IP addresses work at Layer 3, the
-                Network Layer.
-              </li>
-
-              <li>
-                <b>Layer 3 - Network : </b>Here at the Network Layer is where
-                you’ll find most of the router functionality that most
-                networking professionals care about and love. In its most basic
-                sense, this layer is responsible for packet forwarding,
-                including routing through different routers. You might know that
-                your Boston computer wants to connect to a server in California,
-                but there are millions of different paths to take. Routers at
-                this layer help do this efficiently.
-              </li>
-
-              <li>
-                <b>Layer 2 – Data Link: </b>The Data Link Layer provides
-                node-to-node data transfer (between two directly connected
-                nodes), and also handles error correction from the physical
-                layer. Two sublayers exist here as well--the Media Access
-                Control (MAC) layer and the Logical Link Control (LLC) layer. In
-                the networking world, most switches operate at Layer 2. But it’s
-                not that simple. Some switches also operate at Layer 3 in order
-                to support virtual LANs that may span more than one switch
-                subnet, which requires routing capabilities.
-              </li>
-
-              <li>
-                <b>Layer 1 - Physical: </b>At the bottom of our OSI model we
-                have the Physical Layer, which represents the electrical and
-                physical representation of the system. This can include
-                everything from the cable type, radio frequency link (as in a
-                Wi-Fi network), as well as the layout of pins, voltages, and
-                other physical requirements. When a networking problem occurs,
-                many networking pros go right to the physical layer to check
-                that all of the cables are properly connected and that the power
-                plug hasn’t been pulled from the router, switch or computer, for
-                example.
-              </li>
-            </ul>
-
-            <h2>External resources</h2>
-            <ul>
-              <li>
-                <a
-                  href="https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html"
-                  target="_blank"
-                  >Cisco IP addressing</a
-                >
-              </li>
-            </ul>
-
-            <!-- ********** End of Networking and Cybersecurity reference section **********-->
-          </div>
-
-          <div>
-            <!-- ********** Start of Python reference section **********-->
-            <h1 id="Python">Python Reference</h1>
-            <a
-              href="https://github.com/1Amal/engineering-reference/tree/main/Python"
-              >Click here to view other resources</a
-            >
-
-            <h2>Python Basics</h2>
-            <ul>
-              <li>
-                Python Indentation: Indentation refers to the spaces at the
-                beginning of a code line. Where in other programming languages
-                the indentation in code is for readability only, the indentation
-                in Python is very important. Python uses indentation to indicate
-                a block of code.
-              </li>
-              <li>
-                # : Add in front of the code for commenting out single line of
-                code
-                <br />
-                """ <br />
-                Use triple quotes for multiline comments <br />
-                """
-              </li>
-
-              <li>print("Hello World"): Print a message onto the screen</li>
-
-              <li>
-                Variable: Variables store data types into the memory of your
-                computer, Variable names are case-sensitive. allowing Python to
-                automatically populate them into your code when you reference
-                them later.<br />
-                "Name=Value" <br />
-                On the left side of the variable we give name for the variable =
-                On the right side we assign a value <br />
-                A variable can have a short name (like x and y) or a more
-                descriptive name (age, carname, total_volume). <br />
-                Rules for Python variables:<br />
-                A variable name must start with a letter or the underscore
-                character<br />
-                A variable name cannot start with a number<br />
-                A variable name can only contain alpha-numeric characters and
-                underscores (A-z, 0-9, and _ )<br />
-                Variable names are case-sensitive (age, Age and AGE are three
-                different variables)<br />
-                Pascal Case: Each word starts with a capital letter:
-                MyVariableName = "John" <br />
-                Snake Case: Each word is separated by an underscore character:
-                my_variable_name = "John"
-              </li>
-
-              <li>
-                Primitive Data Types: Data types that are single objects and are
-                immutable (cannot be changed without being redefined). These
-                are:
-                <ul>
-                  <li>Numbers: Numbers (with an optional + or - prefix).</li>
-                  <li>
-                    Integers: are whole numbers with an optional positive + or
-                    negative - prefix. For example, 3, 82, 38218, +3, -71 are
-                    all integers.
-                  </li>
-                  <li>
-                    Floats: Any number containing a decimal point is interpreted
-                    as a float (e.g., 0.32, .32, 83.7823, 1.00).
-                  </li>
-                  <li>
-                    Strings: Sequences of characters, always enclosed in
-                    quotation marks.
-                  </li>
-                  <li>
-                    Booleans: Also called flags; these can only be True or
-                    False.
-                  </li>
-                  <li>
-                    None: Represents a null value, or the absence of data.
-                  </li>
-                  <li>
-                    Numerical Operators: programmers perform equations with data
-                    by using numerical operators, which include +, -, *, /, //,
-                    and %.
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                Converting Data Types: we use built-in functions like float(),
-                int(), str() to convert a data type. For instance, say our data
-                set stores the number “1” as a string. To convert it to an
-                integer, we would write int('1')
-              </li>
-
-              <li>
-                Casting : If you want to specify the data type of a variable,
-                this can be done with casting.<br />
-                x = str(3) # x will be '3' <br />
-                y = int(3) # y will be 3 <br />
-                z = float(3) # z will be 3.0
-              </li>
-
-              <li>
-                Get the Type : You can get the data type of a variable with the
-                type() function i.e. <br />
-                x = 5 <br />
-                y = "John"<br />
-                print(type(x)) <br />
-                print(type(y) <br />
-              </li>
-
-              <li>
-                Complex Data Types: A data type that can hold more than one
-                object as Lists, Tuples, Set and Dictionaries<br />
-                Lists: Enclosed by square brackets ([]). Mutable (changeable)
-                collections of objects with specific orders. The objects in a
-                list can be any combination of data types and do not have to be
-                unique (elements can be repeated).
-                <ul>
-                  <li>len() - tells us thg length of our list.</li>
-                  <li>append() - adds an item to the end of a list.</li>
-                  <li>pop() - removes an element from a list.</li>
-                  <li>
-                    index() - asks python to return the value in a given
-                    position. Indexing in Python starts from 0 not 1.
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                Tuples: Enclosed by parentheses (()). Immutable versions of
-                lists. Unlike lists, their elements cannot be removed, added to,
-                or changed.
-              </li>
-
-              <li>
-                Set: Enclosed by curly braces ({}). A collection of unordered,
-                unique elements.
-              </li>
-
-              <li>
-                Dictionaries: Also enclosed by curly braces, but elements are
-                pairs joined by a colon ({:}). These are sets of key-value
-                pairs. Every element has a key (of any immutable data type),
-                which must be unique, and a value (which can be of any data type
-                and does not need to be unique — multiple keys can have the same
-                value). Dictionaries, like sets, are unordered — their index is
-                the keys, not a list of numbers.
-              </li>
-
-              <li>
-                For help type ‘help’ i.e. for definition of ‘print’ function
-                type: help(print) ?print
-                <ul>
-                  <li>
-                    Getting help from Jupyter and Python to remember what stuff
-                    does: shift+tab in the brackets of a function or argument
-                    will bring up the docstring, or short instructions on how to
-                    use it
-                  </li>
-                  <li>
-                    help(function_or_method) will print out the same docstring
-                  </li>
-                  <li>
-                    dir(variable) will remind you what methods are available
-                    (for a variable, depending on its type or data structure)
-                  </li>
-                  <li>tab whilst typing will try to autocomplete things</li>
-                  <li>
-                    command+click or alt+click will enable multi-line editing -
-                    which is so amazingly cool and a must have feature for a
-                    text editor once you know it exists.
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                %pip install : Install Python modules <br />i.e %pip install
-                geocode
-              </li>
-
-              <li>
-                import: For importing external python modules<br />
-                i.e: import csv
-              </li>
-            </ul>
-            <h2>Control Flow</h2>
-            <ul>
-              <li>
-                Comparison Operators has the ability to compare values and
-                return a boolean result of "True" or "False" <br />
-                > : Greater than <br />
-                >= : Greater than or equal to <br />
-                < : Less than <br />
-                <= : Less than or equal to <br />
-                == : Equality <br />
-                != : Inequality
-              </li>
-
-              <li>
-                Logic operators allows to combine multiple operators together.
-                For complex conditionals you can put several conditions in
-                parentheses to evaluate as single expression.<br />
-                and : Evaluates to True if all combined values are True <br />
-                or : Evaluates to True if any of the combined values are True
-                <br />
-                not : Reverses the boolean result of whatever follows it
-              </li>
-            </ul>
-
-            <h2>Python Functions</h2>
-            <p>
-              A function is a block of code which only runs when it is called.
-              You can pass data, known as parameters, into a function. A
-              function can return data as a result.
-              <a
-                href="https://www.w3schools.com/python/python_functions.asp"
-                target="_blank"
-                >Python Functions</a
-              >
-            </p>
-
-            <h2>Python Classes/Objects</h2>
-            <p>
-              Python is an object oriented programming language. Almost
-              everything in Python is an object, with its properties and
-              methods. A Class is like an object constructor, or a "blueprint"
-              for creating objects.
-              <a
-                href="https://www.w3schools.com/python/python_classes.asp"
-                target="_blank"
-                >Python classes</a
-              >
-            </p>
-            <p>
-              Create a Class To create a class, use the keyword class:<br />
-
-              Example Create a class named MyClass, with a property named x:
-              <br />
-
-              class MyClass:<br />
-              x = 5
-            </p>
-
-            <h2>Python data structures definition and usage</h2>
-            <h3>Python Collections (Arrays)</h3>
-            <p>
-              There are four collection data types in the Python programming
-              language: List is a collection which is ordered and changeable.
-              Allows duplicate members. Lists are used to store multiple items
-              in a single variable. Create a List: thislist = ["apple",
-              "banana", "cherry"] print(thislist)
-            </p>
-            <ul>
-              <li>
-                List items are ordered, changeable, and allow duplicate values.
-              </li>
-              <li>
-                List items are indexed, the first item has index [0], the second
-                item has index [1] etc.
-              </li>
-              <li>
-                Ordered: When we say that lists are ordered, it means that the
-                items have a defined order, and that order will not change.
-              </li>
-              <li>
-                If you add new items to a list, the new items will be placed at
-                the end of the list.
-              </li>
-              <li>
-                Note: There are some list methods that will change the order,
-                but in general: the order of the items will not change.
-              </li>
-              <li>
-                Changeable: The list is changeable, meaning that we can change,
-                add, and remove items in a list after it has been created.
-              </li>
-              <li>
-                Allow Duplicates: Since lists are indexed, lists can have items
-                with the same value:
-              </li>
-            </ul>
-            <h3>Tuples</h3>
-            <p>
-              Tuple is a collection which is ordered and unchangeable. Allows
-              duplicate members. Tuples are used to store multiple items in a
-              single variable. A tuple is a collection which is ordered and
-              unchangeable. Tuples are written with round brackets. Create a
-              Tuple: thistuple = ("apple", "banana", "cherry") print(thistuple)
-              tuple Items
-            </p>
-
-            <ul>
-              <li>
-                Tuple items are ordered, unchangeable, and allow duplicate
-                values.
-              </li>
-              <li>
-                Tuple items are indexed, the first item has index [0], the
-                second item has index [1] etc.
-              </li>
-              <li>
-                Ordered: When we say that tuples are ordered, it means that the
-                items have a defined order, and that order will not change.
-              </li>
-              <li>
-                Unchangeable: Tuples are unchangeable, meaning that we cannot
-                change, add or remove items after the tuple has been created.
-              </li>
-              <li>
-                Allow Duplicates: Since tuples are indexed, they can have items
-                with the same value:
-              </li>
-            </ul>
-
-            <h3>Set</h3>
-            <p>
-              Set is a collection which is unordered, unchangeable*, and
-              unindexed. No duplicate members. Sets are used to store multiple
-              items in a single variable. A set is a collection which is
-              unordered, unchangeable*, and unindexed. * Note: Set items are
-              unchangeable, but you can remove items and add new items. Sets are
-              written with curly brackets. Example Create a Set: thisset =
-              {"apple", "banana", "cherry"} print(thisset)
-            </p>
-
-            <ul>
-              <li>
-                Set Items: Set items are unordered, unchangeable, and do not
-                allow duplicate values.
-              </li>
-              <li>
-                Unordered: Unordered means that the items in a set do not have a
-                defined order.
-              </li>
-              <li>
-                Set items can appear in a different order every time you use
-                them, and cannot be referred to by index or key.
-              </li>
-              <li>
-                Unchangeable: Set items are unchangeable, meaning that we cannot
-                change the items after the set has been created.
-              </li>
-              <li>
-                Once a set is created, you cannot change its items, but you can
-                remove items and add new items.
-              </li>
-              <li>
-                Duplicates Not Allowed: Sets cannot have two items with the same
-                value. No duplicate members.
-              </li>
-            </ul>
-
-            <h3>Dictionary</h3>
-            <p>
-              Dictionary is a collection which is ordered** and changeable.
-              Dictionaries are used to store data values in key:value pairs. A
-              dictionary is a collection which is ordered*, changeable and do
-              not allow duplicates. Dictionaries are written with curly
-              brackets, and have keys and values: Example Create and print a
-              dictionary: thisdict = { "brand": "Ford", "model": "Mustang",
-              "year": 1964 } print(thisdict)
-            </p>
-
-            <ul>
-              <li>
-                Dictionary Items: Dictionary items are ordered, changeable, and
-                does not allow duplicates. Dictionary items are presented in
-                key:value pairs, and can be referred to by using the key name. v
-              </li>
-              <li>
-                Ordered or Unordered? :As of Python version 3.7, dictionaries
-                are ordered. In Python 3.6 and earlier, dictionaries are
-                unordered. When we say that dictionaries are ordered, it means
-                that the items have a defined order, and that order will not
-                change. Unordered means that the items does not have a defined
-                order, you cannot refer to an item by using an index.
-              </li>
-              <li>
-                Changeable: Dictionaries are changeable, meaning that we can
-                change, add or remove items after the dictionary has been
-                created.
-              </li>
-              <li>
-                Duplicates Not Allowed: Dictionaries cannot have two items with
-                the same key:
-              </li>
-            </ul>
-
-            <h2>Jupyter Notebook</h2>
-            <p>
-              Start Jupyter Notebook in any folder, jupyter notebook
-              --notebook-dir=”LOCATION of the folder to start Jupyter Notebook
-              i.e. D:/Documents”
-            </p>
-            <p>
-              Jupyter Notebook and JupyterLab 3.0 For old Jupyter Notebook
-              interface installed with notebook package and run as jupyter
-              notebook (see the next section for the identical interface
-              installed with nbclassic and run with jupyter nbclassic, and for
-              JupyterLab):
-            </p>
-            <ol>
-              <li>
-                Open cmd (or Anaconda Prompt) and run jupyter notebook
-                --generate-config.
-              </li>
-              <li>
-                This writes a file to
-                C:\Users\username\.jupyter\jupyter_notebook_config.py.
-                C:\Users\[Windows user directory]\.jupyter
-              </li>
-              <li>Browse to the file location and open it in an Editor</li>
-              <li>
-                Search for the following line in the file:
-                #c.NotebookApp.notebook_dir = ''
-              </li>
-              <li>
-                Replace by c.NotebookApp.notebook_dir =
-                '/the/path/to/home/folder/' Make sure you use forward slashes in
-                your path and use /home/user/ instead of ~/ for your home
-                directory, backslashes could be used if placed in double quotes
-                even if folder name contains spaces as such :
-                "D:\yourUserName\Any Folder\More Folders\"
-              </li>
-              <li>
-                Remove the # at the beginning of the line to allow the line to
-                execute JupyterLab >= 3, Jupyter Notebook Classic, and RetroLab
-                For recent nbclassic and JupyterLab >= 3 use
-                c.ServerApp.root_dir instead of c.NotebookApp.notebook_dir (and
-                jupyter server --generate-config instead of jupyter notebook
-                --generate-config).
-              </li>
-            </ol>
-
-            <!-- ********** End of Python reference section **********-->
           </div>
         </div>
       </div>
