@@ -11,21 +11,22 @@
 
   <body>
     <div class="mainWebsiteGridContainer">
-      <div>
+      <div class="title">
         <h1>
           Software Engineering (Front End, Back End, Full Stack), Electronics,
           Telecommunications and Internet Engineering quick reference portal
         </h1>
       </div>
-
       <div id="navBar">
-        <div>
-          <a href="index.html#linuxAndMiscellaneousOperatingSystems"
-            ><h3>Linux and Miscellaneous Operating Systems</h3></a
-          >
+        <div class="navBarLinux">
+          <h1>
+            <a href="index.html#linuxAndMiscellaneousOperatingSystems"
+              >Linux and Miscellaneous Operating Systems</a
+            >
+          </h1>
 
           <ul>
-            <li><a href="index.html#Linux">Linux |</a></li>
+            <li><a href="index.html#linux">Linux |</a></li>
             <!-- ********** Start of Linux reference section **********-->
 
             <li><a href="index.html#raspberryPi">Raspberri Pi |</a></li>
@@ -38,12 +39,12 @@
           </ul>
         </div>
 
-        <div>
-          <h3>
+        <div class="navBarSoftwareTools">
+          <h1>
             <a href="index.html#softwareDevelopmentTools"
               >Software Development Tools</a
             >
-          </h3>
+          </h1>
 
           <ul>
             <li><a href="index.html#Git">Git |</a></li>
@@ -59,12 +60,12 @@
             <!-- ********** Start of Software development tools and best practices section **********-->
           </ul>
         </div>
-        <div>
-          <h3>
+        <div class="navBarFrontEnd">
+          <h1>
             <a href="index.html#frontEndDevelopmentLanguagesAndFrameWorks"
               >Front End Development Languages and FrameWorks</a
             >
-          </h3>
+          </h1>
 
           <ul>
             <li><a href="index.html#javaScript">JavaScript |</a></li>
@@ -78,30 +79,35 @@
           </ul>
         </div>
 
-        <div>
-          <h3>
-            <a href="index.html#backEnd"
+        <div class="navBarBackEnd">
+          <h1>
+            <a href="index.html#backEndDevelopmentLanguagesAndFrameWorks"
               >Back End End Development Languages and FrameWorks</a
             >
-          </h3>
+          </h1>
 
           <ul>
-            <li><a href="index.html#nodejs">Node.js</a></li>
+            <li><a href="index.html#nodeJs">Node.js</a></li>
           </ul>
         </div>
 
-        <div>
+        <div class="navBarSoftwarePractices">
+          <h1>
+            <a href="index.html#softwareBestPractices"
+              >Software development best practices</a
+            >
+          </h1>
           <ul>
-            <li>
-              <a href="index.html#softwareBestPractices"
-                >Software development best practices</a
-              >
-            </li>
+            <li></li>
           </ul>
         </div>
 
-        <div>
-          <h3>Electronics, Telecommunications and Internet Engineering</h3>
+        <div class="navBarETIE">
+          <a href="index.html#ETIE"
+            ><h1>
+              Electronics, Telecommunications and Internet Engineering
+            </h1></a
+          >
           <ul>
             <li><a href="index.html#Python">Python |</a></li>
             <!-- ********** Start of Python reference section **********-->
@@ -111,7 +117,7 @@
             </li>
             <!-- ********** Start of Networking and Cybersecurity reference section **********-->
 
-            <li><a href="index.html#Electronics">Electronics |</a></li>
+            <li><a href="index.html#electronics">Electronics |</a></li>
             <!-- ********** Start of Electronics Engineering reference section **********-->
           </ul>
         </div>
@@ -954,6 +960,37 @@
 
                 <!-- ********** End of Git reference section **********-->
               </div>
+              <h2 id="vsCode">Visual Studio Code keyboard shortcuts</h2>
+              <ul>
+                <li><code>Ctrl+Shift+P, F1 </code> : Show Command Palette</li>
+                <li><code>Ctrl+K Ctrl+S</code> : Keyboard Shortcuts</li>
+                <li><code>F11 </code> : Toggle full screen</li>
+                <li><code>Ctrl+ = / - </code> : Zoom in/out</li>
+                <li><code>Ctrl+B</code> : Toggle Sidebar visibility</li>
+                <li><code>Ctrl+` </code> : Show integrated terminal</li>
+                <li>
+                  <code>Alt and clicking in multiple locations</code>
+                  for Editing: This allows to edit multiple lines
+                  simultaneously.
+                </li>
+                <li>
+                  <code>(Ctrl + `)</code> Integrated Terminal: Utilize the
+                  integrated terminal for running command-line commands without
+                  leaving the editor.
+                </li>
+              </ul>
+
+              <h2 id="chromeDeveloperTools">
+                Firefox / Chrome Developer Tools
+              </h2>
+              <ul>
+                <li>
+                  about:config then search for devtools.selfxss.count then set
+                  the value to 100 : To enable pasting to Firefox JavaScript
+                  console: Get into setting by As an temporary solution "allow
+                  pasting" can be used
+                </li>
+              </ul>
             </div>
 
             <div id="frontEndDevelopmentLanguagesAndFrameWorks">
@@ -1224,7 +1261,8 @@
 
                     Example: <br />
                     <code>
-                      &lth1 style="color:blue;">A Blue Heading &lt/h1&gt <br />
+                      &lth1 style="color:blue;">A Blue Heading &lt/h1&gt
+                      <br />
 
                       &ltp style="color:red;">A red paragraph.&lt/p&gt
                     </code>
@@ -1366,6 +1404,9 @@
 
                 <!-- ********** End of CSS reference section **********-->
               </div>
+              <div id="react">
+                <h2>React</h2>
+              </div>
             </div>
             <!-- ********** End of Front End Development Languages and FrameWorks **********-->
 
@@ -1393,35 +1434,7 @@
                   >
                 </li>
               </ul>
-              <h2>Visual Studio Code keyboard shortcuts</h2>
-              <ul>
-                <li><code>Ctrl+Shift+P, F1 </code> : Show Command Palette</li>
-                <li><code>Ctrl+K Ctrl+S</code> : Keyboard Shortcuts</li>
-                <li><code>F11 </code> : Toggle full screen</li>
-                <li><code>Ctrl+ = / - </code> : Zoom in/out</li>
-                <li><code>Ctrl+B</code> : Toggle Sidebar visibility</li>
-                <li><code>Ctrl+` </code> : Show integrated terminal</li>
-                <li>
-                  <code>Alt and clicking in multiple locations</code>
-                  for Editing: This allows to edit multiple lines
-                  simultaneously.
-                </li>
-                <li>
-                  <code>(Ctrl + `)</code> Integrated Terminal: Utilize the
-                  integrated terminal for running command-line commands without
-                  leaving the editor.
-                </li>
-              </ul>
 
-              <h2>Firefox / Chrome Developer Tools</h2>
-              <ul>
-                <li>
-                  about:config then search for devtools.selfxss.count then set
-                  the value to 100 : To enable pasting to Firefox JavaScript
-                  console: Get into setting by As an temporary solution "allow
-                  pasting" can be used
-                </li>
-              </ul>
               <h2>Clean Code</h2>
               <p>
                 I will use the following Clean Code methods for writing my
@@ -1490,9 +1503,9 @@
               <!-- ********** End of Software development tools and best practices section **********-->
             </div>
 
-            <div>
+            <div id="ETIE">
               <!-- ********** Start of Electronics Engineering reference section **********-->
-              <h1 id="Electronics">Electronics Engineering Reference</h1>
+              <h1>Electronics, Telecommunications and Internet Engineering</h1>
               <a
                 href="https://github.com/1Amal/engineering-reference/tree/main/Electronics"
                 >Click here to view other Electronics Engineering resources</a
@@ -1502,7 +1515,7 @@
                 >Please visit Linux section for Raspberry Pi OS</a
               >
 
-              <h2>Electronics Reference</h2>
+              <h2 id="electronics">Electronics Reference</h2>
 
               <ul>
                 <li>
@@ -1514,7 +1527,7 @@
                 </li>
               </ul>
 
-              <h2>Raspberry Pi</h2>
+              <h2>Raspberry Pi Hardware</h2>
               <ul>
                 <li>
                   <a
@@ -1539,7 +1552,7 @@
                 </li>
               </ul>
 
-              <h2>Arduino</h2>
+              <h2 id="arduinoHardware">Arduino</h2>
 
               <ul>
                 <li>
@@ -1560,7 +1573,7 @@
 
             <div>
               <!-- ********** Start of Networking and Cybersecurity reference section **********-->
-              <h1 id="Networking">Networking and Cybersecurity Reference</h1>
+              <h2 id="Networking">Networking and Cybersecurity Reference</h2>
               <a
                 href="https://github.com/1Amal/engineering-reference/tree/main/Networking and Cybersecurity"
                 >Click here to view other Networking and Cybersecurity
@@ -1691,7 +1704,7 @@
 
             <div>
               <!-- ********** Start of Python reference section **********-->
-              <h1 id="Python">Python Reference</h1>
+              <h2 id="Python">Python Reference</h2>
               <a
                 href="https://github.com/1Amal/engineering-reference/tree/main/Python"
                 >Click here to view other resources</a
@@ -1881,8 +1894,8 @@
                   return a boolean result of "True" or "False" <br />
                   > : Greater than <br />
                   >= : Greater than or equal to <br />
-                  < : Less than <br />
-                  <= : Less than or equal to <br />
+                  <code>< </code>: Less than <br />
+                  <code><= </code>: Less than or equal to <br />
                   == : Equality <br />
                   != : Inequality
                 </li>
@@ -1891,7 +1904,8 @@
                   Logic operators allows to combine multiple operators together.
                   For complex conditionals you can put several conditions in
                   parentheses to evaluate as single expression.<br />
-                  and : Evaluates to True if all combined values are True <br />
+                  and : Evaluates to True if all combined values are True
+                  <br />
                   or : Evaluates to True if any of the combined values are True
                   <br />
                   not : Reverses the boolean result of whatever follows it

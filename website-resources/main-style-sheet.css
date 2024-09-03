@@ -16,8 +16,10 @@ Last Update: 30/08/2024
   --colour-H1-Heading: #000000;
   --colour-H2-Heading: #160404;
   --colour-H3-Heading: #0de827;
-  --colour-P-Paragraph: #1f2937;
-  --colour-HeadingBackground: #ffffff;
+  --colour-P-Paragraph: #000000;
+  --colour-H1HeadingBackground: #ef9f2f;
+  --colour-H2HeadingBackground: #a0b2ea;
+  --colour-H3HeadingBackground: #f6f47d;
   --colour-ALinks: #2997ff;
   --colour-ALinksActive: #13a570;
   --colour-ALinksVisited: #027a50;
@@ -58,7 +60,7 @@ h1 {
   margin: 5px;
   text-align: center;
   color: var(--colour-H1-Heading);
-  background-color: var(--colour-HeadingBackground);
+  background-color: var(--colour-H1HeadingBackground);
 }
 
 h2 {
@@ -67,7 +69,7 @@ h2 {
   margin: 5px;
   text-align: center;
   color: var(--colour-H2-Heading);
-  /* background-color: var(--colour-HeadingBackground); */
+  background-color: var(--colour-H2HeadingBackground);
 }
 
 h3 {
@@ -76,7 +78,7 @@ h3 {
   margin: 5px;
   text-align: center;
   color: var(--colour-H3-Heading);
-  /* background-color: var(--colour-HeadingBackground); */
+  background-color: var(--colour-H3HeadingBackground);
 }
 
 p {
