@@ -47,6 +47,9 @@ git push
 
 
 ***** Linux *****
+Run Nautilus File Manager with Root privileges: nautilus admin:/
+prompt with root permissions with the command: sudo -i and CTRL+D to go back to normal user
+
 sudo lshw : View hardware info
 Edit the Laptop Lid close behaviour
 sudo gnome-text-editor /etc/systemd/logind.conf
@@ -77,8 +80,14 @@ DecryptedDrive UUID=XXXXX none nofail
 Then update initramfs as follows
 sudo update-initramfs -u -k all
 
+Check the Laptop battery status
+upower -i /org/freedesktop/UPower/devices/battery_BAT0
 
-
+Lenovo Thinkpad
+Find serial number
+sudo dmidecode -t system | grep Serial
+To find the baseboard serial number:
+sudo dmidecode -t baseboard | grep Serial
 
 ***** Microsoft Windows *****
 
@@ -86,4 +95,6 @@ sudo update-initramfs -u -k all
 ***** Raspberri Pi ***** 
 
 ****  Dev Tools *****
+To Open VSCode from the same folder: code .
+
 
