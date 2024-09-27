@@ -2,6 +2,14 @@ Place to add all updates to the reference database before they are entered into 
 
 **************** Pending updates ****************
 
+*** JavaScript ****
+https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+The preventDefault() method of the Event interface tells the user agent that if the event does not get explicitly handled, 
+its default action should not be taken as it normally would be.
+
+Form Basics
+https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-form-basics
+
 ***** Git *****
 When the repo is cloned between Windows and Linux/Unix machines.
 
@@ -31,7 +39,7 @@ Find your GitHub noreply address in your GitHub's Personal Settings → Emails. 
 
 {ID}+{username}@users.noreply.github.com
 
-hange the global user e-mail address setting to be your GitHub noreply address:
+Change the global user e-mail address setting to be your GitHub noreply address:
 
 git config --global user.email {ID}+{username}@users.noreply.github.com
 Reset the author information on your last commit:
@@ -43,6 +51,17 @@ Now you can push the commit with the noreply e-mail address, and future commits 
 
 git push
 
+*****VS Code Extensions****
+Favourites Manager
+`ext install oleg-shilo.favorites`
+
+Open Settings
+references: Open Settings or use the keyboard shortcut (Ctrl+,)
+
+*** VS Code ****
+https://code.visualstudio.com/docs/languages/markdown
+
+To switch between views, press Ctrl+Shift+V in the editor. You can view the preview side-by-side (Ctrl+K V) with the file you are editing and see changes reflected in real-time as you edit.
 
 ***React***
 Please make sure that you are using the LTS version of Node, otherwise errors may occur. Fire up a terminal instance, cd into the folder containing your projects, and enter the following command (you can replace my-first-react-app with any name you want):
