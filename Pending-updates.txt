@@ -49,48 +49,6 @@ If you have multiple commits with your private e-mail address, see this answer.
 
 Now you can push the commit with the noreply e-mail address, and future commits will have the noreply e-mail address as well.
 
-git push
-
-*****VS Code Extensions****
-Favourites Manager
-`ext install oleg-shilo.favorites`
-
-Open Settings
-references: Open Settings or use the keyboard shortcut (Ctrl+,)
-
-*** VS Code ****
-https://code.visualstudio.com/docs/languages/markdown
-
-To switch between views, press Ctrl+Shift+V in the editor. You can view the preview side-by-side (Ctrl+K V) with the file you are editing and see changes reflected in real-time as you edit.
-
-***React***
-Please make sure that you are using the LTS version of Node, otherwise errors may occur. Fire up a terminal instance, cd into the folder containing your projects, and enter the following command (you can replace my-first-react-app with any name you want):
-npm create vite@latest my-first-react-app -- --template react
-Then follow the instructions to fully setup Vite
-To link your local project directory to a GitHub repo, create a new empty repo on GitHub then follow the instructions in the new repo’s page to connect it to your local project directory.
-
-Using an existing GitHub repo
-Alternatively, if you created a GitHub repo already and cloned it, you can cd into your cloned repo then run the above Vite command, using . as the project name:
-
-npm create vite@latest . -- --template react
-This will tell Vite to use the current directory for the project, instead of creating a new directory with the given project name. This cloned directory will already be initialized as a git repo and connected to the right remote.
-
-***** Linux *****
-
-
-
-
-***** Microsoft Windows *****
-
-
-***** Raspberri Pi ***** 
-
-****  VS Code *****
-To Open VSCode from the same folder: code .
-To switch between views, press Ctrl+Shift+V in the editor. 
-You can view the preview side-by-side (Ctrl+K V) with the file you are editing and see changes reflected in real-time as you edit.
-
-
 **** Git *****
 To create a new branch in Git, first check your current branch using git branch. Then, create and switch to a new branch with git checkout -b <new-branch-name>. If you want to push the new branch to the remote repository, use git push -u origin <new-branch-name>. To switch back to the main branch or any other branch, run git checkout main (or the branch name you wish to switch to).
 
@@ -137,6 +95,39 @@ Now let’s merge our <new branch> into `main`, our current branch, with git mer
 If everything goes fine, new branch is now successfully merged with main! Use git log and you’ll see all the commits you’ve made to your new branch on top of the commits you made to the main branch.
 To push main branch into our remote repo by running git push origin main . Go to your GitHub repo and you’ll see that our main branch will have all the changes and commits you made to the <new branch> 
 Now that we have all our code in the main branch, we don’t really need our <new branch> branch anymore. Let’s do some cleanup, both locally and in the remote repo. Delete the branch from our local repo with git branch -d <new branch name> and also delete it from the remote repo on GitHub with git push origin --delete <new branch name>.
+
+git push
+
+*** VS Code ****
+
+
+***React***
+Please make sure that you are using the LTS version of Node, otherwise errors may occur. Fire up a terminal instance, cd into the folder containing your projects, and enter the following command (you can replace my-first-react-app with any name you want):
+npm create vite@latest my-first-react-app -- --template react
+Then follow the instructions to fully setup Vite
+To link your local project directory to a GitHub repo, create a new empty repo on GitHub then follow the instructions in the new repo’s page to connect it to your local project directory.
+
+Using an existing GitHub repo
+Alternatively, if you created a GitHub repo already and cloned it, you can cd into your cloned repo then run the above Vite command, using . as the project name:
+
+npm create vite@latest . -- --template react
+This will tell Vite to use the current directory for the project, instead of creating a new directory with the given project name. This cloned directory will already be initialized as a git repo and connected to the right remote.
+
+***** Linux *****
+
+
+
+
+***** Microsoft Windows *****
+
+
+***** Raspberri Pi ***** 
+
+****  VS Code *****
+
+
+
+
 
 
 
