@@ -76,47 +76,9 @@ npm create vite@latest . -- --template react
 This will tell Vite to use the current directory for the project, instead of creating a new directory with the given project name. This cloned directory will already be initialized as a git repo and connected to the right remote.
 
 ***** Linux *****
-Run Nautilus File Manager with Root privileges: nautilus admin:/
-prompt with root permissions with the command: sudo -i and CTRL+D to go back to normal user
 
-sudo lshw : View hardware info
-Edit the Laptop Lid close behaviour
-sudo gnome-text-editor /etc/systemd/logind.conf
-find out the line #HandleLidSwitch=suspend and change it to one of following :
 
-    HandleLidSwitch=lock – lock when lid closed.
-    HandleLidSwitch=ignore – do nothing, some laptops will disconnect Wi-Fi.
-    HandleLidSwitch=poweroff – shutdown.
-    HandleLidSwitch=hibernate – hibernate Ubuntu.
-    
-    sudo lshw : View hardware info
 
-restart your computer
-
-Fixing the Encrypted drive issues on boot initramfs
-When you boot Ubuntu will not mount the encrypted drive as for some reason i.e. /etc/crypttab has been changed
-cryptsetup luksOpen /dev/nvme0n1p3 DecryptedDrive
-Enter the correct password and then exit the console
-exit
-*nvme0n1p3 is the default name for the SSD, change as per the correct device
-
-Once Ubuntu boots up normally (after the encrypted drive is mounted according to the above)
-Edit the /etc/crypttab by
-sudo nano /etc/crypttab
-
-Also open up Ubuntu Disks manager and look for the LUKS encrypted drive UUID then add to the 
-DecryptedDrive UUID=XXXXX none nofail
-Then update initramfs as follows
-sudo update-initramfs -u -k all
-
-Check the Laptop battery status
-upower -i /org/freedesktop/UPower/devices/battery_BAT0
-
-Lenovo Thinkpad
-Find serial number
-sudo dmidecode -t system | grep Serial
-To find the baseboard serial number:
-sudo dmidecode -t baseboard | grep Serial
 
 ***** Microsoft Windows *****
 
@@ -175,3 +137,24 @@ Now let’s merge our <new branch> into `main`, our current branch, with git mer
 If everything goes fine, new branch is now successfully merged with main! Use git log and you’ll see all the commits you’ve made to your new branch on top of the commits you made to the main branch.
 To push main branch into our remote repo by running git push origin main . Go to your GitHub repo and you’ll see that our main branch will have all the changes and commits you made to the <new branch> 
 Now that we have all our code in the main branch, we don’t really need our <new branch> branch anymore. Let’s do some cleanup, both locally and in the remote repo. Delete the branch from our local repo with git branch -d <new branch name> and also delete it from the remote repo on GitHub with git push origin --delete <new branch name>.
+
+
+
+*******************
+Programming Concepts
+
+Given-When-Then (GWT) is a semi-structured way to write down test cases. They can either be tested manually or automated as browser tests with tools like Selenium and Cucumber.[1][2]
+
+It derives its name from the three clauses used, which start with the words given, when and then.[3] Given describes the preconditions and initial state before the start of a test and allows for any pre-test setup that may occur. When describes actions taken by a user during a test. Then describes the outcome resulting from actions taken in the when clause.
+
+The Given-When-Then was proposed by Dan North in 2006, as part of behavior-driven development.[4]
+
+
+
+
+"Arrange-Act-Assert"
+a pattern for arranging and formatting code in UnitTest methods:
+Each method should group these functional sections, separated by blank lines:
+Arrange all necessary preconditions and inputs.
+Act on the object or method under test.
+Assert that the expected results have occurred

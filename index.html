@@ -196,8 +196,13 @@
             </li>
           </ul>
           <div class="project-1">
-            <h3>Linux: File & Directory operations</h3>
+            <h3>Linux: File, Directory and Storage operations</h3>
             <ul>
+              <li>
+                nautilus admin:/ :Run Nautilus File Manager with Root
+                privileges: prompt with root permissions with the command: sudo
+                -i and CTRL+D to go back to normal user
+              </li>
               <li>pwd - Print working directory command in Linux</li>
               <li>cd - Linux command to navigate through directories</li>
               <li>mkdir - Command used to create directories in Linux</li>
@@ -228,6 +233,29 @@
               </li>
               <li>zip - Zip files in Linux</li>
               <li>unzip - Unzip files in Linux</li>
+              <li>
+                Fixing the Encrypted drive issues on boot initramfs:
+                <p>
+                  When you boot Ubuntu will not mount the encrypted drive as for
+                  some reason i.e. /etc/crypttab has been changed cryptsetup
+                  luksOpen /dev/nvme0n1p3 DecryptedDrive Enter the correct
+                  password and then exit the console exit *nvme0n1p3 is assumed
+                  as the default name for the SSD, change as per the correct
+                  device
+                </p>
+                <p>
+                  Once Ubuntu boots up normally (after the encrypted drive is
+                  mounted according to the above) Edit the /etc/crypttab by sudo
+                  nano /etc/crypttab
+                </p>
+
+                <p>
+                  Also open up Ubuntu Disks manager and look for the LUKS
+                  encrypted drive UUID then add to the DecryptedDrive UUID=XXXXX
+                  none nofail Then update initramfs as follows sudo
+                  update-initramfs -u -k all
+                </p>
+              </li>
             </ul>
           </div>
 
@@ -357,6 +385,30 @@
                 grep 'dhcp|dns' /var/log/syslog grep -A2 -B4 'Fatal error'
                 /var/log/apache/error.log grep -v 'Notice'
                 /var/log/apache/error.log`
+              </li>
+              <li>sudo lshw : View hardware info</li>
+              <li>
+                sudo gnome-text-editor /etc/systemd/logind.conf: Edit the Laptop
+                Lid close behaviour:
+                <p>
+                  find out the line #HandleLidSwitch=suspend and change it to
+                  one of following : HandleLidSwitch=lock – lock when lid
+                  closed. HandleLidSwitch=ignore – do nothing, some laptops will
+                  disconnect Wi-Fi. HandleLidSwitch=poweroff – shutdown.
+                  HandleLidSwitch=hibernate – hibernate Ubuntu. restart your
+                  computer
+                </p>
+              </li>
+
+              <li>
+                Check the Laptop battery status: upower -i
+                /org/freedesktop/UPower/devices/battery_BAT0
+              </li>
+
+              <li>
+                Lenovo Thinkpad Find serial number sudo dmidecode -t system |
+                grep Serial To find the baseboard serial number: sudo dmidecode
+                -t baseboard | grep Serial
               </li>
             </ul>
           </div>
