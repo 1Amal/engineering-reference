@@ -136,8 +136,8 @@ a:active {
   background-color: #1f2937;
   padding: 1vw;
   display: flex; /*Enable flexbox layout */
-  flex-direction: row;
-  justify-content: space-between; /*This defines the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. 
+  flex-direction: column;
+  justify-content:space-evenly; /*This defines the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. 
   It also exerts some control over the alignment of items when they overflow the line. */
   flex-wrap: wrap;
   flex-shrink: 0;

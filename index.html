@@ -100,13 +100,18 @@
 
         <div class="navBarSoftwarePractices">
           <h1>
+            <a href="index.html#dataStructuresandAlgorithms"
+              >Data Structures, Algorithms and Tech Interviews</a
+            >
+          </h1>
+        </div>
+
+        <div class="navBarDataStructuresandAlgorithms">
+          <h1>
             <a href="index.html#softwareBestPractices"
               >Software development best practices</a
             >
           </h1>
-          <ul>
-            <li></li>
-          </ul>
         </div>
 
         <div class="navBarElectronics">
@@ -190,22 +195,9 @@
 
       <div id="linux">
         <div id="linux">
-          <!-- ********** Start of Linux reference section **********-->
           <h1>Linux</h1>
+          <a href="index.html#navBar">Return to Main Menu</a>
 
-          <ul>
-            <li>
-              <a
-                href="https://github.com/1Amal/engineering-reference/tree/main/Linux"
-                >Click here to view other Linux resources</a
-              >
-            </li>
-            <li>
-              <a href="https://swcarpentry.github.io/shell-novice/">
-                Linux Reference</a
-              >
-            </li>
-          </ul>
           <div id="linuxFileDirectoryAndStorageOperations">
             <h3>Linux: File, Directory and Storage operations</h3>
             <ul>
@@ -579,6 +571,104 @@
                 You can also change the refresh rate with the `-n` option.
                 `watch -n10 date` watch date watch ls -latr watch cat output.txt
               </li>
+              <li>
+                <code>sudo apt remove [tree]</code>
+                : You can uninstall a package with apt remove, The user is
+                prompted to confirm the removal. Again, the -y flag will
+                auto-confirm.
+              </li>
+              <li>
+                <code>sudo apt purge tree</code>
+                : You can also choose to completely remove the package and its
+                associated configuration files with apt purge
+              </li>
+
+              <li>
+                <strong>Check if xterm package exists:</strong>
+                <code>dpkg -l | grep xterm</code>If xterm package does not exist
+                , install it <code>sudo apt install xterm</code>
+              </li>
+              <li>
+                <strong>Set lxterminal as x-terminal-emulator</strong> by
+                running the following command
+                <strong
+                  >sudo update-alternatives --config x-terminal-emulator</strong
+                >
+              </li>
+
+              <li>
+                <strong> Removes a previously selected package.</strong>
+                <code>sudo apt remove vim` `apt remove [package]</code>
+              </li>
+              <li>
+                <strong
+                  >Searches for a package name in the packages list</strong
+                >
+                <code
+                  >`sudo apt search myadmin` `sudo apt search php` `apt search
+                  [search]`</code
+                >
+              </li>
+              <li>
+                <strong>Lists all installed packages on your system: </strong>
+                <code>`dpkg -l` `dpkg -l | grep myadmin` `dpkg -l`</code>
+                You can use grep to find a specific package.
+              </li>
+
+              <li>
+                <code>sudo reboot</code>
+                : This command will restart the PC immediately.
+              </li>
+              <li>
+                <code>shutdown -h now</code>
+                : This is to stop the Raspberry Pi immediately. You can replace
+                “now” by a specific time (shutdown -h 12:05). Don’t use the
+                power switch to stop your Raspberry, you should do it properly
+                by using this command.
+              </li>
+              <li>
+                <code>shutdown -h 0 </code>: Shutdown computer immediately
+              </li>
+
+              <li>
+                <code>ps aux</code>
+                : This command displays all running process on your Raspberry
+                Pi.
+              </li>
+
+              <li>
+                <code>`kill 12345` `kill [pid]`</code>
+                : The kill command allows you to terminate a process. You’ll
+                need the process ID to do this.
+              </li>
+              <li>
+                <code>`kill -9 12345`</code>
+                :Sometime you may need to use the -9 option to force all related
+                commands to stop. For example, if you run 20 commands in a
+                script and kill it, it’ll continue to the next line, not exit
+                the program, except if you use the -9 option.
+              </li>
+              <li>
+                <code>`killall php`</code>
+                : Killall to stop all occurrences of a program.
+              </li>
+              <li>
+                <code>`htop`</code>
+                : This tool is an alternative to top. It’s more user-friendly
+                than top, with colors and dynamic load bars.
+              </li>
+              <li>
+                <code>`df` `df -h`</code>
+                : Displays the partition list, with the disk space used and
+                available for each one.
+              </li>
+
+              <li><code>/usr/bin/dm-tool lock</code> : Lock screen</li>
+
+              <li>
+                <code>ps -u amal</code>
+                : You can also display process started by a specific user:
+              </li>
             </ul>
           </div>
 
@@ -613,13 +703,26 @@
 
             <!-- ********** End of Linux reference section **********-->
           </div>
+          <h4>Links</h4>
+          <ul>
+            <li>
+              <a
+                href="https://github.com/1Amal/engineering-reference/tree/main/Linux"
+                >Click here to view other Linux resources</a
+              >
+            </li>
+            <li>
+              <a href="https://swcarpentry.github.io/shell-novice/">
+                Linux Reference</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
       <div id="softwareEngineeringTools">
         <div>
           <h1>Software Engineering Tools</h1>
-          <a href="index.html#navBar">Navigation Bar</a>
-          <!-- ********** Start of Git reference section **********-->
+          <a href="index.html#navBar">Return to Main Menu</a>
           <div id="Git">
             <h2>Git</h2>
             <ul>
@@ -1234,117 +1337,13 @@
           <h2>WebPack</h2>
         </div>
       </div>
-      <div id="softwareBestPractices">
-        <!-- ********** Start of Software development tools and best practices section **********-->
-        <h1>Software development best practices</h1>
-        <ul>
-          <li>
-            <a
-              href="https://github.com/1Amal/engineering-reference/tree/main/Software Development Tools"
-              >Click here to view other Software development tools and best
-              practices resources</a
-            >
-          </li>
-          <li>
-            <strong>Given-When-Then (GWT):</strong> Is a semi-structured way to
-            write down test cases. They can either be tested manually or
-            automated as browser tests with tools like Selenium and Cucumber. It
-            derives its name from the three clauses used, which start with the
-            words given, when and then.Given describes the preconditions and
-            initial state before the start of a test and allows for any pre-test
-            setup that may occur. When describes actions taken by a user during
-            a test. Then describes the outcome resulting from actions taken in
-            the when clause. The Given-When-Then was proposed by Dan North in
-            2006, as part of behavior-driven development.
-          </li>
 
-          <li>
-            <strong>Arrange-Act-Assert:</strong>
-            A pattern for arranging and formatting code in UnitTest methods:
-            Each method should group these functional sections, separated by
-            blank lines:Arrange all necessary preconditions and inputs. Act on
-            the object or method under test.Assert that the expected results
-            have occurred.
-          </li>
-
-          <li>
-            <strong>Clean Code</strong>
-            <a
-              href="https://www.theodinproject.com/lessons/foundations-clean-code"
-              target="_blank"
-            >
-              Odin Project, Foundations Course: Clean Code
-            </a>
-            and
-            <a
-              href="https://onextrapixel.com/10-principles-for-keeping-your-programming-code-clean"
-              target="_blank"
-              >10 Principles for Keeping Your Programming Code Clean</a
-            >
-            <ul>
-              <li>Indentation:2 spaces for indentation</li>
-              <li>Semicolons: Always Add semicolons</li>
-              <li>
-                Line length:Break lines that are longer than about 80
-                characters.
-                <ul>
-                  <li>Break immediately after an operator or comma</li>
-                  <li>Indent continuation lines by one level</li>
-                  <li>
-                    Vertically align continuation lines with the first variable
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Naming Things:Names for functions and variables should be
-                descriptive. Always use camelCase. To keep things consistent and
-                easy to read, variables should always begin with a noun or an
-                adjective (that is, a noun phrase) and functions with a verb. It
-                is ok to use single characters as variable names in the context
-                of a loop or a callback function, but not elsewhere.
-              </li>
-              <li>Revise Your Logic Before Coding</li>
-              <li>Clearly Expose the Structure of the Page</li>
-              <li>Write Explanatory Comments and Avoid Abusing Comments</li>
-              <li>Avoid Extremely Large Functions</li>
-              <li>
-                Use Naming Standards for Functions and Variables: Whenever a
-                variable or a function is created, its name should be
-                descriptive enough as to give a general idea of what it does or
-                what it’s for.
-              </li>
-              <li>Avoid Indiscriminate Mixing of Coding Languages</li>
-              <li>
-                Summarize Your Imports: Even though it is much better to have
-                additional coding languages imported from different files, this
-                shouldn’t be abused. If there are too many style sheets, they
-                can probably be summarized into one or two. This won’t only save
-                space and make things look cleaner, but it will also save
-                loading time. Each imported file is an HTTP request that tampers
-                with the performance of your application. So apart from being a
-                consideration for tidiness, it is also a consideration for
-                efficiency.
-              </li>
-            </ul>
-          </li>
-        </ul>
-
-        <!-- ********** End of Software development tools and best practices section **********-->
-      </div>
       <div id="frontEndDevelopmentLanguagesAndFrameWorks">
         <h1>Front End Development Languages and FrameWorks</h1>
+        <a href="index.html#navBar">Return to Main Menu</a>
         <div id="javaScript">
           <!-- ********** Start of JavaScript reference section **********-->
           <h2>JavaScript</h2>
-          <h4>Links</h4>
-          <ul>
-            <li>
-              <a
-                href="https://github.com/1Amal/engineering-reference/tree/main/JavaScript"
-                >Click here to view other JavaScript resources</a
-              >
-            </li>
-          </ul>
 
           <div>
             <h4>General</h4>
@@ -1424,6 +1423,15 @@
             </ul>
           </div>
 
+          <h4>Links</h4>
+          <ul>
+            <li>
+              <a
+                href="https://github.com/1Amal/engineering-reference/tree/main/JavaScript"
+                >Click here to view other JavaScript resources</a
+              >
+            </li>
+          </ul>
           <!-- ********** End of JavaScript reference section **********-->
         </div>
 
@@ -1763,16 +1771,13 @@
 
       <div id="backEndDevelopmentLanguagesAndFrameWorks">
         <h1>Back End Development Languages and FrameWorks</h1>
+        <a href="index.html#navBar">Return to Main Menu</a>
         <div id="nodeJs">
           <h2>Node.Js</h2>
         </div>
         <div id="python">
           <!-- ********** Start of Python reference section **********-->
           <h2>Python</h2>
-          <a
-            href="https://github.com/1Amal/engineering-reference/tree/main/Python"
-            >Click here to view other resources</a
-          >
 
           <h3>Python Basics</h3>
           <ul>
@@ -2190,14 +2195,141 @@
               --generate-config instead of jupyter notebook --generate-config).
             </li>
           </ol>
+          <h4>Links</h4>
+          <ul>
+            <li>
+              <a
+                href="https://github.com/1Amal/engineering-reference/tree/main/Python"
+                >Click here to view other resources</a
+              >
+            </li>
+          </ul>
 
           <!-- ********** End of Python reference section **********-->
         </div>
       </div>
 
+      <div id="softwareBestPractices">
+        <h1>Software development best practices</h1>
+        <a href="index.html#navBar">Return to Main Menu</a>
+
+        <ul>
+          <li>
+            <strong>Given-When-Then (GWT):</strong> Is a semi-structured way to
+            write down test cases. They can either be tested manually or
+            automated as browser tests with tools like Selenium and Cucumber. It
+            derives its name from the three clauses used, which start with the
+            words given, when and then.Given describes the preconditions and
+            initial state before the start of a test and allows for any pre-test
+            setup that may occur. When describes actions taken by a user during
+            a test. Then describes the outcome resulting from actions taken in
+            the when clause. The Given-When-Then was proposed by Dan North in
+            2006, as part of behavior-driven development.
+          </li>
+
+          <li>
+            <strong>Arrange-Act-Assert:</strong>
+            A pattern for arranging and formatting code in UnitTest methods:
+            Each method should group these functional sections, separated by
+            blank lines:Arrange all necessary preconditions and inputs. Act on
+            the object or method under test.Assert that the expected results
+            have occurred.
+          </li>
+
+          <li>
+            <strong>Clean Code</strong>
+            <a
+              href="https://www.theodinproject.com/lessons/foundations-clean-code"
+              target="_blank"
+            >
+              Odin Project, Foundations Course: Clean Code
+            </a>
+            and
+            <a
+              href="https://onextrapixel.com/10-principles-for-keeping-your-programming-code-clean"
+              target="_blank"
+              >10 Principles for Keeping Your Programming Code Clean</a
+            >
+            <ul>
+              <li>Indentation:2 spaces for indentation</li>
+              <li>Semicolons: Always Add semicolons</li>
+              <li>
+                Line length:Break lines that are longer than about 80
+                characters.
+                <ul>
+                  <li>Break immediately after an operator or comma</li>
+                  <li>Indent continuation lines by one level</li>
+                  <li>
+                    Vertically align continuation lines with the first variable
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Naming Things:Names for functions and variables should be
+                descriptive. Always use camelCase. To keep things consistent and
+                easy to read, variables should always begin with a noun or an
+                adjective (that is, a noun phrase) and functions with a verb. It
+                is ok to use single characters as variable names in the context
+                of a loop or a callback function, but not elsewhere.
+              </li>
+              <li>Revise Your Logic Before Coding</li>
+              <li>Clearly Expose the Structure of the Page</li>
+              <li>Write Explanatory Comments and Avoid Abusing Comments</li>
+              <li>Avoid Extremely Large Functions</li>
+              <li>
+                Use Naming Standards for Functions and Variables: Whenever a
+                variable or a function is created, its name should be
+                descriptive enough as to give a general idea of what it does or
+                what it’s for.
+              </li>
+              <li>Avoid Indiscriminate Mixing of Coding Languages</li>
+              <li>
+                Summarize Your Imports: Even though it is much better to have
+                additional coding languages imported from different files, this
+                shouldn’t be abused. If there are too many style sheets, they
+                can probably be summarized into one or two. This won’t only save
+                space and make things look cleaner, but it will also save
+                loading time. Each imported file is an HTTP request that tampers
+                with the performance of your application. So apart from being a
+                consideration for tidiness, it is also a consideration for
+                efficiency.
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <h4>Links</h4>
+        <ul>
+          <li>
+            <a
+              href="https://github.com/1Amal/engineering-reference/tree/main/Software Development Tools"
+              >Click here to view other Software development tools and best
+              practices resources</a
+            >
+          </li>
+        </ul>
+
+        <!-- ********** End of Software development tools and best practices section **********-->
+      </div>
+
+      <div id="dataStructuresandAlgorithms">
+        <h1>Data Structures, Algorithms and Tech Interviews</h1>
+        <a href="index.html#navBar">Return to Main Menu</a>
+        <h4>Links</h4>
+        <ul>
+          <li>
+            <a href="https://guides.codepath.com/compsci" target="_blank"
+              >CodePath Computer Science | Technical Interview | Algorithms |
+              Data Structures
+            </a>
+          </li>
+        </ul>
+      </div>
+
       <div id="electronics">
         <!-- ********** Start of Electronics Engineering reference section **********-->
         <h1>Electronics</h1>
+        <a href="index.html#navBar">Return to Main Menu</a>
         <a
           href="https://github.com/1Amal/engineering-reference/tree/main/Electronics"
           >Click here to view other Electronics Engineering resources</a
@@ -2335,6 +2467,7 @@
         <div id="networkingAndCybersecurity">
           <!-- ********** Start of Networking and Cybersecurity reference section **********-->
           <h1 id="Networking">Networking and Cybersecurity</h1>
+          <a href="index.html#navBar">Return to Main Menu</a>
 
           <ul>
             <li>
@@ -2458,12 +2591,16 @@
                 >Network World 7 Layer OSI
               </a>
             </li>
+            <li>
+              <a href="https://guides.codepath.com/websecurity" target="_blank"
+                >CodePath Web Security</a
+              >
+            </li>
           </ul>
-
-          <!-- ********** End of Networking and Cybersecurity reference section **********-->
         </div>
         <div id="miscellaneous">
           <h1>Miscellaneous</h1>
+          <a href="index.html#navBar">Return to Main Menu</a>
           <div id="Windows">
             <!-- ********** Start of Windows reference section **********-->
 
