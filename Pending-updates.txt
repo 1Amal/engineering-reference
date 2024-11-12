@@ -3,52 +3,16 @@ Place to add all updates to the reference database before they are entered into 
 **************** Pending updates ****************
 
 *** JavaScript ****
-https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
-The preventDefault() method of the Event interface tells the user agent that if the event does not get explicitly handled, 
-its default action should not be taken as it normally would be.
 
-Form Basics
-https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-form-basics
 
 **** Git *****
-
-
-
-
------
-Automatically deploy to Github Pages
-Step 1 Remove the 'dist' directory from the project’s .gitignore file.
-
-Step 2 Make sure git knows about your subtree (the subfolder with your site).
-
-git add dist && git commit -m "Initial dist subtree commit"
-
-Step 3 Use subtree push to send it to the gh-pages branch on GitHub.
-
-git subtree push --prefix dist origin gh-pages Boom. If your folder isn’t called dist, then you’ll need to change that in each of the commands above.
------
-By adding this to the packages.json (Already configured for this repo) You can simply push the commit to both the main branch and the gh-pages branch (Git Hub pages will be served from gh-pages branch) "scripts": {"gh-pages": "git subtree push --prefix dist origin gh-pages && git push"}
-
-npm run gh-pages
 
 *** VS Code ****
 
 
 ***React***
-Please make sure that you are using the LTS version of Node, otherwise errors may occur. Fire up a terminal instance, cd into the folder containing your projects, and enter the following command (you can replace my-first-react-app with any name you want):
-npm create vite@latest my-first-react-app -- --template react
-Then follow the instructions to fully setup Vite
-To link your local project directory to a GitHub repo, create a new empty repo on GitHub then follow the instructions in the new repo’s page to connect it to your local project directory.
-
-Using an existing GitHub repo
-Alternatively, if you created a GitHub repo already and cloned it, you can cd into your cloned repo then run the above Vite command, using . as the project name:
-
-npm create vite@latest . -- --template react
-This will tell Vite to use the current directory for the project, instead of creating a new directory with the given project name. This cloned directory will already be initialized as a git repo and connected to the right remote.
 
 ***** Linux *****
-
-
 
 
 ***** Microsoft Windows *****
@@ -58,27 +22,7 @@ This will tell Vite to use the current directory for the project, instead of cre
 
 ****  VS Code *****
 
-
-
-
-
-
-
 *******************
 Programming Concepts
 
-Given-When-Then (GWT) is a semi-structured way to write down test cases. They can either be tested manually or automated as browser tests with tools like Selenium and Cucumber.[1][2]
 
-It derives its name from the three clauses used, which start with the words given, when and then.[3] Given describes the preconditions and initial state before the start of a test and allows for any pre-test setup that may occur. When describes actions taken by a user during a test. Then describes the outcome resulting from actions taken in the when clause.
-
-The Given-When-Then was proposed by Dan North in 2006, as part of behavior-driven development.[4]
-
-
-
-
-"Arrange-Act-Assert"
-a pattern for arranging and formatting code in UnitTest methods:
-Each method should group these functional sections, separated by blank lines:
-Arrange all necessary preconditions and inputs.
-Act on the object or method under test.
-Assert that the expected results have occurred

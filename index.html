@@ -42,7 +42,7 @@
         <div class="navBarSoftwareTools">
           <h1>
             <a href="index.html#softwareDevelopmentTools"
-              >Software Development Tools</a
+              >Software Engineering Tools</a
             >
           </h1>
 
@@ -711,7 +711,7 @@
             </div>
             <div id="softwareDevelopmentTools">
               <div>
-                <h1>Software Development Tools</h1>
+                <h1>Software Engineering Tools</h1>
                 <a href="index.html#navBar">Navigation Bar</a>
                 <!-- ********** Start of Git reference section **********-->
 
@@ -727,189 +727,308 @@
                     <a href="https://git-scm.com/book/en/v2"> Git Reference</a>
                   </li>
                 </ul>
-                <h3>Git: Basics</h3>
-                <ul>
-                  <li>
-                    <code>Git clone </code> : is a command for downloading
-                    existing source code from a remote repository (like Github,
-                    for example). Git clone basically makes an identical copy of
-                    the latest version of a project in a repository and saves it
-                    to your computer. There are a couple of ways to download the
-                    source code,
-                    <ul>
-                      <li>
-                        Clone using SSH:
+
+                <div>
+                  <h3>Git: Essentials</h3>
+                  <ul>
+                    <li>
+                      <code>git status </code>: command gives us all the
+                      necessary information about the current branch.
+                    </li>
+
+                    <li>
+                      <code>git add</code> : We need to use the git add command
+                      to include the changes of a file(s) into our next commit.
+                      <ul>
+                        <li>
+                          To add a single file: <code>git add [filename] </code>
+                        </li>
+                        <li>
+                          To add all files in repo at once:
+                          <code>git add -A </code>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <code> git commit</code>: is like setting a checkpoint in
+                      the development process which you can go back to later if
+                      needed. We also need to write a short message to explain
+                      what we have developed or changed in the source code.
+                      <p><code>git commit -m "commit message"</code></p>
+                    </li>
+
+                    <li>
+                      <code>git push</code> :After committing your changes, the
+                      next thing you want to do is send your changes to the
+                      remote server. Git push uploads your commits to the remote
+                      repository.
+                      <p><code>git push [remote][branch-name]</code></p>
+                      <p>
+                        However, if your branch is newly created, then you also
+                        need to upload the branch with the following command:<br />
                         <code
-                          >git clone
-                          git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code
+                          >git push --set-upstream [remote]
+                          [name-of-your-branch]</code
                         >
-                      </li>
-                      <li>
-                        Clone using HTTPS:
-                        <code
-                          >git clone
-                          git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code
-                        >
-                      </li>
-                      <li>
-                        When the repo is cloned between Windows and Linux/Unix
-                        machines.Just tell git to ignore filemode change. Here
-                        are several ways to do so:
-                      </li>
-                      <li>
-                        Config ONLY for current repo:git config core.filemode
-                        false
-                      </li>
-                      <li>
-                        Config globally: git config --global core.filemode false
-                        Add in ~/.gitconfig: [core] filemode = false
-                      </li>
-                    </ul>
-                  </li>
+                        <br />
+                        alternatively you can also use:
+                        <code>git push -u origin [branch_name]</code>
+                      </p>
+                    </li>
 
-                  <li>
-                    <code>git status </code>: command gives us all the necessary
-                    information about the current branch.
-                  </li>
+                    <li>
+                      <code>git pull</code> : command is used to get updates
+                      from the remote repo. This command is a combination of git
+                      fetch and git merge which means that, when we use git
+                      pull, it gets the updates from remote repository (git
+                      fetch) and immediately applies the latest changes in your
+                      local (git merge).<br />
+                      <code>git pull [remote]</code>
+                    </li>
 
-                  <li>
-                    <code>git add</code> : We need to use the git add command to
-                    include the changes of a file(s) into our next commit.
-                    <ul>
-                      <li>
-                        To add a single file: <code>git add [filename] </code>
-                      </li>
-                      <li>
-                        To add all files in repo at once:
-                        <code>git add -A </code>
-                      </li>
-                    </ul>
-                  </li>
+                    <li>
+                      <code>git log -- oneline</code> : To see our commit
+                      history
+                    </li>
 
-                  <li>
-                    <code> git commit</code>: is like setting a checkpoint in
-                    the development process which you can go back to later if
-                    needed. We also need to write a short message to explain
-                    what we have developed or changed in the source code.
-                    <p><code>git commit -m "commit message"</code></p>
-                  </li>
-
-                  <li>
-                    <code>git push</code> :After committing your changes, the
-                    next thing you want to do is send your changes to the remote
-                    server. Git push uploads your commits to the remote
-                    repository.
-                    <p><code>git push [remote][branch-name]</code></p>
-                    <p>
-                      However, if your branch is newly created, then you also
-                      need to upload the branch with the following command:<br />
-                      <code
-                        >git push --set-upstream [remote]
-                        [name-of-your-branch]</code
+                    <li>
+                      Git can specify which files or parts of your project
+                      should be ignored by Git using a .gitignore file. Step 1:
+                      touch .gitignore Step 2: # text comment | name All name
+                      files, name folders, and files and folders in any name
+                      folder | name/ Ending with / specifies the pattern is for
+                      a folder. Matches all files and folders in any name folder
+                      For more information go to :
+                      <a
+                        href="https://www.w3schools.com/git/git_ignore.asp?remote=github"
+                        target="_blank"
+                        >Git Ignore</a
                       >
-                      <br />
-                      alternatively you can also use:
-                      <code>git push -u origin [branch_name]</code>
-                    </p>
-                  </li>
+                    </li>
 
-                  <li>
-                    <code>git pull</code> : command is used to get updates from
-                    the remote repo. This command is a combination of git fetch
-                    and git merge which means that, when we use git pull, it
-                    gets the updates from remote repository (git fetch) and
-                    immediately applies the latest changes in your local (git
-                    merge).<br />
-                    <code>git pull [remote]</code>
-                  </li>
+                    <li>
+                      <code>git revert</code> : A safer way that we can undo our
+                      commits is by using git revert. We just need to specify
+                      the hash code next to our commit that we would like to
+                      undo:<br />
+                      <code>git revert 3321844</code><br />
+                      The Git revert command will undo the given commit, but
+                      will create a new commit without deleting the older one:
+                      The advantage of using git revert is that it doesn't touch
+                      the commit history. This means that you can still see all
+                      of the commits in your history, even the reverted ones.
+                      Another safety measure here is that everything happens in
+                      our local system unless we push them to the remote repo.
+                      That's why git revert is safer to use and is the preferred
+                      way to undo our commits.
+                    </li>
 
-                  <li>
-                    <code>git log -- oneline</code> : To see our commit history
-                  </li>
+                    <li>
+                      <code>git pull origin main</code> : Update local copy with
+                      the remote copy
+                    </li>
+                    <li>
+                      <code>git fetch</code> : Use git fetch to retrieve new
+                      work done by other people. Fetching from a repository
+                      grabs all the new remote-tracking branches and tags
+                      without merging those changes into your own branches.
+                    </li>
 
-                  <li>
-                    Git can specify which files or parts of your project should
-                    be ignored by Git using a .gitignore file. Step 1: touch
-                    .gitignore Step 2: # text comment | name All name files,
-                    name folders, and files and folders in any name folder |
-                    name/ Ending with / specifies the pattern is for a folder.
-                    Matches all files and folders in any name folder For more
-                    information go to :
-                    <a
-                      href="https://www.w3schools.com/git/git_ignore.asp?remote=github"
-                      target="_blank"
-                      >Git Ignore</a
-                    >
-                  </li>
+                    <li>
+                      <code>git diff</code> : Show you all of your local changes
+                      since you last committed.
+                    </li>
 
-                  <li>
-                    <code>git revert</code> : A safer way that we can undo our
-                    commits is by using git revert. We just need to specify the
-                    hash code next to our commit that we would like to undo:<br />
-                    <code>git revert 3321844</code><br />
-                    The Git revert command will undo the given commit, but will
-                    create a new commit without deleting the older one: The
-                    advantage of using git revert is that it doesn't touch the
-                    commit history. This means that you can still see all of the
-                    commits in your history, even the reverted ones. Another
-                    safety measure here is that everything happens in our local
-                    system unless we push them to the remote repo. That's why
-                    git revert is safer to use and is the preferred way to undo
-                    our commits.
-                  </li>
+                    <li>
+                      <code>git diff index.html</code> : To check what changes
+                      made to a certain file simply add the path of a file as an
+                      option
+                    </li>
 
-                  <li>
-                    <code>git pull origin main</code> : Update local copy with
-                    the remote copy
-                  </li>
-                  <li>
-                    <code>git fetch</code> : Use git fetch to retrieve new work
-                    done by other people. Fetching from a repository grabs all
-                    the new remote-tracking branches and tags without merging
-                    those changes into your own branches.
-                  </li>
+                    <li>
+                      <code>git diff --color-words index.html</code> : this
+                      option shows a more concise view
+                    </li>
 
-                  <li>
-                    <code>git diff</code> : Show you all of your local changes
-                    since you last committed.
-                  </li>
+                    <li>
+                      <code>git diff --staged index.html</code> : Staged changes
+                      in a certain file
+                    </li>
 
-                  <li>
-                    <code>git diff index.html</code> : To check what changes
-                    made to a certain file simply add the path of a file as an
-                    option
-                  </li>
+                    <li>
+                      <code>git diff --staged</code> : Staged changes in all
+                      local files
+                    </li>
 
-                  <li>
-                    <code>git diff --color-words index.html</code> : this option
-                    shows a more concise view
-                  </li>
+                    <li>
+                      <code>git diff main (NAME OF OTHER BRANCH)</code> : It's
+                      also possible to compare two branches to each other. This
+                      helps you find out how exactly the code in both branches
+                      is different:
+                    </li>
 
-                  <li>
-                    <code>git diff --staged index.html</code> : Staged changes
-                    in a certain file
-                  </li>
+                    <li>
+                      <code>git diff main feature/login index.html</code> :
+                      Compare a certain file in two different branches. You can
+                      do this simply by adding the file's path: This will show
+                      you how the file "index.html" was changed in the
+                      feature/login branch, compared to how it looks in the main
+                      branch.
+                    </li>
+                  </ul>
+                </div>
 
-                  <li>
-                    <code>git diff --staged</code> : Staged changes in all local
-                    files
-                  </li>
+                <div>
+                  <h3>Git/Github Workflow</h3>
+                  <ul>
+                    <li>
+                      <code>Git clone </code> : is a command for downloading
+                      existing source code from a remote repository (like
+                      Github, for example). Git clone basically makes an
+                      identical copy of the latest version of a project in a
+                      repository and saves it to your computer. There are a
+                      couple of ways to download the source code,
+                      <ul>
+                        <li>
+                          Clone using SSH:
+                          <code
+                            >git clone
+                            git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code
+                          >
+                        </li>
+                        <li>
+                          Clone using HTTPS:
+                          <code
+                            >git clone
+                            git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code
+                          >
+                        </li>
+                        <li>
+                          When the repo is cloned between Windows and Linux/Unix
+                          machines.Just tell git to ignore filemode change. Here
+                          are several ways to do so:
+                        </li>
+                        <li>
+                          Config ONLY for current repo:git config core.filemode
+                          false
+                        </li>
+                        <li>
+                          Config globally: git config --global core.filemode
+                          false Add in ~/.gitconfig: [core] filemode = false
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      Working With Branches:
+                      <ol>
+                        <li>
+                          Make a new branch and change to it with the command
+                          <code>`git checkout -b [branch name]`</code>
+                        </li>
+                        <li>
+                          Push this new branch to your remote repo with the
+                          command <code>`git push origin [branch name]`</code>
+                        </li>
+                        <li>
+                          You can check current branch, with the
+                          <code>`git branch`</code> command. The branch you are
+                          currently on will have an (*)asterisk next to it.
+                        </li>
+                        <li>
+                          Now you’re all set to work on your new feature! Note:
+                          You can add files, commit to this branch, and push
+                          changes to your repo, just like you would with the
+                          main branch. Everything is the same except when you
+                          push the changes, you’d use
+                          <code>`git push origin [New Branch Name]`</code>
+                          instead of <code>git push origin main</code>, since
+                          we’re pushing to our new branch.
+                        </li>
+                        <li>
+                          To merge the changes from our New branch back to our
+                          main branch; Checkout the branch we want to merge INTO
+                          i.e. main with the command git checkout main. Now
+                          let’s merge our [new branch] into [`main`], our
+                          current branch, with
+                          <code>git merge [new branch]</code>.
+                        </li>
+                        <li>
+                          If everything goes fine, new branch is now
+                          successfully merged with main! Use
+                          <code>git log</code> and you’ll see all the commits
+                          you’ve made to your new branch on top of the commits
+                          you made to the main branch.
+                        </li>
+                        <li>
+                          To push main branch into our remote repo by running
+                          <code>git push origin main</code>.
+                        </li>
 
-                  <li>
-                    <code>git diff main (NAME OF OTHER BRANCH)</code> : It's
-                    also possible to compare two branches to each other. This
-                    helps you find out how exactly the code in both branches is
-                    different:
-                  </li>
+                        <li>
+                          Go to your GitHub repo and you’ll see that our main
+                          branch will have all the changes and commits you made
+                          to the [new branch] Now that we have all our code in
+                          the main branch, we don’t really need our [new branch]
+                          branch anymore. Let’s do some cleanup, both locally
+                          and in the remote repo.
+                        </li>
 
-                  <li>
-                    <code>git diff main feature/login index.html</code> :
-                    Compare a certain file in two different branches. You can do
-                    this simply by adding the file's path: This will show you
-                    how the file "index.html" was changed in the feature/login
-                    branch, compared to how it looks in the main branch.
-                  </li>
-                </ul>
+                        <li>
+                          Delete the branch from our local repo with
+                          <code>git branch -d [new branch name]</code> and also
+                          delete it from the remote repo on GitHub with
+                          <code></code>git push origin --delete [new branch
+                          name]
+                        </li>
+                      </ol>
+                    </li>
+                    <li>
+                      GitHub Pages:
+                      <ol>
+                        <li>
+                          Remove the 'dist' directory from the project’s
+                          .gitignore file.
+                        </li>
+                        <li>
+                          Make sure git knows about your subtree (the subfolder
+                          with your site)
+                          <code
+                            >git add dist && git commit -m "Initial dist subtree
+                            commit"</code
+                          >
+                        </li>
+
+                        <li>
+                          Use subtree push to send it to the gh-pages branch on
+                          GitHub.
+
+                          <code
+                            >git subtree push --prefix dist origin
+                            gh-pages</code
+                          >
+                          Boom. If your folder isn’t called dist, then you’ll
+                          need to change that in each of the commands above.
+                        </li>
+
+                        <li>
+                          By adding this to the packages.json, you can simply
+                          push the commit to both the main branch and the
+                          gh-pages branch (Git Hub pages will be served from
+                          gh-pages branch)
+                          <code
+                            >"scripts": {"gh-pages": "git subtree push --prefix
+                            dist origin gh-pages && git push"}</code
+                          >
+                        </li>
+                        <li>
+                          To Push to Github pages :
+                          <code>npm run gh-pages</code>
+                        </li>
+                      </ol>
+                    </li>
+                  </ul>
+                </div>
 
                 <h3>Git: Advanced Topics</h3>
                 <ul>
@@ -1056,135 +1175,74 @@
                     >
                     : Update renamed repository address
                   </li>
-                </ul>
 
-                <h3>Git/Github Workflow</h3>
-                <ul>
                   <li>
-                    Working With Branches:
+                    Setting up GitHub on a new Linux installation
+
                     <ol>
                       <li>
-                        Make a new branch and change to it with the command
-                        <code>`git checkout -b [branch name]`</code>
-                      </li>
-                      <li>
-                        Push this new branch to your remote repo with the
-                        command <code>`git push origin [branch name]`</code>
-                      </li>
-                      <li>
-                        You can check current branch, with the
-                        <code>`git branch`</code> command. The branch you are
-                        currently on will have an (*)asterisk next to it.
-                      </li>
-                      <li>
-                        Now you’re all set to work on your new feature! Note:
-                        You can add files, commit to this branch, and push
-                        changes to your repo, just like you would with the main
-                        branch. Everything is the same except when you push the
-                        changes, you’d use
-                        <code>`git push origin [New Branch Name]`</code> instead
-                        of <code>git push origin main</code>, since we’re
-                        pushing to our new branch.
-                      </li>
-                      <li>
-                        To merge the changes from our New branch back to our
-                        main branch; Checkout the branch we want to merge INTO
-                        i.e. main with the command git checkout main. Now let’s
-                        merge our [new branch] into [`main`], our current
-                        branch, with <code>git merge [new branch]</code>.
-                      </li>
-                      <li>
-                        If everything goes fine, new branch is now successfully
-                        merged with main! Use <code>git log</code> and you’ll
-                        see all the commits you’ve made to your new branch on
-                        top of the commits you made to the main branch.
-                      </li>
-                      <li>
-                        To push main branch into our remote repo by running
-                        <code>git push origin main</code>.
+                        <code>git config --global user.name "Amal K" </code> :
+                        Use this command for adding a user name and confirm that
+                        you have set the Git username correctly: <br /><code
+                          >git config user.name</code
+                        >
                       </li>
 
                       <li>
-                        Go to your GitHub repo and you’ll see that our main
-                        branch will have all the changes and commits you made to
-                        the [new branch] Now that we have all our code in the
-                        main branch, we don’t really need our [new branch]
-                        branch anymore. Let’s do some cleanup, both locally and
-                        in the remote repo.
+                        <code
+                          >git config --global user.email
+                          "email@example.com"</code
+                        >
+                        : To set an email address in Git. You can use your
+                        GitHub-provided noreply email address or any email
+                        address.<br />
+                        To confirm that you have set the email address correctly
+                        in Git:<br />
+                        <code>git config --global user.email</code>
                       </li>
 
                       <li>
-                        Delete the branch from our local repo with
-                        <code>git branch -d [new branch name]</code> and also
-                        delete it from the remote repo on GitHub with
-                        <code></code>git push origin --delete [new branch name]
+                        <code
+                          >ssh-keygen -t ed25519 -C
+                          "your_email@example.com"</code
+                        >
+                        : Generating a new SSH key, for further information
+                        <a
+                          href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"
+                          target="_blank"
+                          >Visit here</a
+                        >
+                      </li>
+
+                      <li>
+                        <code
+                          >eval "$(ssh-agent -s)"<br />
+                          ssh-add ~/.ssh/id_ed25519</code
+                        >
+                        : Adding your SSH key to the ssh-agent
+                      </li>
+
+                      <li>
+                        <code>cat ~/.ssh/id_ed25519.pub</code> : Adding a new
+                        SSH key to your GitHub account
+                        <a
+                          href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account"
+                          target="_blank"
+                          >Visit here</a
+                        >
+                        <br />
+                        Then select and copy the contents of the id_ed25519.pub
+                        file displayed in the terminal to your clipboard In the
+                        upper-right corner of any GitHub page, click your
+                        profile photo, then click Settings. <br />
+                        Settings icon in the user bar, In the "Access" section
+                        of the sidebar, click SSH and GPG keys. Click New SSH
+                        key or Add SSH key. These steps should set your new
+                        Linux machine with Github
                       </li>
                     </ol>
                   </li>
                 </ul>
-
-                <h3>Setting up GitHub on a new Linux installation</h3>
-
-                <ol>
-                  <li>
-                    <code>git config --global user.name "Amal K" </code> : Use
-                    this command for adding a user name and confirm that you
-                    have set the Git username correctly: <br /><code
-                      >git config user.name</code
-                    >
-                  </li>
-
-                  <li>
-                    <code
-                      >git config --global user.email "email@example.com"</code
-                    >
-                    : To set an email address in Git. You can use your
-                    GitHub-provided noreply email address or any email
-                    address.<br />
-                    To confirm that you have set the email address correctly in
-                    Git:<br />
-                    <code>git config --global user.email</code>
-                  </li>
-
-                  <li>
-                    <code
-                      >ssh-keygen -t ed25519 -C "your_email@example.com"</code
-                    >
-                    : Generating a new SSH key, for further information
-                    <a
-                      href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"
-                      target="_blank"
-                      >Visit here</a
-                    >
-                  </li>
-
-                  <li>
-                    <code
-                      >eval "$(ssh-agent -s)"<br />
-                      ssh-add ~/.ssh/id_ed25519</code
-                    >
-                    : Adding your SSH key to the ssh-agent
-                  </li>
-
-                  <li>
-                    <code>cat ~/.ssh/id_ed25519.pub</code> : Adding a new SSH
-                    key to your GitHub account
-                    <a
-                      href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account"
-                      target="_blank"
-                      >Visit here</a
-                    >
-                    <br />
-                    Then select and copy the contents of the id_ed25519.pub file
-                    displayed in the terminal to your clipboard In the
-                    upper-right corner of any GitHub page, click your profile
-                    photo, then click Settings. <br />
-                    Settings icon in the user bar, In the "Access" section of
-                    the sidebar, click SSH and GPG keys. Click New SSH key or
-                    Add SSH key. These steps should set your new Linux machine
-                    with Github
-                  </li>
-                </ol>
 
                 <!-- ********** End of Git reference section **********-->
               </div>
@@ -1293,124 +1351,82 @@
                   >Click here to view other JavaScript resources</a
                 >
 
-                <h3>JavaScript: Initial Setup</h3>
-                <ul>
-                  <li>
-                    External JavaScript: JavaScript files have the file
-                    extension .js. To use an external script, put the name of
-                    the script file in the src (source) attribute of
-                    <br />
-                    <code>
-                      &ltscript&gt tag: <br />
-                      &ltscript src="myScript.js"&gt &lt/script&gt
-                    </code>
-                  </li>
+                <div>
+                  <ul>
+                    <li>
+                      <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"
+                        target="_blank"
+                        >The preventDefault()
+                      </a>
+                      : method of the Event interface tells the user agent that
+                      if the event does not get explicitly handled, its default
+                      action should not be taken as it normally would be.
+                    </li>
+                  </ul>
+                </div>
 
-                  <li>
-                    JavaScript in &lthead&gt JavaScript can be placed in the
-                    &lthead&gt section of an HTML page.<br />
-
-                    <code>
-                      &lt!DOCTYPE html&gt <br />
-                      &lthtml&gt <br />
-                      &lthead&gt <br />
-                      &ltscript&gt <br />
-                      function myFunction() { <br />
-                      document.getElementById("demo").innerHTML = "Paragraph
-                      changed.";<br />
-                      }<br />
-                      &lt/script&gt<br />
-                      &lt/head&gt<br />
-                      &ltbody&gt<br />
-
-                      &lt/body&gt<br />
-                      &lt/html&gt
-                    </code>
-                  </li>
-
-                  <li>
-                    JavaScript in &ltbody&gt : JavaScript function can be placed
-                    in the &ltbody&gt section of an HTML page.
-                    <br />
-                    <code>
-                      &lt!DOCTYPE html&gt <br />
-                      &lthtml&gt <br />
-                      &ltbody&gt <br />
-
-                      &lth2&gtDemo JavaScript in Body &lt/h2&gt <br />
-
-                      &ltscript&gt <br />
-                      function myFunction() { <br />
-                      document.getElementById("demo").innerHTML = "Paragraph
-                      changed.";
+                <div>
+                  <h3>JavaScript: Setup for static site</h3>
+                  <ul>
+                    <li>
+                      External JavaScript: JavaScript files have the file
+                      extension .js. To use an external script, put the name of
+                      the script file in the src (source) attribute of
                       <br />
-                      }<br />
-                      &lt/script&gt <br />
+                      <code>
+                        &ltscript&gt tag: <br />
+                        &ltscript src="myScript.js"&gt &lt/script&gt
+                      </code>
+                    </li>
 
-                      &lt/body&gt <br />
-                      &lt/html&gt <br />
-                    </code>
-                  </li>
-                  <h3>JavaScript: Loops</h3>
-                  <p>
-                    Which loop type should you use? If you're iterating through
-                    an array or some other object that supports it, and don't
-                    need access to the index position of each item, then
-                    for...of is the best choice. It's easier to read and there's
-                    less to go wrong. For other uses, for, while, and do...while
-                    loops are largely interchangeable. They can all be used to
-                    solve the same problems, and which one you use will largely
-                    depend on your personal preference — which one you find
-                    easiest to remember or most intuitive. We would recommend
-                    for, at least to begin with, as it is probably the easiest
-                    for remembering everything — the initializer, condition, and
-                    final-expression all have to go neatly into the parentheses,
-                    so it is easy to see where they are and check that you
-                    aren't missing them.
-                  </p>
-                  <li>
-                    <b>for...of loops</b>
-                    <br />
+                    <li>
+                      JavaScript in &lthead&gt JavaScript can be placed in the
+                      &lthead&gt section of an HTML page.<br />
 
-                    for (const item of array) <br />
-                    {<br />
-                    // code to run <br />
-                    }
-                  </li>
+                      <code>
+                        &lt!DOCTYPE html&gt <br />
+                        &lthtml&gt <br />
+                        &lthead&gt <br />
+                        &ltscript&gt <br />
+                        function myFunction() { <br />
+                        document.getElementById("demo").innerHTML = "Paragraph
+                        changed.";<br />
+                        }<br />
+                        &lt/script&gt<br />
+                        &lt/head&gt<br />
+                        &ltbody&gt<br />
 
-                  <li>
-                    <b>for loops</b> <br />
+                        &lt/body&gt<br />
+                        &lt/html&gt
+                      </code>
+                    </li>
 
-                    for (initializer; condition; final-expression) <br />
-                    {<br />
-                    // code to run<br />
-                    }
-                  </li>
+                    <li>
+                      JavaScript in &ltbody&gt : JavaScript function can be
+                      placed in the &ltbody&gt section of an HTML page.
+                      <br />
+                      <code>
+                        &lt!DOCTYPE html&gt <br />
+                        &lthtml&gt <br />
+                        &ltbody&gt <br />
 
-                  <li>
-                    <b>while loops</b> <br />
+                        &lth2&gtDemo JavaScript in Body &lt/h2&gt <br />
 
-                    initializer <br />
-                    while (condition) <br />
-                    { <br />
-                    // code to run
-                    <br />
-                    final-expression <br />
-                    }
-                  </li>
+                        &ltscript&gt <br />
+                        function myFunction() { <br />
+                        document.getElementById("demo").innerHTML = "Paragraph
+                        changed.";
+                        <br />
+                        }<br />
+                        &lt/script&gt <br />
 
-                  <li>
-                    <b>do...while loops</b> <br />
-                    initializer <br />
-                    do <br />
-                    { <br />
-                    // code to run<br />
-
-                    final-expression <br />
-                    } <br />
-                    while (condition)
-                  </li>
-                </ul>
+                        &lt/body&gt <br />
+                        &lt/html&gt <br />
+                      </code>
+                    </li>
+                  </ul>
+                </div>
 
                 <!-- ********** End of JavaScript reference section **********-->
               </div>
@@ -1442,6 +1458,14 @@
                   <li>
                     <a href="https://validator.w3.org/" target="_blank"
                       >HTML Validator</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-form-basics"
+                      target="_blank"
+                      >Form Basics</a
                     >
                   </li>
                 </ul>
@@ -1488,15 +1512,40 @@
               <div>
                 <!-- ********** Start of CSS reference section **********-->
                 <h2 id="CSS">CSS</h2>
-                <a
-                  href="https://github.com/1Amal/engineering-reference/tree/main/CSS"
-                  >Click here to view other CSS resources</a
-                ><br />
-                <a
-                  href="https://www.w3schools.com/cssref/index.php"
-                  target="_blank"
-                  >W3Schools CSS Reference
-                </a>
+                <ul>
+                  <li>
+                    <a
+                      href="https://github.com/1Amal/engineering-reference/tree/main/CSS"
+                      >Click here to view other CSS resources</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.w3schools.com/cssref/index.php"
+                      target="_blank"
+                      >W3Schools CSS Reference
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+                      target="_blank"
+                      >Comprehensive CSS Flexbox Layout Guide from CSS Tricks</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://flexbox.malven.co/" target="_blank"
+                      >Short CSS Flex Quick reference</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://css-tricks.com/snippets/css/complete-guide-grid/#aa-important-terminology"
+                      target="_blank"
+                      >Comprehensive CSS Grid Layout Guide from CSS Tricks</a
+                    >
+                  </li>
+                </ul>
 
                 <h3>CSS: Initial Setup</h3>
                 <ul>
@@ -1696,6 +1745,46 @@
               </div>
               <div id="react">
                 <h2>React</h2>
+                <ul>
+                  <li>
+                    Scaffold a React App usinge Vite:
+                    <ul>
+                      <li>
+                        Please make sure that you are using the LTS version of
+                        Node , otherwise errors may occur
+                      </li>
+                      <li>
+                        Using an existing GitHub repo: Alternatively, if you
+                        created a GitHub repo already and cloned it, you can cd
+                        into your cloned repo then run the above Vite command,
+                        using <code>.</code> as the project name.
+                        <code
+                          >npm create vite@latest . -- --template react</code
+                        >
+                        This will tell Vite to use the current directory for the
+                        project, instead of creating a new directory with the
+                        given project name. This cloned directory should already
+                        be initialized as a git repo and connected to the right
+                        remote i.e use standard github repo creation process.
+                      </li>
+                      <li>
+                        For New Github repo: Fire up a terminal instance, cd
+                        into the folder containing your projects, and enter the
+                        following command (you can replace my-first-react-app
+                        with any name you want):
+                        <code
+                          >npm create vite@latest my-first-react-app --
+                          --template react</code
+                        >
+                        Then follow the instructions to fully setup Vite To link
+                        your local project directory to a GitHub repo, create a
+                        new empty repo on GitHub then follow the instructions in
+                        the new repo’s page to connect it to your local project
+                        directory.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
             </div>
             <!-- ********** End of Front End Development Languages and FrameWorks **********-->
@@ -1723,70 +1812,92 @@
                     best practices resources</a
                   >
                 </li>
-              </ul>
-
-              <h2>Clean Code</h2>
-              <p>
-                I will use the following Clean Code methods for writing my
-                source code :
-                <a
-                  href="https://www.theodinproject.com/lessons/foundations-clean-code"
-                  target="_blank"
-                >
-                  Odin Project, Foundations Course: Clean Code
-                </a>
-                and
-                <a
-                  href="https://onextrapixel.com/10-principles-for-keeping-your-programming-code-clean"
-                  target="_blank"
-                  >10 Principles for Keeping Your Programming Code Clean</a
-                >
-              </p>
-              <ul>
-                <li>Indentation:2 spaces for indentation</li>
-                <li>Semicolons: Always Add semicolons</li>
                 <li>
-                  Line length:Break lines that are longer than about 80
-                  characters.
+                  <strong>Given-When-Then (GWT):</strong> Is a semi-structured
+                  way to write down test cases. They can either be tested
+                  manually or automated as browser tests with tools like
+                  Selenium and Cucumber. It derives its name from the three
+                  clauses used, which start with the words given, when and
+                  then.Given describes the preconditions and initial state
+                  before the start of a test and allows for any pre-test setup
+                  that may occur. When describes actions taken by a user during
+                  a test. Then describes the outcome resulting from actions
+                  taken in the when clause. The Given-When-Then was proposed by
+                  Dan North in 2006, as part of behavior-driven development.
+                </li>
+
+                <li>
+                  <strong>Arrange-Act-Assert:</strong>
+                  A pattern for arranging and formatting code in UnitTest
+                  methods: Each method should group these functional sections,
+                  separated by blank lines:Arrange all necessary preconditions
+                  and inputs. Act on the object or method under test.Assert that
+                  the expected results have occurred.
+                </li>
+
+                <li>
+                  <strong>Clean Code</strong>
+                  <a
+                    href="https://www.theodinproject.com/lessons/foundations-clean-code"
+                    target="_blank"
+                  >
+                    Odin Project, Foundations Course: Clean Code
+                  </a>
+                  and
+                  <a
+                    href="https://onextrapixel.com/10-principles-for-keeping-your-programming-code-clean"
+                    target="_blank"
+                    >10 Principles for Keeping Your Programming Code Clean</a
+                  >
                   <ul>
-                    <li>Break immediately after an operator or comma</li>
-                    <li>Indent continuation lines by one level</li>
+                    <li>Indentation:2 spaces for indentation</li>
+                    <li>Semicolons: Always Add semicolons</li>
                     <li>
-                      Vertically align continuation lines with the first
-                      variable
+                      Line length:Break lines that are longer than about 80
+                      characters.
+                      <ul>
+                        <li>Break immediately after an operator or comma</li>
+                        <li>Indent continuation lines by one level</li>
+                        <li>
+                          Vertically align continuation lines with the first
+                          variable
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      Naming Things:Names for functions and variables should be
+                      descriptive. Always use camelCase. To keep things
+                      consistent and easy to read, variables should always begin
+                      with a noun or an adjective (that is, a noun phrase) and
+                      functions with a verb. It is ok to use single characters
+                      as variable names in the context of a loop or a callback
+                      function, but not elsewhere.
+                    </li>
+                    <li>Revise Your Logic Before Coding</li>
+                    <li>Clearly Expose the Structure of the Page</li>
+                    <li>
+                      Write Explanatory Comments and Avoid Abusing Comments
+                    </li>
+                    <li>Avoid Extremely Large Functions</li>
+                    <li>
+                      Use Naming Standards for Functions and Variables: Whenever
+                      a variable or a function is created, its name should be
+                      descriptive enough as to give a general idea of what it
+                      does or what it’s for.
+                    </li>
+                    <li>Avoid Indiscriminate Mixing of Coding Languages</li>
+                    <li>
+                      Summarize Your Imports: Even though it is much better to
+                      have additional coding languages imported from different
+                      files, this shouldn’t be abused. If there are too many
+                      style sheets, they can probably be summarized into one or
+                      two. This won’t only save space and make things look
+                      cleaner, but it will also save loading time. Each imported
+                      file is an HTTP request that tampers with the performance
+                      of your application. So apart from being a consideration
+                      for tidiness, it is also a consideration for efficiency.
                     </li>
                   </ul>
-                </li>
-                <li>
-                  Naming Things:Names for functions and variables should be
-                  descriptive. Always use camelCase. To keep things consistent
-                  and easy to read, variables should always begin with a noun or
-                  an adjective (that is, a noun phrase) and functions with a
-                  verb. It is ok to use single characters as variable names in
-                  the context of a loop or a callback function, but not
-                  elsewhere.
-                </li>
-                <li>Revise Your Logic Before Coding</li>
-                <li>Clearly Expose the Structure of the Page</li>
-                <li>Write Explanatory Comments and Avoid Abusing Comments</li>
-                <li>Avoid Extremely Large Functions</li>
-                <li>
-                  Use Naming Standards for Functions and Variables: Whenever a
-                  variable or a function is created, its name should be
-                  descriptive enough as to give a general idea of what it does
-                  or what it’s for.
-                </li>
-                <li>Avoid Indiscriminate Mixing of Coding Languages</li>
-                <li>
-                  Summarize Your Imports: Even though it is much better to have
-                  additional coding languages imported from different files,
-                  this shouldn’t be abused. If there are too many style sheets,
-                  they can probably be summarized into one or two. This won’t
-                  only save space and make things look cleaner, but it will also
-                  save loading time. Each imported file is an HTTP request that
-                  tampers with the performance of your application. So apart
-                  from being a consideration for tidiness, it is also a
-                  consideration for efficiency.
                 </li>
               </ul>
 
