@@ -736,20 +736,35 @@
                     the latest version of a project in a repository and saves it
                     to your computer. There are a couple of ways to download the
                     source code,
-                    <p>
-                      - Clone using SSH:
-                      <code
-                        >git clone
-                        git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code
-                      >
-                    </p>
-                    <p>
-                      - Clone using HTTPS:
-                      <code
-                        >git clone
-                        git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code
-                      >
-                    </p>
+                    <ul>
+                      <li>
+                        Clone using SSH:
+                        <code
+                          >git clone
+                          git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code
+                        >
+                      </li>
+                      <li>
+                        Clone using HTTPS:
+                        <code
+                          >git clone
+                          git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code
+                        >
+                      </li>
+                      <li>
+                        When the repo is cloned between Windows and Linux/Unix
+                        machines.Just tell git to ignore filemode change. Here
+                        are several ways to do so:
+                      </li>
+                      <li>
+                        Config ONLY for current repo:git config core.filemode
+                        false
+                      </li>
+                      <li>
+                        Config globally: git config --global core.filemode false
+                        Add in ~/.gitconfig: [core] filemode = false
+                      </li>
+                    </ul>
                   </li>
 
                   <li>
@@ -760,13 +775,15 @@
                   <li>
                     <code>git add</code> : We need to use the git add command to
                     include the changes of a file(s) into our next commit.
-                    <p>
-                      - To add a single file: <code>git add [filename] </code>
-                    </p>
-                    <p>
-                      - To add all files in repo at once:
-                      <code>git add -A </code>
-                    </p>
+                    <ul>
+                      <li>
+                        To add a single file: <code>git add [filename] </code>
+                      </li>
+                      <li>
+                        To add all files in repo at once:
+                        <code>git add -A </code>
+                      </li>
+                    </ul>
                   </li>
 
                   <li>
@@ -907,6 +924,16 @@
                   </li>
 
                   <li>
+                    Create a new branch in Git: First check your current branch
+                    using git branch. Then, create and switch to a new branch
+                    with <code>git checkout -b [new-branch-name]</code>. If you
+                    want to push the new branch to the remote repository, use
+                    <code>git push -u origin [new-branch-name]</code>. To switch
+                    back to the main branch or any other branch, run git
+                    checkout main (or the branch name you wish to switch to).
+                  </li>
+
+                  <li>
                     <code>git checkout dev</code> : When you've completed
                     development in your branch and everything works fine, the
                     final step is merging the branch with the parent branch (dev
@@ -944,11 +971,155 @@
                   </li>
 
                   <li>
+                    How to connect local folder to new/existing GitHub
+                    repository:
+                    <ol>
+                      <li>
+                        First register a project as a local Git repository the
+                        first thing you need to do is perform the following
+                        command at your project root: <code>git init</code>
+                      </li>
+                      <li>
+                        Above will create a .git folder at your project root and
+                        will allow you to start using Git in that repository.You
+                        can call origin whatever you like, really, but origin is
+                        the standard name for Git remote repositories.
+                        [Repository_Location] is the URL to your remote
+                        repository. For example, if I had a new project called
+                        reactResumeCVWebApp which I want
+                        <code
+                          >`git remote add origin
+                          git@github.com:1Amal/reactResumeCVWebApp.git`</code
+                        >
+                        Then
+                        <code>`git push --set-upstream origin main`</code> to
+                        set the default upstream branch
+                      </li>
+                      <li>
+                        Then <code>git pull</code> to download the github repo
+                        to local folder <code>`git pull origin main`</code> Most
+                        of the time you will get an error as you have different
+                        files on Github (initial repository files such as
+                        .gitignore) and different files in your local repo i.e.
+                        Vite created src, public folders and other files if so
+                        use
+                        <code
+                          >`git pull origin main
+                          --allow-unrelated-histories`</code
+                        >
+                      </li>
+                    </ol>
+                  </li>
+
+                  <li>
+                    Public e-mail address change:
+                    <ol>
+                      <li>
+                        If you get this error ! [remote rejected] main -> main
+                        (push declined due to email privacy restrictions) You
+                        can see your personal e-mail address, which is used by
+                        default for your commits in Git:
+                      </li>
+                      <li>
+                        git config --global user.email Find your GitHub noreply
+                        address in your GitHub's Personal Settings → Emails.
+                        It's mentioned in the description of the Keep my email
+                        address private checkbox. Usually, it starts with a
+                        unique identifier, plus your username:<code
+                          >{ID}+{username}@users.noreply.github.com</code
+                        >
+                      </li>
+                      <li>
+                        Change the global user e-mail address setting to be your
+                        GitHub noreply address:
+
+                        <code
+                          >git config --global user.email
+                          {ID}+{username}@users.noreply.github.com</code
+                        >
+                      </li>
+                      <li>
+                        Reset the author information on your last commit: git
+                        commit --amend --reset-author If you have multiple
+                        commits with your private e-mail address, see this
+                        answer. Now you can push the commit with the noreply
+                        e-mail address, and future commits will have the noreply
+                        e-mail address as well.
+                      </li>
+                    </ol>
+                  </li>
+
+                  <li>
                     <code
                       >git remote set-url origin [updated link url
                       https://........git]</code
                     >
                     : Update renamed repository address
+                  </li>
+                </ul>
+
+                <h3>Git/Github Workflow</h3>
+                <ul>
+                  <li>
+                    Working With Branches:
+                    <ol>
+                      <li>
+                        Make a new branch and change to it with the command
+                        <code>`git checkout -b [branch name]`</code>
+                      </li>
+                      <li>
+                        Push this new branch to your remote repo with the
+                        command <code>`git push origin [branch name]`</code>
+                      </li>
+                      <li>
+                        You can check current branch, with the
+                        <code>`git branch`</code> command. The branch you are
+                        currently on will have an (*)asterisk next to it.
+                      </li>
+                      <li>
+                        Now you’re all set to work on your new feature! Note:
+                        You can add files, commit to this branch, and push
+                        changes to your repo, just like you would with the main
+                        branch. Everything is the same except when you push the
+                        changes, you’d use
+                        <code>`git push origin [New Branch Name]`</code> instead
+                        of <code>git push origin main</code>, since we’re
+                        pushing to our new branch.
+                      </li>
+                      <li>
+                        To merge the changes from our New branch back to our
+                        main branch; Checkout the branch we want to merge INTO
+                        i.e. main with the command git checkout main. Now let’s
+                        merge our [new branch] into [`main`], our current
+                        branch, with <code>git merge [new branch]</code>.
+                      </li>
+                      <li>
+                        If everything goes fine, new branch is now successfully
+                        merged with main! Use <code>git log</code> and you’ll
+                        see all the commits you’ve made to your new branch on
+                        top of the commits you made to the main branch.
+                      </li>
+                      <li>
+                        To push main branch into our remote repo by running
+                        <code>git push origin main</code>.
+                      </li>
+
+                      <li>
+                        Go to your GitHub repo and you’ll see that our main
+                        branch will have all the changes and commits you made to
+                        the [new branch] Now that we have all our code in the
+                        main branch, we don’t really need our [new branch]
+                        branch anymore. Let’s do some cleanup, both locally and
+                        in the remote repo.
+                      </li>
+
+                      <li>
+                        Delete the branch from our local repo with
+                        <code>git branch -d [new branch name]</code> and also
+                        delete it from the remote repo on GitHub with
+                        <code></code>git push origin --delete [new branch name]
+                      </li>
+                    </ol>
                   </li>
                 </ul>
 
@@ -1020,49 +1191,62 @@
               <div id="vsCode">
                 <h2>VS Code</h2>
                 <ul>
-                  <li>Markdown:  To switch between views, press Ctrl+Shift+V in the editor. You can view the preview side-by-side (Ctrl+K V) with the file you are editing and see changes reflected in real-time as you edit. <a href="https://code.visualstudio.com/docs/languages/markdown" target="_blank">Markdown and Visual Studio Code</a></li>
-                    <li>VS Code: Keyboard shortcuts</li>
-                    <ul>
-
-                      <li><code>Ctrl+Shift+P, F1 </code> : Show Command Palette</li>
-                      <li><code>Ctrl+K Ctrl+S</code> : Keyboard Shortcuts</li>
-                      <li><code>F11 </code> : Toggle full screen</li>
-                      <li><code>Ctrl+ = / - </code> : Zoom in/out</li>
-                      <li><code>Ctrl+B</code> : Toggle Sidebar visibility</li>
-                      <li><code>Ctrl+` </code> : Show integrated terminal</li>
-                      <li>
-                        <code>Alt and clicking in multiple locations</code>
-                        for Editing: This allows to edit multiple lines
-                        simultaneously.
-                      </li>
-                      <li>
-                        <code>(Ctrl + `)</code> Integrated Terminal: Utilize the
-                        integrated terminal for running command-line commands
-                        without leaving the editor.
-                      </li>
-                      <li>
-                        <code>CTRL + K Then CTRL + 0</code> : Fold the code i.e:
-                        HTML DIV's
-                      </li>
-                      <li>
-                        <code>CTRL + K Then CTRL + J</code> : Unfold the Code i.e:
-                        HTML DIV's
-                      </li>
-                      <li><code>CTRL + SHIFT + [</code> : Fold the Code</li>
-                      <li><code>CTRL + SHIFT + ]</code> : Un-Fold the Code</li>
-                      <li><code>Ctrl+ </code>Open Settings</li>
-                    </ul>
-                
-                  <li>VS Code Extensions: 
-                    <ul>
-                      <li>Favourites Manager : `ext install oleg-shilo.favorites`</li>
-                    </ul>         
-                    
-                    
+                  <li>
+                    Markdown: To switch between views, press Ctrl+Shift+V in the
+                    editor. You can view the preview side-by-side (Ctrl+K V)
+                    with the file you are editing and see changes reflected in
+                    real-time as you edit.
+                    <a
+                      href="https://code.visualstudio.com/docs/languages/markdown"
+                      target="_blank"
+                      >Markdown and Visual Studio Code</a
+                    >
+                  </li>
+                  <li>VS Code: Keyboard shortcuts</li>
+                  <ul>
+                    <li>
+                      <code>Ctrl+Shift+P, F1 </code> : Show Command Palette
                     </li>
+                    <li><code>Ctrl+K Ctrl+S</code> : Keyboard Shortcuts</li>
+                    <li><code>F11 </code> : Toggle full screen</li>
+                    <li><code>Ctrl+ = / - </code> : Zoom in/out</li>
+                    <li><code>Ctrl+B</code> : Toggle Sidebar visibility</li>
+                    <li><code>Ctrl+` </code> : Show integrated terminal</li>
+                    <li>
+                      <code>Alt and clicking in multiple locations</code>
+                      for Editing: This allows to edit multiple lines
+                      simultaneously.
+                    </li>
+                    <li>
+                      <code>(Ctrl + `)</code> Integrated Terminal: Utilize the
+                      integrated terminal for running command-line commands
+                      without leaving the editor.
+                    </li>
+                    <li>
+                      <code>CTRL + K Then CTRL + 0</code> : Fold the code i.e:
+                      HTML DIV's
+                    </li>
+                    <li>
+                      <code>CTRL + K Then CTRL + J</code> : Unfold the Code i.e:
+                      HTML DIV's
+                    </li>
+                    <li><code>CTRL + SHIFT + [</code> : Fold the Code</li>
+                    <li><code>CTRL + SHIFT + ]</code> : Un-Fold the Code</li>
+                    <li><code>Ctrl+ </code>Open Settings</li>
+                  </ul>
 
-                    <li><code>code . </code> : To Open VSCode from the same folder</li>
-                
+                  <li>
+                    VS Code Extensions:
+                    <ul>
+                      <li>
+                        Favourites Manager : `ext install oleg-shilo.favorites`
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <code>code . </code> : To Open VSCode from the same folder
+                  </li>
                 </ul>
               </div>
 
