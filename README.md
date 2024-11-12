@@ -1,20 +1,18 @@
-# Tech Ref for Software Engineering (Full Stack), DevOps, Linux, Electronics, Cybersecurity & Networking
+# Tech Lexicon
 
-For software developers it is vital to keep a handy reference source which is available quickly, efficiently and from any location. Hence it was decided to collate all the information and to upload to GitHub so it can be accessed from anywhere, can be easily accessed, can be updated quite easily and anyone who needs this data is freely available for access.
+For software engineers and technologists alike, having an accessible, comprehensive reference is essential—something you can consult anytime, anywhere. This repository offers a curated collection of resources across Software Engineering, Hardware Engineering, DevOps, Cybersecurity, Linux, AI and more. As an open-source project, it’s built for the community, licensed under GPL V3.0. Contributions are welcome, so feel free to enhance, share, and use these resources to support your work and learning.
 
 ## Links
 
 * Github: https://github.com/1Amal/engineering-reference
 * Live Production version: https://www.amalk.au/engineering-reference/
 
-
-
 ## Design principles
 
-* Ability access from any location and any device
-* Ability to search easily
-* Available offline without an internet connection
-* Can be printed or converted to PDF files easily so keeping a simple and clean interface
-* Can be updated easily
-* Frequently used Technology information accessible from one place
-* Share knowledge and ability for anyone to contribute
+* Accessible from any location and device
+* Easy and intuitive search functionality
+* Offline availability, with no internet connection required
+* Simple, clean interface, optimized for printing and PDF conversion
+* Easily updated with the latest information
+* Centralized source for frequently used technology references
+* Open for knowledge sharing and community contributions
