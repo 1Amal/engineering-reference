@@ -199,62 +199,93 @@
             <h3>Linux: File, Directory and Storage operations</h3>
             <ul>
               <li>
-                nautilus admin:/ :Run Nautilus File Manager with Root
-                privileges: prompt with root permissions with the command: sudo
-                -i and CTRL+D to go back to normal user
+                <code>nautilus admin:/</code> : Run Nautilus File Manager with
+                Root privileges: prompt with root permissions with the command:
+                sudo -i and CTRL+D to go back to normal user
               </li>
-              <li>pwd - Print working directory command in Linux</li>
-              <li>cd - Linux command to navigate through directories</li>
-              <li>mkdir - Command used to create directories in Linux</li>
-              <li>sudo systemctl hibernate - Hibernate The computer</li>
+              <li>
+                <code>pwd</code> : Print working directory command in Linux
+              </li>
+              <li>
+                <code>cd</code> : Linux command to navigate through directories
+              </li>
+              <li>
+                <code>mkdir</code> : Command used to create directories in Linux
+              </li>
+              <li>
+                <code>sudo systemctl hibernate</code> : Hibernate The computer
+              </li>
               <li>
                 <a
                   href="https://www.linuxuprising.com/2021/08/how-to-enable-hibernation-on-ubuntu.html"
                   >Enable Hibernate on Ubuntu Tutorial</a
                 >
               </li>
-              <li>mv - Move or rename files in Linux</li>
-              <li>cp - Similar usage as mv but for copying files in Linux</li>
-              <li>rm - Delete files or directories</li>
-              <li>touch - Create blank/empty files</li>
-              <li>ln - Create symbolic links (shortcuts) to other files</li>
-              <li>cat - Display file contents on the terminal</li>
-              <li>tar - Command to extract and compress files in Linux</li>
-              <li>head - Return the specified number of lines from the top</li>
+              <li><code>mv</code> : Move or rename files in Linux</li>
               <li>
-                tail - Return the specified number of lines from the bottom
+                <code>cp</code> : Similar usage as mv but for copying files in
+                Linux
               </li>
-              <li>diff - Find the difference between two files</li>
-              <li>cmp - Allows you to check if two files are identical</li>
-              <li>comm - Combines the functionality of diff and cmp</li>
+              <li><code>rm</code> : Delete files or directories</li>
+              <li><code>touch</code> : Create blank/empty files</li>
               <li>
-                sort - Linux command to sort the content of a file while
-                outputting
+                <code>ln</code> : Create symbolic links (shortcuts) to other
+                files
               </li>
-              <li>zip - Zip files in Linux</li>
-              <li>unzip - Unzip files in Linux</li>
+              <li><code>cat</code> : Display file contents on the terminal</li>
               <li>
-                Fixing the Encrypted drive issues on boot initramfs:
-                <p>
-                  When you boot Ubuntu will not mount the encrypted drive as for
-                  some reason i.e. /etc/crypttab has been changed cryptsetup
-                  luksOpen /dev/nvme0n1p3 DecryptedDrive Enter the correct
-                  password and then exit the console exit *nvme0n1p3 is assumed
-                  as the default name for the SSD, change as per the correct
-                  device
-                </p>
-                <p>
-                  Once Ubuntu boots up normally (after the encrypted drive is
-                  mounted according to the above) Edit the /etc/crypttab by sudo
-                  nano /etc/crypttab
-                </p>
-
-                <p>
-                  Also open up Ubuntu Disks manager and look for the LUKS
-                  encrypted drive UUID then add to the DecryptedDrive UUID=XXXXX
-                  none nofail Then update initramfs as follows sudo
-                  update-initramfs -u -k all
-                </p>
+                <code>tar</code> : Command to extract and compress files in
+                Linux
+              </li>
+              <li>
+                <code>head</code> : Return the specified number of lines from
+                the top
+              </li>
+              <li>
+                <code>tail</code>: Return the specified number of lines from the
+                bottom
+              </li>
+              <li><code>diff</code>: Find the difference between two files</li>
+              <li>
+                <code>cmp</code>: Allows you to check if two files are identical
+              </li>
+              <li>
+                <code>comm</code>: Combines the functionality of diff and cmp
+              </li>
+              <li>
+                <code>sort</code>: Linux command to sort the content of a file
+                while outputting
+              </li>
+              <li><code>zip</code>: Zip files in Linux</li>
+              <li><code>unzip</code>: Unzip files in Linux</li>
+              <li>
+                <strong
+                  >Fixing the Encrypted drive issues on boot initramfs:</strong
+                >
+                <ul>
+                  <li>
+                    Rarely when you boot Ubuntu will not mount the encrypted
+                    drive due to an unknown reason i.e. /etc/crypttab has been
+                    changed. Then
+                    <code
+                      >cryptsetup luksOpen /dev/nvme0n1p3 DecryptedDrive</code
+                    >
+                    Enter the correct password and then exit the console exit
+                    *nvme0n1p3 is assumed as the default name for the SSD,
+                    change as per the correct device
+                  </li>
+                  <li>
+                    Once Ubuntu boots up normally (after the encrypted drive is
+                    mounted according to the above) Edit the /etc/crypttab by
+                    sudo nano /etc/crypttab
+                  </li>
+                  <li>
+                    Also open up Ubuntu Disks manager and look for the LUKS
+                    encrypted drive UUID then add to the DecryptedDrive
+                    UUID=XXXXX none nofail Then update initramfs as follows sudo
+                    update-initramfs -u -k all
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -262,33 +293,49 @@
           <div class="project-2">
             <h3>Linux: Networking</h3>
             <ul>
-              <li>ssh - Secure Shell command in Linux</li>
+              <li><code>ssh</code>: Secure Shell command in Linux</li>
               <li>
-                traceroute - Trace all the network hops to reach the destination
-              </li>
-              <li>wget - Direct download files from the internet</li>
-              <li>ufw - Firewall command</li>
-              <li>
-                iptables - Base firewall for all other firewall utilities to
-                interface with
-              </li>
-              <li>w : Show who is logged on and what they are doing</li>
-              <li>
-                tree : Analyze current location in the file tree. It will show
-                you the entire lower tree.
+                <code>traceroute</code>: Trace all the network hops to reach the
+                destination
               </li>
               <li>
-                ifconfig OR ip a: Displays your current network configuration,
-                mainly your IP address if connected.
+                <code>wget</code>: Direct download files from the internet
+              </li>
+              <li><code>ufw</code>: Firewall command</li>
+              <li>
+                <code>iptables</code>: Base firewall for all other firewall
+                utilities to interface with
               </li>
               <li>
-                sudo ifup eth0 OR ifup <span>[interface] </span>: Enables the
-                specified interface.
+                <code>w</code>: Show who is logged on and what they are doing
               </li>
               <li>
-                sudo ifdown wlan0 OR ifdown <span>[interface]</span> : Disables
-                the specified interface. Can be useful to disable Wi-Fi if you
-                are already connected by cable for example.
+                <code>tree</code>: Analyze current location in the file tree. It
+                will show you the entire lower tree.
+              </li>
+              <li>
+                <code>ifconfig</code> Or <code>ip a</code>: Displays your
+                current network configuration,mainly your IP address if
+                connected.
+              </li>
+              <li>
+                <code>sudo ifup eth0</code> Or <code>ifup [interface] </code> :
+                Enables the specified interface.
+              </li>
+              <li>
+                <code>sudo ifdown wlan0</code> Or
+                <code>ifdown [interface]</code> : Disables the specified
+                interface. Can be useful to disable Wi-Fi if you are already
+                connected by cable for example.
+              </li>
+              <li>
+                <code>netstat</code>: Netstat is a powerful tool to monitor what
+                your Linux machine is doing with the network. For example, you
+                can see every port open and every traffic flow. Basic usages to
+                display all listening connections you can use:
+                <code>netstat -l -p</code> option will add the process id (PID).
+                <code>netstat -lp -c</code> option allows you to refresh data
+                continuously <code>netstat -lpc</code>
               </li>
             </ul>
           </div>
@@ -298,48 +345,9 @@
 
             <ul>
               <li>
-                sudo dmesg | more : View the Kernel ring buffer for messages
-              </li>
-              <li>
-                history : Linux store any command you type in an archive file.
-                History is the command to use to display this list. You can also
-                clear all the history. `history -c` Or clear one specific entry.
-                `history -d 12`
-              </li>
-              <li>
-                ls : The most frequently used command in Linux to list
-                directories
-              </li>
-              <li>clear - Clear the terminal display</li>
-              <li>echo - Print any text that follows the command</li>
-              <li>
-                less - Linux command to display paged outputs in the terminal
-              </li>
-              <li>man - Access manual pages for all Linux commands</li>
-              <li>
-                uname - Linux command to get basic information about the OS
-              </li>
-              <li>whoami - Get the active username</li>
-              <li>grep - Search for a string within an output</li>
-              <li>cal - View a command-line calendar</li>
-              <li>
-                whereis - Locate the binary, source, and manual pages for a
-                command
-              </li>
-              <li>whatis - Find what a command is used for</li>
-              <li>top - View active processes live with their system usage</li>
-              <li>
-                netstat : Netstat is a powerful tool to monitor what your
-                Raspberry Pi/Linux machine is doing with the network. For
-                example, you can see every port open and every traffic flow.
-                Basic usages to display all listening connections you can use:
-                `netstat -l` `-p` option will add the process id (PID). `netstat
-                -lp` `-c` option allows you to refresh data continuously.
-                `netstat -lpc`
-              </li>
-              <li>
-                dmesg : This command is useful to understand your Raspberry Pi /
-                Linux machine boot problems. It will show you every event that
+                <code>sudo dmesg | more</code>: View the Kernel ring buffer for
+                messages. This command is useful to understand your Linux
+                machine boot problems. It will show you every event that
                 happened in the start sequence. Here you could see errors with
                 drivers or services and understand why something doesn’t work
                 the way you want. You will get a column with the time elapsed
@@ -347,49 +355,96 @@
                 happened. There are also normal messages when everything is fine
               </li>
               <li>
-                cat /home/pi/README.txt OR cat [file] : Displays all the content
-                of the specified file.
+                <code>history</code>: Linux store any command you type in an
+                archive file. History is the command to use to display this
+                list. You can also clear all the history.
+                <code>`history -c`</code> Or clear one specific entry.
+                <code>`history -d 12`</code>
               </li>
               <li>
-                more /var/log/syslog OR more [file] : Displays the content of
-                the specified file, page per page (enter or space to continue, q
-                to quit).
+                <code>ls </code>: The most frequently used command in Linux to
+                list directories
+              </li>
+              <li><code>clear</code>: Clear the terminal display</li>
+              <li>
+                <code>echo</code>: Print any text that follows the command
               </li>
               <li>
-                tail /var/log/syslog OR tail [file]` : Tail allows you to
-                display the end of a file, it’s useful to check new entries in a
-                log file.
+                <code>less</code>: Linux command to display paged outputs in the
+                terminal
               </li>
               <li>
-                tail -n20 /var/log/syslog :You can specify the number of lines
-                to display with -n.
+                <code>man</code>: Access manual pages for all Linux commands
               </li>
               <li>
-                tail -f /var/log/syslog : Option -f to displays new lines in
-                real-time.
+                <code>uname</code>: Linux command to get basic information about
+                the OS
+              </li>
+              <li><code>whoami</code>: Get the active username</li>
+              <li><code>grep</code>: Search for a string within an output</li>
+              <li><code>cal</code>: View a command-line calendar</li>
+              <li>
+                <code>whereis</code>: Locate the binary, source, and manual
+                pages for a command
+              </li>
+              <li><code>whatis</code>: Find what a command is used for</li>
+              <li>
+                <code>top</code>: View active processes live with their system
+                usage
+              </li>
+
+              <li>
+                <code>cat /home/pi/README.txt</code> Or
+                <code>cat [file] </code>: Displays all the content of the
+                specified file.
               </li>
               <li>
-                head /home/pi/file.txt OR head -n20 /home/pi/file.txt OR head
-                [file] : It’s the same as tail but to display the beginning of a
-                file.
+                <code>more /var/log/syslog</code> Or <code>more [file]</code> :
+                Displays the content of the specified file, page per page (enter
+                or space to continue, q to quit).
               </li>
               <li>
-                grep dhcp /var/log/syslog` `grep [string]` : Grep is a powerful
-                tool to search string in a text. You can use it to search
-                something in a file or to filter the output of another command
-                or script. cat /var/log/syslog | grep dhcp /home/pi/myscript.sh
-                | grep error ls -latr | grep php Lot of options to use with
-                grep, like regular expressions or options to display lines
-                before (-B), after (-A) or around (-C) the search string. You
-                can also use -v to display everything except the input string.
-                grep 'dhcp|dns' /var/log/syslog grep -A2 -B4 'Fatal error'
-                /var/log/apache/error.log grep -v 'Notice'
-                /var/log/apache/error.log`
+                <code>tail /var/log/syslog OR tail [file]</code>
+                : Tail allows you to display the end of a file, it’s useful to
+                check new entries in a log file.
               </li>
-              <li>sudo lshw : View hardware info</li>
               <li>
-                sudo gnome-text-editor /etc/systemd/logind.conf: Edit the Laptop
-                Lid close behaviour:
+                <code>tail -n20 /var/log/syslog </code>
+                :You can specify the number of lines to display with -n.
+              </li>
+              <li>
+                <code>tail -f /var/log/syslog</code>
+                : Option -f to displays new lines in real-time.
+              </li>
+              <li>
+                <code>head /home/pi/file.txt</code> Or
+                <code>head -n20 /home/pi/file.txt</code> Or
+                <code>head [file]</code> : It’s the same as tail but to display
+                the beginning of a file.
+              </li>
+              <li>
+                <code>grep dhcp /var/log/syslog</code> or
+                <code>grep [string]</code> : Grep is a powerful tool to search
+                string in a text. You can use it to search something in a file
+                or to filter the output of another command or script.
+                <code
+                  >cat /var/log/syslog | grep dhcp /home/pi/myscript.sh | grep
+                  error ls -latr | grep php</code
+                >
+                Lot of options to use with grep, like regular expressions or
+                options to display lines before (-B), after (-A) or around (-C)
+                the search string. You can also use -v to display everything
+                except the input string.
+                <code
+                  >grep 'dhcp|dns' /var/log/syslog grep -A2 -B4 'Fatal error'
+                  /var/log/apache/error.log grep -v 'Notice'
+                  /var/log/apache/error.log`</code
+                >
+              </li>
+              <li><code>sudo lshw</code> : View hardware info</li>
+              <li>
+                <strong>Change the Laptop Lid close behavior : </strong>
+                <code>sudo gnome-text-editor /etc/systemd/logind.conf</code> :
                 <p>
                   find out the line #HandleLidSwitch=suspend and change it to
                   one of following : HandleLidSwitch=lock – lock when lid
@@ -401,14 +456,17 @@
               </li>
 
               <li>
-                Check the Laptop battery status: upower -i
-                /org/freedesktop/UPower/devices/battery_BAT0
+                <strong>Check the Laptop battery status :</strong>
+                <code
+                  >upower -i /org/freedesktop/UPower/devices/battery_BAT0</code
+                >
               </li>
 
               <li>
-                Lenovo Thinkpad Find serial number sudo dmidecode -t system |
-                grep Serial To find the baseboard serial number: sudo dmidecode
-                -t baseboard | grep Serial
+                <strong>Lenovo Thinkpad Find serial number: </strong>
+                <code>sudo dmidecode -t system | grep Serial </code> To find the
+                baseboard serial number:
+                <code>sudo dmidecode -t baseboard | grep Serial</code>
               </li>
             </ul>
           </div>
@@ -418,77 +476,97 @@
 
             <ul>
               <li>
-                sudo apt update && sudo apt upgrade : To refresh and update
-                software in Debian / Ubuntu in one command
+                <code>sudo apt update && sudo apt upgrade</code>
+                : To refresh and update software in Debian / Ubuntu in one
+                command
               </li>
               <li>
-                sudo apt install ./deb_file : To manually install Deb files,
-                command for same directory where the deb file is located
+                <code>sudo apt install ./deb_file </code>
+                : To manually install Deb files, command for same directory
+                where the deb file is located
               </li>
-              <li>snap refresh : Update the Snap packages</li>
+              <li><code>snap refresh</code> : Update the Snap packages</li>
               <li>
-                df -h : You can display disk usage in a more human-readable
-                format
-              </li>
-              <li>
-                du -h : The du command displays disk usage. This tool can
-                display disk usage for individual directories in Linux, giving
-                you a finer-grained view of your disk usage. Use it to display
-                the amount of space used by your current directory
-              </li>
-              <li>sudo - Command to escalate privileges in Linux</li>
-              <li>service - Linux command to start and stop services</li>
-              <li>ps - Display active processes</li>
-              <li>
-                kill , killall - Kill active processes by process ID or name
-              </li>
-              <li>df - Display disk filesystem information</li>
-              <li>mount - Mount file systems in Linux</li>
-              <li>chmod - Command to change file permissions</li>
-              <li>export - Export environment variables in Linux</li>
-              <li>
-                chown - Command for granting ownership of files or folders
+                <code>df -h</code>
+                : You can display disk usage in a more human-readable format
               </li>
               <li>
-                apt, pacman, yum, rpm - Package managers depending on the distro
+                <code>du -h</code>
+                : The du command displays disk usage. This tool can display disk
+                usage for individual directories in Linux, giving you a
+                finer-grained view of your disk usage. Use it to display the
+                amount of space used by your current directory
               </li>
               <li>
-                alias - Create custom shortcuts for your regularly used commands
-              </li>
-              <li>dd - Majorly used for creating bootable USB sticks</li>
-              <li>
-                useradd and usermod - Add new user or change existing users data
-              </li>
-              <li>passwd - Create or update passwords for existing users</li>
-              <li>sudo killall openvpn: Close OpenVpn</li>
-              <li>
-                crontab -l , crontab -e : Cron is a tool to schedule tasks on a
-                Raspberry Pi / Linux Machines. Crontab is the file where you
-                enter lines for each task to run. `-l` option to display lines.
-                `-e` option to edit lines. You can use sudo before to schedule
-                tasks to run with root privileges.
+                <code>sudo</code> : Command to escalate privileges in Linux
               </li>
               <li>
-                screen -s [name] , screen -r [name]: This tool allows you to let
-                something run in the background even if you close your session.
-                `-s` option to start a new screen with the following name. `-r`
-                option to resume a running screen with this name. You can forget
-                the name if you want, an ID will be generated, use screen `-r`
-                to find it and screen `-r [ID]` to resume it. With only one
-                screen running, screen `-r` will resume it directly.
+                <code>service</code>: Linux command to start and stop services
+              </li>
+              <li><code>ps</code>: Display active processes</li>
+              <li>
+                <code>kill , killall</code>: Kill active processes by process ID
+                or name
+              </li>
+              <li><code>df</code>: Display disk filesystem information</li>
+              <li><code>mount</code>: Mount file systems in Linux</li>
+              <li><code>chmod</code>: Command to change file permissions</li>
+              <li>
+                <code>export</code>: Export environment variables in Linux
               </li>
               <li>
-                lsof : lsof stands for “List open files”. This command displays
-                all files open on your Raspberry Pi. This can be useful to know
-                why you can’t edit a file, or which file lock the unmount
-                process.
+                <code>chown</code>: Command for granting ownership of files or
+                folders
               </li>
               <li>
-                watch: If you are waiting for something, in a file or directory,
-                the watch command can help you to monitor what happens. This
-                will execute the same command every two seconds. You can also
-                change the refresh rate with the `-n` option. `watch -n10 date`
-                watch date watch ls -latr watch cat output.txt
+                <code>apt, pacman, yum, rpm</code>: Package managers depending
+                on the distro
+              </li>
+              <li>
+                <code>alias</code>: Create custom shortcuts for your regularly
+                used commands
+              </li>
+              <li>
+                <code>dd</code>: Majorly used for creating bootable USB sticks
+              </li>
+              <li>
+                <code>useradd and usermod</code>: Add new user or change
+                existing users data
+              </li>
+              <li>
+                <code>passwd</code>: Create or update passwords for existing
+                users
+              </li>
+              <li><code>sudo killall openvpn</code>: Close OpenVpn</li>
+              <li>
+                <code>crontab -l , crontab -e </code>: Cron is a tool to
+                schedule tasks on a Raspberry Pi / Linux Machines. Crontab is
+                the file where you enter lines for each task to run. `-l` option
+                to display lines. `-e` option to edit lines. You can use sudo
+                before to schedule tasks to run with root privileges.
+              </li>
+              <li>
+                <code>screen -s [name] , screen -r [name]</code>: This tool
+                allows you to let something run in the background even if you
+                close your session. `-s` option to start a new screen with the
+                following name. `-r` option to resume a running screen with this
+                name. You can forget the name if you want, an ID will be
+                generated, use screen `-r` to find it and screen `-r [ID]` to
+                resume it. With only one screen running, screen `-r` will resume
+                it directly.
+              </li>
+              <li>
+                <code>lsof</code>: lsof stands for “List open files”. This
+                command displays all files open on your Raspberry Pi. This can
+                be useful to know why you can’t edit a file, or which file lock
+                the unmount process.
+              </li>
+              <li>
+                <code>watch</code>: If you are waiting for something, in a file
+                or directory, the watch command can help you to monitor what
+                happens. This will execute the same command every two seconds.
+                You can also change the refresh rate with the `-n` option.
+                `watch -n10 date` watch date watch ls -latr watch cat output.txt
               </li>
             </ul>
           </div>
@@ -528,130 +606,153 @@
 
               <ul>
                 <li>
-                  argonone-config : Argoneone Case fan control configuration
-                  curl https://download.argon40.com/argon1.sh | bash : Install
+                  <code>argonone-config </code>
+                  : Argoneone Case fan control configuration curl
+                  https://download.argon40.com/argon1.sh | bash : Install
                   ArgonOne fancontrol script
                 </li>
                 <li>
-                  pinout: A handy reference can be accessed on the Raspberry Pi
-                  by opening a terminal window and running the command pinout
+                  <code>pinout</code>
+                  : A handy reference can be accessed on the Raspberry Pi by
+                  opening a terminal window and running the command pinout
                 </li>
                 <li>
-                  sudo usermod -a -G gpio [username] : In order to use the GPIO
-                  ports your user must be a member of the gpio group. The pi
-                  user is a member by default, other users need to be added
-                  manually.
+                  <code>sudo usermod -a -G gpio [username]</code>
+                  : In order to use the GPIO ports your user must be a member of
+                  the gpio group. The pi user is a member by default, other
+                  users need to be added manually.
                 </li>
                 <li>
-                  sudo apt remove [tree] : You can uninstall a package with apt
-                  remove, The user is prompted to confirm the removal. Again,
-                  the -y flag will auto-confirm.
+                  <code>sudo apt remove [tree]</code>
+                  : You can uninstall a package with apt remove, The user is
+                  prompted to confirm the removal. Again, the -y flag will
+                  auto-confirm.
                 </li>
                 <li>
-                  sudo apt purge tree : You can also choose to completely remove
-                  the package and its associated configuration files with apt
-                  purge
+                  <code>sudo apt purge tree</code>
+                  : You can also choose to completely remove the package and its
+                  associated configuration files with apt purge
                 </li>
-                <li>sudo rpi-update and then use sudo reboot</li>
+                <li><code>sudo rpi-update and then use sudo reboot</code></li>
                 <li>
-                  rpi-update will download the latest pre-release version of the
-                  linux kernel, its matching modules, device tree files, along
-                  with the latest versions of the VideoCore firmware. It will
-                  then install these files to relevant locations on the SD card,
-                  overwriting any previous versions.
-                </li>
-                <li>
-                  sudo apt-get update sudo apt install --reinstall
-                  libraspberrypi0 libraspberrypi-{bin,dev,doc}
-                  raspberrypi-bootloader raspberrypi-kernel If you have done an
-                  rpi-update and things are not working as you wish, if your
-                  Raspberry Pi is still bootable you can return to the stable
-                  release using above command
+                  <code>rpi-update </code> : will download the latest
+                  pre-release version of the linux kernel, its matching modules,
+                  device tree files, along with the latest versions of the
+                  VideoCore firmware. It will then install these files to
+                  relevant locations on the SD card, overwriting any previous
+                  versions.
                 </li>
                 <li>
-                  Check if xterm package exists: `dpkg -l | grep xterm`,If xterm
-                  package does not exist , install it `sudo apt install xterm`
+                  <code
+                    >sudo apt-get update sudo apt install --reinstall
+                    libraspberrypi0 libraspberrypi-{bin,dev,doc}
+                    raspberrypi-bootloader raspberrypi-kernel</code
+                  >
+                  If you have done an rpi-update and things are not working as
+                  you wish, if your Raspberry Pi is still bootable you can
+                  return to the stable release using above command
                 </li>
                 <li>
-                  Set lxterminal as x-terminal-emulator by running the following
-                  command `sudo update-alternatives --config
-                  x-terminal-emulator`
-                </li>
-                <li>`sudo raspi-config`: Configure Raspberry Pi</li>
-                <li>`/usr/bin/dm-tool lock` : Lock screen</li>
-                <li>
-                  `sudo rpi-update` : Only use this if you know what you do.
-                  This command will update everything on your Raspberry Pi
-                  (firmware, packages, …) and can potentially break something.
+                  <strong>Check if xterm package exists:</strong>
+                  <code>dpkg -l | grep xterm</code>If xterm package does not
+                  exist , install it <code>sudo apt install xterm</code>
                 </li>
                 <li>
-                  `sudo apt install phpmyadmin` `sudo apt install vim htop` `apt
-                  install [package]` : Installs the specified package(s).
+                  <strong>Set lxterminal as x-terminal-emulator</strong> by
+                  running the following command
+                  <strong
+                    >sudo update-alternatives --config
+                    x-terminal-emulator</strong
+                  >
                 </li>
+                <li><code>sudo raspi-config</code>: Configure Raspberry Pi</li>
+                <li><code>/usr/bin/dm-tool lock</code> : Lock screen</li>
                 <li>
-                  `sudo apt remove vim` `apt remove [package]` : Removes a
-                  previously selected package.
+                  <code>sudo rpi-update</code>
+                  : Only use this if you know what you do. This command will
+                  update everything on your Raspberry Pi (firmware, packages, …)
+                  and can potentially break something.
                 </li>
-                <li>
-                  `sudo apt search myadmin` `sudo apt search php` `apt search
-                  [search]` : Searches for a package name in the packages list
-                  (repository).
-                </li>
-                <li>
-                  `dpkg -l` `dpkg -l | grep myadmin` `dpkg -l` : Lists all
-                  installed packages on your system. You can use grep to find a
-                  specific package.
-                </li>
-                <li>
-                  `sudo reboot` : This command will restart the Raspberry Pi
-                  immediately.
-                </li>
-                <li>
-                  `shutdown -h now` : This is to stop the Raspberry Pi
-                  immediately. You can replace “now” by a specific time
-                  (shutdown -h 12:05). Don’t use the power switch to stop your
-                  Raspberry, you should do it properly by using this command.
-                </li>
-                <li>shutdown -h 0 : Shutdown computer immediately</li>
 
                 <li>
-                  `ps aux` : This command displays all running process on your
-                  Raspberry Pi.
+                  <strong> Removes a previously selected package.</strong>
+                  <code>sudo apt remove vim` `apt remove [package]</code>
                 </li>
                 <li>
-                  `ps -u pi` : You can also display process started by a
-                  specific user:
+                  <strong
+                    >Searches for a package name in the packages list</strong
+                  >
+                  <code
+                    >`sudo apt search myadmin` `sudo apt search php` `apt search
+                    [search]`</code
+                  >
                 </li>
                 <li>
-                  `kill 12345` `kill [pid]`: The kill command allows you to
-                  terminate a process. You’ll need the process ID to do this.
+                  <strong>Lists all installed packages on your system: </strong>
+                  <code>`dpkg -l` `dpkg -l | grep myadmin` `dpkg -l`</code>
+                  You can use grep to find a specific package.
                 </li>
                 <li>
-                  `kill -9 12345` :Sometime you may need to use the -9 option to
-                  force all related commands to stop. For example, if you run 20
-                  commands in a script and kill it, it’ll continue to the next
-                  line, not exit the program, except if you use the -9 option.
+                  <code>sudo reboot</code>
+                  : This command will restart the Raspberry Pi immediately.
                 </li>
                 <li>
-                  `killall php`: Killall to stop all occurrences of a program.
+                  <code>shutdown -h now</code>
+                  : This is to stop the Raspberry Pi immediately. You can
+                  replace “now” by a specific time (shutdown -h 12:05). Don’t
+                  use the power switch to stop your Raspberry, you should do it
+                  properly by using this command.
                 </li>
                 <li>
-                  `htop` : This tool is an alternative to top. It’s more
-                  user-friendly than top, with colors and dynamic load bars.
+                  <code>shutdown -h 0 </code>: Shutdown computer immediately
+                </li>
+
+                <li>
+                  <code>ps aux</code>
+                  : This command displays all running process on your Raspberry
+                  Pi.
                 </li>
                 <li>
-                  `df` `df -h`: Displays the partition list, with the disk space
-                  used and available for each one.
+                  <code>ps -u pi</code>
+                  : You can also display process started by a specific user:
                 </li>
                 <li>
-                  `vcgencmd measure_temp` : You may not remember it, but this
-                  command displays the current CPU temperature.
+                  <code>`kill 12345` `kill [pid]`</code>
+                  : The kill command allows you to terminate a process. You’ll
+                  need the process ID to do this.
                 </li>
                 <li>
-                  `raspi-gpio` : This command allows you to manage the GPIO pins
-                  of the Raspberry Pi. You can either set or get a value.
-                  raspi-gpio get raspi-gpio get 20 raspi-gpio set 20 a5
-                  raspi-gpio set 20 op pn dh
+                  <code>`kill -9 12345`</code>
+                  :Sometime you may need to use the -9 option to force all
+                  related commands to stop. For example, if you run 20 commands
+                  in a script and kill it, it’ll continue to the next line, not
+                  exit the program, except if you use the -9 option.
+                </li>
+                <li>
+                  <code>`killall php`</code>
+                  : Killall to stop all occurrences of a program.
+                </li>
+                <li>
+                  <code>`htop`</code>
+                  : This tool is an alternative to top. It’s more user-friendly
+                  than top, with colors and dynamic load bars.
+                </li>
+                <li>
+                  <code>`df` `df -h`</code>
+                  : Displays the partition list, with the disk space used and
+                  available for each one.
+                </li>
+                <li>
+                  <code>`vcgencmd measure_temp`</code>
+                  : You may not remember it, but this command displays the
+                  current CPU temperature.
+                </li>
+                <li>
+                  <code>`raspi-gpio`</code>
+                  : This command allows you to manage the GPIO pins of the
+                  Raspberry Pi. You can either set or get a value. raspi-gpio
+                  get raspi-gpio get 20 raspi-gpio set 20 a5 raspi-gpio set 20
+                  op pn dh
                 </li>
               </ul>
               <!-- ********** End of Raspberri Pi reference section **********-->
@@ -682,17 +783,18 @@
               <h3>Windows 11: Administration</h3>
               <ul>
                 <li>
-                  winget upgrade : Command line tool to update all installed
-                  programs in Windows 11, this will download information about
-                  all the latest avilable updates
+                  <code>winget upgrade </code>
+                  : Command line tool to update all installed programs in
+                  Windows 11, this will download information about all the
+                  latest avilable updates
                 </li>
                 <li>
-                  winget upgrade --all : This will download and install all the
-                  updates available
+                  <code>winget upgrade --all</code>
+                  : This will download and install all the updates available
                 </li>
                 <li>
-                  powercfg /availablesleepstates : Find the power states
-                  available on your computer
+                  <code>powercfg /availablesleepstates</code>
+                  : Find the power states available on your computer
                 </li>
               </ul>
 
@@ -714,213 +816,282 @@
                 <h1>Software Engineering Tools</h1>
                 <a href="index.html#navBar">Navigation Bar</a>
                 <!-- ********** Start of Git reference section **********-->
-
-                <h2 id="Git">Git</h2>
-                <ul>
-                  <li>
-                    <a
-                      href="https://github.com/1Amal/engineering-reference/tree/main/Git"
-                      >Click here to view other Git resources</a
-                    >
-                  </li>
-                  <li>
-                    <a href="https://git-scm.com/book/en/v2"> Git Reference</a>
-                  </li>
-                </ul>
-
-                <div>
-                  <h3>Git: Essentials</h3>
+                <div id="Git">
+                  <h2>Git</h2>
                   <ul>
                     <li>
-                      <code>git status </code>: command gives us all the
-                      necessary information about the current branch.
-                    </li>
-
-                    <li>
-                      <code>git add</code> : We need to use the git add command
-                      to include the changes of a file(s) into our next commit.
-                      <ul>
-                        <li>
-                          To add a single file: <code>git add [filename] </code>
-                        </li>
-                        <li>
-                          To add all files in repo at once:
-                          <code>git add -A </code>
-                        </li>
-                      </ul>
-                    </li>
-
-                    <li>
-                      <code> git commit</code>: is like setting a checkpoint in
-                      the development process which you can go back to later if
-                      needed. We also need to write a short message to explain
-                      what we have developed or changed in the source code.
-                      <p><code>git commit -m "commit message"</code></p>
-                    </li>
-
-                    <li>
-                      <code>git push</code> :After committing your changes, the
-                      next thing you want to do is send your changes to the
-                      remote server. Git push uploads your commits to the remote
-                      repository.
-                      <p><code>git push [remote][branch-name]</code></p>
-                      <p>
-                        However, if your branch is newly created, then you also
-                        need to upload the branch with the following command:<br />
-                        <code
-                          >git push --set-upstream [remote]
-                          [name-of-your-branch]</code
-                        >
-                        <br />
-                        alternatively you can also use:
-                        <code>git push -u origin [branch_name]</code>
-                      </p>
-                    </li>
-
-                    <li>
-                      <code>git pull</code> : command is used to get updates
-                      from the remote repo. This command is a combination of git
-                      fetch and git merge which means that, when we use git
-                      pull, it gets the updates from remote repository (git
-                      fetch) and immediately applies the latest changes in your
-                      local (git merge).<br />
-                      <code>git pull [remote]</code>
-                    </li>
-
-                    <li>
-                      <code>git log -- oneline</code> : To see our commit
-                      history
-                    </li>
-
-                    <li>
-                      Git can specify which files or parts of your project
-                      should be ignored by Git using a .gitignore file. Step 1:
-                      touch .gitignore Step 2: # text comment | name All name
-                      files, name folders, and files and folders in any name
-                      folder | name/ Ending with / specifies the pattern is for
-                      a folder. Matches all files and folders in any name folder
-                      For more information go to :
                       <a
-                        href="https://www.w3schools.com/git/git_ignore.asp?remote=github"
+                        href="https://github.com/1Amal/engineering-reference/tree/main/Git"
                         target="_blank"
-                        >Git Ignore</a
+                        >Click here to view other Git resources</a
                       >
                     </li>
-
                     <li>
-                      <code>git revert</code> : A safer way that we can undo our
-                      commits is by using git revert. We just need to specify
-                      the hash code next to our commit that we would like to
-                      undo:<br />
-                      <code>git revert 3321844</code><br />
-                      The Git revert command will undo the given commit, but
-                      will create a new commit without deleting the older one:
-                      The advantage of using git revert is that it doesn't touch
-                      the commit history. This means that you can still see all
-                      of the commits in your history, even the reverted ones.
-                      Another safety measure here is that everything happens in
-                      our local system unless we push them to the remote repo.
-                      That's why git revert is safer to use and is the preferred
-                      way to undo our commits.
-                    </li>
-
-                    <li>
-                      <code>git pull origin main</code> : Update local copy with
-                      the remote copy
-                    </li>
-                    <li>
-                      <code>git fetch</code> : Use git fetch to retrieve new
-                      work done by other people. Fetching from a repository
-                      grabs all the new remote-tracking branches and tags
-                      without merging those changes into your own branches.
-                    </li>
-
-                    <li>
-                      <code>git diff</code> : Show you all of your local changes
-                      since you last committed.
-                    </li>
-
-                    <li>
-                      <code>git diff index.html</code> : To check what changes
-                      made to a certain file simply add the path of a file as an
-                      option
-                    </li>
-
-                    <li>
-                      <code>git diff --color-words index.html</code> : this
-                      option shows a more concise view
-                    </li>
-
-                    <li>
-                      <code>git diff --staged index.html</code> : Staged changes
-                      in a certain file
-                    </li>
-
-                    <li>
-                      <code>git diff --staged</code> : Staged changes in all
-                      local files
-                    </li>
-
-                    <li>
-                      <code>git diff main (NAME OF OTHER BRANCH)</code> : It's
-                      also possible to compare two branches to each other. This
-                      helps you find out how exactly the code in both branches
-                      is different:
-                    </li>
-
-                    <li>
-                      <code>git diff main feature/login index.html</code> :
-                      Compare a certain file in two different branches. You can
-                      do this simply by adding the file's path: This will show
-                      you how the file "index.html" was changed in the
-                      feature/login branch, compared to how it looks in the main
-                      branch.
+                      <a href="https://git-scm.com/book/en/v2" target="_blank">
+                        Full Pro Git book, written by Scott Chacon and Ben
+                        Straub</a
+                      >
                     </li>
                   </ul>
-                </div>
 
-                <div>
-                  <h3>Git/Github Workflow</h3>
-                  <ul>
-                    <li>
-                      <code>Git clone </code> : is a command for downloading
-                      existing source code from a remote repository (like
-                      Github, for example). Git clone basically makes an
-                      identical copy of the latest version of a project in a
-                      repository and saves it to your computer. There are a
-                      couple of ways to download the source code,
-                      <ul>
-                        <li>
-                          Clone using SSH:
+                  <div>
+                    <h3>Git: Essentials</h3>
+                    <ul>
+                      <li>
+                        <code>git status </code>: command gives us all the
+                        necessary information about the current branch.
+                      </li>
+
+                      <li>
+                        <code>git add</code> : We need to use the git add
+                        command to include the changes of a file(s) into our
+                        next commit.
+                        <ul>
+                          <li>
+                            To add a single file:
+                            <code>git add [filename] </code>
+                          </li>
+                          <li>
+                            To add all files in repo at once:
+                            <code>git add -A </code>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li>
+                        <code> git commit</code>: is like setting a checkpoint
+                        in the development process which you can go back to
+                        later if needed. We also need to write a short message
+                        to explain what we have developed or changed in the
+                        source code.
+                        <p><code>git commit -m "commit message"</code></p>
+                      </li>
+
+                      <li>
+                        <code>git push</code> :After committing your changes,
+                        the next thing you want to do is send your changes to
+                        the remote server. Git push uploads your commits to the
+                        remote repository.
+                        <p><code>git push [remote][branch-name]</code></p>
+                        <p>
+                          However, if your branch is newly created, then you
+                          also need to upload the branch with the following
+                          command:<br />
                           <code
-                            >git clone
-                            git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code
+                            >git push --set-upstream [remote]
+                            [name-of-your-branch]</code
                           >
-                        </li>
-                        <li>
-                          Clone using HTTPS:
-                          <code
-                            >git clone
-                            git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code
-                          >
-                        </li>
-                        <li>
-                          When the repo is cloned between Windows and Linux/Unix
-                          machines.Just tell git to ignore filemode change. Here
-                          are several ways to do so:
-                        </li>
-                        <li>
-                          Config ONLY for current repo:git config core.filemode
-                          false
-                        </li>
-                        <li>
-                          Config globally: git config --global core.filemode
-                          false Add in ~/.gitconfig: [core] filemode = false
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      Working With Branches:
+                          <br />
+                          alternatively you can also use:
+                          <code>git push -u origin [branch_name]</code>
+                        </p>
+                      </li>
+
+                      <li>
+                        <code>git pull</code> : command is used to get updates
+                        from the remote repo. This command is a combination of
+                        git fetch and git merge which means that, when we use
+                        git pull, it gets the updates from remote repository
+                        (git fetch) and immediately applies the latest changes
+                        in your local (git merge).<br />
+                        <code>git pull [remote]</code>
+                      </li>
+
+                      <li>
+                        <code>git log -- oneline</code> : To see our commit
+                        history
+                      </li>
+
+                      <li>
+                        <strong>.gitignore : </strong>
+                        Git can specify which files or parts of your project
+                        should be ignored by Git using a .gitignore file. Step
+                        1: touch .gitignore Step 2: # text comment | name All
+                        name files, name folders, and files and folders in any
+                        name folder | name/ Ending with / specifies the pattern
+                        is for a folder. Matches all files and folders in any
+                        name folder For more information go to :
+                        <a
+                          href="https://www.w3schools.com/git/git_ignore.asp?remote=github"
+                          target="_blank"
+                          >Git Ignore</a
+                        >
+                      </li>
+
+                      <li>
+                        <code>git revert</code> : A safer way that we can undo
+                        our commits is by using git revert. We just need to
+                        specify the hash code next to our commit that we would
+                        like to undo:<br />
+                        <code>git revert 3321844</code><br />
+                        The Git revert command will undo the given commit, but
+                        will create a new commit without deleting the older one:
+                        The advantage of using git revert is that it doesn't
+                        touch the commit history. This means that you can still
+                        see all of the commits in your history, even the
+                        reverted ones. Another safety measure here is that
+                        everything happens in our local system unless we push
+                        them to the remote repo. That's why git revert is safer
+                        to use and is the preferred way to undo our commits.
+                      </li>
+
+                      <li>
+                        <code>git pull origin main</code> : Update local copy
+                        with the remote copy
+                      </li>
+                      <li>
+                        <code>git fetch</code> : Use git fetch to retrieve new
+                        work done by other people. Fetching from a repository
+                        grabs all the new remote-tracking branches and tags
+                        without merging those changes into your own branches.
+                      </li>
+
+                      <li>
+                        <code>git diff</code> : Show you all of your local
+                        changes since you last committed.
+                      </li>
+
+                      <li>
+                        <code>git diff index.html</code> : To check what changes
+                        made to a certain file simply add the path of a file as
+                        an option
+                      </li>
+
+                      <li>
+                        <code>git diff --color-words index.html</code> : this
+                        option shows a more concise view
+                      </li>
+
+                      <li>
+                        <code>git diff --staged index.html</code> : Staged
+                        changes in a certain file
+                      </li>
+
+                      <li>
+                        <code>git diff --staged</code> : Staged changes in all
+                        local files
+                      </li>
+
+                      <li>
+                        <code>git diff main (NAME OF OTHER BRANCH)</code> : It's
+                        also possible to compare two branches to each other.
+                        This helps you find out how exactly the code in both
+                        branches is different:
+                      </li>
+
+                      <li>
+                        <code>git diff main feature/login index.html</code> :
+                        Compare a certain file in two different branches. You
+                        can do this simply by adding the file's path: This will
+                        show you how the file "index.html" was changed in the
+                        feature/login branch, compared to how it looks in the
+                        main branch.
+                      </li>
+                      <li>
+                        <code>git remote update origin --prune</code> : To
+                        update the local list of remote branches
+                      </li>
+
+                      <li>
+                        <code> git branch -a</code> : To show all local and
+                        remote branches that (local) Git knows about
+                      </li>
+
+                      <li>
+                        <code>git checkout dev</code> : When you've completed
+                        development in your branch and everything works fine,
+                        the final step is merging the branch with the parent
+                        branch (dev or master). This is done with the git merge
+                        command. Git merge basically integrates your feature
+                        branch with all of its commits back to the dev (or
+                        master) branch. It's important to remember that you
+                        first need to be on the specific branch that you want to
+                        merge with your feature branch. For example, when you
+                        want to merge your feature branch into the dev branch.
+                        First you should switch to the dev branch:
+                      </li>
+
+                      <li>
+                        <code> git fetch</code> : Before merging, you should
+                        update your local dev branch
+                      </li>
+
+                      <li>
+                        <code>git merge [branch-name]</code> : Finally, you can
+                        merge your feature branch into dev
+                      </li>
+
+                      <li>
+                        <code>git remote -v</code> : Check the fetch and push
+                        locations
+                      </li>
+
+                      <li>
+                        <code
+                          >git config --global user.email "email@example.com"
+                        </code>
+                        : Set an email address in Git. You can use your
+                        GitHub-provided noreply email address or any email
+                        address.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3>Git/Github Workflow</h3>
+                    <ul>
+                      <li>
+                        <strong>Git clone</strong> : is a command for
+                        downloading existing source code from a remote
+                        repository (like Github, for example). Git clone
+                        basically makes an identical copy of the latest version
+                        of a project in a repository and saves it to your
+                        computer. There are a couple of ways to download the
+                        source code,
+                        <ul>
+                          <li>
+                            Clone using SSH:
+                            <code
+                              >git clone
+                              git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code
+                            >
+                          </li>
+                          <li>
+                            Clone using HTTPS:
+                            <code
+                              >git clone
+                              git@github.com:1Amal/python-webapp-https-amaldevelops.pythonanywhere.com.git</code
+                            >
+                          </li>
+                          <li>
+                            When the repo is cloned between Windows and
+                            Linux/Unix machines.Just tell git to ignore filemode
+                            change. Here are several ways to do so:
+                          </li>
+                          <li>
+                            Config ONLY for current repo:git config
+                            core.filemode false
+                          </li>
+                          <li>
+                            Config globally: git config --global core.filemode
+                            false Add in ~/.gitconfig: [core] filemode = false
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <strong
+                          >Working With Branches, Create a new branch in Git:
+                          First check your current branch using git branch.
+                          Then, create and switch to a new branch with
+                          <code>git checkout -b [new-branch-name]</code>. If you
+                          want to push the new branch to the remote repository,
+                          use <code>git push -u origin [new-branch-name]</code>.
+                          To switch back to the main branch or any other branch,
+                          run git checkout main (or the branch name you wish to
+                          switch to).</strong
+                        >Working With Branches, Long Version below:
+                      </li>
+
                       <ol>
                         <li>
                           Make a new branch and change to it with the command
@@ -982,269 +1153,219 @@
                           name]
                         </li>
                       </ol>
-                    </li>
+
+                      <li>
+                        <strong>GitHub Pages:</strong>
+
+                        <ol>
+                          <li>
+                            Remove the 'dist' directory from the project’s
+                            .gitignore file.
+                          </li>
+                          <li>
+                            Make sure git knows about your subtree (the
+                            subfolder with your site)
+                            <code
+                              >git add dist && git commit -m "Initial dist
+                              subtree commit"</code
+                            >
+                          </li>
+
+                          <li>
+                            Use subtree push to send it to the gh-pages branch
+                            on GitHub.
+
+                            <code
+                              >git subtree push --prefix dist origin
+                              gh-pages</code
+                            >
+                            Boom. If your folder isn’t called dist, then you’ll
+                            need to change that in each of the commands above.
+                          </li>
+
+                          <li>
+                            By adding this to the packages.json, you can simply
+                            push the commit to both the main branch and the
+                            gh-pages branch (Git Hub pages will be served from
+                            gh-pages branch)
+                            <code
+                              >"scripts": {"gh-pages": "git subtree push
+                              --prefix dist origin gh-pages && git push"}</code
+                            >
+                          </li>
+                          <li>
+                            To Push to Github pages :
+                            <code>npm run gh-pages</code>
+                          </li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <h3>Git: Advanced Topics</h3>
+                  <ul>
                     <li>
-                      GitHub Pages:
+                      <strong
+                        >How to connect local folder to new/existing GitHub
+                        repository:</strong
+                      >
+
                       <ol>
                         <li>
-                          Remove the 'dist' directory from the project’s
-                          .gitignore file.
+                          First register a project as a local Git repository the
+                          first thing you need to do is perform the following
+                          command at your project root: <code>git init</code>
                         </li>
                         <li>
-                          Make sure git knows about your subtree (the subfolder
-                          with your site)
+                          Above will create a .git folder at your project root
+                          and will allow you to start using Git in that
+                          repository.You can call origin whatever you like,
+                          really, but origin is the standard name for Git remote
+                          repositories. [Repository_Location] is the URL to your
+                          remote repository. For example, if I had a new project
+                          called reactResumeCVWebApp which I want
                           <code
-                            >git add dist && git commit -m "Initial dist subtree
-                            commit"</code
+                            >`git remote add origin
+                            git@github.com:1Amal/reactResumeCVWebApp.git`</code
                           >
+                          Then
+                          <code>`git push --set-upstream origin main`</code> to
+                          set the default upstream branch
                         </li>
-
                         <li>
-                          Use subtree push to send it to the gh-pages branch on
-                          GitHub.
-
+                          Then <code>git pull</code> to download the github repo
+                          to local folder
+                          <code>`git pull origin main`</code> Most of the time
+                          you will get an error as you have different files on
+                          Github (initial repository files such as .gitignore)
+                          and different files in your local repo i.e. Vite
+                          created src, public folders and other files if so use
                           <code
-                            >git subtree push --prefix dist origin
-                            gh-pages</code
+                            >`git pull origin main
+                            --allow-unrelated-histories`</code
                           >
-                          Boom. If your folder isn’t called dist, then you’ll
-                          need to change that in each of the commands above.
-                        </li>
-
-                        <li>
-                          By adding this to the packages.json, you can simply
-                          push the commit to both the main branch and the
-                          gh-pages branch (Git Hub pages will be served from
-                          gh-pages branch)
-                          <code
-                            >"scripts": {"gh-pages": "git subtree push --prefix
-                            dist origin gh-pages && git push"}</code
-                          >
-                        </li>
-                        <li>
-                          To Push to Github pages :
-                          <code>npm run gh-pages</code>
                         </li>
                       </ol>
                     </li>
+
+                    <li>
+                      <strong>Public e-mail address change:</strong>
+
+                      <ol>
+                        <li>
+                          If you get this error ! [remote rejected] main -> main
+                          (push declined due to email privacy restrictions) You
+                          can see your personal e-mail address, which is used by
+                          default for your commits in Git:
+                        </li>
+                        <li>
+                          git config --global user.email Find your GitHub
+                          noreply address in your GitHub's Personal Settings →
+                          Emails. It's mentioned in the description of the Keep
+                          my email address private checkbox. Usually, it starts
+                          with a unique identifier, plus your username:<code
+                            >{ID}+{username}@users.noreply.github.com</code
+                          >
+                        </li>
+                        <li>
+                          Change the global user e-mail address setting to be
+                          your GitHub noreply address:
+
+                          <code
+                            >git config --global user.email
+                            {ID}+{username}@users.noreply.github.com</code
+                          >
+                        </li>
+                        <li>
+                          Reset the author information on your last commit: git
+                          commit --amend --reset-author If you have multiple
+                          commits with your private e-mail address, see this
+                          answer. Now you can push the commit with the noreply
+                          e-mail address, and future commits will have the
+                          noreply e-mail address as well.
+                        </li>
+                      </ol>
+                    </li>
+
+                    <li>
+                      <strong
+                        >Setting up GitHub on a new Linux installation:
+                      </strong>
+
+                      <ol>
+                        <li>
+                          <code>git config --global user.name "Amal K" </code> :
+                          Use this command for adding a user name and confirm
+                          that you have set the Git username correctly:
+                          <br /><code>git config user.name</code>
+                        </li>
+
+                        <li>
+                          <code
+                            >git config --global user.email
+                            "email@example.com"</code
+                          >
+                          : To set an email address in Git. You can use your
+                          GitHub-provided noreply email address or any email
+                          address.<br />
+                          To confirm that you have set the email address
+                          correctly in Git:<br />
+                          <code>git config --global user.email</code>
+                        </li>
+
+                        <li>
+                          <code
+                            >ssh-keygen -t ed25519 -C
+                            "your_email@example.com"</code
+                          >
+                          : Generating a new SSH key, for further information
+                          <a
+                            href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"
+                            target="_blank"
+                            >Visit here</a
+                          >
+                        </li>
+
+                        <li>
+                          <code
+                            >eval "$(ssh-agent -s)"<br />
+                            ssh-add ~/.ssh/id_ed25519</code
+                          >
+                          : Adding your SSH key to the ssh-agent
+                        </li>
+
+                        <li>
+                          <code>cat ~/.ssh/id_ed25519.pub</code> : Adding a new
+                          SSH key to your GitHub account
+                          <a
+                            href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account"
+                            target="_blank"
+                            >Visit here</a
+                          >
+                          <br />
+                          Then select and copy the contents of the
+                          id_ed25519.pub file displayed in the terminal to your
+                          clipboard In the upper-right corner of any GitHub
+                          page, click your profile photo, then click Settings.
+                          <br />
+                          Settings icon in the user bar, In the "Access" section
+                          of the sidebar, click SSH and GPG keys. Click New SSH
+                          key or Add SSH key. These steps should set your new
+                          Linux machine with Github
+                        </li>
+                      </ol>
+                    </li>
+                    <li>
+                      <code
+                        >git remote set-url origin [updated link url
+                        https://........git]</code
+                      >
+                      : Update renamed repository address
+                    </li>
                   </ul>
+
+                  <!-- ********** End of Git reference section **********-->
                 </div>
-
-                <h3>Git: Advanced Topics</h3>
-                <ul>
-                  <li>
-                    <code>git remote update origin --prune</code> : To update
-                    the local list of remote branches
-                  </li>
-
-                  <li>
-                    <code> git branch -a</code> : To show all local and remote
-                    branches that (local) Git knows about
-                  </li>
-
-                  <li>
-                    Create a new branch in Git: First check your current branch
-                    using git branch. Then, create and switch to a new branch
-                    with <code>git checkout -b [new-branch-name]</code>. If you
-                    want to push the new branch to the remote repository, use
-                    <code>git push -u origin [new-branch-name]</code>. To switch
-                    back to the main branch or any other branch, run git
-                    checkout main (or the branch name you wish to switch to).
-                  </li>
-
-                  <li>
-                    <code>git checkout dev</code> : When you've completed
-                    development in your branch and everything works fine, the
-                    final step is merging the branch with the parent branch (dev
-                    or master). This is done with the git merge command. Git
-                    merge basically integrates your feature branch with all of
-                    its commits back to the dev (or master) branch. It's
-                    important to remember that you first need to be on the
-                    specific branch that you want to merge with your feature
-                    branch. For example, when you want to merge your feature
-                    branch into the dev branch. First you should switch to the
-                    dev branch:
-                  </li>
-
-                  <li>
-                    <code> git fetch</code> : Before merging, you should update
-                    your local dev branch
-                  </li>
-
-                  <li>
-                    <code>git merge [branch-name]</code> : Finally, you can
-                    merge your feature branch into dev
-                  </li>
-
-                  <li>
-                    <code>git remote -v</code> : Check the fetch and push
-                    locations
-                  </li>
-
-                  <li>
-                    <code
-                      >git config --global user.email "email@example.com"
-                    </code>
-                    : Set an email address in Git. You can use your
-                    GitHub-provided noreply email address or any email address.
-                  </li>
-
-                  <li>
-                    How to connect local folder to new/existing GitHub
-                    repository:
-                    <ol>
-                      <li>
-                        First register a project as a local Git repository the
-                        first thing you need to do is perform the following
-                        command at your project root: <code>git init</code>
-                      </li>
-                      <li>
-                        Above will create a .git folder at your project root and
-                        will allow you to start using Git in that repository.You
-                        can call origin whatever you like, really, but origin is
-                        the standard name for Git remote repositories.
-                        [Repository_Location] is the URL to your remote
-                        repository. For example, if I had a new project called
-                        reactResumeCVWebApp which I want
-                        <code
-                          >`git remote add origin
-                          git@github.com:1Amal/reactResumeCVWebApp.git`</code
-                        >
-                        Then
-                        <code>`git push --set-upstream origin main`</code> to
-                        set the default upstream branch
-                      </li>
-                      <li>
-                        Then <code>git pull</code> to download the github repo
-                        to local folder <code>`git pull origin main`</code> Most
-                        of the time you will get an error as you have different
-                        files on Github (initial repository files such as
-                        .gitignore) and different files in your local repo i.e.
-                        Vite created src, public folders and other files if so
-                        use
-                        <code
-                          >`git pull origin main
-                          --allow-unrelated-histories`</code
-                        >
-                      </li>
-                    </ol>
-                  </li>
-
-                  <li>
-                    Public e-mail address change:
-                    <ol>
-                      <li>
-                        If you get this error ! [remote rejected] main -> main
-                        (push declined due to email privacy restrictions) You
-                        can see your personal e-mail address, which is used by
-                        default for your commits in Git:
-                      </li>
-                      <li>
-                        git config --global user.email Find your GitHub noreply
-                        address in your GitHub's Personal Settings → Emails.
-                        It's mentioned in the description of the Keep my email
-                        address private checkbox. Usually, it starts with a
-                        unique identifier, plus your username:<code
-                          >{ID}+{username}@users.noreply.github.com</code
-                        >
-                      </li>
-                      <li>
-                        Change the global user e-mail address setting to be your
-                        GitHub noreply address:
-
-                        <code
-                          >git config --global user.email
-                          {ID}+{username}@users.noreply.github.com</code
-                        >
-                      </li>
-                      <li>
-                        Reset the author information on your last commit: git
-                        commit --amend --reset-author If you have multiple
-                        commits with your private e-mail address, see this
-                        answer. Now you can push the commit with the noreply
-                        e-mail address, and future commits will have the noreply
-                        e-mail address as well.
-                      </li>
-                    </ol>
-                  </li>
-
-                  <li>
-                    <code
-                      >git remote set-url origin [updated link url
-                      https://........git]</code
-                    >
-                    : Update renamed repository address
-                  </li>
-
-                  <li>
-                    Setting up GitHub on a new Linux installation
-
-                    <ol>
-                      <li>
-                        <code>git config --global user.name "Amal K" </code> :
-                        Use this command for adding a user name and confirm that
-                        you have set the Git username correctly: <br /><code
-                          >git config user.name</code
-                        >
-                      </li>
-
-                      <li>
-                        <code
-                          >git config --global user.email
-                          "email@example.com"</code
-                        >
-                        : To set an email address in Git. You can use your
-                        GitHub-provided noreply email address or any email
-                        address.<br />
-                        To confirm that you have set the email address correctly
-                        in Git:<br />
-                        <code>git config --global user.email</code>
-                      </li>
-
-                      <li>
-                        <code
-                          >ssh-keygen -t ed25519 -C
-                          "your_email@example.com"</code
-                        >
-                        : Generating a new SSH key, for further information
-                        <a
-                          href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"
-                          target="_blank"
-                          >Visit here</a
-                        >
-                      </li>
-
-                      <li>
-                        <code
-                          >eval "$(ssh-agent -s)"<br />
-                          ssh-add ~/.ssh/id_ed25519</code
-                        >
-                        : Adding your SSH key to the ssh-agent
-                      </li>
-
-                      <li>
-                        <code>cat ~/.ssh/id_ed25519.pub</code> : Adding a new
-                        SSH key to your GitHub account
-                        <a
-                          href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account"
-                          target="_blank"
-                          >Visit here</a
-                        >
-                        <br />
-                        Then select and copy the contents of the id_ed25519.pub
-                        file displayed in the terminal to your clipboard In the
-                        upper-right corner of any GitHub page, click your
-                        profile photo, then click Settings. <br />
-                        Settings icon in the user bar, In the "Access" section
-                        of the sidebar, click SSH and GPG keys. Click New SSH
-                        key or Add SSH key. These steps should set your new
-                        Linux machine with Github
-                      </li>
-                    </ol>
-                  </li>
-                </ul>
-
-                <!-- ********** End of Git reference section **********-->
               </div>
               <div id="vsCode">
                 <h2>VS Code</h2>
