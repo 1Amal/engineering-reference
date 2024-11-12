@@ -1,19 +1,20 @@
-# Software Engineering, Electronics, Telecommunications, Internet Engineering reference database
+# Tech Ref for Software Engineering (Full Stack), DevOps, Linux, Electronics, Cybersecurity & Networking
 
-Reference manuals, Cheat sheets, Study notes 
-Please note this collection is intended for education purposes only, no copyright infringement intended !
-<li><a href="https://1amal.github.io/engineering-reference">Main Menu</a></li>
-<li><a href="https://1amal.github.io/engineering-reference/index.html#Linux">Linux</a></li>
-<li><a href="https://1amal.github.io/engineering-reference/index.html#Windows">Microsoft Windows Reference</a></li>
-<li><a href="https://1amal.github.io/engineering-reference/index.html#Git">Git</a></li>
-<li><a href="https://1amal.github.io/engineering-reference/index.html#HTML">HTML</a></li>
-<li><a href="https://1amal.github.io/engineering-reference/index.html#CSS">CSS</a></li>
-<li><a href="https://1amal.github.io/engineering-reference/index.html#JavaScript">JavaScript</a></li>
-<li><a href="https://1amal.github.io/engineering-reference/index.html#Python">Python</a></li>
-<li><a href="https://1amal.github.io/engineering-reference/index.html#Tools">Software Development</a></li>
-<li><a href="https://1amal.github.io/engineering-reference/index.html#Networking">Networking and Cybersecurity</a></li>
-<li><a href="https://1amal.github.io/engineering-reference/index.html#Electronics">Electronics</a></li>
-<li><a href="https://1amal.github.io/engineering-reference/index.html#pi">Raspberry Pi</a></li>
+For software developers it is vital to keep a handy reference source which is available quickly, efficiently and from any location. Hence it was decided to collate all the information and to upload to GitHub so it can be accessed from anywhere, can be easily accessed, can be updated quite easily and anyone who needs this data is freely available for access.
+
+## Links
+
+* Github: https://github.com/1Amal/engineering-reference
+* Live Production version: https://www.amalk.au/engineering-reference/
 
 
 
+## Design principles
+
+* Ability access from any location and any device
+* Ability to search easily
+* Available offline without an internet connection
+* Can be printed or converted to PDF files easily so keeping a simple and clean interface
+* Can be updated easily
+* Frequently used Technology information accessible from one place
+* Share knowledge and ability for anyone to contribute
