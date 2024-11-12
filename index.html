@@ -13,35 +13,22 @@
     <div class="mainWebsiteGridContainer">
       <div class="title">
         <h1>
-          Software Engineering (Front End, Back End, Full Stack), Electronics,
-          Telecommunications and Internet Engineering quick reference portal
+          Software Engineering (Full Stack), Linux, Electronics, Cybersecurity, Networking Reference Manual
+          
         </h1>
       </div>
       <div id="navBar">
         <div class="navBarLinux">
           <h1>
-            <a href="index.html#linuxAndMiscellaneousOperatingSystems"
-              >Linux and Miscellaneous Operating Systems</a
-            >
+            <a href="index.html#linux">Linux</a>
           </h1>
 
-          <ul>
-            <li><a href="index.html#linux">Linux |</a></li>
-            <!-- ********** Start of Linux reference section **********-->
-
-            <li><a href="index.html#raspberryPi">Raspberri Pi |</a></li>
-            <!-- ********** Start of RaspberriPi reference section **********-->
-
-            <li>
-              <a href="index.html#Windows">Microsoft Windows 11 </a>
-            </li>
-            <!-- ********** Start of Windows reference section **********-->
-          </ul>
+          
         </div>
 
         <div class="navBarSoftwareTools">
           <h1>
-            <a href="index.html#softwareDevelopmentTools"
+            <a href="index.html#softwareEngineeringTools"
               >Software Engineering Tools</a
             >
           </h1>
@@ -50,7 +37,7 @@
             <li><a href="index.html#Git">Git |</a></li>
             <!-- ********** Start of Git reference section **********-->
 
-            <li><a href="index.html#vsCode">Visual Studio Code |</a></li>
+            <li><a href="index.html#vsCode">VS Code |</a></li>
             <li>
               <a href="index.html#chromeDeveloperTools"
                 >Chrome Developer Tools |</a
@@ -109,11 +96,13 @@
         <div class="navBarETIE">
           <a href="index.html#ETIE"
             ><h1>
-              Electronics, Telecommunications and Internet Engineering
+              Electronics
             </h1></a
           >
           <ul>
             <li><a href="index.html#electronics">Electronics |</a></li>
+            <li><a href="index.html#raspberrypi">Raspberri Pi |</a></li>
+            <!-- ********** Start of RaspberriPi reference section **********-->
             <li><a href="index.html#arduino">Arduino |</a></li>
             <li><a href="index.html#python">Python |</a></li>
             <!-- ********** Start of Python reference section **********-->
@@ -125,6 +114,13 @@
 
             <!-- ********** Start of Electronics Engineering reference section **********-->
           </ul>
+        </div>
+        <div class="">
+          <ul>
+            <li>
+              <a href="index.html#Windows">Microsoft Windows 11 </a>
+            </li><ul>
+         
         </div>
       </div>
 
@@ -138,7 +134,7 @@
           available for access.
         </p>
 
-        <h3>Design principles</h3>
+        <h4>Design principles</h4>
 
         <ul>
           <li>Ability access from any location and any device</li>
@@ -156,32 +152,11 @@
         </ul>
       </div>
 
-      <div class="externalReferenceSites">
-        <h3>External Reference sites</h3>
-        <ul>
-          <li>
-            <a href="https://guides.codepath.com/compsci" target="_blank"
-              >CodePath Computer Science | Technical Interview | Algorithms |
-              Data Structures
-            </a>
-          </li>
-          <li>
-            <a href="https://guides.codepath.com/webdev" target="_blank"
-              >CodePath Web Development</a
-            >
-          </li>
-          <li>
-            <a href="https://guides.codepath.com/websecurity" target="_blank"
-              >CodePath Web Security</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div id="linuxAndMiscellaneousOperatingSystems">
+      <div id="linux">
         <div id="linux">
           <!-- ********** Start of Linux reference section **********-->
-          <h1>Linux and Miscellaneous Operating Systems</h1>
-          <h2>Linux</h2>
+          <h1>Linux</h1>
+
           <ul>
             <li>
               <a
@@ -195,7 +170,7 @@
               >
             </li>
           </ul>
-          <div class="project-1">
+          <div class="linuxFileDirectoryAndStorageOperations">
             <h3>Linux: File, Directory and Storage operations</h3>
             <ul>
               <li>
@@ -290,7 +265,7 @@
             </ul>
           </div>
 
-          <div class="project-2">
+          <div class="linuxNetworking">
             <h3>Linux: Networking</h3>
             <ul>
               <li><code>ssh</code>: Secure Shell command in Linux</li>
@@ -340,7 +315,7 @@
             </ul>
           </div>
 
-          <div class="project-3">
+          <div class="linuxSystemInformationAndSearch">
             <h3>Linux: System Information and Search</h3>
 
             <ul>
@@ -471,7 +446,7 @@
             </ul>
           </div>
 
-          <div class="project-4">
+          <div class="linuxAdministration">
             <h3>Linux: Administration</h3>
 
             <ul>
@@ -571,7 +546,7 @@
             </ul>
           </div>
 
-          <div class="project-4">
+          <div class="linuxBashScripting">
             <h3>Linux: Bash Scripting</h3>
             <ul>
               <li>
@@ -600,217 +575,7 @@
               </li>
             </ul>
 
-            <!-- ********** Start of RaspberriPi reference section **********-->
-            <div id="raspberryPi">
-              <h2>Linux: RaspberryPi</h2>
-
-              <ul>
-                <li>
-                  <code>argonone-config </code>
-                  : Argoneone Case fan control configuration curl
-                  https://download.argon40.com/argon1.sh | bash : Install
-                  ArgonOne fancontrol script
-                </li>
-                <li>
-                  <code>pinout</code>
-                  : A handy reference can be accessed on the Raspberry Pi by
-                  opening a terminal window and running the command pinout
-                </li>
-                <li>
-                  <code>sudo usermod -a -G gpio [username]</code>
-                  : In order to use the GPIO ports your user must be a member of
-                  the gpio group. The pi user is a member by default, other
-                  users need to be added manually.
-                </li>
-                <li>
-                  <code>sudo apt remove [tree]</code>
-                  : You can uninstall a package with apt remove, The user is
-                  prompted to confirm the removal. Again, the -y flag will
-                  auto-confirm.
-                </li>
-                <li>
-                  <code>sudo apt purge tree</code>
-                  : You can also choose to completely remove the package and its
-                  associated configuration files with apt purge
-                </li>
-                <li><code>sudo rpi-update and then use sudo reboot</code></li>
-                <li>
-                  <code>rpi-update </code> : will download the latest
-                  pre-release version of the linux kernel, its matching modules,
-                  device tree files, along with the latest versions of the
-                  VideoCore firmware. It will then install these files to
-                  relevant locations on the SD card, overwriting any previous
-                  versions.
-                </li>
-                <li>
-                  <code
-                    >sudo apt-get update sudo apt install --reinstall
-                    libraspberrypi0 libraspberrypi-{bin,dev,doc}
-                    raspberrypi-bootloader raspberrypi-kernel</code
-                  >
-                  If you have done an rpi-update and things are not working as
-                  you wish, if your Raspberry Pi is still bootable you can
-                  return to the stable release using above command
-                </li>
-                <li>
-                  <strong>Check if xterm package exists:</strong>
-                  <code>dpkg -l | grep xterm</code>If xterm package does not
-                  exist , install it <code>sudo apt install xterm</code>
-                </li>
-                <li>
-                  <strong>Set lxterminal as x-terminal-emulator</strong> by
-                  running the following command
-                  <strong
-                    >sudo update-alternatives --config
-                    x-terminal-emulator</strong
-                  >
-                </li>
-                <li><code>sudo raspi-config</code>: Configure Raspberry Pi</li>
-                <li><code>/usr/bin/dm-tool lock</code> : Lock screen</li>
-                <li>
-                  <code>sudo rpi-update</code>
-                  : Only use this if you know what you do. This command will
-                  update everything on your Raspberry Pi (firmware, packages, …)
-                  and can potentially break something.
-                </li>
-
-                <li>
-                  <strong> Removes a previously selected package.</strong>
-                  <code>sudo apt remove vim` `apt remove [package]</code>
-                </li>
-                <li>
-                  <strong
-                    >Searches for a package name in the packages list</strong
-                  >
-                  <code
-                    >`sudo apt search myadmin` `sudo apt search php` `apt search
-                    [search]`</code
-                  >
-                </li>
-                <li>
-                  <strong>Lists all installed packages on your system: </strong>
-                  <code>`dpkg -l` `dpkg -l | grep myadmin` `dpkg -l`</code>
-                  You can use grep to find a specific package.
-                </li>
-                <li>
-                  <code>sudo reboot</code>
-                  : This command will restart the Raspberry Pi immediately.
-                </li>
-                <li>
-                  <code>shutdown -h now</code>
-                  : This is to stop the Raspberry Pi immediately. You can
-                  replace “now” by a specific time (shutdown -h 12:05). Don’t
-                  use the power switch to stop your Raspberry, you should do it
-                  properly by using this command.
-                </li>
-                <li>
-                  <code>shutdown -h 0 </code>: Shutdown computer immediately
-                </li>
-
-                <li>
-                  <code>ps aux</code>
-                  : This command displays all running process on your Raspberry
-                  Pi.
-                </li>
-                <li>
-                  <code>ps -u pi</code>
-                  : You can also display process started by a specific user:
-                </li>
-                <li>
-                  <code>`kill 12345` `kill [pid]`</code>
-                  : The kill command allows you to terminate a process. You’ll
-                  need the process ID to do this.
-                </li>
-                <li>
-                  <code>`kill -9 12345`</code>
-                  :Sometime you may need to use the -9 option to force all
-                  related commands to stop. For example, if you run 20 commands
-                  in a script and kill it, it’ll continue to the next line, not
-                  exit the program, except if you use the -9 option.
-                </li>
-                <li>
-                  <code>`killall php`</code>
-                  : Killall to stop all occurrences of a program.
-                </li>
-                <li>
-                  <code>`htop`</code>
-                  : This tool is an alternative to top. It’s more user-friendly
-                  than top, with colors and dynamic load bars.
-                </li>
-                <li>
-                  <code>`df` `df -h`</code>
-                  : Displays the partition list, with the disk space used and
-                  available for each one.
-                </li>
-                <li>
-                  <code>`vcgencmd measure_temp`</code>
-                  : You may not remember it, but this command displays the
-                  current CPU temperature.
-                </li>
-                <li>
-                  <code>`raspi-gpio`</code>
-                  : This command allows you to manage the GPIO pins of the
-                  Raspberry Pi. You can either set or get a value. raspi-gpio
-                  get raspi-gpio get 20 raspi-gpio set 20 a5 raspi-gpio set 20
-                  op pn dh
-                </li>
-              </ul>
-              <!-- ********** End of Raspberri Pi reference section **********-->
-            </div>
             <!-- ********** End of Linux reference section **********-->
-            <div id="Windows">
-              <!-- ********** Start of Windows reference section **********-->
-
-              <h2>Microsoft Windows 11</h2>
-              <ul>
-                <li>
-                  <a
-                    href="https://github.com/1Amal/engineering-reference/tree/main/Microsoft Windows"
-                    >Click here to view Microsoft Windows resources</a
-                  >
-                </li>
-              </ul>
-              <h3>Windows 11: Shortcuts</h3>
-              <ul>
-                <li><code>Ctrl + Shift + Esc</code> : Open Task Manager</li>
-                <li>
-                  <code>Shift + F10 </code> : Display the shortcut menu for the
-                  selected item
-                </li>
-                <li><code>Windows logo key + E </code> : Open File Explorer</li>
-                <li><code>Windows logo key + I </code> : Open Settings</li>
-              </ul>
-              <h3>Windows 11: Administration</h3>
-              <ul>
-                <li>
-                  <code>winget upgrade </code>
-                  : Command line tool to update all installed programs in
-                  Windows 11, this will download information about all the
-                  latest avilable updates
-                </li>
-                <li>
-                  <code>winget upgrade --all</code>
-                  : This will download and install all the updates available
-                </li>
-                <li>
-                  <code>powercfg /availablesleepstates</code>
-                  : Find the power states available on your computer
-                </li>
-              </ul>
-
-              <h3>Windows 11: External resources</h3>
-              <ul>
-                <li>
-                  <a
-                    href="https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec"
-                    target="_blank"
-                    >Microsoft Windows 11 Shortcuts</a
-                  >
-                </li>
-              </ul>
-
-              <!-- ********** End of Windows reference section **********-->
-            </div>
           </div>
         </div>
       </div>
@@ -2387,7 +2152,7 @@
       <!-- ********** End of Back End Development Languages and FrameWorks **********-->
       <div id="ETIE">
         <!-- ********** Start of Electronics Engineering reference section **********-->
-        <h1>Electronics, Telecommunications and Internet Engineering</h1>
+        <h1>Electronics</h1>
         <a
           href="https://github.com/1Amal/engineering-reference/tree/main/Electronics"
           >Click here to view other Electronics Engineering resources</a
@@ -2409,28 +2174,102 @@
           </li>
         </ul>
 
-        <h2>Raspberry Pi: Hardware</h2>
-        <ul>
-          <li>
-            <a href="https://www.raspberrypi.com/documentation/" target="_blank"
-              >Offical Raspberrypi Pi documentation</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.raspberrypi.com/documentation/computers/raspberry-pi.html"
-              target="_blank"
-              >Raspberry Pi Hardware Reference</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.raspberrypi.com/documentation/computers/os.html"
-              target="_blank"
-              >Raspberry Pi OS</a
-            >
-          </li>
-        </ul>
+        <!-- ********** Start of RaspberriPi reference section **********-->
+        <div id="raspberrypi">
+          <div class="raspberryPiSoftware">
+            <h2>RaspberryPi Software / OS</h2>
+
+            <ul>
+              <li>
+                <code>argonone-config </code>
+                : Argoneone Case fan control configuration curl
+                https://download.argon40.com/argon1.sh | bash : Install ArgonOne
+                fancontrol script
+              </li>
+              <li>
+                <code>pinout</code>
+                : A handy reference can be accessed on the Raspberry Pi by
+                opening a terminal window and running the command pinout
+              </li>
+              <li>
+                <code>sudo usermod -a -G gpio [username]</code>
+                : In order to use the GPIO ports your user must be a member of
+                the gpio group. The pi user is a member by default, other users
+                need to be added manually.
+              </li>
+
+              <li><code>sudo rpi-update and then use sudo reboot</code></li>
+              <li>
+                <code>rpi-update </code> : will download the latest pre-release
+                version of the linux kernel, its matching modules, device tree
+                files, along with the latest versions of the VideoCore firmware.
+                It will then install these files to relevant locations on the SD
+                card, overwriting any previous versions.
+              </li>
+              <li>
+                <code
+                  >sudo apt-get update sudo apt install --reinstall
+                  libraspberrypi0 libraspberrypi-{bin,dev,doc}
+                  raspberrypi-bootloader raspberrypi-kernel</code
+                >
+                If you have done an rpi-update and things are not working as you
+                wish, if your Raspberry Pi is still bootable you can return to
+                the stable release using above command
+              </li>
+
+              <li><code>sudo raspi-config</code>: Configure Raspberry Pi</li>
+
+              <li>
+                <code>sudo rpi-update</code>
+                : Only use this if you know what you do. This command will
+                update everything on your Raspberry Pi (firmware, packages, …)
+                and can potentially break something.
+              </li>
+
+              <li>
+                <code>`vcgencmd measure_temp`</code>
+                : Displays the current CPU temperature.
+              </li>
+              <li>
+                <code>`raspi-gpio`</code>
+                : This command allows you to manage the GPIO pins of the
+                Raspberry Pi. You can either set or get a value. raspi-gpio get
+                raspi-gpio get 20 raspi-gpio set 20 a5 raspi-gpio set 20 op pn
+                dh
+              </li>
+            </ul>
+            <!-- ********** End of Raspberri Pi reference section **********-->
+          </div>
+          <div class="raspberrypiHardware">
+            <h2>Raspberry Pi: Hardware</h2>
+          </div>
+
+          <ul>
+            <li>
+              <a
+                href="https://www.raspberrypi.com/documentation/"
+                target="_blank"
+                >Offical Raspberrypi Pi documentation</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.raspberrypi.com/documentation/computers/raspberry-pi.html"
+                target="_blank"
+                >Raspberry Pi Hardware Reference</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.raspberrypi.com/documentation/computers/os.html"
+                target="_blank"
+                >Raspberry Pi OS</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        
 
         <h2 id="arduino">Arduino: Hardware</h2>
 
@@ -2450,11 +2289,32 @@
         <!-- ********** End of Electronics Engineering reference section **********-->
         <div id="networkingAndCybersecurity">
           <!-- ********** Start of Networking and Cybersecurity reference section **********-->
-          <h2 id="Networking">Networking and Cybersecurity</h2>
-          <a
-            href="https://github.com/1Amal/engineering-reference/tree/main/Networking and Cybersecurity"
-            >Click here to view other Networking and Cybersecurity resources</a
-          >
+          <h1 id="Networking">Networking and Cybersecurity</h1>
+
+          <h4>Links</h4>
+          <ul>
+            <li>
+              <a
+                href="https://github.com/1Amal/engineering-reference/tree/main/Networking and Cybersecurity"
+                >Click here to view other Networking and Cybersecurity
+                resources</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html"
+                target="_blank"
+                >Cisco IP addressing</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.networkworld.com/article/3239677/the-osi-model-explained-and-how-to-easily-remember-its-7-layers.html"
+                target="_blank"
+                >Network World 7 Layer OSI
+              </a>
+            </li>
+          </ul>
 
           <ul>
             <li>
@@ -2470,11 +2330,7 @@
           </ul>
 
           <h3>The 7 layers of the OSI model</h3>
-          <a
-            href="https://www.networkworld.com/article/3239677/the-osi-model-explained-and-how-to-easily-remember-its-7-layers.html"
-            target="_blank"
-            >From Network World</a
-          >
+
           <ul>
             <li>
               <b>A</b>ll <b>P</b>eople <b>S</b>eem <b>T</b>o <b>N</b>eed
@@ -2559,18 +2415,69 @@
             </li>
           </ul>
 
-          <h3>External resources</h3>
-          <ul>
-            <li>
-              <a
-                href="https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html"
-                target="_blank"
-                >Cisco IP addressing</a
-              >
-            </li>
-          </ul>
-
           <!-- ********** End of Networking and Cybersecurity reference section **********-->
+        </div>
+        <div id="miscellaneous">
+          <div id="Windows">
+            <!-- ********** Start of Windows reference section **********-->
+  
+            <h2>Microsoft Windows 11</h2>
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/1Amal/engineering-reference/tree/main/Microsoft Windows"
+                  >Click here to view Microsoft Windows resources</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec"
+                  target="_blank"
+                  >Microsoft Windows 11 Shortcuts</a
+                >
+              </li>
+            </ul>
+  
+            <ul>
+              <li>
+                Windows 11 Shortcuts
+                <ul>
+                  <li><code>Ctrl + Shift + Esc</code> : Open Task Manager</li>
+                  <li>
+                    <code>Shift + F10 </code> : Display the shortcut menu for the
+                    selected item
+                  </li>
+                  <li><code>Windows logo key + E </code> : Open File Explorer</li>
+                  <li><code>Windows logo key + I </code> : Open Settings</li>
+                </ul>
+              </li>
+            </ul>
+  
+            <ul>
+              <li>
+                Windows 11: Administration
+                <ul>
+                  <li>
+                    <code>winget upgrade </code>
+                    : Command line tool to update all installed programs in
+                    Windows 11, this will download information about all the
+                    latest avilable updates
+                  </li>
+                  <li>
+                    <code>winget upgrade --all</code>
+                    : This will download and install all the updates available
+                  </li>
+                  <li>
+                    <code>powercfg /availablesleepstates</code>
+                    : Find the power states available on your computer
+                  </li>
+                </ul>
+              </li>
+            </ul>
+  
+            <!-- ********** End of Windows reference section **********-->
+          </div>
+
         </div>
       </div>
     </div>

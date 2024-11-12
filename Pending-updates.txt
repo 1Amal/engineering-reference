@@ -26,3 +26,125 @@ Place to add all updates to the reference database before they are entered into 
 Programming Concepts
 
 
+         <li>
+            <a href="https://guides.codepath.com/compsci" target="_blank"
+              >CodePath Computer Science | Technical Interview | Algorithms |
+              Data Structures
+            </a>
+          </li>
+
+          <li>
+            <a href="https://guides.codepath.com/webdev" target="_blank"
+              >CodePath Web Development</a
+            >
+          </li>
+
+          <li>
+            <a href="https://guides.codepath.com/websecurity" target="_blank"
+              >CodePath Web Security</a
+            >
+          </li>
+
+
+
+
+
+          <li>
+                  <code>sudo apt remove [tree]</code>
+                  : You can uninstall a package with apt remove, The user is
+                  prompted to confirm the removal. Again, the -y flag will
+                  auto-confirm.
+                </li>
+                <li>
+                  <code>sudo apt purge tree</code>
+                  : You can also choose to completely remove the package and its
+                  associated configuration files with apt purge
+                </li>
+
+                <li>
+                  <strong>Check if xterm package exists:</strong>
+                  <code>dpkg -l | grep xterm</code>If xterm package does not
+                  exist , install it <code>sudo apt install xterm</code>
+                </li>
+                <li>
+                  <strong>Set lxterminal as x-terminal-emulator</strong> by
+                  running the following command
+                  <strong
+                    >sudo update-alternatives --config
+                    x-terminal-emulator</strong
+                  >
+                </li>
+
+
+                <li>
+                  <strong> Removes a previously selected package.</strong>
+                  <code>sudo apt remove vim` `apt remove [package]</code>
+                </li>
+                <li>
+                  <strong
+                    >Searches for a package name in the packages list</strong
+                  >
+                  <code
+                    >`sudo apt search myadmin` `sudo apt search php` `apt search
+                    [search]`</code
+                  >
+                </li>
+                <li>
+                  <strong>Lists all installed packages on your system: </strong>
+                  <code>`dpkg -l` `dpkg -l | grep myadmin` `dpkg -l`</code>
+                  You can use grep to find a specific package.
+                </li>
+                <li>
+                  <code>sudo reboot</code>
+                  : This command will restart the Raspberry Pi immediately.
+                </li>
+                <li>
+                  <code>shutdown -h now</code>
+                  : This is to stop the Raspberry Pi immediately. You can
+                  replace “now” by a specific time (shutdown -h 12:05). Don’t
+                  use the power switch to stop your Raspberry, you should do it
+                  properly by using this command.
+                </li>
+                <li>
+                  <code>shutdown -h 0 </code>: Shutdown computer immediately
+                </li>
+
+                <li>
+                  <code>ps aux</code>
+                  : This command displays all running process on your Raspberry
+                  Pi.
+                </li>
+
+                 <li>
+                  <code>`kill 12345` `kill [pid]`</code>
+                  : The kill command allows you to terminate a process. You’ll
+                  need the process ID to do this.
+                </li>
+                <li>
+                  <code>`kill -9 12345`</code>
+                  :Sometime you may need to use the -9 option to force all
+                  related commands to stop. For example, if you run 20 commands
+                  in a script and kill it, it’ll continue to the next line, not
+                  exit the program, except if you use the -9 option.
+                </li>
+                <li>
+                  <code>`killall php`</code>
+                  : Killall to stop all occurrences of a program.
+                </li>
+                <li>
+                  <code>`htop`</code>
+                  : This tool is an alternative to top. It’s more user-friendly
+                  than top, with colors and dynamic load bars.
+                </li>
+                <li>
+                  <code>`df` `df -h`</code>
+                  : Displays the partition list, with the disk space used and
+                  available for each one.
+                </li>
+
+                <li><code>/usr/bin/dm-tool lock</code> : Lock screen</li>
+
+                <li>
+                  <code>ps -u amal</code>
+                  : You can also display process started by a specific user:
+                </li>
