@@ -5,7 +5,7 @@ For software engineers and technologists alike, having an accessible, comprehens
 ## Links
 
 * Github: https://github.com/1Amal/engineering-reference
-* Live Production version: https://www.amalk.au/engineering-reference/
+* Live Production version: https://www.amalk.au/TechLexicon
 
 ## Design principles
 
