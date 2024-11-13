@@ -25,15 +25,3 @@ Place to add all updates to the reference database before they are entered into 
 *******************
 Programming Concepts
 
-
-Frontend Software Engineering
-
-Backend Software Engineering
-
-DevOps & Developer Tools
-
-Hardware & Electronics
-
-Networking and CyberSecurity
-
-AI & ML
