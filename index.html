@@ -200,70 +200,11 @@
                 event does not get explicitly handled, its default action should
                 not be taken as it normally would be.
               </li>
+              <li><a href="./SoftwareEngineeringFullStack/JavaScript/JavaScriptReferenceDocuments/setupJSForStaticSite.md" target="_blank">Setup guide: JavaScript for static sites</a></li>
             </ul>
           </div>
 
-          <div>
-            <h4>JavaScript: Setup for static site</h4>
-            <ul>
-              <li>
-                External JavaScript: JavaScript files have the file extension
-                .js. To use an external script, put the name of the script file
-                in the src (source) attribute of
-                <br />
-                <code>
-                  &ltscript&gt tag: <br />
-                  &ltscript src="myScript.js"&gt &lt/script&gt
-                </code>
-              </li>
-
-              <li>
-                JavaScript in &lthead&gt JavaScript can be placed in the
-                &lthead&gt section of an HTML page.<br />
-
-                <code>
-                  &lt!DOCTYPE html&gt <br />
-                  &lthtml&gt <br />
-                  &lthead&gt <br />
-                  &ltscript&gt <br />
-                  function myFunction() { <br />
-                  document.getElementById("demo").innerHTML = "Paragraph
-                  changed.";<br />
-                  }<br />
-                  &lt/script&gt<br />
-                  &lt/head&gt<br />
-                  &ltbody&gt<br />
-
-                  &lt/body&gt<br />
-                  &lt/html&gt
-                </code>
-              </li>
-
-              <li>
-                JavaScript in &ltbody&gt : JavaScript function can be placed in
-                the &ltbody&gt section of an HTML page.
-                <br />
-                <code>
-                  &lt!DOCTYPE html&gt <br />
-                  &lthtml&gt <br />
-                  &ltbody&gt <br />
-
-                  &lth2&gtDemo JavaScript in Body &lt/h2&gt <br />
-
-                  &ltscript&gt <br />
-                  function myFunction() { <br />
-                  document.getElementById("demo").innerHTML = "Paragraph
-                  changed.";
-                  <br />
-                  }<br />
-                  &lt/script&gt <br />
-
-                  &lt/body&gt <br />
-                  &lt/html&gt <br />
-                </code>
-              </li>
-            </ul>
-          </div>
+ 
 
           <h4>Links</h4>
           <ul>
@@ -1155,8 +1096,13 @@
         <h1>Software Engineering : Tools</h1>
         <div id="linux">
           <div id="linux">
+           
             <h2>Linux</h2>
-            <a href="index.html#navBar">Return to Main Menu</a>
+            <ul>
+              <li><a href="index.html#navBar">Return to Main Menu</a></li>
+              <li><a href="./SoftwareEngineeringTools/Linux/">Additional Resources : Linux </a></li>
+            </ul>
+            
 
             <div id="linuxFileDirectoryAndStorageOperations">
               <h3>Linux: File, Directory and Storage operations</h3>
@@ -1450,6 +1396,7 @@
               <h3>Linux: Administration</h3>
 
               <ul>
+                <li><a href="./SoftwareEngineeringTools/Linux/LinuxScripts/bashScript.sh">Guide/Script : Linux Bash Scripting</a></li>
                 <li>
                   <code>sudo apt update && sudo apt upgrade</code>
                   : To refresh and update software in Debian / Ubuntu in one
@@ -1646,37 +1593,6 @@
               </ul>
             </div>
 
-            <div id="linuxBashScripting">
-              <h3>Linux: Bash Scripting</h3>
-              <ul>
-                <li>
-                  touch hello_world.sh` : Create a file named hello_world.sh
-                </li>
-                <li>`which bash` : Find the path to bash shell</li>
-                <li>
-                  Setup of a Bash Script:
-                  <p>
-                    #! usr/bin/bash (If you get an error "cannot execute:
-                    required file not found" use #! /bin/bash)
-                  </p>
-                  <p>echo "Hello World"</p>
-                </li>
-                <li>
-                  `chmod u+x hello_world.sh` Make the Bash script executable,
-                  chmod modifies the existing rights of a file for a particular
-                  user. We are adding +x to user u.
-                </li>
-                <li>
-                  <p>You can run the script in the following ways:</p>
-
-                  <p>./hello_world.sh</p>
-                  or
-                  <p>bash hello_world.sh</p>
-                </li>
-              </ul>
-
-              <!-- ********** End of Linux reference section **********-->
-            </div>
             <h4>Links</h4>
             <ul>
               <li>
