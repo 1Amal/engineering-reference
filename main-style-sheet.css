@@ -24,6 +24,7 @@ Last Update: 30/08/2024
   --colour-ALinksActive: #090656;
   --colour-ALinksVisited: #090656;;
   --colour-ALinksHover: #7940e3;
+  --colour-inksDivExternalResources:#aaeb9d;
   /* Different Div Section Colours */
   --colour-MainWebsiteGridContainer: #ffffff;
   --colour-IntroductionBackground: #f4b618;
@@ -171,77 +172,38 @@ a:active {
 #navBar a:active {
   background-color: #0704aa;
 }
-
 /* ********** End of code for Navigation Bar **********  */
-/* 
-.dropdown-container {
-  grid-area: mainMenuContainer;
-  margin: 1rem auto;
-  text-align: center;
-  line-height: 2rem;
-  font-size: 1.5rem;
-  padding: 1rem;
-  color: var(--colour-MainMenuText);
-  background-color: var(--colour-IntroductionBackground);
-  cursor: pointer;
-  text-decoration: none;
-}
 
-.menu-title {
-  padding: 1rem;
-  background-color: var(--colour-MainMenuBackground);
-}
+.linksDivExternalResources ul
+{
 
-.dropdown-menu {
-  display: none;
-  margin: 1rem;
-  padding: 0.5rem;
-  overflow: hidden;
-  background-color: var(--colour-MainMenuBackground);
-}
-
-.visible {
-  display: block;
-  animation: expand 600ms ease-in-out;
-  transform-origin: bottom;
-}
-
-ul.dropdown-menu li:hover {
-  background: var(--colour-ALinksHover);
-}
-
-ul.dropdown-menu li {
   list-style-type: none;
-  margin: 1rem;
-  padding: 1rem;
-  border: 1px solid var(--colour-ALinksVisited);
+  /* margin: 0; */
+  /* padding: 0; */
+  
+  overflow: hidden;
+  background-color: var(--colour-inksDivExternalResources);
 }
 
-ul.dropdown-menu li a {
-  color: var(--colour-MainMenuText);
+.linksDivExternalResources li{
+  float: left;
+  padding: 0.5rem 1.5rem;
+
+
+}
+
+.linksDivExternalResources li a:hover:not(.active) {
+  /* display: block; */
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0.5rem;
   text-decoration: none;
-  font-size: 1.5rem;
 }
 
-ul.dropdown-menu a:active {
-  background-color: var(--colour-ALinksActive);
-}
+/* .linksDivExternalResources li {
 
-@keyframes expand {
-  0% {
-    transform: scaleY(0);
-  }
-
-  70% {
-    transform: scaleY(1.1);
-  }
-
-  100% {
-    transform: scaleY(1);
-  }
 } */
 
-/* ********** End of code for Navigation Bar **********  */
 
 /* ********** Start of code for About Section **********  */
 
@@ -303,11 +265,6 @@ ul.dropdown-menu a:active {
   flex: 1;
   box-sizing: border-box;
   text-align: center;
-  /* justify-content: flex-start; */
-  /* display: grid; */
-  /* grid-template-rows: repeat(3, 1fr); */
-  /* grid-template-columns: repeat(auto-fill, minmax(800px, 1fr)); */
-  /* grid-template-columns: repeat(3,1fr); */
   font-size: 1.5rem;
 }
 .projectCategoryWebsites {
